@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/worker_test.py",
+        "dist/Packsmith-preview/workers/packsmith-worker.exe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/legacy_test.py",
+        "dist/Packsmith-preview/workers/packsmith-worker.exe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/classic_test.py",
+        "dist/Packsmith-preview/workers/packsmith-worker.exe"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/run_beta4.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/classic_qualification.py",
+        "--private-manifest",
+        "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\beta4-oracles\\cases.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/qualify_legacy.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/classic_corpus_oracle.py",
+        "refresh"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/package_beta.py",
+        "--prepare-only"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/relink_test.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/gui_smoke.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/presentation_test.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/branding_test.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "tests/performance_beta4.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "assessment/scripts/verify_assessment.py"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

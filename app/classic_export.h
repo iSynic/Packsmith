@@ -95,7 +95,7 @@ static QJsonObject classicPlan(const QJsonArray &rows, const QSet<int> &selected
                     folderPaths.insert(key,path);
                     folders.append(path);
                 }
-                if(name!=original) changes.append(QJsonObject{{"id",id},{"component",depth},{"original",original},{"restored",name},{"reason",duplicate?"duplicate directory":"classic HFS name, encoding or collision"}});
+                if(name!=original) changes.append(QJsonObject{{"id",id},{"component",depth},{"components",parts},{"original",original},{"restored",name},{"reason",duplicate?"duplicate directory":"classic HFS name, encoding or collision"}});
             }
             restored.append(name);
             if(isFolder && depth==parts.size()-1 && row["directory"].toBool()) explicitFolders.insert(key);

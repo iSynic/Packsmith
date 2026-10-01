@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "historical_files": 247,
+  "historical_manifest_sha256": "2a3c4c9ce5f706153bb0e2823d614a4f4d61449c5d7d9e5bec8f00215099c5f9",
+  "baseline_commit": "56cb5c3",
+  "clean_windows": {
+    "status": "completed by user report",
+    "commands_machine_details_and_automated_receipts": "not supplied",
+    "fresh_machine_source_builds": "unverified",
+    "system_timezone_dst_checks": "unverified"
+  },
+  "expander_703": {
+    "investigation": "deferred until reproducible bug report",
+    "cause": "undetermined"
+  }
+}

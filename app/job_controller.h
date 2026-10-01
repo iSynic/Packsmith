@@ -47,6 +47,9 @@ struct JobResult {
         if (!failure.isEmpty()) lines.append("Failure: " + failure);
         if (!terminal["code"].toString().isEmpty()) lines.append("Code: " + terminal["code"].toString());
         if (!terminal["engine"].toString().isEmpty()) lines.append("Backend: " + terminal["engine"].toString());
+        if (!terminal["format"].toString().isEmpty()) lines.append("Format: " + terminal["format"].toString());
+        if (!terminal["method"].toString().isEmpty()) lines.append("Compression: " + terminal["method"].toString());
+        if (terminal["method_id"].isDouble()) lines.append(QString("Compression method ID: %1").arg(terminal["method_id"].toInteger()));
         if (terminal["id"].toInteger(-1) >= 0) lines.append(QString("Entry: %1 · Fork: %2").arg(terminal["id"].toInteger()).arg(terminal["part"].toString()));
         if (terminal.contains("count")) lines.append(QString("Entries: %1").arg(terminal["count"].toInteger()));
         if (terminal.contains("file_count")) lines.append(QString("Files: %1 · Data forks: %2 · Resource forks: %3").arg(terminal["file_count"].toInteger()).arg(terminal["data_forks"].toInteger()).arg(terminal["resource_forks"].toInteger()));
@@ -54,6 +57,7 @@ struct JobResult {
         if (!coverage.isEmpty() && operation != "list") {
             lines.append(QString("Source checksums: %1 checked fork streams; %2 without source checksums; %3 expanded wrappers.").arg(coverage["checked_forks"].toInteger()).arg(coverage["unchecked_forks"].toInteger()).arg(coverage["expanded_wrappers"].toInteger()));
             if (coverage["unchecked_forks"].toInteger()) lines.append("Completed with verification limits: decoded streams without source checksums are not checksum-verified.");
+            if (coverage["shared_checksums"].toInteger()) lines.append(QString("Combined Compact Pro source checksums: %1 fork pairs; individual fork bytes are covered together.").arg(coverage["shared_checksums"].toInteger()));
         }
         if (terminal.contains("mapped_names")) lines.append(QString("Mapped names: %1 (see mapping for substitutions and collisions)").arg(terminal["mapped_names"].toInteger()));
         if (!terminal["preservation"].toString().isEmpty()) lines.append("Preservation limits: " + terminal["preservation"].toString());

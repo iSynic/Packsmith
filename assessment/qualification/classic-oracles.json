@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "label": "HaxHQX",
+      "name": "hax-13.hqx",
+      "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+      "filename_encoding": "macintosh",
+      "expected_files": 124,
+      "oracle": {
+        "kind": "independently qualified",
+        "software": "StuffIt Expander 5.5",
+        "targets": [
+          "System 7.6",
+          "Mac OS 9"
+        ]
+      },
+      "provenance": "User-owned private archive; redistribution rights unknown",
+      "detected_format": "StuffIt",
+      "compression_methods": [
+        "LZ+Huffman",
+        "None"
+      ],
+      "wrapper_chain": [
+        "BinHex",
+        "StuffIt"
+      ],
+      "expected_report_sha256": "18c4767a2b28e69ab2d7396c1ee617c4d2bcb97926316989496e9d1693d56baf",
+      "expected_report": "assessment/outputs/beta3-oracle/corpus/HaxHQX.zip!Report.json"
+    },
+    {
+      "label": "HaxBIN",
+      "name": "HAX1R3.BIN",
+      "archive_sha256": "adf4259be232a3eb6c521f2a2749433d0b495d14461b30cde6988431ad22fa9c",
+      "filename_encoding": "macintosh",
+      "expected_files": 125,
+      "oracle": {
+        "kind": "independently qualified",
+        "software": "StuffIt Expander 5.5",
+        "targets": [
+          "System 7.6",
+          "Mac OS 9"
+        ]
+      },
+      "provenance": "User-owned private archive; redistribution rights unknown",
+      "detected_format": "StuffIt 5",
+      "compression_methods": [
+        "Arsenic",
+        "None"
+      ],
+      "wrapper_chain": [
+        "MacBinary",
+        "StuffIt 5"
+      ],
+      "expected_report_sha256": "83b567df5cb167d7be16090d587a0702438dc88edcd35ef7d6f9c742088bb57d",
+      "expected_report": "assessment/outputs/beta3-oracle/corpus/HaxBIN.zip!Report.json"
+    },
+    {
+      "label": "Old",
+      "name": "dark-towers-ks.hqx",
+      "archive_sha256": "69192fd651613d5cbda7acfa9356ca126d40ecab161b01e83c595f342e7640ac",
+      "filename_encoding": "macintosh",
+      "expected_files": 4,
+      "oracle": {
+        "kind": "independently qualified",
+        "software": "StuffIt Expander 5.5",
+        "targets": [
+          "System 7.6",
+          "Mac OS 9"
+        ]
+      },
+      "provenance": "User-owned private archive; redistribution rights unknown",
+      "detected_format": "StuffIt",
+      "compression_methods": [
+        "LZ+Huffman"
+      ],
+      "wrapper_chain": [
+        "BinHex",
+        "StuffIt"
+      ],
+      "expected_report_sha256": "577689cf82f2ac6af2f57deec72d9f6fa86e32146660910a9802f10e49dd990c",
+      "expected_report": "assessment/outputs/beta3-oracle/corpus/Old.zip!Report.json"
+    },
+    {
+      "label": "New",
+      "name": "BOutS 1.2.sit",
+      "archive_sha256": "604aaf3a3116ce6e017aeac768d5e9e036313fd4fe359b89d3a6aeb6dce8731d",
+      "filename_encoding": "macintosh",
+      "expected_files": 39,
+      "oracle": {
+        "kind": "independently qualified",
+        "software": "StuffIt Expander 5.5",
+        "targets": [
+          "System 7.6",
+          "Mac OS 9"
+        ]
+      },
+      "provenance": "User-owned private archive; redistribution rights unknown",
+      "detected_format": "StuffIt 5",
+      "compression_methods": [
+        "Arsenic",
+        "None"
+      ],
+      "wrapper_chain": [
+        "StuffIt 5"
+      ],
+      "expected_report_sha256": "9115b0c399d66e099e307a782ae75936c5a142b62eb60bd693ff44d77a5261f5",
+      "expected_report": "assessment/outputs/beta3-oracle/corpus/New.zip!Report.json"
+    }
+  ],
+  "known_control": "assessment/outputs/beta3-oracle/corpus/Known.sit",
+  "hfs_evidence": "assessment/evidence/beta3/classic-corpus-oracle.json"
+}

@@ -1,0 +1,1948 @@
+{
+  "xad_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+  "detector_revision": "4eb832d999628edcd3d134e46bd35357c8c99a85",
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "decoder_sha256": "af6872b47a89bfc63b6a2ee56c23fdc9f890b98b03df3e707aa742c1e448aa09",
+  "environment": "Native Windows developer machine, private corpus; no original Mac extraction oracle",
+  "records": [
+    {
+      "name": "BOutS 1.2.sit",
+      "archive_sha256": "604aaf3a3116ce6e017aeac768d5e9e036313fd4fe359b89d3a6aeb6dce8731d",
+      "archive_bytes": 711087,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 88.15,
+        "peak_worker_tree_rss": 36610048,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 40,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "604aaf3a3116ce6e017aeac768d5e9e036313fd4fe359b89d3a6aeb6dce8731d",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 40,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 251.25,
+        "peak_worker_tree_rss": 62861312,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 43,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 40,
+          "data_forks": 37,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 39,
+          "mapped_names": 1,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/0/BOutS 1.2",
+          "output_committed": true,
+          "resource_forks": 6
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 37,
+      "resource_forks": 6,
+      "empty_data_files": 3,
+      "fork_inventory_sha256": "fa8041fd8311a1c4122299a175dfcec89e0dc9c252514a3ea9f88335605bb116",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\0\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 43,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "BSNG_3.1a2.sit",
+      "archive_sha256": "d75928c0499c640804925bd40c90c439d3a1024225f8e194830fa1f10b9ab505",
+      "archive_bytes": 1454296,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 111.45,
+        "peak_worker_tree_rss": 30728192,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 6,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "d75928c0499c640804925bd40c90c439d3a1024225f8e194830fa1f10b9ab505",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 6,
+      "methods": [
+        "Arsenic"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 387.07,
+        "peak_worker_tree_rss": 47886336,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 6,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 6,
+          "data_forks": 2,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 4,
+          "mapped_names": 1,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/1/BSNG_3.1a2",
+          "output_committed": true,
+          "resource_forks": 4
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 2,
+      "resource_forks": 4,
+      "empty_data_files": 2,
+      "fork_inventory_sha256": "8e735fb5a2080b3f2bf99e3eac21970840a3fc320add2bfe77b626114175a849",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\1\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 6,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "CW_Pro_5.3_updater.bin",
+      "archive_sha256": "c9246919fb03bc83d660db4e120451c511c4e6aad07a8e20f6e3d9e1ed760dbb",
+      "archive_bytes": 26228096,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 247.43,
+        "peak_worker_tree_rss": 37875712,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "MacBinary",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "MacBinary"
+            ]
+          },
+          "count": 1,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "c9246919fb03bc83d660db4e120451c511c4e6aad07a8e20f6e3d9e1ed760dbb",
+          "format": "MacBinary",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 1,
+      "methods": [
+        "unknown"
+      ],
+      "format": "MacBinary",
+      "outer_format": "MacBinary",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 708.86,
+        "peak_worker_tree_rss": 61227008,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "MacBinary",
+            "shared_checksums": 0,
+            "unchecked_forks": 2,
+            "wrapper_chain": [
+              "MacBinary"
+            ]
+          },
+          "count": 1,
+          "data_forks": 1,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 1,
+          "mapped_names": 0,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/2/CW_Pro_5.3_updater",
+          "output_committed": true,
+          "resource_forks": 1
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 1,
+      "resource_forks": 1,
+      "empty_data_files": 0,
+      "fork_inventory_sha256": "ad9a23e85f5ac07c2907aab37803a9c0a99eec270048ac5f899b13606d3e9571",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\2\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 0,
+        "expanded_wrappers": 0,
+        "outer_format": "MacBinary",
+        "shared_checksums": 0,
+        "unchecked_forks": 2,
+        "wrapper_chain": [
+          "MacBinary"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "dark-towers-ks.hqx",
+      "archive_sha256": "69192fd651613d5cbda7acfa9356ca126d40ecab161b01e83c595f342e7640ac",
+      "archive_bytes": 637187,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 112.01,
+        "peak_worker_tree_rss": 43737088,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 1,
+            "outer_format": "BinHex",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "BinHex",
+              "StuffIt"
+            ]
+          },
+          "count": 5,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "69192fd651613d5cbda7acfa9356ca126d40ecab161b01e83c595f342e7640ac",
+          "format": "StuffIt",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 5,
+      "methods": [
+        "LZ+Huffman"
+      ],
+      "format": "StuffIt",
+      "outer_format": "BinHex",
+      "independent_binhex": {
+        "archive_sha256": "69192fd651613d5cbda7acfa9356ca126d40ecab161b01e83c595f342e7640ac",
+        "archive_bytes": 637187,
+        "implementation": "Python stdlib six-bit decode, BinHex RLE and binascii.crc_hqx; no XAD code",
+        "sections": {
+          "header": {
+            "bytes": 51,
+            "sha256": "784146662a31353d788d2209e959c01b199ae900e2d6a8c5ed797cf7a2556e20",
+            "stored_crc": 63598,
+            "computed_crc": 63598,
+            "crc_valid": true
+          },
+          "data": {
+            "bytes": 468619,
+            "sha256": "1241856e16f1c019aca60083100c2b5db23bfea7d5114ccc6fb2c0a92d48a1ee",
+            "stored_crc": 65253,
+            "computed_crc": 65253,
+            "crc_valid": true
+          },
+          "resource": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stored_crc": 0,
+            "computed_crc": 0,
+            "crc_valid": true
+          }
+        },
+        "trailing_decoded_bytes": 0,
+        "passed": true
+      },
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 189.02,
+        "peak_worker_tree_rss": 46166016,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 6,
+            "expanded_wrappers": 1,
+            "outer_format": "BinHex",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "BinHex",
+              "StuffIt"
+            ]
+          },
+          "count": 5,
+          "data_forks": 2,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 4,
+          "mapped_names": 2,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/3/dark-towers-ks",
+          "output_committed": true,
+          "resource_forks": 3
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 2,
+      "resource_forks": 3,
+      "empty_data_files": 2,
+      "fork_inventory_sha256": "f299599d0e0d1363248c7cc3215ec4f6e3b0496c67bd1b7e09af0a375caf99f6",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\3\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 6,
+        "expanded_wrappers": 1,
+        "outer_format": "BinHex",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "BinHex",
+          "StuffIt"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Divinity-CD.sit",
+      "archive_sha256": "daf8f6f4c30feff42b19d161e355419af48e81a8c593a74f3d07f23dda693fdb",
+      "archive_bytes": 38522472,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 542.47,
+        "peak_worker_tree_rss": 88657920,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1948,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "daf8f6f4c30feff42b19d161e355419af48e81a8c593a74f3d07f23dda693fdb",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 1948,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 8735.42,
+        "peak_worker_tree_rss": 760193024,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 1965,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1948,
+          "data_forks": 1508,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 1826,
+          "mapped_names": 265,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/4/Divinity-CD",
+          "output_committed": true,
+          "resource_forks": 457
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 1508,
+      "resource_forks": 457,
+      "empty_data_files": 337,
+      "fork_inventory_sha256": "5ac022f64c4c6f4c73f742fd77911ad8f9084025bac3ddda8150134f1069496b",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\4\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 1965,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Garden gnomes robber.sit",
+      "archive_sha256": "87057031f722e2d55595533ec2e494da4a623253e1dbce3d2632f3570aed3359",
+      "archive_bytes": 350421,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 150.86,
+        "peak_worker_tree_rss": 43307008,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 79,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "87057031f722e2d55595533ec2e494da4a623253e1dbce3d2632f3570aed3359",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 79,
+      "methods": [
+        "LZ+Huffman",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 548.15,
+        "peak_worker_tree_rss": 59109376,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 82,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 79,
+          "data_forks": 71,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 74,
+          "mapped_names": 3,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/5/Garden gnomes robber",
+          "output_committed": true,
+          "resource_forks": 11
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 71,
+      "resource_forks": 11,
+      "empty_data_files": 5,
+      "fork_inventory_sha256": "138d1826b70279f93e847b7d381366231f0d61aa1026b9061e9914c6a9a609a7",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\5\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 82,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "hax-13.hqx",
+      "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+      "archive_bytes": 1383382,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 178.02,
+        "peak_worker_tree_rss": 46522368,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 1,
+            "outer_format": "BinHex",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "BinHex",
+              "StuffIt"
+            ]
+          },
+          "count": 131,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+          "format": "StuffIt",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 131,
+      "methods": [
+        "LZ+Huffman",
+        "None"
+      ],
+      "format": "StuffIt",
+      "outer_format": "BinHex",
+      "independent_binhex": {
+        "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+        "archive_bytes": 1383382,
+        "implementation": "Python stdlib six-bit decode, BinHex RLE and binascii.crc_hqx; no XAD code",
+        "sections": {
+          "header": {
+            "bytes": 33,
+            "sha256": "ed2f410242d647ef862bfe813252b3d342fd64386deafdfe6ab690a8ea80f5e2",
+            "stored_crc": 10094,
+            "computed_crc": 10094,
+            "crc_valid": true
+          },
+          "data": {
+            "bytes": 1005963,
+            "sha256": "a42bc7affc4af990c20a4abcfa74ae13d478975c96ccb499efc96e39ecec1607",
+            "stored_crc": 47425,
+            "computed_crc": 47425,
+            "crc_valid": true
+          },
+          "resource": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stored_crc": 0,
+            "computed_crc": 0,
+            "crc_valid": true
+          }
+        },
+        "trailing_decoded_bytes": 0,
+        "passed": true
+      },
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 1196.48,
+        "peak_worker_tree_rss": 68288512,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 150,
+            "expanded_wrappers": 1,
+            "outer_format": "BinHex",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "BinHex",
+              "StuffIt"
+            ]
+          },
+          "count": 131,
+          "data_forks": 79,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 124,
+          "mapped_names": 44,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/6/hax-13",
+          "output_committed": true,
+          "resource_forks": 70
+        },
+        "stderr": ""
+      },
+      "warnings": [
+        "Output commit waited 100 ms for Windows to release a file handle."
+      ],
+      "data_forks": 79,
+      "resource_forks": 70,
+      "empty_data_files": 46,
+      "fork_inventory_sha256": "b3bc1ef55e411f35024c46ac867c4a2ecc4a16ded945c56f0452a4755d37c275",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\6\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 150,
+        "expanded_wrappers": 1,
+        "outer_format": "BinHex",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "BinHex",
+          "StuffIt"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "HAX1R3.BIN",
+      "archive_sha256": "adf4259be232a3eb6c521f2a2749433d0b495d14461b30cde6988431ad22fa9c",
+      "archive_bytes": 915328,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 145.65,
+        "peak_worker_tree_rss": 43876352,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 1,
+            "outer_format": "MacBinary",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "MacBinary",
+              "StuffIt 5"
+            ]
+          },
+          "count": 132,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "adf4259be232a3eb6c521f2a2749433d0b495d14461b30cde6988431ad22fa9c",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 132,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "MacBinary",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 540.17,
+        "peak_worker_tree_rss": 71630848,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 149,
+            "expanded_wrappers": 1,
+            "outer_format": "MacBinary",
+            "shared_checksums": 0,
+            "unchecked_forks": 1,
+            "wrapper_chain": [
+              "MacBinary",
+              "StuffIt 5"
+            ]
+          },
+          "count": 132,
+          "data_forks": 78,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 125,
+          "mapped_names": 44,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/7/HAX1R3",
+          "output_committed": true,
+          "resource_forks": 71
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 78,
+      "resource_forks": 71,
+      "empty_data_files": 48,
+      "fork_inventory_sha256": "f1a955bef2173455b4bb977b9d68054cb300adeef3936d753715e055db00be27",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\7\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 149,
+        "expanded_wrappers": 1,
+        "outer_format": "MacBinary",
+        "shared_checksums": 0,
+        "unchecked_forks": 1,
+        "wrapper_chain": [
+          "MacBinary",
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Price of Power 5.0(2).sit",
+      "archive_sha256": "dee4c9466f765387d3c7ae173116c4de7cd4d461edad23cdfd16bf513bddaaea",
+      "archive_bytes": 868552,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 114.27,
+        "peak_worker_tree_rss": 29786112,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 40,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "dee4c9466f765387d3c7ae173116c4de7cd4d461edad23cdfd16bf513bddaaea",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 40,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 310.77,
+        "peak_worker_tree_rss": 64344064,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 42,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 40,
+          "data_forks": 37,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 39,
+          "mapped_names": 1,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/8/Price of Power 5.0(2)",
+          "output_committed": true,
+          "resource_forks": 5
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 37,
+      "resource_forks": 5,
+      "empty_data_files": 3,
+      "fork_inventory_sha256": "6f732dea57fe29f42e2dabcadf586329698bc5e00ef984925cf74dcc584df596",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\8\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 42,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz 8r1.sit",
+      "archive_sha256": "3e68846a4f451b871dc1f99a5f072484782d6dfde1343f1515b3863827590b77",
+      "archive_bytes": 78924155,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 952.96,
+        "peak_worker_tree_rss": 117895168,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 3087,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "3e68846a4f451b871dc1f99a5f072484782d6dfde1343f1515b3863827590b77",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 3087,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 16837.05,
+        "peak_worker_tree_rss": 1148854272,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 3175,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 3087,
+          "data_forks": 2596,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 2910,
+          "mapped_names": 244,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/9/Realmz 8r1",
+          "output_committed": true,
+          "resource_forks": 579
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 2596,
+      "resource_forks": 579,
+      "empty_data_files": 362,
+      "fork_inventory_sha256": "a7bfa49a9ad5a3012bb04a2548bcf681be42f482496c4deeedbe700c8d12e893",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\9\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 3175,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz Scenarios StuffIt7.sit",
+      "archive_sha256": "c056c50eaa028bebabbe94a29ff30a0c67db355bed0097f0dec30b724d919380",
+      "archive_bytes": 18780529,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 328.26,
+        "peak_worker_tree_rss": 62058496,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1011,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "c056c50eaa028bebabbe94a29ff30a0c67db355bed0097f0dec30b724d919380",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 1011,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 4513.83,
+        "peak_worker_tree_rss": 450351104,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 1033,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1011,
+          "data_forks": 945,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 979,
+          "mapped_names": 31,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/10/Realmz Scenarios StuffIt7",
+          "output_committed": true,
+          "resource_forks": 88
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 945,
+      "resource_forks": 88,
+      "empty_data_files": 54,
+      "fork_inventory_sha256": "ff5f30c8aef3ddc72ea306b918302e2c7ca34d027f11f37cab3b08966dc889fe",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\10\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 1033,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz-25.sit",
+      "archive_sha256": "ca0a8d039af6193672e3edd2e20ef631dff4ff2791b27e12d02014fd5778f274",
+      "archive_bytes": 2814348,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 143.47,
+        "peak_worker_tree_rss": 42536960,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 107,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "ca0a8d039af6193672e3edd2e20ef631dff4ff2791b27e12d02014fd5778f274",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 107,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 869.15,
+        "peak_worker_tree_rss": 80822272,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 104,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 107,
+          "data_forks": 64,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 88,
+          "mapped_names": 20,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/11/Realmz-25",
+          "output_committed": true,
+          "resource_forks": 40
+        },
+        "stderr": ""
+      },
+      "warnings": [
+        "Output commit waited 100 ms for Windows to release a file handle."
+      ],
+      "data_forks": 64,
+      "resource_forks": 40,
+      "empty_data_files": 24,
+      "fork_inventory_sha256": "2909a10e23d0e873f4209168a4dadc07afcda21d7f670417e265a0a0dd18eab7",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\11\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 104,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz-update-r1.sit",
+      "archive_sha256": "786e82bac1774f1ac7eb0211b311446a2b598cef658d24601f5107e8d451c9fe",
+      "archive_bytes": 21179469,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 269.55,
+        "peak_worker_tree_rss": 53833728,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 560,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "786e82bac1774f1ac7eb0211b311446a2b598cef658d24601f5107e8d451c9fe",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 560,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 4760.06,
+        "peak_worker_tree_rss": 292290560,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 576,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 560,
+          "data_forks": 517,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 542,
+          "mapped_names": 17,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/12/Realmz-update-r1",
+          "output_committed": true,
+          "resource_forks": 59
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 517,
+      "resource_forks": 59,
+      "empty_data_files": 32,
+      "fork_inventory_sha256": "b2341c5fa2995554fbe9afa178758edc0fb9beee8f605d93050e94857e7b7d38",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\12\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 576,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz_3.3.sit",
+      "archive_sha256": "0a1d6a7861c162e18e1a31fe53449be5bb85629d45ccec18ce5dbbac344024b1",
+      "archive_bytes": 4668202,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 177.44,
+        "peak_worker_tree_rss": 44822528,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 240,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "0a1d6a7861c162e18e1a31fe53449be5bb85629d45ccec18ce5dbbac344024b1",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 240,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 1247.04,
+        "peak_worker_tree_rss": 143065088,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 227,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 240,
+          "data_forks": 180,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 215,
+          "mapped_names": 30,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/13/Realmz_3.3",
+          "output_committed": true,
+          "resource_forks": 47
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 180,
+      "resource_forks": 47,
+      "empty_data_files": 35,
+      "fork_inventory_sha256": "cda3b6810ec5ce0ac28d744620c87f47dccf2d94d9e998a8fa51623ca200a969",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\13\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 227,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz_4.1.2.sit",
+      "archive_sha256": "71ef924118c3ce59035bf15ccee167bff5f30f04f43cbe3736506aa86c6f61b0",
+      "archive_bytes": 5206842,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 171.51,
+        "peak_worker_tree_rss": 43778048,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 239,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "71ef924118c3ce59035bf15ccee167bff5f30f04f43cbe3736506aa86c6f61b0",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 239,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 1575.73,
+        "peak_worker_tree_rss": 144207872,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 238,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 239,
+          "data_forks": 191,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 217,
+          "mapped_names": 24,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/14/Realmz_4.1.2",
+          "output_committed": true,
+          "resource_forks": 47
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 191,
+      "resource_forks": 47,
+      "empty_data_files": 26,
+      "fork_inventory_sha256": "076359a8c93c8acbdb6d23e8ddfdfffc1216f27f810116f31c4cfc1ce316867c",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\14\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 238,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz_5.1.5.sit",
+      "archive_sha256": "648a4cc64ab2c84840197f6480c6d26cdb44052f104c4851c7ac096cb6d792d3",
+      "archive_bytes": 8097182,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 139.06,
+        "peak_worker_tree_rss": 40173568,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "648a4cc64ab2c84840197f6480c6d26cdb44052f104c4851c7ac096cb6d792d3",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 1,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 317.71,
+        "peak_worker_tree_rss": 48685056,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 2,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1,
+          "data_forks": 1,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 1,
+          "mapped_names": 0,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/15/Realmz_5.1.5",
+          "output_committed": true,
+          "resource_forks": 1
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 1,
+      "resource_forks": 1,
+      "empty_data_files": 0,
+      "fork_inventory_sha256": "0c2960c12285c5f61dfc77347b32f3b5ada33261ac4e3de7c5f87f46e9f96a73",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\15\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz_6.1.2.sit",
+      "archive_sha256": "0d60079504319645934064c00c24dd51f2296f286049b750d4e5c4a63941b7ef",
+      "archive_bytes": 10415370,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 172.03,
+        "peak_worker_tree_rss": 26333184,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "0d60079504319645934064c00c24dd51f2296f286049b750d4e5c4a63941b7ef",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 1,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 374.63,
+        "peak_worker_tree_rss": 49713152,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 2,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 1,
+          "data_forks": 1,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 1,
+          "mapped_names": 0,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/16/Realmz_6.1.2",
+          "output_committed": true,
+          "resource_forks": 1
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 1,
+      "resource_forks": 1,
+      "empty_data_files": 0,
+      "fork_inventory_sha256": "1c05d24a93fbc5be2261c747256a2a93f3f7dc06400274c73b41b1330620dc4b",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\16\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Realmz_7.1.2.sit",
+      "archive_sha256": "29f1e463dcc930b5ef95a1d81219ec741383d15ec84266d9f56c9762cf2c9842",
+      "archive_bytes": 20766823,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 355.32,
+        "peak_worker_tree_rss": 54915072,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 671,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "29f1e463dcc930b5ef95a1d81219ec741383d15ec84266d9f56c9762cf2c9842",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 671,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 4672.79,
+        "peak_worker_tree_rss": 320172032,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 682,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 671,
+          "data_forks": 552,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 634,
+          "mapped_names": 62,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/17/Realmz_7.1.2",
+          "output_committed": true,
+          "resource_forks": 130
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 552,
+      "resource_forks": 130,
+      "empty_data_files": 89,
+      "fork_inventory_sha256": "1e1e666b230d6d4db7991e0a8f7a55c47b9d35b4eaea6d2e2ff872b4fcd74199",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\17\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 682,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "RealmzOfFire.sit",
+      "archive_sha256": "e76ff34e5e4b884c82d1ef44314a9f820f06f813b137983b1d733c3ad3d65353",
+      "archive_bytes": 917786,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 113.54,
+        "peak_worker_tree_rss": 34328576,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 52,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "e76ff34e5e4b884c82d1ef44314a9f820f06f813b137983b1d733c3ad3d65353",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 52,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 337.58,
+        "peak_worker_tree_rss": 66707456,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 61,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 52,
+          "data_forks": 47,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 49,
+          "mapped_names": 1,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/18/RealmzOfFire",
+          "output_committed": true,
+          "resource_forks": 14
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 47,
+      "resource_forks": 14,
+      "empty_data_files": 3,
+      "fork_inventory_sha256": "a8c09016566df7173e264892d5a18fb0e5c7a98b03a8d4a551aba001756887db",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\18\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 61,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "TEQ130.sit",
+      "archive_sha256": "962360fe28a2d10709108be05e56e5e29d32d2ffb72e6d49affd54fd9e6dd0d1",
+      "archive_bytes": 814359,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 117.74,
+        "peak_worker_tree_rss": 33046528,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 44,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "962360fe28a2d10709108be05e56e5e29d32d2ffb72e6d49affd54fd9e6dd0d1",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 44,
+      "methods": [
+        "Arsenic",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 274.35,
+        "peak_worker_tree_rss": 59113472,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 49,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 44,
+          "data_forks": 40,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 42,
+          "mapped_names": 2,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/19/TEQ130",
+          "output_committed": true,
+          "resource_forks": 9
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 40,
+      "resource_forks": 9,
+      "empty_data_files": 3,
+      "fork_inventory_sha256": "aa26415c3a2b1133763b9f78561c49e7a753beb1b78e85bee723edc1232989ba",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\19\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 49,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "TheNewCenturions.sit",
+      "archive_sha256": "89ccaaa3c135b99288479a377f46247ce7e9c436021ba00213ae5fa25d7fe6d0",
+      "archive_bytes": 16131216,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 220.99,
+        "peak_worker_tree_rss": 46923776,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 273,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "89ccaaa3c135b99288479a377f46247ce7e9c436021ba00213ae5fa25d7fe6d0",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 273,
+      "methods": [
+        "Arsenic"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 2959.23,
+        "peak_worker_tree_rss": 102113280,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 235,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 273,
+          "data_forks": 73,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 219,
+          "mapped_names": 107,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/20/TheNewCenturions",
+          "output_committed": true,
+          "resource_forks": 162
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 73,
+      "resource_forks": 162,
+      "empty_data_files": 146,
+      "fork_inventory_sha256": "23c07893c841aea45b2542f8685dedd1aec420df3fa1178f49abb66cfe6c7c9d",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\20\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 235,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "Trouble in the Sword Lands.sit",
+      "archive_sha256": "95b8aa973892bcad3cf454938b1c9313496a74278c0c1583a2eaed79b5a47d35",
+      "archive_bytes": 1686144,
+      "provenance": "User-owned local archive; redistribution permission unknown; payload excluded from source/release",
+      "fidelity_oracle": "unverified: output bytes checked against decoder stream hashes; no original Mac extraction oracle",
+      "listing": {
+        "exit_code": 0,
+        "elapsed_ms": 111.8,
+        "peak_worker_tree_rss": 43749376,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 0,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 41,
+          "engine": "xad",
+          "event": "complete",
+          "fingerprint": "95b8aa973892bcad3cf454938b1c9313496a74278c0c1583a2eaed79b5a47d35",
+          "format": "StuffIt 5",
+          "message": "",
+          "read_only": true
+        },
+        "stderr": ""
+      },
+      "logical_entries": 41,
+      "methods": [
+        "LZ+Huffman",
+        "None"
+      ],
+      "format": "StuffIt 5",
+      "outer_format": "StuffIt 5",
+      "extraction": {
+        "exit_code": 0,
+        "elapsed_ms": 308.79,
+        "peak_worker_tree_rss": 55767040,
+        "terminal": {
+          "checksum_coverage": {
+            "checked_forks": 43,
+            "expanded_wrappers": 0,
+            "outer_format": "StuffIt 5",
+            "shared_checksums": 0,
+            "unchecked_forks": 0,
+            "wrapper_chain": [
+              "StuffIt 5"
+            ]
+          },
+          "count": 41,
+          "data_forks": 39,
+          "engine": "xad",
+          "event": "complete",
+          "file_count": 40,
+          "mapped_names": 1,
+          "mapping": "packsmith-mapping.json",
+          "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/beta4-corpus/20261001T145624/21/Trouble in the Sword Lands",
+          "output_committed": true,
+          "resource_forks": 4
+        },
+        "stderr": ""
+      },
+      "warnings": [],
+      "data_forks": 39,
+      "resource_forks": 4,
+      "empty_data_files": 2,
+      "fork_inventory_sha256": "aac8fd8f65ce628ac9130c6405cdf0d4ac7b7af1df569dfeb077a5f2a037a993",
+      "private_inventory": "assessment\\outputs\\beta4-corpus\\20261001T145624\\21\\fork-inventory.json",
+      "checksum_coverage": {
+        "checked_forks": 43,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt 5",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt 5"
+        ]
+      },
+      "passed": true,
+      "original_unchanged": true
+    }
+  ]
+}

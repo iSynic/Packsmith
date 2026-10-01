@@ -206,6 +206,6 @@ class LegacyTests(unittest.TestCase):
 if __name__=='__main__':
     suite=unittest.defaultTestLoader.loadTestsFromTestCase(LegacyTests)
     result=unittest.TextTestRunner(verbosity=2).run(suite)
-    out=common.ROOT/'assessment/evidence/beta3/desktop-legacy/tests.json'
+    out=common.ROOT/'assessment/evidence/beta4/desktop-legacy/tests.json'
     out.write_text(json.dumps({'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'worker_sha256':hashlib.file_digest(common.WORKER.open('rb'),'sha256').hexdigest(),'decoder_sha256':hashlib.file_digest((common.WORKER.parent/'legacy/xad-stream.exe').open('rb'),'sha256').hexdigest(),'environment':'Native Windows; developer PATH removed; generated fixtures and upstream encrypted StuffIt fixtures; no independent original Mac oracle','receipts':common.RECEIPTS},indent=2)+'\n',encoding='utf-8')
     sys.exit(0 if result.wasSuccessful() else 1)

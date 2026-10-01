@@ -22,6 +22,7 @@ static QElapsedTimer progressClock;
 static QString backend = "7zip", progressPhase = "opening", progressPart;
 static qint64 progressId = -1;
 static QString committedOutput;
+static QJsonObject errorContext;
 static std::function<void(const QJsonObject &)> internalEvents;
 struct WorkerError : std::runtime_error {
     QString code;
@@ -31,6 +32,8 @@ struct WorkerError : std::runtime_error {
         : std::runtime_error(message.toUtf8().constData()), code(code), id(id), part(part) {}
 };
 static void emitEvent(QJsonObject obj) {
+    if (obj["event"] == "error" || obj["event"] == "cancelled")
+        for (auto it = errorContext.begin(); it != errorContext.end(); ++it) if (!obj.contains(it.key())) obj[it.key()] = it.value();
     if (!obj.contains("engine")) obj["engine"] = backend;
     if (internalEvents) { internalEvents(obj); return; }
     std::lock_guard<std::mutex> lock(outputMutex);

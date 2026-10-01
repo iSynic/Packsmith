@@ -351,7 +351,7 @@ class WorkerTests(unittest.TestCase):
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(WorkerTests)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
-    evidence = ROOT / "assessment/evidence/beta3/desktop-preview"
+    evidence = ROOT / "assessment/evidence/beta4/desktop-preview"
     evidence.mkdir(parents=True, exist_ok=True)
     (evidence / "worker-tests.json").write_text(json.dumps({"tests": result.testsRun, "failures": len(result.failures), "errors": len(result.errors),
         "environment": "Native Windows; developer PATH removed; not a clean VM", "worker_sha256": hashlib.file_digest(WORKER.open("rb"), "sha256").hexdigest(), "receipts": RECEIPTS}, indent=2)+"\n", encoding="utf-8")

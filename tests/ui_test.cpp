@@ -4,9 +4,40 @@
 #include "../app/main.cpp"
 #undef main
 
+static QStringList announcements;
+static void accessibilityEvent(QAccessibleEvent *event) {
+    if (event->type()==QAccessible::Announcement) announcements.append(static_cast<QAccessibleAnnouncementEvent *>(event)->message());
+}
+
 struct GuiChecks {
     static void expect(bool value, const char *message) { if (!value) { std::cerr << message << std::endl; std::exit(1); } }
     static void run(Window &w, const QString &fixture) {
+        QTemporaryDir settings;
+        RecentArchives history(settings.filePath("history.ini"));
+        expect(!history.enabled() && history.paths().isEmpty(), "History is opt in");
+        history.opened("private.sit"); expect(history.paths().isEmpty(), "Disabled history records nothing");
+        history.enable(true);
+        for (int i=0;i<12;++i) history.opened(settings.filePath(QString("caf\u00e9-%1.sit").arg(i)));
+        expect(history.paths().size()==10,"History is bounded to ten paths");
+        auto latest=history.paths().first(); history.opened(latest.toUpper()); expect(history.paths().size()==10,"Windows paths deduplicate case insensitively");
+        RecentArchives reopened(settings.filePath("history.ini")); expect(reopened.paths()==history.paths(),"Opted-in history persists");
+        history.clear(); expect(history.paths().isEmpty(),"Clear history takes effect immediately");
+        history.opened(latest); history.enable(false); history.enable(true); expect(history.paths().isEmpty(),"Disabling history clears stored paths");
+        QSettings stored(settings.filePath("history.ini"),QSettings::IniFormat);
+        expect(stored.allKeys()==QStringList{"recent/enabled"},"History stores no unrelated or sensitive settings");
+        QString error;
+        expect(archiveDropPath({QUrl("https://example.com/archive.sit")},error).isEmpty(),"Remote drops rejected");
+        expect(archiveDropPath({QUrl("file://server/share/archive.sit")},error).isEmpty(),"Network file URLs rejected");
+        expect(archiveDropPath({QUrl::fromLocalFile(settings.path())},error).isEmpty(),"Directory drops rejected");
+        expect(archiveDropPath({QUrl::fromLocalFile(fixture),QUrl::fromLocalFile(fixture)},error).isEmpty(),"Multiple drops rejected");
+        w.archive="unchanged.sit";w.password="secret";w.fingerprint="stable";w.setBusy(true);
+        w.openArchive(fixture);expect(w.archive=="unchanged.sit" && w.password=="secret" && w.fingerprint=="stable","Busy opening preserves archive identity and credentials");
+        w.setBusy(false);w.recoveryRequired=true;w.openArchive(fixture);expect(w.archive=="unchanged.sit","Recovery blocks archive replacement");w.recoveryRequired=false;
+        w.recent.enable(true);w.recent.opened(settings.filePath("missing.sit"));w.openArchive(settings.filePath("missing.sit"));expect(w.recent.paths().isEmpty() && w.archive=="unchanged.sit","Missing recent file is removed without disturbing current archive");
+        w.password.clear();
+        auto accessible=QAccessible::queryAccessibleInterface(w.table);
+        expect(accessible && accessible->role()==QAccessible::Table && accessible->text(QAccessible::Name)=="Archive entries","Entries expose a named accessible table");
+        w.resultToggle->click();expect(w.resultText->maximumHeight()==QWIDGETSIZE_MAX,"Result expands without truncation");w.resultToggle->click();
         w.model.append({QJsonObject{{"id", 0}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "2"}},
                         QJsonObject{{"id", 1}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "3"}},
                         QJsonObject{{"id", 2}, {"path", "empty"}, {"components", QJsonArray{"empty"}}, {"directory", true}},
@@ -24,6 +55,7 @@ struct GuiChecks {
         expect(w.classicRequest(false)["ids"].toArray() == QJsonArray({0,1}), "Classic export uses current-folder IDs");
         expect(w.classicRequest(true)["selection_scope"] == "all", "Classic Export All has explicit scope");
         expect(w.table->hasFocus(), "Navigation restores keyboard focus");
+        expect(!w.model.data(w.proxy.mapToSource(w.proxy.index(0,0)),Qt::AccessibleTextRole).toString().isEmpty(),"Entry paths have accessible text");
         w.table->selectRow(0); const auto before = w.selected();
         w.table->sortByColumn(1, Qt::DescendingOrder); expect(w.selected() == before, "Sorting preserves selected ID");
         w.search->setText("dir/a"); expect(w.model.searching() && w.proxy.rowCount() == 2, "Search is global");
@@ -32,9 +64,10 @@ struct GuiChecks {
         w.table->selectRow(1); expect(w.extractAction->isEnabled(), "Selected search result enables extraction");
         expect(w.classicAction->isEnabled() && w.classicRequest(false)["ids"].toArray().size()==1, "Classic search uses selected IDs");
         w.search->clear(); expect(w.model.currentParts() == QStringList{"dir"} && w.selected().isEmpty(), "Clearing search restores folder and clears hidden selection");
-        QTest::keyClick(&w, Qt::Key_Up, Qt::AltModifier); QTest::qWait(150);
+        w.activateWindow();expect(QTest::qWaitForWindowActive(&w),"Keyboard navigation requires the active test window");w.table->setFocus();
+        QTest::keyClick(w.table, Qt::Key_Up, Qt::AltModifier); QTest::qWait(150);
         expect(w.model.currentParts().isEmpty(), "Alt+Up navigates to parent");
-        QTest::keyClick(&w, Qt::Key_Left, Qt::AltModifier); QTest::qWait(150);
+        QTest::keyClick(w.table, Qt::Key_Left, Qt::AltModifier); QTest::qWait(150);
         expect(w.model.currentParts() == QStringList{"dir"}, "Alt+Left navigates back");
         w.model.navigate({"empty"}); w.navigated(); expect(w.model.currentIds() == QJsonArray({2}), "Empty directory does not request all entries");
         w.search->setText("literal"); w.table->setCurrentIndex(w.proxy.index(0,0)); w.table->setFocus();
@@ -42,6 +75,13 @@ struct GuiChecks {
         auto details = w.findChild<QMessageBox *>();
         expect(details && details->isVisible() && details->textFormat() == Qt::PlainText, "Enter on a file opens plain-text details");
         details->close(); w.search->clear();
+        QTest::qWait(25);expect(w.table->hasFocus(),"Details dismissal restores entry focus");
+        auto updateHandler=QAccessible::installUpdateHandler(accessibilityEvent); QAccessible::setActive(true);
+        w.jobs.result.begin({{"password","hidden-password"}});w.announcedPhases.clear();announcements.clear();
+        w.event({{"event","progress"},{"phase","decoding"}});w.event({{"event","progress"},{"phase","decoding"}});
+        w.event({{"event","progress"},{"phase","verifying"}});w.announce("Error hidden-password");
+        expect(announcements.size()==3 && !announcements.last().contains("hidden-password"),"Phase announcements are deduplicated and secrets redacted");
+        QAccessible::installUpdateHandler(updateHandler);
         QJsonObject change{{"id",1},{"component",0},{"original","<b>name</b>"},{"restored","name~1"}};
         w.reviewClassic(QJsonObject{{"strict_allowed",false},{"changes",QJsonArray{change}}},{});
         QTest::qWait(25);auto review=w.findChild<QDialog *>("classicPreflight");expect(review && review->isVisible(), "Classic preflight opens a keyboard-accessible native dialog");
@@ -76,11 +116,19 @@ struct GuiChecks {
         QTest::qWait(500); dialogCloser.stop();
         expect(promptAfterExit, "Password prompt must wait for worker exit and cleanup");
         expect(!w.resultText->toPlainText().contains("hidden-password"), "Password-required diagnostics remain redacted");
+        updateHandler=QAccessible::installUpdateHandler(accessibilityEvent);announcements.clear();w.announcedOutcome=false;
+        w.setBusy(true);w.jobs.start({{"operation","list"}},settings.filePath("missing-worker.exe"));QTest::qWait(100);
+        expect(!w.busy && w.jobs.result.finished && !w.jobs.result.success && announcements.size()==1,"Worker start failure has one accessible terminal announcement");
+        QAccessible::installUpdateHandler(updateHandler);for(auto dialog:w.findChildren<QDialog *>())if(dialog->isVisible())dialog->reject();
         if (!fixture.isEmpty()) {
             QTemporaryDir destination;expect(destination.isValid(),"Classic GUI test destination exists");
-            w.passwordDefined=false;w.filenameEncoding="macintosh";w.openArchive(fixture);
+            w.passwordDefined=false;w.filenameEncoding="macintosh";
+            QMimeData mime; mime.setUrls({QUrl::fromLocalFile(fixture)});
+            QDropEvent dropped(QPointF(20,20),Qt::CopyAction,&mime,Qt::LeftButton,Qt::NoModifier);
+            w.dropEvent(&dropped);expect(dropped.isAccepted(),"Single local file drop opens through the shared path");
             for(int i=0;i<400 && w.busy;++i)QTest::qWait(25);
             expect(w.listingValid && !w.busy,"Classic GUI test lists a real archive");
+            expect(w.recent.paths().size()==1 && w.password.isEmpty() && w.filenameEncoding.isEmpty(),"Successful opening alone records history and clears archive-specific state");
             auto request=w.classicRequest(true);request["destination"]=destination.filePath("Transfer.zip");w.run(request);
             QDialog *preflight=nullptr;
             for(int i=0;i<400 && !preflight;++i) { QTest::qWait(25);preflight=w.findChild<QDialog *>("classicPreflight"); }
@@ -92,12 +140,25 @@ struct GuiChecks {
             for(int i=0;i<400 && w.busy;++i)QTest::qWait(25);
             expect(w.jobs.result.success && QFileInfo::exists(destination.filePath("Transfer.zip")),"Keyboard export produces a verified ZIP after worker exit");
             expect(w.resultText->toPlainText().contains("Output committed: yes") && w.mappingButton->isEnabled(),"Classic result exposes commitment and mapping");
+            w.jobs.result.begin({{"operation","list"}});
+            w.mappingButton->click();QTest::qWait(25);expect(w.findChild<QTableWidget *>(),"Mapping uses a readable native table");
+            expect(w.lastResultClassic,"Preservation review remains tied to the displayed result across a later listing");
+            for(auto dialog:w.findChildren<QDialog *>())if(dialog->isVisible())dialog->reject();
+            const auto previousHistory=w.recent.paths();
+            auto invalid=settings.filePath("not-an-archive.cpt");QFile bad(invalid);expect(bad.open(QIODevice::WriteOnly),"Invalid input created");bad.write("not archive bytes");bad.close();
+            w.openArchive(invalid);for(int i=0;i<400 && w.busy;++i)QTest::qWait(25);
+            expect(!w.jobs.result.success && w.recent.paths()==previousHistory,"Failed listings are never added to history");
+            for(auto dialog:w.findChildren<QDialog *>())if(dialog->isVisible())dialog->reject();
         }
         w.grab().save("ui-test.png");
     }
 };
 int main(int argc, char **argv) {
-    QApplication app(argc, argv); app.setApplicationName("Packsmith-beta3-tests"); QStandardPaths::setTestModeEnabled(true);
-    app.setWindowIcon(QIcon(":/brand/packsmith.ico")); Window window; window.show(); window.activateWindow(); QTest::qWait(100);
+    QApplication app(argc, argv); app.setApplicationName("Packsmith-beta4-tests"); QStandardPaths::setTestModeEnabled(true);
+    if(qEnvironmentVariableIsSet("PACKSMITH_TEST_LARGE_TEXT")) { auto font=app.font();font.setPointSize(16);app.setFont(font); }
+    if(qEnvironmentVariableIsSet("PACKSMITH_TEST_CONTRAST")) { QPalette palette;palette.setColor(QPalette::Window,Qt::black);palette.setColor(QPalette::Base,Qt::black);palette.setColor(QPalette::AlternateBase,Qt::black);palette.setColor(QPalette::Text,Qt::white);palette.setColor(QPalette::WindowText,Qt::white);palette.setColor(QPalette::Button,Qt::black);palette.setColor(QPalette::ButtonText,Qt::white);palette.setColor(QPalette::Highlight,Qt::yellow);palette.setColor(QPalette::HighlightedText,Qt::black);app.setPalette(palette); }
+    QTemporaryDir preferences;
+    app.setWindowIcon(QIcon(":/brand/packsmith.ico")); Window window(preferences.filePath("preferences.ini")); window.show(); window.activateWindow(); QTest::qWait(100);
+    if(app.arguments().contains("--manual")) { if(argc>1)window.openArchive(QString::fromLocal8Bit(argv[1]));return app.exec(); }
     GuiChecks::run(window, argc>1 ? QString::fromLocal8Bit(argv[1]) : QString()); qInfo("Native folder and classic export UI checks passed"); return 0;
 }

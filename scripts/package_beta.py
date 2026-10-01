@@ -76,17 +76,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--prepare-only', action='store_true')
     parser.add_argument('--candidate', action='store_true', help='Package an unpublished candidate from the exact current workspace snapshot')
+    parser.add_argument('--committed', action='store_true', help='Require a clean tree and tie an unpublished candidate to HEAD')
     args = parser.parse_args()
     version = re.search(r'#define PACKSMITH_VERSION "([^"]+)"', (ROOT / 'app/version.h').read_text()).group(1)
     stage = prepare(version)
     if args.prepare_only:
         return
     dirty=bool(subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT, text=True).strip())
-    if dirty and not args.candidate:
+    if args.committed and not args.candidate:
+        raise RuntimeError('--committed requires --candidate')
+    if dirty and (not args.candidate or args.committed):
         raise RuntimeError('Commit the workspace before assembling the tagged release assets')
     commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     snapshot={}
-    if args.candidate:
+    if args.candidate and not args.committed:
         paths=subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z'],cwd=ROOT).decode('utf-8').split('\0')
         with tarfile.open(stage/'Packsmith-source.tar.gz','w:gz') as archive:
             for name in sorted(set(paths)):
@@ -97,9 +100,9 @@ def main():
         subprocess.run(['git', 'archive', '--format=tar.gz', '--prefix=Packsmith/',
                         '--output=' + str(stage / 'Packsmith-source.tar.gz'), commit], cwd=ROOT, check=True)
     materials = json.loads((stage / 'source-materials.json').read_text())
-    if args.candidate:
+    if args.candidate and not args.committed:
         materials.update(version=version,candidate=True,source_base_commit=commit,workspace_dirty=dirty,workspace_sources=snapshot)
-    else:materials.update(version=version, source_commit=commit)
+    else:materials.update(version=version, source_commit=commit, candidate=args.candidate, workspace_dirty=False)
     (stage / 'source-materials.json').write_text(json.dumps(materials, indent=2) + '\n', encoding='utf-8')
     manifest = {str(path.relative_to(stage)).replace('\\', '/'): sha(path)
                 for path in stage.rglob('*') if path.is_file() and path.name != 'materials-manifest.json'}
@@ -128,11 +131,11 @@ def main():
                 archive.write(path, stage.name + '/' + path.relative_to(stage).as_posix(),
                               compress_type=zipfile.ZIP_STORED if compressed else zipfile.ZIP_DEFLATED)
     assets = [dict(name=path.name, sha256=sha(path), bytes=path.stat().st_size) for path in (binary, source)]
-    result = dict(tag=None if args.candidate else 'v' + version, source_commit=None if args.candidate else commit,
+    result = dict(tag=None if args.candidate else 'v' + version, source_commit=None if args.candidate and not args.committed else commit,
                   source_base_commit=commit,candidate=args.candidate,workspace_dirty=dirty,
-                  workspace_tree_sha256=hashlib.sha256(json.dumps(snapshot,sort_keys=True).encode()).hexdigest() if args.candidate else None,
+                  workspace_tree_sha256=hashlib.sha256(json.dumps(snapshot,sort_keys=True).encode()).hexdigest() if snapshot else None,
                   prerelease=True, assets=assets,
-                  scope='Unsigned portable Windows x64 beta; native developer-machine relocation tested; fresh Windows VM qualification pending')
+                  scope='Unsigned portable Windows x64 beta; native developer-machine relocation tested; clean-Windows pass user-reported, automated details unavailable; fresh-machine source builds unverified')
     receipt = out / 'release-manifest.json'
     receipt.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
     (out / 'SHA256SUMS.txt').write_text(''.join(sha(path) + '  ' + path.name + '\n' for path in (binary, source, receipt)), encoding='utf-8')

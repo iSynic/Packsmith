@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "metrics": {
+    "listing_ms": {
+      "previous": 2156,
+      "current": 2094,
+      "change_percent": -2.88
+    },
+    "peak_gui_rss": {
+      "previous": 262139904,
+      "current": 258494464,
+      "change_percent": -1.39
+    }
+  },
+  "max_event_gap_ms": 445,
+  "regressions": [],
+  "environment": "Same native developer machine; harness ran sequentially with no competing build/test/emulator jobs. Existing user applications were left alone.",
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "gui_sha256": "edf82918d2cebae8a0a28a560124a00cbb452590c19aef5208176c3664ff9318"
+}

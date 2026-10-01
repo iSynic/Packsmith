@@ -63,7 +63,7 @@ struct LegacyChild {
             process.readAllStandardError();
             if (process.state() == QProcess::NotRunning && pending.isEmpty()) {
                 require(!cancelled, "Cancelled");
-                require(process.exitCode() == 0 && complete,
+                require(process.exitStatus() == QProcess::NormalExit && process.exitCode() == 0 && complete,
                         "Legacy decoder stopped before verification");
                 return false;
             }
@@ -73,7 +73,8 @@ struct LegacyChild {
 static bool usesLegacy(const QJsonObject &request) {
     QString path = request["archive"].toString().toLower();
     return request["engine"].toString() == "xad" || path.endsWith(".sit") ||
-           path.endsWith(".hqx") || path.endsWith(".sitx") || path.endsWith(".bin");
+           path.endsWith(".hqx") || path.endsWith(".sitx") || path.endsWith(".bin") ||
+           path.endsWith(".cpt") || path.endsWith(".lha") || path.endsWith(".lzh") || path.endsWith(".lzx");
 }
 static QByteArray appleDouble(quint32 resourceSize, const QByteArray &finder, bool resource) {
     require(finder.isEmpty() || finder.size() == 32, "Unsupported Finder metadata length");
@@ -165,8 +166,10 @@ static void legacyJob(const QJsonObject &request) {
     bool ready = false, reading = false;
     while (child.next(frame)) {
         QString event = frame["event"].toString();
-        if (event == "error" || event == "cancelled")
+        if (event == "error" || event == "cancelled") {
+            for (const auto &key : {"format", "method", "method_id"}) if (frame.contains(key)) errorContext[key] = frame[key];
             throw WorkerError(frame["code"].toString("decode_failed"), frame["message"].toString(), frame["id"].toInteger(-1), frame["part"].toString());
+        }
         if (event == "progress") {
             emitEvent(frame);
         } else if (event == "entries") {
@@ -184,6 +187,7 @@ static void legacyJob(const QJsonObject &request) {
             ready = true;
             format = frame["format"].toString();
             coverage["outer_format"] = frame["outer_format"];
+            coverage["wrapper_chain"] = frame["wrapper_chain"];
             if (operation == "extract") {
                 for (auto id : request["ids"].toArray()) {
                     auto n = id.toInteger(-1);
@@ -342,9 +346,9 @@ static void legacyJob(const QJsonObject &request) {
         } else if (event == "complete") {
             require(ready && !reading, "Incomplete legacy decoder result");
             child.complete = true;
-            coverage = {{"outer_format", coverage["outer_format"]}, {"checked_forks", frame["checked_forks"]},
+            coverage = {{"outer_format", coverage["outer_format"]}, {"wrapper_chain", coverage["wrapper_chain"]}, {"checked_forks", frame["checked_forks"]},
                         {"unchecked_forks", frame["unchecked_forks"]},
-                        {"expanded_wrappers", frame["expanded_wrappers"]}};
+                        {"expanded_wrappers", frame["expanded_wrappers"]}, {"shared_checksums", frame["shared_checksums"]}};
         } else
             require(false, "Unknown legacy decoder event");
     }

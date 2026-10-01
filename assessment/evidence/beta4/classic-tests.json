@@ -1,0 +1,2587 @@
+{
+  "tests": 14,
+  "failures": 0,
+  "errors": 0,
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "receipts": [
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 85.17,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d89bb209c74c00fdc23b378f167edd4fa8977cb3500c595426da6cc09c26dce2",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 80.32,
+      "terminal": {
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [
+            {
+              "component": 0,
+              "components": [
+                "caf\u00e9"
+              ],
+              "id": 0,
+              "original": "caf\u00e9",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "caf_~0"
+            },
+            {
+              "component": 1,
+              "components": [
+                "caf\u00e9",
+                "CON"
+              ],
+              "id": 1,
+              "original": "CON",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "CON~1"
+            }
+          ],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "caf\u00e9"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "macintosh",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "caf\u00e9",
+              "raw_components": [
+                "Y2Fmjg=="
+              ],
+              "raw_name": "Y2Fmjg==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "caf_~0"
+              ],
+              "restored_path": "caf_~0",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "caf\u00e9",
+                "CON"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "macintosh",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 1,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "caf\u00e9/CON",
+              "raw_components": [
+                "Y2Fmjg==",
+                "Q09O"
+              ],
+              "raw_name": "Y2Fmji9DT04=",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "caf_~0",
+                "CON~1"
+              ],
+              "restored_path": "caf_~0/CON~1",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "caf\u00e9",
+                "CON",
+                "child"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "macintosh",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 2,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "caf\u00e9/CON/child",
+              "raw_components": [
+                "Y2Fmjg==",
+                "Q09O",
+                "Y2hpbGQ="
+              ],
+              "raw_name": "Y2Fmji9DT04vY2hpbGQ=",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "caf_~0",
+                "CON~1",
+                "child"
+              ],
+              "restored_path": "caf_~0/CON~1/child",
+              "size": "1",
+              "transport_path": "caf_~0/CON~1/F00000002.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "d89bb209c74c00fdc23b378f167edd4fa8977cb3500c595426da6cc09c26dce2",
+          "folders": [
+            "caf_~0",
+            "caf_~0/CON~1"
+          ],
+          "fork_container_bytes": "256",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "ca92423d78626bc836a4ea5c326d92d0c74c80f678ca51d210eb762de3048144",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": false
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 199.27,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 3,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "mapped_names": 2,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [
+          {
+            "component": 0,
+            "components": [
+              "caf\u00e9"
+            ],
+            "id": 0,
+            "original": "caf\u00e9",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "caf_~0"
+          },
+          {
+            "component": 1,
+            "components": [
+              "caf\u00e9",
+              "CON"
+            ],
+            "id": 1,
+            "original": "CON",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "CON~1"
+          }
+        ],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-rp8f1gmh/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 0
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 113.53,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 126.26,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "large.dat"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "large.dat",
+              "raw_components": [
+                "bGFyZ2UuZGF0"
+              ],
+              "raw_name": "bGFyZ2UuZGF0",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "20",
+              "restored_components": [
+                "large.dat"
+              ],
+              "restored_path": "large.dat",
+              "size": "4194304",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+          "folders": [],
+          "fork_container_bytes": "4194560",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "ff3bd61e4f3de38e7adf9326d7d3d2fd68e65a781c5c0e63bb23e9a74502ce87",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 26.47,
+      "terminal": {
+        "engine": "xad",
+        "event": "complete",
+        "message": "Interrupted staging cleaned"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "bad-resource.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 74.39,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "a113b1da7cd328fadc7af88a4dce62ecff3f7e04d6cbee26cd0671d32ccda06b",
+        "format": "BinHex",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "bad-resource.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 81.75,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "bad.txt"
+              ],
+              "data_method": "unknown",
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "BinHex",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "path": "bad.txt",
+              "raw_components": [
+                "YmFkLnR4dA=="
+              ],
+              "raw_name": "YmFkLnR4dA==",
+              "resource_method": "unknown",
+              "resource_size": "20",
+              "restored_components": [
+                "bad.txt"
+              ],
+              "restored_path": "bad.txt",
+              "size": "16",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "a113b1da7cd328fadc7af88a4dce62ecff3f7e04d6cbee26cd0671d32ccda06b",
+          "folders": [],
+          "fork_container_bytes": "384",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "edb1b91658777671869ec18a077a0c62899231dbb61d4a8ab0425d9601c74178",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "bad-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 148.73,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "resource"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 80.1,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "22c7630b8e6a21574fca23713475c24eb001e629fa4d20e35e30abb72782f42e",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 94.41,
+      "terminal": {
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [
+            {
+              "component": 0,
+              "components": [
+                "folder"
+              ],
+              "id": 2,
+              "original": "folder",
+              "reason": "duplicate directory",
+              "restored": "folder~2"
+            }
+          ],
+          "data_forks": 3,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "folder"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "folder",
+              "raw_components": [
+                "Zm9sZGVy"
+              ],
+              "raw_name": "Zm9sZGVy",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "folder"
+              ],
+              "restored_path": "folder",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "folder",
+                "same.txt"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 1,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "folder/same.txt",
+              "raw_components": [
+                "Zm9sZGVy",
+                "c2FtZS50eHQ="
+              ],
+              "raw_name": "Zm9sZGVyL3NhbWUudHh0",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "10",
+              "restored_components": [
+                "folder",
+                "same.txt"
+              ],
+              "restored_path": "folder/same.txt",
+              "size": "5",
+              "transport_path": "folder/F00000001.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "folder"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 2,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "folder",
+              "raw_components": [
+                "Zm9sZGVy"
+              ],
+              "raw_name": "Zm9sZGVy",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "folder~2"
+              ],
+              "restored_path": "folder~2",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "folder",
+                "same.txt"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 3,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "folder/same.txt",
+              "raw_components": [
+                "Zm9sZGVy",
+                "c2FtZS50eHQ="
+              ],
+              "raw_name": "Zm9sZGVyL3NhbWUudHh0",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "11",
+              "restored_components": [
+                "folder~2",
+                "same.txt"
+              ],
+              "restored_path": "folder~2/same.txt",
+              "size": "6",
+              "transport_path": "folder~2/F00000003.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "empty"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 4,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "empty",
+              "raw_components": [
+                "ZW1wdHk="
+              ],
+              "raw_name": "ZW1wdHk=",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "empty"
+              ],
+              "restored_path": "empty",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "folder/same.txt"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 5,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "folder/same.txt",
+              "raw_components": [
+                "Zm9sZGVyL3NhbWUudHh0"
+              ],
+              "raw_name": "Zm9sZGVyL3NhbWUudHh0",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "folder/same.txt"
+              ],
+              "restored_path": "folder/same.txt",
+              "size": "13",
+              "transport_path": "F00000005.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 3,
+          "fingerprint": "22c7630b8e6a21574fca23713475c24eb001e629fa4d20e35e30abb72782f42e",
+          "folders": [
+            "folder",
+            "folder~2",
+            "empty"
+          ],
+          "fork_container_bytes": "1024",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "3fd21c2e50f64530fb95f91bcf2cf60cdd50093b9e77928acaff2473ae535b6d",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 2,
+          "schema": 1,
+          "strict_allowed": false
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 240.82,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 5,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "data_forks": 3,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 3,
+        "mapped_names": 1,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [
+          {
+            "component": 0,
+            "components": [
+              "folder"
+            ],
+            "id": 2,
+            "original": "folder",
+            "reason": "duplicate directory",
+            "restored": "folder~2"
+          }
+        ],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-ngphyvlt/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 2
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 94.82,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 2,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9bf8c91dba97046fe741614e22d4ca2161a7d5f441f4e1228c438b5e5a0c4dba",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 90.06,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 0,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "Empty"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Empty",
+              "raw_components": [
+                "RW1wdHk="
+              ],
+              "raw_name": "RW1wdHk=",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "Empty"
+              ],
+              "restored_path": "Empty",
+              "size": "0"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 0,
+          "fingerprint": "9bf8c91dba97046fe741614e22d4ca2161a7d5f441f4e1228c438b5e5a0c4dba",
+          "folders": [
+            "Empty"
+          ],
+          "fork_container_bytes": "0",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "e92934b58b2d91c86bffea896d30eb98af7b7d2b9a5a5e0bc5ed69c6004c9cbe",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 212.79,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 0,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 0,
+        "mapped_names": 0,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-qa5acrxy/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 0
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 1,
+      "elapsed_ms": 104.66,
+      "terminal": {
+        "code": "empty_selection",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Select at least one entry",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 83.61,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "a848c25980004739465cf093d14da84a239336ba1531db8fcf54259482c3020a",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 77.57,
+      "terminal": {
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [
+            {
+              "component": 0,
+              "components": [
+                "a"
+              ],
+              "id": 1,
+              "original": "a",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "a~1"
+            },
+            {
+              "component": 0,
+              "components": [
+                "same"
+              ],
+              "id": 3,
+              "original": "same",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "same~3"
+            },
+            {
+              "component": 0,
+              "components": [
+                "space\u00a0name"
+              ],
+              "id": 5,
+              "original": "space\u00a0name",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "space\u00a0name~5"
+            }
+          ],
+          "data_forks": 6,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "A"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "A",
+              "raw_components": [
+                "QQ=="
+              ],
+              "raw_name": "QQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "A"
+              ],
+              "restored_path": "A",
+              "size": "1",
+              "transport_path": "F00000000.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "a"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 1,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "a",
+              "raw_components": [
+                "YQ=="
+              ],
+              "raw_name": "YQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "a~1"
+              ],
+              "restored_path": "a~1",
+              "size": "1",
+              "transport_path": "F00000001.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "same"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 2,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "same",
+              "raw_components": [
+                "c2FtZQ=="
+              ],
+              "raw_name": "c2FtZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "same"
+              ],
+              "restored_path": "same",
+              "size": "1",
+              "transport_path": "F00000002.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "same"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 3,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "same",
+              "raw_components": [
+                "c2FtZQ=="
+              ],
+              "raw_name": "c2FtZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "same~3"
+              ],
+              "restored_path": "same~3",
+              "size": "1",
+              "transport_path": "F00000003.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "space name"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 4,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "space name",
+              "raw_components": [
+                "c3BhY2UgbmFtZQ=="
+              ],
+              "raw_name": "c3BhY2UgbmFtZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "space name"
+              ],
+              "restored_path": "space name",
+              "size": "1",
+              "transport_path": "F00000004.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "space\u00a0name"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "macintosh",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 5,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "space\u00a0name",
+              "raw_components": [
+                "c3BhY2XKbmFtZQ=="
+              ],
+              "raw_name": "c3BhY2XKbmFtZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "space\u00a0name~5"
+              ],
+              "restored_path": "space\u00a0name~5",
+              "size": "1",
+              "transport_path": "F00000005.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 6,
+          "fingerprint": "a848c25980004739465cf093d14da84a239336ba1531db8fcf54259482c3020a",
+          "folders": [],
+          "fork_container_bytes": "1536",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "eb47dacd346afc3c57a35f4ebbec67fe0a71c585aaec1e7d3bfad0f198e2fd37",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": false
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 1,
+      "elapsed_ms": 80.64,
+      "terminal": {
+        "code": "classic_name_conflict",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Classic names require reviewed mapping",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 226.38,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 6,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "data_forks": 6,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 6,
+        "mapped_names": 3,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [
+          {
+            "component": 0,
+            "components": [
+              "a"
+            ],
+            "id": 1,
+            "original": "a",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "a~1"
+          },
+          {
+            "component": 0,
+            "components": [
+              "same"
+            ],
+            "id": 3,
+            "original": "same",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "same~3"
+          },
+          {
+            "component": 0,
+            "components": [
+              "space\u00a0name"
+            ],
+            "id": 5,
+            "original": "space\u00a0name",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "space\u00a0name~5"
+          }
+        ],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-ci9gy6_g/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 0
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 100.3,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 122.47,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "large.dat"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "large.dat",
+              "raw_components": [
+                "bGFyZ2UuZGF0"
+              ],
+              "raw_name": "bGFyZ2UuZGF0",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "20",
+              "restored_components": [
+                "large.dat"
+              ],
+              "restored_path": "large.dat",
+              "size": "4194304",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+          "folders": [],
+          "fork_container_bytes": "4194560",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "ff3bd61e4f3de38e7adf9326d7d3d2fd68e65a781c5c0e63bb23e9a74502ce87",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 35.17,
+      "terminal": {
+        "engine": "xad",
+        "event": "complete",
+        "message": "Interrupted staging cleaned"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 78.23,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "fada2bc0fb306399f24eba9645aae389412977adaeaf6b7f05b1b202512a1075",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 78.31,
+      "terminal": {
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 3,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "Empty"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Empty",
+              "raw_components": [
+                "RW1wdHk="
+              ],
+              "raw_name": "RW1wdHk=",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "Empty"
+              ],
+              "restored_path": "Empty",
+              "size": "0",
+              "transport_path": "F00000000.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "Resource"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": false,
+              "has_resource": true,
+              "id": 1,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Resource",
+              "raw_components": [
+                "UmVzb3VyY2U="
+              ],
+              "raw_name": "UmVzb3VyY2U=",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "14",
+              "restored_components": [
+                "Resource"
+              ],
+              "restored_path": "Resource",
+              "size": "0",
+              "transport_path": "F00000001.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "caf\u00e9"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "macintosh",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 2,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "caf\u00e9",
+              "raw_components": [
+                "Y2Fmjg=="
+              ],
+              "raw_name": "Y2Fmjg==",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "4",
+              "restored_components": [
+                "caf\u00e9"
+              ],
+              "restored_path": "caf\u00e9",
+              "size": "4",
+              "transport_path": "F00000002.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "Nested"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 3,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Nested",
+              "raw_components": [
+                "TmVzdGVk"
+              ],
+              "raw_name": "TmVzdGVk",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "Nested"
+              ],
+              "restored_path": "Nested",
+              "size": "0"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "Nested",
+                "Child"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 4,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Nested/Child",
+              "raw_components": [
+                "TmVzdGVk",
+                "Q2hpbGQ="
+              ],
+              "raw_name": "TmVzdGVkL0NoaWxk",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "Nested",
+                "Child"
+              ],
+              "restored_path": "Nested/Child",
+              "size": "6",
+              "transport_path": "Nested/F00000004.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "Nested",
+                "Vacant"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "unknown",
+              "directory": true,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 5,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "Nested/Vacant",
+              "raw_components": [
+                "TmVzdGVk",
+                "VmFjYW50"
+              ],
+              "raw_name": "TmVzdGVkL1ZhY2FudA==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "Nested",
+                "Vacant"
+              ],
+              "restored_path": "Nested/Vacant",
+              "size": "0"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 4,
+          "fingerprint": "fada2bc0fb306399f24eba9645aae389412977adaeaf6b7f05b1b202512a1075",
+          "folders": [
+            "Nested",
+            "Nested/Vacant"
+          ],
+          "fork_container_bytes": "1024",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "1493a3cc4a61ff0bbc59057bc20c07a5954d909798cf15bd2b2783db033362db",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 2,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 222.36,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 5,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "data_forks": 3,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 4,
+        "mapped_names": 0,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-3tikzg5o/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 2
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "huge.bin",
+      "exit_code": 1,
+      "elapsed_ms": 78.6,
+      "terminal": {
+        "code": "classic_limit",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Classic package fork exceeds compatibility limits",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 1,
+      "elapsed_ms": 5031.92,
+      "terminal": {
+        "code": "classic_limit",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Classic ZIP record limit exceeded",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 78.4,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 2,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9d43d2d6d22817e5e1cf9fb2772da3942116cb3bfca579cbcea68cec6116b3bf",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 77.91,
+      "terminal": {
+        "count": 2,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [
+            {
+              "component": 0,
+              "components": [
+                "F00000000.bin"
+              ],
+              "id": 1,
+              "original": "F00000000.bin",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "F00000000_bin~1"
+            }
+          ],
+          "data_forks": 2,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "literal/slash"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "literal/slash",
+              "raw_components": [
+                "bGl0ZXJhbC9zbGFzaA=="
+              ],
+              "raw_name": "bGl0ZXJhbC9zbGFzaA==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "literal/slash"
+              ],
+              "restored_path": "literal/slash",
+              "size": "1",
+              "transport_path": "F00000000.bin"
+            },
+            {
+              "absolute": false,
+              "components": [
+                "F00000000.bin"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 1,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "F00000000.bin",
+              "raw_components": [
+                "RjAwMDAwMDAwLmJpbg=="
+              ],
+              "raw_name": "RjAwMDAwMDAwLmJpbg==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "F00000000_bin~1"
+              ],
+              "restored_path": "F00000000_bin~1",
+              "size": "1",
+              "transport_path": "F00000001.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 2,
+          "fingerprint": "9d43d2d6d22817e5e1cf9fb2772da3942116cb3bfca579cbcea68cec6116b3bf",
+          "folders": [],
+          "fork_container_bytes": "512",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "656bd4da08dc24190ba7aff68b1e2c6472b8228106fbb82777717a1f749463ab",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": false
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 198.92,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 2,
+        "data_forks": 2,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 2,
+        "mapped_names": 1,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [
+          {
+            "component": 0,
+            "components": [
+              "F00000000.bin"
+            ],
+            "id": 1,
+            "original": "F00000000.bin",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "F00000000_bin~1"
+          }
+        ],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-xq60o4ie/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 0
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "long.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 75.5,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "fa3f7b770e44ae911b7dfeae680df1c70850f1ad5fb72edd6664c575fc80d321",
+        "format": "BinHex",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "long.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 88.67,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [
+            {
+              "component": 0,
+              "components": [
+                "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              ],
+              "id": 0,
+              "original": "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "reason": "classic HFS name, encoding or collision",
+              "restored": "long name xxxxxxxxxxxxxxxxxxx~0"
+            }
+          ],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+              ],
+              "data_method": "unknown",
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "BinHex",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "path": "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "raw_components": [
+                "bG9uZyBuYW1lIHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eA=="
+              ],
+              "raw_name": "bG9uZyBuYW1lIHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eA==",
+              "resource_method": "unknown",
+              "resource_size": "8",
+              "restored_components": [
+                "long name xxxxxxxxxxxxxxxxxxx~0"
+              ],
+              "restored_path": "long name xxxxxxxxxxxxxxxxxxx~0",
+              "size": "4",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "fa3f7b770e44ae911b7dfeae680df1c70850f1ad5fb72edd6664c575fc80d321",
+          "folders": [],
+          "fork_container_bytes": "384",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "c54fdadd237b921364e2d8f8ea98d33c3b08d39ff86228d6df682a1bf94924c8",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": false
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "long.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 185.01,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "mapped_names": 1,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [
+          {
+            "component": 0,
+            "components": [
+              "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            ],
+            "id": 0,
+            "original": "long name xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "reason": "classic HFS name, encoding or collision",
+            "restored": "long name xxxxxxxxxxxxxxxxxxx~0"
+          }
+        ],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-cckzs2nt/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 76.64,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "923da73c59abd8146a4127d02dfdaeb4b22bddc6c7e8bff5d98d3cd98e6ec6dc",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 75.42,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "file"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "file",
+              "raw_components": [
+                "ZmlsZQ=="
+              ],
+              "raw_name": "ZmlsZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "file"
+              ],
+              "restored_path": "file",
+              "size": "1",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "923da73c59abd8146a4127d02dfdaeb4b22bddc6c7e8bff5d98d3cd98e6ec6dc",
+          "folders": [],
+          "fork_container_bytes": "256",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "2f0e1025280b28564b6375fd097900fad61c61cec472f1c3975f97c128994523",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 1,
+      "elapsed_ms": 75.58,
+      "terminal": {
+        "code": "stale_plan",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Export plan changed; review it again",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 1,
+      "elapsed_ms": 27.38,
+      "terminal": {
+        "code": "stale_archive",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Archive changed; reopen it before exporting",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 76.39,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "923da73c59abd8146a4127d02dfdaeb4b22bddc6c7e8bff5d98d3cd98e6ec6dc",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "source.sit",
+      "exit_code": 0,
+      "elapsed_ms": 75.97,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "file"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": false,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "file",
+              "raw_components": [
+                "ZmlsZQ=="
+              ],
+              "raw_name": "ZmlsZQ==",
+              "resource_method": "unknown",
+              "resource_size": "0",
+              "restored_components": [
+                "file"
+              ],
+              "restored_path": "file",
+              "size": "1",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "923da73c59abd8146a4127d02dfdaeb4b22bddc6c7e8bff5d98d3cd98e6ec6dc",
+          "folders": [],
+          "fork_container_bytes": "256",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "2f0e1025280b28564b6375fd097900fad61c61cec472f1c3975f97c128994523",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 0,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 76.8,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d008889f453fbd389d23649172684491aea1a1e73982c8b7536a1c60cd695c55",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 77.88,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "testdoc.txt"
+              ],
+              "created_1904": 2910948830,
+              "data_method": "LZ+Huffman",
+              "data_method_id": 13,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": true,
+              "finder_exported_flags": 0,
+              "finder_info": "VEVYVHR0eHQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 256,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "modified_1904": 2960196449,
+              "modified_ms": 877369649000,
+              "path": "testdoc.txt",
+              "raw_components": [
+                "dGVzdGRvYy50eHQ="
+              ],
+              "raw_name": "dGVzdGRvYy50eHQ=",
+              "resource_method": "LZ+Huffman",
+              "resource_method_id": 13,
+              "resource_size": "454",
+              "restored_components": [
+                "testdoc.txt"
+              ],
+              "restored_path": "testdoc.txt",
+              "size": "4780",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "d008889f453fbd389d23649172684491aea1a1e73982c8b7536a1c60cd695c55",
+          "folders": [],
+          "fork_container_bytes": "5504",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "3c94f044f44e94e8e53be61f87d27a171e6e47e432981ad4b6b7742c089b92d2",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "1234567.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 151.78,
+      "terminal": {
+        "code": "password_incorrect",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Missing or wrong password",
+        "method": "LZ+Huffman",
+        "method_id": 13,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 195.93,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "mapped_names": 0,
+        "message": "Classic transfer ZIP verified and committed. Report.json and Read Me.txt are inside the ZIP.",
+        "name_mapping": [],
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-yks28rvn/Transfer.zip",
+        "output_committed": true,
+        "preservation": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 107.17,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "export_classic",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 123.76,
+      "terminal": {
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "message": "Classic export preflight complete; no payload checks performed",
+        "plan": {
+          "changes": [],
+          "data_forks": 1,
+          "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+          "entries": [
+            {
+              "absolute": false,
+              "components": [
+                "large.dat"
+              ],
+              "created_1904": 3660680646,
+              "data_method": "None",
+              "data_method_id": 0,
+              "directory": false,
+              "encoding": "UTF-8",
+              "encrypted": false,
+              "finder_exported_flags": 16384,
+              "finder_info": "VEVYVHR0eHRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "finder_report_only_flags": 0,
+              "format": "StuffIt",
+              "has_data": true,
+              "has_resource": true,
+              "id": 0,
+              "link": false,
+              "modified_1904": 3660680646,
+              "modified_ms": 1577853846000,
+              "path": "large.dat",
+              "raw_components": [
+                "bGFyZ2UuZGF0"
+              ],
+              "raw_name": "bGFyZ2UuZGF0",
+              "resource_method": "None",
+              "resource_method_id": 0,
+              "resource_size": "20",
+              "restored_components": [
+                "large.dat"
+              ],
+              "restored_path": "large.dat",
+              "size": "4194304",
+              "transport_path": "F00000000.bin"
+            }
+          ],
+          "exporter_version": "0.1.0-beta.4",
+          "file_count": 1,
+          "fingerprint": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+          "folders": [],
+          "fork_container_bytes": "4194560",
+          "limitations": "MacBinary II restores both forks, type/creator and available classic file dates. Finder may change reserved resource-header bytes and managed flags. Directory metadata, comments and extended Finder fields are recorded, not restored. Renames can break application references. Missing dates use zero.",
+          "metadata_profile": "Finder flags mask 0xfc0e; full available FinderInfo retained in report. Icon position, containing-folder ID, Finder-managed state and lock/protection fields are not restored.",
+          "plan_digest": "ff3bd61e4f3de38e7adf9326d7d3d2fd68e65a781c5c0e63bb23e9a74502ce87",
+          "profile": "classic-hfs-macroman-macbinary2",
+          "resource_forks": 1,
+          "schema": 1,
+          "strict_allowed": true
+        },
+        "preflight": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "recovery.sit",
+      "exit_code": 1,
+      "elapsed_ms": 24.46,
+      "terminal": {
+        "code": "operation_failed",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Cannot remove interrupted output (Windows error 18)",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 26.09,
+      "terminal": {
+        "engine": "xad",
+        "event": "complete",
+        "message": "Interrupted staging cleaned"
+      },
+      "stderr": ""
+    }
+  ]
+}

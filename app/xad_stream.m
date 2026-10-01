@@ -5,6 +5,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <stdio.h>
+#include <zlib.h>
 
 // Decoder-only process: archive paths never become destination filesystem paths.
 static volatile LONG stopped = 0;
@@ -14,6 +15,11 @@ static HANDLE input;
 static NSUInteger checkedForks = 0, uncheckedForks = 0;
 static NSNumber *activeId = nil;
 static NSString *activePart = nil;
+static NSString *activeFormat = nil, *activeMethod = nil;
+static NSNumber *activeMethodId = nil;
+static BOOL sharedChecksumActive = NO;
+static uLong sharedChecksum = 0;
+static NSUInteger sharedChecksums = 0;
 static void sendEvent(NSDictionary *object) {
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:&error];
@@ -90,12 +96,19 @@ static void checkStop(void) {
 @end
 
 static NSString *filenameEncoding = nil;
+static BOOL supportedFormat(NSString *format) {
+    return [format rangeOfString:@"StuffIt" options:NSCaseInsensitiveSearch].location != NSNotFound ||
+        [format isEqual:@"BinHex"] || [format isEqual:@"MacBinary"] || [format isEqual:@"Compact Pro"] ||
+        [format isEqual:@"LZH"] || [format isEqual:@"LZX"];
+}
 static NSArray *parse(XADArchiveParser *parser) {
     checkStop();
     NSString *format = [parser formatName];
+    activeFormat = format;
     if (filenameEncoding)
         [parser setEncodingName:filenameEncoding];
     else if ([format isEqual:@"BinHex"] || [format isEqual:@"MacBinary"] ||
+             [format isEqual:@"Compact Pro"] ||
              [NSStringFromClass([parser class]) isEqual:@"XADStuffItParser"] ||
              [NSStringFromClass([parser class]) isEqual:@"XADStuffIt5Parser"])
         [parser setEncodingName:XADMacOSRomanStringEncodingName];
@@ -111,7 +124,7 @@ static NSArray *parse(XADArchiveParser *parser) {
     if (passwordMissing)
         fail(@"password_required", @"Password required");
     if (error)
-        fail(@"parse_error",
+        fail(error == XADNotSupportedError ? @"unsupported_format" : error == XADPasswordError ? @"password_incorrect" : @"parse_error",
              [NSString stringWithFormat:@"Legacy archive parsing failed (XAD %d)", error]);
     return entries;
 }
@@ -161,6 +174,12 @@ static BOOL forkPair(XADArchiveParser *parser, NSDictionary *resource, NSDiction
     if (!resource || !data)
         return NO;
     NSString *className = NSStringFromClass([parser class]);
+    if ([className isEqual:@"XADCompactProParser"]) {
+        NSNumber *crc = [resource objectForKey:@"CompactProSharedCRC32"];
+        return crc && [crc isEqual:[data objectForKey:@"CompactProSharedCRC32"]] &&
+            [[resource objectForKey:@"CompactProVolume"] isEqual:[data objectForKey:@"CompactProVolume"]] &&
+            [[resource objectForKey:XADDataOffsetKey] longLongValue] + [[resource objectForKey:XADDataLengthKey] longLongValue] == [[data objectForKey:XADDataOffsetKey] longLongValue];
+    }
     if ([className isEqual:@"XADStuffItParser"] || [className isEqual:@"XADStuffIt5Parser"]) {
         long long end = [[resource objectForKey:XADDataOffsetKey] longLongValue] +
                         [[resource objectForKey:XADDataLengthKey] longLongValue];
@@ -184,6 +203,9 @@ static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger i
     if (flag(entry, XADIsEncryptedKey) && !password)
         fail(@"password_required", @"Password required");
     Collector *collector = [Collector new];
+    activeFormat = [parser formatName];
+    activeMethod = [[entry objectForKey:XADCompressionNameKey] description];
+    activeMethodId = [entry objectForKey:@"StuffItCompressionMethod"];
     [parser setDelegate:collector];
     @try {
         CSHandle *handle = [parser handleForEntryWithDictionary:entry wantChecksum:YES];
@@ -201,6 +223,7 @@ static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger i
             if (n < 0)
                 fail(@"decode_failed", @"Invalid legacy stream length");
             count += n;
+            if (sharedChecksumActive) sharedChecksum = crc32(sharedChecksum, buffer, n);
             if (output) {
                 NSAutoreleasePool *pool = [NSAutoreleasePool new];
                 NSData *data = [NSData dataWithBytes:buffer length:n];
@@ -220,7 +243,7 @@ static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger i
         NSNumber *size = [entry objectForKey:XADFileSizeKey];
         if (size && [size unsignedLongLongValue] != count)
             fail(@"integrity_failed", @"Legacy fork size differs from archive metadata");
-        if (checksum)
+        if (checksum || sharedChecksumActive)
             checkedForks++;
         else
             uncheckedForks++;
@@ -229,7 +252,7 @@ static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger i
                 @"event" : @"end",
                 @"id" : @(index),
                 @"part" : part,
-                @"checksum_checked" : [NSNumber numberWithBool:checksum],
+                @"checksum_checked" : [NSNumber numberWithBool:checksum || sharedChecksumActive],
                 @"bytes" : [NSString stringWithFormat:@"%llu", count]
             });
     } @finally {
@@ -277,13 +300,11 @@ int main(void) {
                  [NSString stringWithFormat:@"Unsupported or damaged legacy archive (XAD %d)",
                                             openError]);
         NSString *outer = [parser formatName];
-        BOOL supported =
-            [outer rangeOfString:@"StuffIt" options:NSCaseInsensitiveSearch].location !=
-                NSNotFound ||
-            [outer isEqual:@"BinHex"] || [outer isEqual:@"MacBinary"];
+        activeFormat = outer;
+        BOOL supported = supportedFormat(outer);
         if (!supported)
             fail(@"unsupported_format",
-                 @"This legacy adapter supports StuffIt, BinHex and MacBinary");
+                 @"This legacy adapter supports StuffIt, BinHex, MacBinary, Compact Pro, LhA and Amiga LZX");
         NSArray *entries = nil;
         NSMutableArray *wrappers = [NSMutableArray array];
         for (int depth = 0;; ++depth) {
@@ -312,9 +333,7 @@ int main(void) {
                          [NSString stringWithFormat:@"Cannot open wrapped legacy archive (XAD %d)",
                                                     error]);
                 NSString *innerFormat = [inner formatName];
-                if ([innerFormat rangeOfString:@"StuffIt" options:NSCaseInsensitiveSearch]
-                            .location == NSNotFound &&
-                    ![innerFormat isEqual:@"BinHex"] && ![innerFormat isEqual:@"MacBinary"])
+                if (!supportedFormat(innerFormat))
                     break;
                 [wrappers addObject:@{
                     @"parser" : parser,
@@ -379,6 +398,12 @@ int main(void) {
             }];
             [row setObject:([[data objectForKey:XADCompressionNameKey] description] ?: @"unknown") forKey:@"data_method"];
             [row setObject:([[resource objectForKey:XADCompressionNameKey] description] ?: @"unknown") forKey:@"resource_method"];
+            [row setObject:[parser formatName] forKey:@"format"];
+            for (NSString *part in @[@"data", @"resource"]) {
+                NSDictionary *fork = [group objectForKey:part];
+                if ([fork objectForKey:@"StuffItCompressionMethod"]) [row setObject:[fork objectForKey:@"StuffItCompressionMethod"] forKey:[part stringByAppendingString:@"_method_id"]];
+            }
+            if ([main objectForKey:@"CompactProSharedCRC32"]) [row setObject:@"shared-resource-data-crc32" forKey:@"checksum_type"];
             NSDate *modified = [main objectForKey:XADLastModificationDateKey];
             if (modified)
                 [row setObject:@((long long)([modified timeIntervalSince1970] * 1000))
@@ -398,11 +423,16 @@ int main(void) {
         }
         if ([metadata count])
             sendEvent(@{@"event" : @"entries", @"items" : metadata});
+        NSMutableArray *wrapperChain = [NSMutableArray array];
+        for (NSDictionary *wrapper in wrappers)
+            [wrapperChain addObject:[[wrapper objectForKey:@"parser"] formatName]];
+        [wrapperChain addObject:[parser formatName]];
         sendEvent(@{
             @"event" : @"ready",
             @"count" : @([groups count]),
             @"format" : [parser formatName],
-            @"outer_format" : outer
+            @"outer_format" : outer,
+            @"wrapper_chain" : wrapperChain
         });
         NSString *operation = [request objectForKey:@"operation"];
         if (![operation isEqual:@"list"]) {
@@ -442,10 +472,18 @@ int main(void) {
                 NSDictionary *group = [groups objectAtIndex:i],
                              *data = [group objectForKey:@"data"],
                              *resource = [group objectForKey:@"resource"];
-                if (data && !flag(data, XADIsDirectoryKey))
-                    readFork(parser, data, i, @"data", [operation isEqual:@"stream"]);
-                if (resource)
+                NSNumber *pairCRC = [data objectForKey:@"CompactProSharedCRC32"];
+                if (pairCRC && resource) {
+                    sharedChecksumActive = YES; sharedChecksum = crc32(0, Z_NULL, 0);
                     readFork(parser, resource, i, @"resource", [operation isEqual:@"stream"]);
+                    readFork(parser, data, i, @"data", [operation isEqual:@"stream"]);
+                    sharedChecksumActive = NO;
+                    if (sharedChecksum != ~[pairCRC unsignedIntValue]) fail(@"integrity_failed", @"Compact Pro combined fork checksum failed");
+                    sharedChecksums++;
+                } else {
+                    if (data && !flag(data, XADIsDirectoryKey)) readFork(parser, data, i, @"data", [operation isEqual:@"stream"]);
+                    if (resource) readFork(parser, resource, i, @"resource", [operation isEqual:@"stream"]);
+                }
                 sendEvent(@{@"event" : @"verified", @"id" : @(i)});
             }
             // Outer fork handles share the nested parser's source. Verify the inner
@@ -466,11 +504,15 @@ int main(void) {
             @"event" : @"complete",
             @"checked_forks" : @(checkedForks),
             @"unchecked_forks" : @(uncheckedForks),
-            @"expanded_wrappers" : @([wrappers count])
+            @"expanded_wrappers" : @([wrappers count]), @"shared_checksums" : @(sharedChecksums)
         });
     } @catch (NSException *error) {
+        XADError xadError = [XADException parseException:error];
         NSString *code = passwordMissing ? @"password_required"
                          : stopped       ? @"cancelled"
+                         : xadError == XADNotSupportedError ? @"unsupported_codec"
+                         : xadError == XADPasswordError ? @"password_incorrect"
+                         : xadError == XADChecksumError ? @"integrity_failed"
                                          : [error name];
         NSString *message = passwordMissing ? @"Password required"
                             : stopped       ? @"Cancelled"
@@ -479,6 +521,7 @@ int main(void) {
             @"event" : stopped ? @"cancelled" : @"error",
             @"code" : code,
             @"id": activeId ?: @(-1), @"part": activePart ?: @"",
+            @"format": activeFormat ?: @"unknown", @"method": activeMethod ?: @"unknown", @"method_id": activeMethodId ?: [NSNull null],
             @"message" : message ?: @"Legacy decoding failed"
         });
         result = 1;

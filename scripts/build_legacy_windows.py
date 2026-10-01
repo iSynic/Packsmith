@@ -13,7 +13,7 @@ PREFIX = ASSESSMENT / "tools/windows-runtime/mingw64"
 COMPAT = ASSESSMENT / "tools/windows-runtime-gcc16_1/mingw64"
 XAD = ASSESSMENT / "experiments/xad-windows"
 BUILD = ROOT / "build/legacy"
-EVIDENCE = ASSESSMENT / "evidence/beta3/desktop-legacy"
+EVIDENCE = ASSESSMENT / "evidence/beta4/desktop-legacy"
 
 
 def sha(path):

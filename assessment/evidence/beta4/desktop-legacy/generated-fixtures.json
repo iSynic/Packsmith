@@ -1,0 +1,91 @@
+{
+  "provenance": "Generated classic StuffIt stored/RLE and BinHex 4.0, with independent CRC generators; no downloaded personal archives.",
+  "data_sha256": "576e5f6a4892f554e2a76ae7d8a681dacc33c302b95550fc102765bc291da3c9",
+  "resource_sha256": "3dd220817c4c99d725b2c54257099044a23fd9b27746de6068448c38ad13926a",
+  "files": {
+    "forks.sit": {
+      "sha256": "94e75df7b524d35b926a616304a8ae1d84a7e196d69b537c135026a4b017260b",
+      "bytes": 170
+    },
+    "forks.hqx": {
+      "sha256": "9234a6c44fcaefbcc0acd5f12613416f09f2c7747b07113705ccb040e4665465",
+      "bytes": 152
+    },
+    "rle.sit": {
+      "sha256": "2d0e299eec63337c8b34e7b998328df6d47e3af608aa6b43ba84722f49737d11",
+      "bytes": 145
+    },
+    "collisions.sit": {
+      "sha256": "fa48b1d7b483298f4aadbb1b10953510d9e5851320c38556adb42e23c2c35e25",
+      "bytes": 665
+    },
+    "unpaired.sit": {
+      "sha256": "ae06e5b81a46d587f875620c4ffb976265d65597fa59cea457b27e36061f00e4",
+      "bytes": 268
+    },
+    "unsafe.sit": {
+      "sha256": "a04cdb2ef88a14b955fe586bfaa208cec7d858a5bee8b2d76dcef69d56803eba",
+      "bytes": 364
+    },
+    "names.sit": {
+      "sha256": "ee4115f16d7a215df6d66211de611753ca37557f91abc21caf39b42e4acdae33",
+      "bytes": 420
+    },
+    "folder.sit": {
+      "sha256": "affda816cd37ca1c341e73a1b1ca901418cd77010aed47c7732b6b6afed8e964",
+      "bytes": 638
+    },
+    "duplicate-folders.sit": {
+      "sha256": "22c7630b8e6a21574fca23713475c24eb001e629fa4d20e35e30abb72782f42e",
+      "bytes": 1075
+    },
+    "nested-wrapped.hqx": {
+      "sha256": "30f5fdf170cc269706524e849a7778b7e7eda16a4a5177ed2ac86a890a379b9e",
+      "bytes": 1512
+    },
+    "bad-resource.hqx": {
+      "sha256": "a113b1da7cd328fadc7af88a4dce62ecff3f7e04d6cbee26cd0671d32ccda06b",
+      "bytes": 149
+    },
+    "bad-data.hqx": {
+      "sha256": "3c73e8f359a351f3fc4dcfac8c415816812ff25ceaf4033f371d5b659ccad8d9",
+      "bytes": 149
+    },
+    "bad-header.hqx": {
+      "sha256": "c5e0f92ad9aa20afae1cc69e18536fee43e8c0778eacf8c0f82ec3ae1a25fbf7",
+      "bytes": 149
+    },
+    "wrapped.hqx": {
+      "sha256": "8addf089e6f2d6ec73e9a7b2e7f3103ffc5ef7fb50f906f6edbb3895a50cd3d2",
+      "bytes": 715
+    },
+    "bad-wrapper.hqx": {
+      "sha256": "85e615e15922c859f13fd6d7f6bc8f4eb3282999004cac819eb9c6d27657747f",
+      "bytes": 715
+    },
+    "recovery.sit": {
+      "sha256": "fbf2ba72a3d411a1e72a5dde3bd6fb1ecb89339cf3c7a5b0a9c64ef7d65471ea",
+      "bytes": 4194458
+    },
+    "large-wrapped.hqx": {
+      "sha256": "936517cf0747e6f77c721b6c36feb43dc2c88455262c6e16258d90f548ec1b9d",
+      "bytes": 1054013
+    },
+    "bad-large-wrapper-data.hqx": {
+      "sha256": "515db57d2310a8940e3f3616e986ec80bc6f63aa7f2d0dd7968b5cd48633f703",
+      "bytes": 1054013
+    },
+    "bad-large-wrapper-resource.hqx": {
+      "sha256": "6a3b991476f833ac6dcb46b50a699e3ca7725d9b0db22e8e4c0dbcfa0885190e",
+      "bytes": 1054013
+    },
+    "truncated.sit": {
+      "sha256": "c36c10580ad0f52450ba751c3161d5fc59cc9af67837ce702b9e8246408c31b7",
+      "bytes": 166
+    },
+    "bad-data.sit": {
+      "sha256": "42406755608cbd56fbd7a5096cb70a3876ced1e5f45cde1f6c3f85e0b3e86ea9",
+      "bytes": 170
+    }
+  }
+}

@@ -14,7 +14,7 @@ legacy_fixtures.generate()
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "dist/Packsmith-preview"
-EVIDENCE = ROOT / "assessment/evidence/beta3/desktop-preview"
+EVIDENCE = ROOT / "assessment/evidence/beta4/desktop-preview"
 EVIDENCE.mkdir(parents=True, exist_ok=True)
 env = os.environ.copy()
 env["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")
@@ -22,7 +22,7 @@ for key in ("QT_PLUGIN_PATH", "QT_QPA_PLATFORM_PLUGIN_PATH", "QTDIR", "QML2_IMPO
     env.pop(key, None)
 results = []
 with tempfile.TemporaryDirectory(prefix="unarchiver-relocation-") as temporary:
-    relocated = Path(temporary) / "æ—¥æœ¬-cafÃ© preview"
+    relocated = Path(temporary) / "日本-café preview"
     shutil.copytree(SOURCE, relocated)
     for fixture, mode in (("mainstream.zip", "--smoke"), ("scale-100k.zip", "--smoke"), ("large-5g.zip", "--smoke-recovery"), ("forks.sit", "--smoke"), ("forks.hqx", "--smoke"), ("recovery.sit", "--smoke-recovery"), ("large-wrapped.hqx", "--smoke"), ("bad-large-wrapper-data.hqx", "--smoke-error")):
         folder = EVIDENCE / (Path(fixture).stem if fixture.endswith('.zip') else fixture.replace('.','-'))

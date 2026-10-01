@@ -1,0 +1,1290 @@
+{
+  "schema": 1,
+  "xad_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+  "detector_revision": "4eb832d999628edcd3d134e46bd35357c8c99a85",
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "decoder_sha256": "af6872b47a89bfc63b6a2ee56c23fdc9f890b98b03df3e707aa742c1e448aa09",
+  "passed": true,
+  "cases": [
+    {
+      "name": "method-0.sit",
+      "archive_sha256": "7c50de133c39ca461c5bf941b3b0fee7c9f9dc49a07a934e441561843b2700f9",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "7c50de133c39ca461c5bf941b3b0fee7c9f9dc49a07a934e441561843b2700f9",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "None"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "7c50de133c39ca461c5bf941b3b0fee7c9f9dc49a07a934e441561843b2700f9",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "867d02d72b7f10c1ae5b683319c601af9077b360f7ba7a652f258bf035a93705",
+      "original_unchanged": true
+    },
+    {
+      "name": "method-1.sit",
+      "archive_sha256": "ab91776267fc29555795c45f9f0c1d7802c2dfff9f28641bb95153ee352a3c24",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "ab91776267fc29555795c45f9f0c1d7802c2dfff9f28641bb95153ee352a3c24",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "RLE"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "ab91776267fc29555795c45f9f0c1d7802c2dfff9f28641bb95153ee352a3c24",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "847c3d2cd7ac0fc320b330c33c252001aa6341e32da4682ada1fc6919661c8d2",
+      "original_unchanged": true
+    },
+    {
+      "name": "method-2.sit",
+      "archive_sha256": "0c55fb9d0a478fc4ddac8de6a1ec6375bc2ffd3771af4b5a42e684857ed35952",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "0c55fb9d0a478fc4ddac8de6a1ec6375bc2ffd3771af4b5a42e684857ed35952",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "Compress"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "0c55fb9d0a478fc4ddac8de6a1ec6375bc2ffd3771af4b5a42e684857ed35952",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "ce745c524b9c12fcfc2eecd95806e79a43f09c03e7f153c12d3df9f9fa328f6d",
+      "original_unchanged": true
+    },
+    {
+      "name": "method-3.sit",
+      "archive_sha256": "9eae02be87590da9f5a76128c5ef8a6b2ccce46691687694a5d31f26e94a168b",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9eae02be87590da9f5a76128c5ef8a6b2ccce46691687694a5d31f26e94a168b",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "Huffman"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9eae02be87590da9f5a76128c5ef8a6b2ccce46691687694a5d31f26e94a168b",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "6ccfeb93423585cde8852bb6265e63908f78356f7e9604648f67cf1e51f04a85",
+      "original_unchanged": true
+    },
+    {
+      "name": "unsupported-6.sit",
+      "archive_sha256": "0a15198897cd3bb698fdc3ad89f92367dfdbf513846fbe026f1285cf91264eaf",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "failed/unsupported",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "0a15198897cd3bb698fdc3ad89f92367dfdbf513846fbe026f1285cf91264eaf",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "Fixed Huffman"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "code": "unsupported_codec",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Legacy codec cannot decode this fork",
+        "method": "Fixed Huffman",
+        "method_id": 6,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "passed": true,
+      "status": "failed/unsupported",
+      "expected_failure": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "macintosh.sit",
+      "archive_sha256": "e1c65f9b35067ea38256ca8d24e54e3b4937123ad2ab00f23bb5eb182a008c0f",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "e1c65f9b35067ea38256ca8d24e54e3b4937123ad2ab00f23bb5eb182a008c0f",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "None"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "e1c65f9b35067ea38256ca8d24e54e3b4937123ad2ab00f23bb5eb182a008c0f",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 1,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "8be0e9607bef2d7e4d75f49ef85e0aa6d4fda989d9df71feee410b16df5dc663",
+      "original_unchanged": true
+    },
+    {
+      "name": "x-mac-japanese.sit",
+      "archive_sha256": "9a65db432781d18685302a3ef5c36ec6369f621c6fa503170ff57ef1730f4c53",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "x-mac-japanese",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9a65db432781d18685302a3ef5c36ec6369f621c6fa503170ff57ef1730f4c53",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "None"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9a65db432781d18685302a3ef5c36ec6369f621c6fa503170ff57ef1730f4c53",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 1,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "34df0910764b4303909c9af9564d5056c847adefa7064e67793a217cbccb27b0",
+      "original_unchanged": true
+    },
+    {
+      "name": "x-mac-cyrillic.sit",
+      "archive_sha256": "409d47cdcd739b9ac81f5469eb3500747d825e96f7c11e9905d42aab68ef2079",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "x-mac-cyrillic",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "409d47cdcd739b9ac81f5469eb3500747d825e96f7c11e9905d42aab68ef2079",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "None"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "409d47cdcd739b9ac81f5469eb3500747d825e96f7c11e9905d42aab68ef2079",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 1,
+        "expanded_wrappers": 0,
+        "outer_format": "StuffIt",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "61a29ec76b1881a176e42435007063859884dc67b39f37a86308e266e25fb338",
+      "original_unchanged": true
+    },
+    {
+      "name": "paired.cpt",
+      "archive_sha256": "b1e656273e93370825f127e11dd0281feb99df3bf037dab5eca7ea1145eaa59b",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "Compact Pro",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "Compact Pro"
+          ]
+        },
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "b1e656273e93370825f127e11dd0281feb99df3bf037dab5eca7ea1145eaa59b",
+        "format": "Compact Pro",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "Compact Pro"
+      ],
+      "methods": [
+        "RLE"
+      ],
+      "logical_entries": 3,
+      "wrapper_chain": [
+        "Compact Pro"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 0,
+          "outer_format": "Compact Pro",
+          "shared_checksums": 1,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "Compact Pro"
+          ]
+        },
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "b1e656273e93370825f127e11dd0281feb99df3bf037dab5eca7ea1145eaa59b",
+        "format": "Compact Pro",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 4,
+        "expanded_wrappers": 0,
+        "outer_format": "Compact Pro",
+        "shared_checksums": 1,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "Compact Pro"
+        ]
+      },
+      "package_sha256": "26edbc130d4760e1eb4e05e57341de722d184b56a5d20cb89facde382fa36718",
+      "original_unchanged": true
+    },
+    {
+      "name": "corrupt-paired.cpt",
+      "archive_sha256": "510973a9ab8e9910ce851f9819e8f008e901c21f3aea99d75e736da709ca2d00",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "failed/unsupported",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "Compact Pro",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "Compact Pro"
+          ]
+        },
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "510973a9ab8e9910ce851f9819e8f008e901c21f3aea99d75e736da709ca2d00",
+        "format": "Compact Pro",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "Compact Pro"
+      ],
+      "methods": [
+        "RLE"
+      ],
+      "logical_entries": 3,
+      "wrapper_chain": [
+        "Compact Pro"
+      ],
+      "integrity": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "Compact Pro",
+        "id": 0,
+        "message": "Compact Pro combined fork checksum failed",
+        "method": "RLE",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "passed": true,
+      "status": "failed/unsupported",
+      "expected_failure": true,
+      "original_unchanged": true
+    },
+    {
+      "name": "runs.cpt",
+      "archive_sha256": "15376839da8c26c1bb9f317bf0177bfa7a29e723b7c32611b2325c9cec053e1c",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "Compact Pro",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "Compact Pro"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "15376839da8c26c1bb9f317bf0177bfa7a29e723b7c32611b2325c9cec053e1c",
+        "format": "Compact Pro",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "Compact Pro"
+      ],
+      "methods": [
+        "RLE"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "Compact Pro"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "Compact Pro",
+          "shared_checksums": 1,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "Compact Pro"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "15376839da8c26c1bb9f317bf0177bfa7a29e723b7c32611b2325c9cec053e1c",
+        "format": "Compact Pro",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "Compact Pro",
+        "shared_checksums": 1,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "Compact Pro"
+        ]
+      },
+      "package_sha256": "d4d82b0371c489ac9bb954a6f292e840bcef3bff25ff182b147ffa460faa5921",
+      "original_unchanged": true
+    },
+    {
+      "name": "nested-macbinary.hqx",
+      "archive_sha256": "136688ce817414e24a94d2178cbd39b1a85acb073246140fe750c0ef9225dcd4",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 2,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "136688ce817414e24a94d2178cbd39b1a85acb073246140fe750c0ef9225dcd4",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "StuffIt"
+      ],
+      "methods": [
+        "None"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "BinHex",
+        "MacBinary",
+        "StuffIt"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 3,
+          "expanded_wrappers": 2,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 1,
+          "wrapper_chain": [
+            "BinHex",
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "136688ce817414e24a94d2178cbd39b1a85acb073246140fe750c0ef9225dcd4",
+        "format": "StuffIt",
+        "message": "Decoded successfully; 1 fork streams have no source checksum",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 3,
+        "expanded_wrappers": 2,
+        "outer_format": "BinHex",
+        "shared_checksums": 0,
+        "unchecked_forks": 1,
+        "wrapper_chain": [
+          "BinHex",
+          "MacBinary",
+          "StuffIt"
+        ]
+      },
+      "package_sha256": "ccf126197137a2c0df8ff9f7c7f6845028f031d320f7c5ad36e005ffcb4534bd",
+      "original_unchanged": true
+    },
+    {
+      "name": "stored.lzh",
+      "archive_sha256": "49ed365a19337bb8ce20a469ffff49cd5f2c01018eb8e8a9561740588a7e89b9",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "known-payload tested",
+        "source": "Generated known bytes and independent CRCs"
+      },
+      "filename_encoding": null,
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "49ed365a19337bb8ce20a469ffff49cd5f2c01018eb8e8a9561740588a7e89b9",
+        "format": "LZH",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "LZH"
+      ],
+      "methods": [
+        "-lh0-"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "LZH"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "49ed365a19337bb8ce20a469ffff49cd5f2c01018eb8e8a9561740588a7e89b9",
+        "format": "LZH",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "known-payload tested",
+      "checksum_coverage": {
+        "checked_forks": 1,
+        "expanded_wrappers": 0,
+        "outer_format": "LZH",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "LZH"
+        ]
+      },
+      "package_sha256": "e8e897fc6f01368e79b924eaaa31d2c1593c2f0c42b8a3f6785b07c6ae2a654e",
+      "original_unchanged": true
+    },
+    {
+      "name": "test_read_format_lha_header3.lzh",
+      "archive_sha256": "d36f9beaf7d1aa482315e810c8cfca327975ffd31a05082004102327310e419d",
+      "provenance": "libarchive pinned upstream BSD-licensed regression fixture",
+      "oracle": {
+        "kind": "independently qualified",
+        "source": "libarchive test_read_format_lha.c known file1/file2 bytes"
+      },
+      "filename_encoding": null,
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 4,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d36f9beaf7d1aa482315e810c8cfca327975ffd31a05082004102327310e419d",
+        "format": "LZH",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "LZH"
+      ],
+      "methods": [
+        "-lh5-",
+        "-lhd-"
+      ],
+      "logical_entries": 4,
+      "wrapper_chain": [
+        "LZH"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 4,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d36f9beaf7d1aa482315e810c8cfca327975ffd31a05082004102327310e419d",
+        "format": "LZH",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "independently qualified",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "LZH",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "LZH"
+        ]
+      },
+      "package_sha256": "66be1a6e767e253bcd71ae1cc64802079ccc6414697a662c6c3a84b4921be7f3",
+      "original_unchanged": true
+    },
+    {
+      "name": "test_read_format_lha_lh6.lzh",
+      "archive_sha256": "99cbc14499cc88361e9182a4912263ae27bcba888f7fe30c00995ab96752421b",
+      "provenance": "libarchive pinned upstream BSD-licensed regression fixture",
+      "oracle": {
+        "kind": "independently qualified",
+        "source": "libarchive test_read_format_lha.c known file1/file2 bytes"
+      },
+      "filename_encoding": null,
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "99cbc14499cc88361e9182a4912263ae27bcba888f7fe30c00995ab96752421b",
+        "format": "LZH",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "LZH"
+      ],
+      "methods": [
+        "-lh6-",
+        "-lhd-"
+      ],
+      "logical_entries": 6,
+      "wrapper_chain": [
+        "LZH"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "99cbc14499cc88361e9182a4912263ae27bcba888f7fe30c00995ab96752421b",
+        "format": "LZH",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "independently qualified",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "LZH",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "LZH"
+        ]
+      },
+      "package_sha256": "f77c94c0271ef8c1c841817dc073d07bc3788edebbab6f37caea2d053226f82f",
+      "original_unchanged": true
+    },
+    {
+      "name": "test_read_format_lha_lh7.lzh",
+      "archive_sha256": "c3aa72e18b294c271737803cedf889f289c4f215d16a192044525d930b045cb6",
+      "provenance": "libarchive pinned upstream BSD-licensed regression fixture",
+      "oracle": {
+        "kind": "independently qualified",
+        "source": "libarchive test_read_format_lha.c known file1/file2 bytes"
+      },
+      "filename_encoding": null,
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "c3aa72e18b294c271737803cedf889f289c4f215d16a192044525d930b045cb6",
+        "format": "LZH",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "LZH"
+      ],
+      "methods": [
+        "-lh7-",
+        "-lhd-"
+      ],
+      "logical_entries": 6,
+      "wrapper_chain": [
+        "LZH"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "LZH",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZH"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "c3aa72e18b294c271737803cedf889f289c4f215d16a192044525d930b045cb6",
+        "format": "LZH",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "independently qualified",
+      "checksum_coverage": {
+        "checked_forks": 2,
+        "expanded_wrappers": 0,
+        "outer_format": "LZH",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "LZH"
+        ]
+      },
+      "package_sha256": "6c3d599cec001e99e1109039d01b4fdac82ed3659f39ed87bf1c7fe980e070f5",
+      "original_unchanged": true
+    },
+    {
+      "name": "known-amiga.lzx",
+      "archive_sha256": "0960d4a5385e56d457c8c43273d79b7020be9c2859cabbef13c5c8d2b2b49f9d",
+      "provenance": "Generated redistributable fixture",
+      "oracle": {
+        "kind": "independently qualified",
+        "source": "Generated with amiga-lzx; original Aminet unLZX 1.1 extracted exact known bytes. See amiga-lzx-oracle.json."
+      },
+      "filename_encoding": null,
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "LZX",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZX"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "0960d4a5385e56d457c8c43273d79b7020be9c2859cabbef13c5c8d2b2b49f9d",
+        "format": "LZX",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "LZX"
+      ],
+      "methods": [
+        "LZX"
+      ],
+      "logical_entries": 1,
+      "wrapper_chain": [
+        "LZX"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 1,
+          "expanded_wrappers": 0,
+          "outer_format": "LZX",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "LZX"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "0960d4a5385e56d457c8c43273d79b7020be9c2859cabbef13c5c8d2b2b49f9d",
+        "format": "LZX",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "independently qualified",
+      "checksum_coverage": {
+        "checked_forks": 1,
+        "expanded_wrappers": 0,
+        "outer_format": "LZX",
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "wrapper_chain": [
+          "LZX"
+        ]
+      },
+      "package_sha256": "6a7eed0a89a59d35b76ff4552d7ef2ea9e56c51139f32b9f86633f9e30d8dbb7",
+      "original_unchanged": true
+    },
+    {
+      "name": "FRED.CPT",
+      "archive_sha256": "d28f57d4766804ace4bbddd80568ce8eb0099b468a5c8daad14995fa89d6dfaa",
+      "provenance": "Private qualification download; redistribution rights unknown; payload excluded",
+      "oracle": {
+        "kind": "engine-advertised/unverified",
+        "source": "Compact Pro LZH sample: Expander file-picker attempt offered no input; no independent oracle"
+      },
+      "filename_encoding": "macintosh",
+      "listing": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "MacBinary",
+            "Compact Pro"
+          ]
+        },
+        "count": 7,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d28f57d4766804ace4bbddd80568ce8eb0099b468a5c8daad14995fa89d6dfaa",
+        "format": "Compact Pro",
+        "message": "",
+        "read_only": true
+      },
+      "formats": [
+        "Compact Pro"
+      ],
+      "methods": [
+        "LZH+RLE",
+        "unknown"
+      ],
+      "logical_entries": 7,
+      "wrapper_chain": [
+        "MacBinary",
+        "Compact Pro"
+      ],
+      "integrity": {
+        "checksum_coverage": {
+          "checked_forks": 6,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 1,
+          "wrapper_chain": [
+            "MacBinary",
+            "Compact Pro"
+          ]
+        },
+        "count": 7,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d28f57d4766804ace4bbddd80568ce8eb0099b468a5c8daad14995fa89d6dfaa",
+        "format": "Compact Pro",
+        "message": "Decoded successfully; 1 fork streams have no source checksum",
+        "read_only": true
+      },
+      "passed": true,
+      "status": "engine-advertised/unverified",
+      "checksum_coverage": {
+        "checked_forks": 6,
+        "expanded_wrappers": 1,
+        "outer_format": "MacBinary",
+        "shared_checksums": 0,
+        "unchecked_forks": 1,
+        "wrapper_chain": [
+          "MacBinary",
+          "Compact Pro"
+        ]
+      },
+      "package_sha256": "cb31eb98056973b7510bc1c833552a6a609a3f1cf69b70d6a6b7a6581200bc8f",
+      "original_unchanged": true
+    }
+  ]
+}

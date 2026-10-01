@@ -1,0 +1,12 @@
+{
+  "compressor_revision": "daf42aeac50a1e4854b9b6cda286b02df309abf5",
+  "compressor_license": "WTFPL",
+  "unlzx_source_url": "https://aminet.net/misc/unix/unlzx.c.gz",
+  "unlzx_source_sha256": "c50b0b20284b05a07b786c406a8aca0b49ed8d9ef6bd8b81a8f0753fea7cb0cc",
+  "archive_sha256": "0960d4a5385e56d457c8c43273d79b7020be9c2859cabbef13c5c8d2b2b49f9d",
+  "known_payload_sha256": "f427db61522838f761cb431a91128b2441eb2bfb6c2a282dbcc96eac0aeadfb1",
+  "original_unlzx_payload_equal": true,
+  "unlzx_compat_header": "#include <direct.h>\n#include <unistd.h>\n#define mkdir(path,mode) _mkdir(path)\n",
+  "unlzx_exit_code": 0,
+  "unlzx_output": "Extracting \"payload.txt\"... crc good\n"
+}

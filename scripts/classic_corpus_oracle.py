@@ -9,7 +9,9 @@ import sys
 import zipfile
 from classic_oracle import ROOT,PRIVATE,PYDEPS,volume,sha
 
-CASES=[('HaxHQX','hax-13.hqx'),('HaxBIN','HAX1R3.BIN'),('Old','dark-towers-ks.hqx'),('New','BOutS 1.2.sit')]
+HISTORICAL_PRIVATE=PRIVATE
+PRIVATE=ROOT/'assessment/outputs/beta4-oracle'
+MANIFEST=ROOT/'assessment/qualification/classic-oracles.json'
 
 def worker(request):
     p=subprocess.run([str(ROOT/'dist/Packsmith-preview/workers/packsmith-worker.exe')],input=json.dumps(request)+'\n',
@@ -18,47 +20,28 @@ def worker(request):
     if p.returncode:raise RuntimeError(str(events[-1]))
     return events[-1]
 
-def prepare():
-    sys.path.insert(0,str(PYDEPS));import machfs
-    generated=PRIVATE/'corpus';generated.mkdir(exist_ok=True)
+def refresh(manifest):
+    """Build fresh packages for comparison with independently restored, shut-down disks."""
+    definition=json.loads(manifest.read_text(encoding='utf-8'))
+    generated=PRIVATE/'corpus';generated.mkdir(parents=True,exist_ok=True)
     cases=[]
-    originals=generated/'Originals.zip';exports=generated/'Exports.zip'
-    with zipfile.ZipFile(originals,'w',zipfile.ZIP_DEFLATED) as oz,zipfile.ZipFile(exports,'w',zipfile.ZIP_DEFLATED) as ez:
-        for label,name in CASES:
-            source=Path('F:/Unarchiver')/name
-            listed=worker(dict(operation='list',archive=str(source),filename_encoding='macintosh'))
-            request=dict(operation='export_classic',mode='preflight',name_policy='strict',selection_scope='all',
-                archive=str(source),filename_encoding='macintosh',fingerprint=listed['fingerprint'])
-            plan=worker(request)['plan'];package=generated/(label+'.zip')
-            if not package.exists():worker(dict(request,mode='execute',name_policy='mapped',plan_digest=plan['plan_digest'],destination=str(package)))
-            with zipfile.ZipFile(package) as z:manifest=json.loads(z.read('Report.json'))
-            oz.write(source,label+'/Source'+source.suffix.lower());ez.write(package,label+'.zip')
-            cases.append(dict(label=label,name=name,source_sha256=sha(source),package_sha256=sha(package),manifest=manifest))
-        # Qualification of the actual worker with known resource records, empty forks and folders.
-        sys.path.insert(0,str(ROOT/'tests'));import legacy_fixtures as fixtures
-        from macresources import make_file,Resource
-        resource=make_file([Resource(b'TEST',128,data=b'Known worker export resource payload')])
-        fixture=generated/'Known.sit'
-        fixture.write_bytes(fixtures.sit([fixtures.sit_entry('Data',b'Known data'),fixtures.sit_entry('Resource',resource=resource),
-            fixtures.sit_entry('caf\u00e9',b'both',resource),fixtures.sit_entry('Empty'),fixtures.sit_entry('Nested',directory=0x20),
-            fixtures.sit_entry('Child',b'nested'),fixtures.sit_entry('Vacant',directory=0x20),fixtures.sit_entry('Vacant',directory=0x21),fixtures.sit_entry('Nested',directory=0x21)]))
-        fingerprint=sha(fixture);request=dict(operation='export_classic',archive=str(fixture),mode='preflight',fingerprint=fingerprint,filename_encoding='macintosh',name_policy='strict',selection_scope='all')
-        plan=worker(request)['plan'];package=generated/'Known.zip'
-        if not package.exists():worker(dict(request,mode='execute',plan_digest=plan['plan_digest'],destination=str(package)))
-        ez.write(package,'Known.zip')
-        with zipfile.ZipFile(package) as z:manifest=json.loads(z.read('Report.json'))
-        cases.append(dict(label='Known',name='Generated known forks and empty folders',source_sha256=fingerprint,package_sha256=sha(package),manifest=manifest))
-    disk=machfs.Volume();disk.name='Packsmith Corpus'
-    donor=volume(PRIVATE/'Tests9.hfv');disk['Expander 5.5']=donor['Expander 5.5'];disk['Reader control']=donor['Reader control']
-    for name,path in [('Originals.zip',originals),('Exports.zip',exports)]:
-        f=machfs.File();f.data=path.read_bytes();f.type=b'ZIP ';f.creator=b'SITx';disk[name]=f
-    for name in ['Corpus76.hfv','Corpus9.hfv']:
-        image=PRIVATE/name
-        if not image.exists():image.write_bytes(disk.write(size=256*1024*1024))
-    for original,new,old_image,new_image in [('BasiliskII_prefs','BasiliskCorpus_prefs','Tests.hfv','Corpus76.hfv'),('SheepShaver_prefs','SheepCorpus_prefs','Tests9.hfv','Corpus9.hfv')]:
-        prefs=(PRIVATE/original).read_text();(PRIVATE/new).write_text(prefs.replace(old_image,new_image))
+    for case in definition['cases']+[dict(label='Known',name='Generated known forks and empty folders',filename_encoding='macintosh')]:
+        source=ROOT/definition['known_control'] if case['label']=='Known' else Path('F:/Unarchiver')/case['name']
+        fingerprint=sha(source)
+        if case.get('archive_sha256'):assert fingerprint==case['archive_sha256'],'Oracle source drift'
+        if case.get('expected_report'):
+            package_name,report_name=case['expected_report'].split('!',1)
+            with zipfile.ZipFile(ROOT/package_name) as z:assert hashlib.sha256(z.read(report_name)).hexdigest()==case['expected_report_sha256'],'Historical expectation drift'
+        listed=worker(dict(operation='list',archive=str(source),filename_encoding=case['filename_encoding']))
+        request=dict(operation='export_classic',mode='preflight',name_policy='strict',selection_scope='all',archive=str(source),filename_encoding=case['filename_encoding'],fingerprint=listed['fingerprint'])
+        plan=worker(request)['plan'];package=generated/(case['label']+'.zip')
+        if package.exists():package.unlink()
+        worker(dict(request,mode='execute',name_policy='mapped' if not plan['strict_allowed'] else 'strict',plan_digest=plan['plan_digest'],destination=str(package)))
+        with zipfile.ZipFile(package) as z:report=json.loads(z.read('Report.json'))
+        if case.get('expected_files'):assert report['file_count']==case['expected_files']
+        cases.append(dict(label=case['label'],name=case['name'],source_sha256=fingerprint,package_sha256=sha(package),manifest=report))
     (generated/'expected.json').write_text(json.dumps(cases,indent=2)+'\n',encoding='utf-8')
-    print(json.dumps(dict(cases=len(cases),private=str(generated),originals_zip_bytes=originals.stat().st_size,exports_zip_bytes=exports.stat().st_size)))
+    verify()
 
 def verify(target_filter=None):
     sys.path.insert(0,str(PYDEPS));import machfs
@@ -69,7 +52,11 @@ def verify(target_filter=None):
     results=[]
     for target,image in [('System 7.6','Corpus76.hfv'),('Mac OS 9','Corpus9.hfv')]:
         if target_filter and target_filter!=target:continue
-        disk=volume(PRIVATE/image);allfiles=[(path,f) for path,f in disk.iter_paths() if isinstance(f,machfs.File)]
+        disk=volume(HISTORICAL_PRIVATE/image);control=disk['Reader control'];assert bytes(control.data)==b'Independent HFS known data'
+        from macresources import Resource,make_file
+        assert bytes(control.rsrc)==make_file([Resource(b'TEST',128,data=b'Known independent resource payload')])
+        assert (control.type,control.creator,control.crdate,control.mddate)==(b'TEXT',b'ttxt',3000000000,3000000100)
+        allfiles=[(path,f) for path,f in disk.iter_paths() if isinstance(f,machfs.File)]
         inventory=[];failures=[];matched=0
         for case in cases:
             label=case['label'];package=PRIVATE/'corpus'/(label+'.zip')
@@ -128,12 +115,12 @@ def verify(target_filter=None):
     record=dict(passed=all(r['passed'] for r in results),targets=results,original_archives_unchanged=True,worker_sha256=sha(ROOT/'dist/Packsmith-preview/workers/packsmith-worker.exe'),
         engine_revision=cases[0]['manifest']['engine_revision'],
         reader_source_sha256=sha(PYDEPS/'machfs/main.py'),
-        procedure='Expand Exports.zip, select its five ZIPs with Finder Edit > Select All and drag to Expander 5.5. Expand Originals.zip, then drag Originals Folder to Expander. Shut down before HFS inventory. Original Hax root collisions distinguished by complete file counts.',
+        procedure='Fresh beta 4 exports compared against original-software extraction and previously restored beta 3 files in unchanged, shut-down System 7.6/Mac OS 9 HFS disks. This is a fork/metadata regression comparison, not a new beta 4 ZIP transfer in either guest.',
         archives=[dict(name=c['name'],archive_sha256=c['source_sha256'],package_sha256=c['package_sha256'],files=c['manifest']['file_count']) for c in cases],
         limitation='Raw resource differences permitted only in bytes 16-255 with independent resource records equal. Private inventories, archives and disk images excluded from Git/releases.')
-    evidence=ROOT/'assessment/evidence/beta3';(evidence/'classic-corpus-oracle.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
+    evidence=ROOT/'assessment/evidence/beta4';(evidence/'classic-corpus-oracle.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(record));raise SystemExit(0 if record['passed'] else 1)
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('action',choices=['prepare','verify']);p.add_argument('--target',choices=['System 7.6','Mac OS 9']);args=p.parse_args()
-    prepare() if args.action=='prepare' else verify(args.target)
+    p=argparse.ArgumentParser();p.add_argument('action',choices=['refresh','verify']);p.add_argument('--manifest',type=Path,default=MANIFEST);p.add_argument('--target',choices=['System 7.6','Mac OS 9']);args=p.parse_args()
+    refresh(args.manifest) if args.action=='refresh' else verify(args.target)

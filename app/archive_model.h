@@ -124,6 +124,11 @@ class Entries final : public QAbstractTableModel {
         const QString &path = global ? r->displayFull : node->displayFull;
         if (role == IdRole) return r ? QVariant(r->id) : QVariant();
         if (role == SearchRole) return path;
+        if (role == Qt::AccessibleTextRole) return index.column() == 0 ? path : data(index, Qt::DisplayRole);
+        if (role == Qt::AccessibleDescriptionRole) {
+            if (folder) return QString("Folder. %1 underlying entries.").arg(idsAt(index.row()).size());
+            return QString("File. Data size %1. Resource fork %2. %3").arg(QLocale().formattedDataSize(r ? r->size : 0), r && r->resourceFork ? QLocale().formattedDataSize(r->resourceSize) : "not present", r && r->encrypted ? "Encrypted." : "Not encrypted.");
+        }
         if (role == Qt::ToolTipRole) return path + (r ? QString("\nEntry %1").arg(r->id) : global ? QString() : QString("\nGrouped folder: %1 explicit directory records").arg(nodes[view[index.row()]].realRows.size()));
         if (role == Qt::TextAlignmentRole && (index.column() == 1 || index.column() == 2))
             return int(Qt::AlignRight | Qt::AlignVCenter);

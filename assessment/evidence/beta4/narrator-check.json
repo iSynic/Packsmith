@@ -1,0 +1,20 @@
+{
+  "status": "partial; full qualification unverified",
+  "narrator_version": "10.0.26100.8972",
+  "settings": "Temporary QSettings and test-mode journal path; history remained off",
+  "ui_test_sha256": "ee51123f4d130fb9775b2ef8f40414525027a142f99757071d78557d79ba17a8",
+  "observations": [
+    "Windows UIA exposed named archive table, fork-size cells, File/Archive/Classic Mac menus, search, result editor and output/mapping/copy controls",
+    "Command-line opening listed the generated archive",
+    "Ctrl+F and typing txt produced global search with location column",
+    "Initial Tab/Down interaction was inconclusive; after a CapsLock+Space scan-mode toggle, Tab selected a row and Enter opened entry details",
+    "Details displayed detected format/method IDs, fork presence/sizes, Finder type/creator, interpreted and raw dates"
+  ],
+  "limitations": [
+    "Spoken output was not captured or independently heard",
+    "Computer-use focused_element remained stale at search despite visible row selection/details; modal Escape targeting was inconclusive",
+    "Narrator-assisted folder browsing, extraction/export review, cancellation and failure recovery remain unverified; automated Qt/native worker tests cover those application behaviors separately",
+    "Actual Windows contrast/display-scale/system-text settings were not changed"
+  ],
+  "shutdown": "Scan-mode chord toggled back; owned Narrator and test app stopped; computer-use session reset; no emulator running"
+}

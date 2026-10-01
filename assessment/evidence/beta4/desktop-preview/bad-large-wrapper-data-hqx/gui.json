@@ -1,0 +1,23 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "error": "Expected extraction failure and visible warning",
+  "error_dialog_detail": "Legacy archive checksum failed",
+  "error_dialog_text": "Extraction failed. No completed output was exported.",
+  "error_dialog_visible": true,
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "passed": true,
+  "result_panel": "extract: Failed or cancelled\nArchive: C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\desktop-legacy-fixtures\\bad-large-wrapper-data.hqx\nOutput committed: no\nFailure: Legacy archive checksum failed\nCode: integrity_failed\nBackend: xad\nFormat: StuffIt\nCompression: None\nCompression method ID: 0\nEntry: 3 \u00b7 Fork: resource",
+  "stage_removed": true,
+  "window_title": "Packsmith 0.1.0-beta.4 \u00b7 Windows beta",
+  "worker_exit_verified": true,
+  "screenshot_sha256": "d442d3e29e9fe0a2fb47770728d518941868c3a0455f388b1504de191bf83ca4",
+  "peak_gui_rss": 51724288,
+  "peak_workers_rss": 52801536,
+  "gui_sha256": "edf82918d2cebae8a0a28a560124a00cbb452590c19aef5208176c3664ff9318",
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "decoder_sha256": "af6872b47a89bfc63b6a2ee56c23fdc9f890b98b03df3e707aa742c1e448aa09",
+  "total_elapsed_ms": 490.17,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

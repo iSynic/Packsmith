@@ -1,6 +1,6 @@
 # Packsmith preview worker interface
 
-The Qt controller starts a new `workers/packsmith-worker.exe` for each job. ZIP/7z use the packaged 7-Zip 26.03 `7z.dll` SDK interfaces. Legacy extensions (`.sit`, `.hqx`, `.sitx`, `.bin`) or explicit `engine:"xad"` route through the decoder-only `workers/legacy/xad-stream.exe`. The filesystem-owning Qt worker receives one UTF-8 JSON object followed by a newline on stdin; later lines may send `{"cancel":true}`. Passwords are optional fields in that first object and reach the decoder through another private pipe. Arguments, stderr, GUI recovery journals and build/test logs never contain user passwords.
+The Qt controller starts a new `workers/packsmith-worker.exe` for each job. ZIP/7z use the packaged 7-Zip 26.03 `7z.dll` SDK interfaces. Legacy extensions (`.sit`, `.hqx`, `.sitx`, `.bin`, `.cpt`, `.lha`, `.lzh`, `.lzx`) or explicit `engine:"xad"` route through the decoder-only `workers/legacy/xad-stream.exe`. The filesystem-owning Qt worker receives one UTF-8 JSON object followed by a newline on stdin; later lines may send `{"cancel":true}`. Passwords are optional fields in that first object and reach the decoder through another private pipe. Arguments, stderr, GUI recovery journals and build/test logs never contain user passwords.
 
 This is a private beta contract. Version/capability negotiation and bounded queue backpressure remain interface work before third-party backend integration. Beta 2 adds explicit extraction scope and structured errors without breaking older requests.
 
@@ -46,4 +46,12 @@ Default `strict` execution rejects required substitutions with `classic_name_con
 
 Committed execution reports the ZIP path, `output_committed`, file/fork counts, source-checksum coverage, `name_mapping` and preservation limits. `Report.json` inside the ZIP stores original/restored names, full available FinderInfo, raw date values, portable/report-only flag masks, separate hashes and revisions. `created_1904`/`modified_1904` are unsigned classic wall-clock values; absent values remain unknown and produce zero header fields. `raw_components` holds base64 where an exact split is known and null otherwise. No password or absolute source path enters the package.
 
-Current qualification is in `assessment/reports/packsmith-beta3.md` and `assessment/evidence/beta3/`; earlier receipts remain historical.
+Current qualification is in `assessment/reports/packsmith-beta4.md` and `assessment/evidence/beta4/`; earlier receipts remain historical.
+
+## Beta 4 context
+
+Parser detection is authoritative after extension routing. Rows expose detected `format` and, when provided, `data_method_id`/`resource_method_id` alongside readable method names. Decoder failures carry `format`, `method` and optional `method_id` through the filesystem worker, with structured `unsupported_codec`, `unsupported_format`, `integrity_failed` or password codes. The controller does not classify errors by searching their messages. Unavailable identifiers remain absent. Entry details display available context.
+
+`checksum_coverage.wrapper_chain` records outer-to-inner detected formats. Compact Pro paired forks use its combined resource-then-data CRC32; `shared_checksums` counts these verified pairs. Individual fork checksum flags for such entries indicate coverage by the combined source checksum, not independent per-fork source CRCs. A mismatch rolls back all staging. One logical pair is formed only for matching offset/volume/shared-CRC metadata; same-name independent entries remain distinct.
+
+The manifest-driven generated harness and private oracle manifest record tested status; neither restricts user archives to known hashes. Compact Pro raw classic dates are unavailable from this pinned parser and stay unknown in Classic export (zero fields), even where its interpreted modification timestamp is available.

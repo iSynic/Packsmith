@@ -1,4 +1,4 @@
-"""Relink original and modified helpers from beta 3 materials and verify known fork bytes."""
+"""Relink original and modified helpers from beta 4 materials and verify known fork bytes."""
 import base64
 import hashlib
 import json
@@ -17,9 +17,9 @@ def sha(path):
 
 def main():
     legacy_fixtures.generate()
-    materials=ROOT/'dist/release-materials/Packsmith-0.1.0-beta.3-source-materials'
-    private=ROOT/'assessment/outputs/beta3-relink';private.mkdir(parents=True,exist_ok=True)
-    evidence=ROOT/'assessment/evidence/beta3';evidence.mkdir(parents=True,exist_ok=True)
+    materials=ROOT/'dist/release-materials/Packsmith-0.1.0-beta.4-source-materials'
+    private=ROOT/'assessment/outputs/beta4-relink';private.mkdir(parents=True,exist_ok=True)
+    evidence=ROOT/'assessment/evidence/beta4';evidence.mkdir(parents=True,exist_ok=True)
     compiler=ROOT/'assessment/tools/windows-runtime/mingw64/bin/clang.exe'
     modified=private/'modified-xad_stream.m'
     source=(materials/'app/xad_stream.m').read_text(encoding='utf-8')
@@ -51,6 +51,6 @@ def main():
             checks.append(dict(build=name,fixture=fixture,passed=True,terminal=terminal,helper_sha256=sha(output)))
     (evidence/'relink-test.json').write_text(json.dumps(dict(passed=True,compiler='Clang/lld 22.1.8 on provisioned Windows machine',
         developer_path_removed=True,modified_source_executed=True,materials_helper_source_sha256=sha(materials/'app/xad_stream.m'),checks=checks),indent=2)+'\n',encoding='utf-8')
-    print('Original and modified beta 3 helpers relinked; known data/resource bytes and corrupt CRC rejection passed',flush=True)
+    print('Original and modified beta 4 helpers relinked; known data/resource bytes and corrupt CRC rejection passed',flush=True)
 
 if __name__=='__main__':main()

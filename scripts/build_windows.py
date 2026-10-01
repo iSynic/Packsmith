@@ -25,6 +25,7 @@ def main():
     parser.add_argument("--compiler", type=Path, default=Path("C:/msys64/mingw64/bin"))
     parser.add_argument("--build", type=Path, default=ROOT / "build/windows")
     parser.add_argument("--package", type=Path, default=ROOT / "dist/Packsmith-preview")
+    parser.add_argument("--reuse-legacy", action="store_true", help="Reuse the unchanged verified helper for a GUI-only rebuild")
     args = parser.parse_args()
     qt, compiler, build, package = (p.resolve() for p in (args.qt, args.compiler, args.build, args.package))
     reference = ROOT / "assessment/references/sevenzip"
@@ -41,7 +42,7 @@ def main():
         raise RuntimeError(f"Untested Qt {qt_version}; this preview pins Qt 6.10.2")
     env = os.environ.copy()
     env["PATH"] = str(compiler) + os.pathsep + env["PATH"]
-    evidence = ROOT / "assessment/evidence/beta3/desktop-preview"
+    evidence = ROOT / "assessment/evidence/beta4/desktop-preview"
     evidence.mkdir(parents=True, exist_ok=True)
     cc1 = Path(subprocess.check_output([str(compiler / "g++.exe"), "-print-prog-name=cc1plus"], text=True).strip()).resolve()
     frozen = {"compiler/" + p.name: sha(p) for p in [compiler / "g++.exe", cc1, compiler / "cmake.exe", compiler / "ninja.exe", compiler / "libstdc++-6.dll", compiler / "libgcc_s_seh-1.dll", compiler / "libwinpthread-1.dll"]}
@@ -59,7 +60,18 @@ def main():
             raise RuntimeError("Build inputs differ from the frozen preview toolchain; qualify the change separately")
     else:
         input_lock.write_text(json.dumps({"hash_provenance": "Observed local SDK/compiler hashes; source/download pins recorded separately. Not a clean-machine acquisition receipt.", "gcc_msys2_package": "15.2.0-8", "qt": qt_version, "sevenzip_revision": revision, "hashes": frozen}, indent=2)+"\n", encoding="utf-8")
-    subprocess.run([os.sys.executable, str(ROOT / "scripts/build_legacy_windows.py")], check=True)
+    if args.reuse_legacy:
+        legacy=ROOT/'assessment/evidence/beta4/desktop-legacy/build.json'
+        receipt=json.loads(legacy.read_text(encoding='utf-8'))
+        previous=json.loads((package/'package-manifest.json').read_text(encoding='utf-8'))
+        helper=ROOT/'build/legacy/xad-stream.exe'
+        expected=next(row['sha256'] for row in previous['files'] if row['path'].replace('\\','/')=='workers/legacy/xad-stream.exe')
+        if receipt['exit_code'] or receipt['source_sha256']!=sha(ROOT/'app/xad_stream.m') or sha(helper)!=expected:
+            raise RuntimeError('Legacy helper changed; perform the complete build')
+        for name,digest in receipt['libraries_sha256'].items():
+            if sha(ROOT/'assessment/experiments/xad-windows/build-clang22'/name)!=digest:raise RuntimeError('Legacy library changed: '+name)
+    else:
+        subprocess.run([os.sys.executable, str(ROOT / "scripts/build_legacy_windows.py")], check=True)
     commands = [
         [str(compiler / "cmake.exe"), "-S", str(ROOT), "-B", str(build), "-G", "Ninja", "-DCMAKE_BUILD_TYPE=Release",
          "-DCMAKE_CXX_COMPILER=" + str(compiler / "g++.exe"), "-DCMAKE_RC_COMPILER=" + str(compiler / "windres.exe"), "-DCMAKE_PREFIX_PATH=" + str(qt)],
@@ -153,9 +165,9 @@ def main():
         "sdk_revision": revision, "qt": qt_version, "compiler": version,
         "commands": commands,
         "build_inputs": frozen,
-        "legacy_build": json.loads((ROOT / "assessment/evidence/beta3/desktop-legacy/build.json").read_text(encoding="utf-8")),
-        "legacy_build_inputs": json.loads((ROOT / "assessment/evidence/beta3/desktop-legacy/build-inputs.lock.json").read_text(encoding="utf-8")),
-        "authored_sources": {str(p.relative_to(ROOT)): sha(p) for p in [ROOT / "CMakeLists.txt", ROOT / "app/main.cpp", ROOT / "app/archive_model.h", ROOT / "app/job_controller.h", ROOT / "app/classic_export.h", ROOT / "app/classic_format.h", ROOT / "app/version.h", ROOT / "app/worker.cpp", ROOT / "app/legacy_worker.h", ROOT / "app/xad_stream.m", ROOT / "app/packsmith.rc", ROOT / "assets/icons/packsmith.ico", ROOT / "assets/icons/packsmith-archive.ico", ROOT / "scripts/build_icons.py", ROOT / "scripts/build_legacy_windows.py", Path(__file__)]},
+        "legacy_build": json.loads((ROOT / "assessment/evidence/beta4/desktop-legacy/build.json").read_text(encoding="utf-8")),
+        "legacy_build_inputs": json.loads((ROOT / "assessment/evidence/beta4/desktop-legacy/build-inputs.lock.json").read_text(encoding="utf-8")),
+        "authored_sources": {str(p.relative_to(ROOT)): sha(p) for p in [ROOT / "CMakeLists.txt", ROOT / "app/main.cpp", ROOT / "app/archive_model.h", ROOT / "app/archive_opening.h", ROOT / "app/job_controller.h", ROOT / "app/classic_export.h", ROOT / "app/classic_format.h", ROOT / "app/version.h", ROOT / "app/worker.cpp", ROOT / "app/legacy_worker.h", ROOT / "app/xad_stream.m", ROOT / "app/packsmith.rc", ROOT / "assets/icons/packsmith.ico", ROOT / "assets/icons/packsmith-archive.ico", ROOT / "scripts/build_icons.py", ROOT / "scripts/build_legacy_windows.py", Path(__file__)]},
         "files": [{"path": str(p.relative_to(package)), "sha256": sha(p), "bytes": p.stat().st_size,
                    "origin": origins.get(str(p.relative_to(package)))} for p in sorted(package.rglob("*")) if p.is_file() and p.name != "package-manifest.json"],
     }

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "targets": [
+    {
+      "target": "System 7.6",
+      "expander": "5.5",
+      "compared_files": 297,
+      "passed": true,
+      "failures": [],
+      "inventory_sha256": "bedfb46fb8b816806e19c23407a4b1a3032d9d3c2e32010c9d22a4ea596b50d4"
+    },
+    {
+      "target": "Mac OS 9",
+      "expander": "5.5",
+      "compared_files": 297,
+      "passed": true,
+      "failures": [],
+      "inventory_sha256": "8c0f9b3110387c9d846afadf09469fe42f6952b9decb09edf53e28e613d02329"
+    }
+  ],
+  "original_archives_unchanged": true,
+  "worker_sha256": "81c1e33a39e0434a765c16aed930d6f8682f8b5ec56760fd930eb6f072845532",
+  "engine_revision": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+  "reader_source_sha256": "b951678a2ef24faddd2c82d0170f8c86b7db4c9fc8014de2d44e66a5271a49ae",
+  "procedure": "Fresh beta 4 exports compared against original-software extraction and previously restored beta 3 files in unchanged, shut-down System 7.6/Mac OS 9 HFS disks. This is a fork/metadata regression comparison, not a new beta 4 ZIP transfer in either guest.",
+  "archives": [
+    {
+      "name": "hax-13.hqx",
+      "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+      "package_sha256": "32a2609a7851286933f5768d20bb12b731309adfab630d55a70ce27f2eca772d",
+      "files": 124
+    },
+    {
+      "name": "HAX1R3.BIN",
+      "archive_sha256": "adf4259be232a3eb6c521f2a2749433d0b495d14461b30cde6988431ad22fa9c",
+      "package_sha256": "e3f240fcd9ff339e7784590687c2a68ef44c501c9c28463ba7118882304e6387",
+      "files": 125
+    },
+    {
+      "name": "dark-towers-ks.hqx",
+      "archive_sha256": "69192fd651613d5cbda7acfa9356ca126d40ecab161b01e83c595f342e7640ac",
+      "package_sha256": "2ca7ef787dff78bf149e863358e5b013753da3e7194c8589b7fdcad9a8c58fcc",
+      "files": 4
+    },
+    {
+      "name": "BOutS 1.2.sit",
+      "archive_sha256": "604aaf3a3116ce6e017aeac768d5e9e036313fd4fe359b89d3a6aeb6dce8731d",
+      "package_sha256": "a57aca5352e8986f7f440140f2591241a448765fb94e944cabec3038a2549d55",
+      "files": 39
+    },
+    {
+      "name": "Generated known forks and empty folders",
+      "archive_sha256": "d670644cf0239e01ee4c12467dce61b82bd3507c8217b335d02e6f037ae930b1",
+      "package_sha256": "804057599b25c201dbd2936d1524394e1531eaafdeb2f0305c542fa2a0fb6ba1",
+      "files": 5
+    }
+  ],
+  "limitation": "Raw resource differences permitted only in bytes 16-255 with independent resource records equal. Private inventories, archives and disk images excluded from Git/releases."
+}

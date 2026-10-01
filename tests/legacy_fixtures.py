@@ -110,7 +110,7 @@ def generate():
     record={'provenance':'Generated classic StuffIt stored/RLE and BinHex 4.0, with independent CRC generators; no downloaded personal archives.',
             'data_sha256':hashlib.sha256(data).hexdigest(),'resource_sha256':hashlib.sha256(resource).hexdigest(),
             'files':{name:{'sha256':hashlib.sha256(content).hexdigest(),'bytes':len(content)} for name,content in files.items()}}
-    evidence=ROOT/'assessment/evidence/beta3/desktop-legacy';evidence.mkdir(parents=True,exist_ok=True)
+    evidence=ROOT/'assessment/evidence/beta4/desktop-legacy';evidence.mkdir(parents=True,exist_ok=True)
     (evidence/'generated-fixtures.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
     return data,resource
 

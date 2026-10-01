@@ -1,0 +1,32 @@
+{
+  "target": "Basilisk II / System 7.6",
+  "software": "StuffIt Expander 5.5 copied from prior qualified test disk",
+  "archive_sha256": "d28f57d4766804ace4bbddd80568ce8eb0099b468a5c8daad14995fa89d6dfaa",
+  "status": "unverified",
+  "procedure": "Copied writable system disk, NVRAM and fresh test volume. A quoted --config path selected the isolated guest. Opened Expander and its Expand picker; it did not offer Freddie.cpt. Cancelled, quit and shut down Finder before disk reads.",
+  "limitation": "No expansion, restoration or fork comparison completed; requires a recognized Compact Pro input or original Compact Pro application.",
+  "initial_launch": "An unquoted configuration path with spaces opened a different guest. No UI input was sent to it; the owned process was stopped. The four protected source images still match the beta 3 hashes. No claim about other default guest disk bytes.",
+  "protected_images": [
+    {
+      "sha256": "8e4e6974c67f9dbe6675823878a63722be8ecd2dcc5685ad7682a775db825f66",
+      "unchanged": true,
+      "name": "system76.hfv"
+    },
+    {
+      "sha256": "8e63afc99d4312a32f84acefcb7b2d30c5f11c1c68047adba75cda18e027574b",
+      "unchanged": true,
+      "name": "Mac OS 9.hfv"
+    },
+    {
+      "sha256": "83c97805b95570470e168d2440913024b8b783e75ce2e4fe13a9f418fed4e94b",
+      "unchanged": true,
+      "name": "250MB.dsk"
+    },
+    {
+      "sha256": "9578ebac28c599e4e44cf55cd9226773e376967cd6fac1f251a581508b6006ac",
+      "unchanged": true,
+      "name": "Stuffit_Expander_5.5.dsk"
+    }
+  ],
+  "emulators_running": false
+}

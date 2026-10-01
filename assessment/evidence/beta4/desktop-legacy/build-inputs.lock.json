@@ -1,0 +1,22 @@
+{
+  "provenance": "Observed local compiler/headers/imports/source hashes; acquired packages and engine build receipts are in windows-first. Not fresh-machine proof.",
+  "hashes": {
+    "tools\\windows-runtime\\mingw64\\bin\\clang.exe": "49bd90436620bd252aa2bc82e62309ee52ed16b61238ca0ccb54594dbc288bed",
+    "tools\\windows-runtime\\mingw64\\bin\\clang++.exe": "49bd90436620bd252aa2bc82e62309ee52ed16b61238ca0ccb54594dbc288bed",
+    "tools\\windows-runtime\\mingw64\\bin\\ld.lld.exe": "b0e55c1d12b730d8f174737dcf8a30bc2f07bdc3cea81003d00a7fd8882d9efb",
+    "tools\\windows-runtime\\mingw64\\lib\\libgnustep-base.dll.a": "5c0e1048dd27f2d531176ac2c856a0541ae5655448412fe8b226dd288c5fdd38",
+    "tools\\windows-runtime\\mingw64\\lib\\libobjc.dll.a": "6abd994aafdbca0223b84c64fab9724f9180fa53514cf21f20b0e145d185217d",
+    "tools\\windows-runtime\\mingw64\\lib\\libz.dll.a": "0c4848c6215d524133447d4449e0cb8a0b6673376b19be2b579506fc1d57c492",
+    "tools\\windows-runtime\\mingw64\\lib\\libbz2.dll.a": "34fa80eaec24704410a5cb2183a946d0689be4f98878961e0f1cbce1923a5b7a",
+    "tools\\windows-runtime\\mingw64\\lib\\libwavpack.dll.a": "8e69d1619d57d1b091692785b0062fbde830d9c549f77ff3e4a484227ae99089",
+    "tools\\windows-runtime-gcc16_1\\mingw64\\lib\\libstdc++.dll.a": "fd94388c7a6e393e74bc6eb1fdc07a7704f7a109f975a29193c79ed5270e09c9",
+    "experiments\\xad-windows\\project\\CMakeLists.txt": "ab4c8078a6bf8fe84da3c5493a35c4c149e34cc74f1afe2a25b1121fc2144b12",
+    "experiments\\xad-windows\\compat-include\\regex.h": "329a2f74982d9714dc808557e21aeabaf052b060510052e217932e1c63a020f0",
+    "evidence\\windows-first\\windows-wide-unlink.patch": "545068a595ac4611e67a75e7f2559e7ea0f5585df3892cf15eb39ff835e85bb1",
+    "evidence\\windows-first\\windows-encoding.patch": "e8ef8c205c3bdee05365b905f9fba457732b9fd8f30b695f14430513605baf21",
+    "tools\\windows-runtime\\mingw64\\include": "667d92b6e2c7116b0dacc7d7a77c186cf0204d876a39e4c14a756c982e214356",
+    "tools\\windows-runtime\\mingw64\\lib\\clang": "738107b6a5923d3dc26f942678eb6a17d9931213a9f1b9f2dede6a88386468cc",
+    "experiments\\xad-windows\\XADMaster": "7f7d7367739ee11ddd48974babc48c7f8136888bc7adfd96413eab7b2c4be5a4",
+    "experiments\\xad-windows\\UniversalDetector": "432bedb98ee6fbfc0ab4f57fffaafe07fb508e8a7fff361d6a82645cd8e94497"
+  }
+}
