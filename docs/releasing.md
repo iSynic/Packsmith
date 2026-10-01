@@ -34,3 +34,11 @@ The desktop/worker can be rebuilt using the repository CMake target, Qt 6.10.2 M
 6. Create an annotated version tag at that commit. Upload the binary, source-materials, release manifest and checksum assets to a draft GitHub prerelease, verify the uploaded SHA-256 digests and tag target, then publish it as a prerelease.
 
 Release notes must keep the demonstrated format/operation scope and outstanding qualification gates visible. The original assessment's failed or unverified checks are retained as evidence. A beta publication does not mark them passed.
+
+## Unpublished candidates
+
+Run `python scripts/package_beta.py --candidate` to package the exact current workspace without committing, tagging, uploading or publishing. It writes versioned assets under `dist/candidates/`, includes a tarball of non-ignored authored workspace files, and records every snapshot hash, the base commit and dirty state. It validates the binary package and authored-source hashes before assembly. Private corpus inputs/outputs remain excluded by Git's ignore rules. This snapshot receipt is not a release-commit claim; the normal tagged-release command still requires a clean commit.
+
+Beta 2 checks also include `python tests/run_beta2.py` and the local corpus qualification described in the root README. New receipts live under `assessment/evidence/beta2/`. Preserve published beta 1 assets, tags and historical receipts.
+
+Beta 3 uses `tests/run_beta3.py`, `tests/classic_test.py`, the existing smoke/recovery/branding checks, and original/modified relink checks. Receipts live under `assessment/evidence/beta3/`; preserve beta 1/beta 2 artifacts. The classic Mac oracle requires isolated disk copies, explicit UI expansion/shutdown and independent HFS inspection. Never include private inventories, disk images, ROMs, proprietary tools or user archives in Git/assets. The candidate remains unpublished; signing, clean-machine certification and publishing are separate tasks.

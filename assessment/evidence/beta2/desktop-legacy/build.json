@@ -1,0 +1,51 @@
+{
+  "command": [
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\clang.exe",
+    "-O2",
+    "-fobjc-runtime=gnustep-2.0",
+    "-fexceptions",
+    "-fobjc-exceptions",
+    "-fblocks",
+    "-fconstant-string-class=NSConstantString",
+    "-DSTRICT_APPLE_COMPATIBILITY=1",
+    "-D_NATIVE_OBJC_EXCEPTIONS",
+    "-D_FILE_OFFSET_BITS=64",
+    "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\include",
+    "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\XADMaster",
+    "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\compat-include",
+    "-LC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime-gcc16_1\\mingw64\\lib",
+    "-LC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\lib",
+    "-fuse-ld=lld",
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\app\\xad_stream.m",
+    "-Wl,--whole-archive",
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\libxad.a",
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\libdetector.a",
+    "-Wl,--no-whole-archive",
+    "-lgnustep-base",
+    "-lobjc",
+    "-lstdc++",
+    "-lz",
+    "-lbz2",
+    "-lwavpack",
+    "-lwinmm",
+    "-lgdi32",
+    "-o",
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\xad-stream.exe"
+  ],
+  "libraries_command": [
+    "C:\\msys64\\mingw64\\bin\\cmake.exe",
+    "--build",
+    "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22",
+    "--target",
+    "xad",
+    "detector",
+    "-j",
+    "4"
+  ],
+  "libraries_sha256": {
+    "libxad.a": "c4e39b0d54a2b73f943e594016609fe4603fa222031c42b3c70a9d1c4f3cab38",
+    "libdetector.a": "42311e691ef804de5dbd69e7ebe84761c05f46b1f04615117617a2a63b94c578"
+  },
+  "source_sha256": "9e30efa08867d4218e5ff44e95b1e0054a3ea4a05ea85b908c0dbb398cfd5cc7",
+  "exit_code": 0
+}

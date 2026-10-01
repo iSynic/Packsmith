@@ -2,6 +2,7 @@ import hashlib
 import base64
 import datetime
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -30,6 +31,33 @@ class LegacyTests(unittest.TestCase):
     tearDown = common.WorkerTests.tearDown
     good = common.WorkerTests.good
     mapping = common.WorkerTests.mapping
+    def test_explicit_scope_and_duplicate_folders(self):
+        path=fixtures.OUT/'duplicate-folders.sit'
+        events=self.good('list',path)
+        rows=[row for event in events if event['event']=='entries' for row in event['items']]
+        folders=[row['id'] for row in rows if row['components']==['folder']]
+        self.assertEqual(len(folders),2)
+        end=self.good('extract',path,destination=str(self.dest),selection_scope='entries',ids=folders)[-1]
+        self.assertEqual(sorted(self.mapping(end).values()),[b'first',b'second'])
+        empty=next(row['id'] for row in rows if row['components']==['empty'])
+        end=self.good('extract',path,destination=str(self.dest),selection_scope='entries',ids=[empty])[-1]
+        self.assertEqual(end['file_count'],0)
+        self.assertTrue((Path(end['output'])/'empty').is_dir())
+        code,events=common.job('extract',path,destination=str(self.dest),selection_scope='entries',ids=[])
+        self.assertNotEqual(code,0);self.assertEqual(events[-1]['code'],'empty_selection')
+        end=self.good('extract',path,destination=str(self.dest),selection_scope='all')[-1]
+        self.assertEqual(end['file_count'],3);self.assertTrue(end['output_committed'])
+
+    def test_nested_wrappers_and_structured_errors(self):
+        end=self.extract('nested-wrapped.hqx',selection_scope='entries',ids=[0])
+        self.assertEqual(self.mapping(end),{0:DATA})
+        output=Path(end['output']);mapping=json.loads((output/end['mapping']).read_text(encoding='utf-8'))['entries'][0]
+        self.assertEqual(sidecar(output/mapping['sidecar'])[2],RESOURCE)
+        self.assertEqual(end['checksum_coverage']['expanded_wrappers'],2)
+        code,events=common.job('extract',fixtures.OUT/'bad-resource.hqx',destination=str(self.dest))
+        self.assertNotEqual(code,0);self.assertEqual(events[-1]['code'],'integrity_failed')
+        self.assertEqual(events[-1]['engine'],'xad');self.assertEqual(events[-1]['part'],'resource')
+        self.assertFalse(events[-1]['output_committed'])
     def extract(self,name,**extra):
         path=fixtures.OUT/name
         return self.good('extract',path,destination=str(self.dest),**extra)[-1]
@@ -38,7 +66,7 @@ class LegacyTests(unittest.TestCase):
         for name in ('forks.sit','forks.hqx'):
             events=self.good('list',fixtures.OUT/name)
             row=next(e['items'][0] for e in events if e['event']=='entries')
-            self.assertEqual(row['path'],'café.txt');self.assertTrue(row['has_resource']);self.assertTrue(row['has_data'])
+            self.assertEqual(row['path'],'cafÃ©.txt');self.assertTrue(row['has_resource']);self.assertTrue(row['has_data'])
             end=self.extract(name,ids=[0]);output=Path(end['output'])
             mapping=json.loads((output/end['mapping']).read_text(encoding='utf-8'))['entries'][0]
             self.assertEqual((output/mapping['output']).read_bytes(),DATA)
@@ -121,6 +149,7 @@ class LegacyTests(unittest.TestCase):
             for extra in ({},{'password':'wrong'}):
                 code,events=common.job('extract',path,destination=str(self.dest),**extra)
                 self.assertNotEqual(code,0,events[-1]);self.assertEqual(list(self.dest.iterdir()),[])
+                if not extra:self.assertEqual(events[-1]['code'],'password_required')
             end=self.good('extract',path,destination=str(self.dest),password=password)[-1];output=Path(end['output'])
             self.assertEqual(hashlib.sha256((output/'testdoc.txt').read_bytes()).hexdigest(),'0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b')
             self.assertEqual(hashlib.sha256(sidecar(output/'._testdoc.txt')[2]).hexdigest(),'47d93fa1812ca5d49bb2df81a077276f6c003612c57abe7ea2ef29ef7b64ce81')
@@ -142,7 +171,9 @@ class LegacyTests(unittest.TestCase):
         for forced in (False,True):
             proc=subprocess.Popen([str(common.WORKER)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env=common.ENV)
             proc.stdin.write(json.dumps(dict(operation='extract',archive=str(archive),destination=str(self.dest)))+'\n');proc.stdin.flush()
-            stage=json.loads(proc.stdout.readline());self.assertEqual(stage['event'],'staging')
+            stage=json.loads(proc.stdout.readline())
+            while stage['event']!='staging': stage=json.loads(proc.stdout.readline())
+            self.assertEqual(stage['event'],'staging')
             children=psutil.Process(proc.pid).children(recursive=True)
             self.assertTrue(any(child.name()=='xad-stream.exe' for child in children))
             started=time.perf_counter()
@@ -163,7 +194,7 @@ class LegacyTests(unittest.TestCase):
     def test_encoding_override_stale_listing_and_write_failure(self):
         archive=fixtures.OUT/'forks.sit'
         events=self.good('list',archive,filename_encoding='macintosh')
-        self.assertEqual(next(e['items'][0]['path'] for e in events if e['event']=='entries'),'café.txt')
+        self.assertEqual(next(e['items'][0]['path'] for e in events if e['event']=='entries'),'cafÃ©.txt')
         code,events=common.job('list',archive,filename_encoding='unavailable')
         self.assertNotEqual(code,0)
         code,events=common.job('extract',archive,destination=str(self.dest),fingerprint='stale')
@@ -175,6 +206,6 @@ class LegacyTests(unittest.TestCase):
 if __name__=='__main__':
     suite=unittest.defaultTestLoader.loadTestsFromTestCase(LegacyTests)
     result=unittest.TextTestRunner(verbosity=2).run(suite)
-    out=common.ROOT/'assessment/evidence/desktop-legacy/tests.json'
+    out=common.ROOT/'assessment/evidence/beta3/desktop-legacy/tests.json'
     out.write_text(json.dumps({'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'worker_sha256':hashlib.file_digest(common.WORKER.open('rb'),'sha256').hexdigest(),'decoder_sha256':hashlib.file_digest((common.WORKER.parent/'legacy/xad-stream.exe').open('rb'),'sha256').hexdigest(),'environment':'Native Windows; developer PATH removed; generated fixtures and upstream encrypted StuffIt fixtures; no independent original Mac oracle','receipts':common.RECEIPTS},indent=2)+'\n',encoding='utf-8')
     sys.exit(0 if result.wasSuccessful() else 1)

@@ -2,112 +2,11 @@
 #include "version.h"
 #include <functional>
 
-struct Row {
-    quint32 id;
-    QString name;
-    quint64 size;
-    bool directory, encrypted, link;
-    quint64 resourceSize;
-    bool resourceFork;
-};
-static QString visibleName(const QString &name) {
-    QStringList parts;
-    for (const auto &part : name.split('/')) {
-        QString text;
-        bool whitespaceOnly = part.trimmed().isEmpty();
-        for (QChar c : part) {
-            if (c == '\t')
-                text += "\\t";
-            else if (c == '\n')
-                text += "\\n";
-            else if (c == '\r')
-                text += "\\r";
-            else if (c == '\\')
-                text += "\\\\";
-            else if (c.unicode() < 32 || c.unicode() == 127 || c.category() == QChar::Other_Format)
-                text += QString("\\u%1").arg(uint(c.unicode()), 4, 16, QChar('0'));
-            else if (whitespaceOnly && c == ' ')
-                text += "\\x20";
-            else
-                text += c;
-        }
-        parts.append(text);
-    }
-    return parts.join('/');
-}
-class Entries final : public QAbstractTableModel {
-  public:
-    QVector<Row> rows;
-    int rowCount(const QModelIndex &parent = {}) const override {
-        return parent.isValid() ? 0 : rows.size();
-    }
-    int columnCount(const QModelIndex &parent = {}) const override {
-        return parent.isValid() ? 0 : 5;
-    }
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const override {
-        if (orientation == Qt::Horizontal && role == Qt::DisplayRole)
-            return QStringList{"Name", "Data size", "Resource fork", "Type", "Protection"}.value(
-                section);
-        return QAbstractTableModel::headerData(section, orientation, role);
-    }
-    QVariant data(const QModelIndex &index, int role) const override {
-        if (!index.isValid())
-            return {};
-        const auto &r = rows[index.row()];
-        if (role == Qt::UserRole)
-            return r.id;
-        if (role == Qt::UserRole + 1) {
-            if (index.column() == 1)
-                return QVariant::fromValue(r.size);
-            if (index.column() == 2)
-                return QVariant::fromValue(r.resourceSize);
-            if (index.column() == 3)
-                return r.link ? "Link" : r.directory ? "Folder" : "File";
-            if (index.column() == 4)
-                return r.encrypted ? "Encrypted" : "";
-            return r.name;
-        }
-        if (role == Qt::TextAlignmentRole && (index.column() == 1 || index.column() == 2))
-            return int(Qt::AlignRight | Qt::AlignVCenter);
-        if (role == Qt::ToolTipRole)
-            return QString("Entry %1\n%2").arg(r.id).arg(visibleName(r.name));
-        if (role != Qt::DisplayRole)
-            return {};
-        switch (index.column()) {
-        case 0:
-            return visibleName(r.name);
-        case 1:
-            return r.directory ? QString() : QLocale().formattedDataSize(r.size);
-        case 2:
-            return r.resourceFork ? QLocale().formattedDataSize(r.resourceSize) : QString();
-        case 3:
-            return r.link ? "Link" : r.directory ? "Folder" : "File";
-        case 4:
-            return r.encrypted ? "Encrypted" : "";
-        }
-        return {};
-    }
-    void clear() {
-        beginResetModel();
-        rows.clear();
-        endResetModel();
-    }
-    void append(const QJsonArray &items) {
-        if (items.isEmpty())
-            return;
-        beginInsertRows({}, rows.size(), rows.size() + items.size() - 1);
-        for (auto v : items) {
-            auto r = v.toObject();
-            rows.append({quint32(r["id"].toInteger()), r["path"].toString(),
-                         r["size"].toString().toULongLong(), r["directory"].toBool(),
-                         r["encrypted"].toBool(), r["link"].toBool(),
-                         r["resource_size"].toString().toULongLong(), r["has_resource"].toBool()});
-        }
-        endInsertRows();
-    }
-};
+#include "archive_model.h"
+#include "job_controller.h"
 
 class Window final : public QMainWindow {
+    friend struct GuiChecks;
     Entries model;
     QSortFilterProxyModel proxy;
     QTableView *table;
@@ -117,14 +16,20 @@ class Window final : public QMainWindow {
     QPushButton *cancel;
     QList<QAction *> operations;
     QList<QAction *> edits;
-    QProcess process;
+    JobController jobs;
+    QProcess &process = jobs.process;
+    QPlainTextEdit *resultText;
+    QPushButton *outputButton, *mappingButton, *backButton, *upButton;
+    QHBoxLayout *breadcrumbs;
+    QAction *extractAction = nullptr, *extractAllAction = nullptr;
+    QAction *classicAction = nullptr, *classicAllAction = nullptr;
+    bool passwordRetry = false;
     QProcess recovery;
     QJsonObject stagingRecord;
     QString stagingJournal;
     QList<QPair<QJsonObject, QString>> pendingRecovery;
     QByteArray recoveryOutput;
     bool recoveryRequired = false;
-    QByteArray incoming;
     QString archive, password, operation, staging, fingerprint, filenameEncoding;
     QAction *encodingAction = nullptr;
     bool passwordDefined = false, terminal = false, busy = false, listingValid = false,
@@ -133,7 +38,8 @@ class Window final : public QMainWindow {
     QElapsedTimer jobClock, heartbeatClock;
     qint64 maxEventGap = 0;
     QTimer heartbeat, killTimer;
-    QString smokeReport, smokeDestination;
+    QString smokeReport, smokeDestination, lastOutput, lastMapping;
+    QHash<quint32, QJsonObject> extractedEntries;
     QJsonObject smoke;
     int smokePhase = 0;
 
@@ -182,9 +88,10 @@ class Window final : public QMainWindow {
         openAction->setIcon(QIcon(":/brand/packsmith-archive.ico"));
         action("Create…", QStyle::SP_FileIcon, QKeySequence::New, [this] { createArchive(); });
         toolbar->addSeparator();
-        action(
+        extractAction = action(
             "Extract…", QStyle::SP_DialogSaveButton, QKeySequence("Ctrl+E"), [this] { extract(); },
             true);
+        extractAllAction = action("Extract All…", QStyle::SP_DialogSaveButton, QKeySequence("Ctrl+Shift+E"), [this] { extract(true); }, true);
         action(
             "Test", QStyle::SP_DialogApplyButton, QKeySequence("Ctrl+T"),
             [this] { run({{"operation", "test"}}); }, true);
@@ -197,7 +104,11 @@ class Window final : public QMainWindow {
             "Rename…", QStyle::SP_FileDialogDetailedView, QKeySequence("F2"), [this] { rename(); },
             true);
         action("Remove", QStyle::SP_TrashIcon, QKeySequence::Delete, [this] { remove(); }, true);
-        edits = operations.mid(2);
+        edits = operations.mid(3);
+        auto classicMenu = menuBar()->addMenu("Classic Mac");
+        classicAction = classicMenu->addAction("Export for Classic Mac…", this, [this] { exportClassic(); }, QKeySequence("Ctrl+M"));
+        classicAllAction = classicMenu->addAction("Export All for Classic Mac…", this, [this] { exportClassic(true); }, QKeySequence("Ctrl+Shift+M"));
+        operations.append(classicAction); operations.append(classicAllAction);
         action(
             "Password…", QStyle::SP_MessageBoxQuestion, {},
             [this] {
@@ -228,6 +139,7 @@ class Window final : public QMainWindow {
                                                    labels, 0, false, &ok);
                 if (ok) {
                     filenameEncoding = encodings[labels.indexOf(label)];
+                    extractedEntries.clear();
                     listingValid = false;
                     fingerprint.clear();
                     model.clear();
@@ -247,9 +159,18 @@ class Window final : public QMainWindow {
         layout->addLayout(searchRow);
         proxy.setSourceModel(&model);
         proxy.setFilterKeyColumn(0);
+        proxy.setFilterRole(Entries::SearchRole);
         proxy.setFilterCaseSensitivity(Qt::CaseInsensitive);
         proxy.setSortRole(Qt::UserRole + 1);
         proxy.setDynamicSortFilter(false);
+        auto navigation = new QHBoxLayout;
+        backButton = new QPushButton("Back"); upButton = new QPushButton("Up");
+        backButton->setShortcut(QKeySequence("Alt+Left")); upButton->setShortcut(QKeySequence("Alt+Up"));
+        navigation->addWidget(backButton); navigation->addWidget(upButton);
+        breadcrumbs = new QHBoxLayout; navigation->addLayout(breadcrumbs, 1);
+        layout->addLayout(navigation);
+        connect(backButton, &QPushButton::clicked, this, [this] { model.back(); navigated(); });
+        connect(upButton, &QPushButton::clicked, this, [this] { model.up(); navigated(); });
         table = new QTableView;
         table->setModel(&proxy);
         table->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -267,7 +188,31 @@ class Window final : public QMainWindow {
         table->setColumnWidth(3, 85);
         table->setColumnWidth(4, 110);
         table->setAccessibleName("Archive entries");
+        table->setColumnWidth(5, 200);
         layout->addWidget(table, 1);
+        auto resultBox = new QGroupBox("Last job result");
+        auto resultLayout = new QVBoxLayout(resultBox);
+        resultText = new QPlainTextEdit; resultText->setReadOnly(true); resultText->setMaximumHeight(145);
+        resultText->setAccessibleName("Last job result"); resultLayout->addWidget(resultText);
+        auto resultActions = new QHBoxLayout;
+        outputButton = new QPushButton("Open output folder"); mappingButton = new QPushButton("View mapping");
+        auto copyButton = new QPushButton("Copy diagnostic details");
+        resultActions->addWidget(outputButton); resultActions->addWidget(mappingButton); resultActions->addWidget(copyButton); resultActions->addStretch();
+        resultLayout->addLayout(resultActions); layout->addWidget(resultBox);
+        outputButton->setEnabled(false); mappingButton->setEnabled(false);
+        connect(outputButton, &QPushButton::clicked, this, [this] { QDesktopServices::openUrl(QUrl::fromLocalFile(QFileInfo(lastOutput).isFile() ? QFileInfo(lastOutput).absolutePath() : lastOutput)); });
+        connect(mappingButton, &QPushButton::clicked, this, [this] {
+            if (jobs.result.operation == "export_classic") {
+                auto dialog = new QDialog(this); dialog->setWindowTitle("Classic export name mapping"); dialog->setAttribute(Qt::WA_DeleteOnClose); dialog->resize(700,400);
+                auto layout = new QVBoxLayout(dialog); auto text = new QPlainTextEdit; text->setReadOnly(true);
+                text->setPlainText("The complete preservation report is Report.json inside the ZIP.\n\n"+QString::fromUtf8(QJsonDocument(jobs.result.terminal["name_mapping"].toArray()).toJson())); layout->addWidget(text); dialog->open();
+            } else QDesktopServices::openUrl(QUrl::fromLocalFile(lastMapping));
+        });
+        connect(copyButton, &QPushButton::clicked, this, [this] { QApplication::clipboard()->setText(resultText->toPlainText()); });
+        connect(table, &QTableView::activated, this, [this](const QModelIndex &index) { activate(index); });
+        connect(table->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this] { updateActions(); });
+        auto detailsShortcut = new QShortcut(QKeySequence("Alt+Return"), table);
+        connect(detailsShortcut, &QShortcut::activated, this, [this] { activate(table->currentIndex()); });
         auto footer = new QHBoxLayout;
         status = new QLabel("Ready");
         status->setWordWrap(true);
@@ -293,54 +238,48 @@ class Window final : public QMainWindow {
             "QTableView {border:1px solid palette(mid);border-radius:4px;} QHeaderView::section "
             "{padding:8px;border:0;border-bottom:1px solid palette(mid);font-weight:600;} "
             "QPushButton {padding:6px 14px;}");
-        connect(search, &QLineEdit::textChanged, &proxy,
-                &QSortFilterProxyModel::setFilterFixedString);
+        for (auto label : {heading, subtitle, status, note}) label->setTextFormat(Qt::PlainText);
+        connect(search, &QLineEdit::textChanged, this, [this](const QString &text) {
+            table->clearSelection(); model.searchMode(!text.isEmpty());
+            proxy.setFilterFixedString(text); proxy.sort(table->horizontalHeader()->sortIndicatorSection(), table->horizontalHeader()->sortIndicatorOrder());
+            updateNavigation(); updateActions();
+        });
         connect(cancel, &QPushButton::clicked, this, [this] { cancelJob(); });
-        connect(&process, &QProcess::readyReadStandardOutput, this, [this] { readOutput(); });
+        jobs.onEvent = [this](const QJsonObject &e) { event(e); };
         connect(&process, &QProcess::started, this, [this] {
             process.write(QJsonDocument(request).toJson(QJsonDocument::Compact) + "\n");
         });
-        connect(&process, &QProcess::readyReadStandardError, this,
-                [this] { process.readAllStandardError(); });
-        connect(&process, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-                [this](int code, QProcess::ExitStatus exit) {
-                    readOutput();
-                    killTimer.stop();
-                    if (!terminal) {
-                        status->setText(
-                            QString("Worker stopped (%1). Partial output is quarantined at %2")
-                                .arg(code)
-                                .arg(staging.isEmpty() ? "no staging folder" : staging));
-                        if (!smokeReport.isEmpty() && smokePhase != 3)
-                            finishSmoke(false, "Worker stopped before completion");
-                    }
-                    setBusy(false);
-                    if (!stagingJournal.isEmpty()) {
-                        if (!QFileInfo::exists(staging)) {
-                            QFile::remove(stagingJournal);
-                        } else if (!recoveryRequired) {
-                            pendingRecovery.append({stagingRecord, stagingJournal});
-                            beginRecovery();
-                        }
-                    }
-                    if (terminal && exit == QProcess::NormalExit && code == 0 &&
-                        (operation == "create" || operation == "update"))
-                        QTimer::singleShot(0, this, [this] { openArchive(archive); });
-                    if (smokePhase == 4 && terminal) {
-                        smoke["stage_removed"] = !QFileInfo::exists(staging);
-                        finishSmoke(code != 0 && smoke["error_dialog_visible"].toBool() &&
-                                        !QFileInfo::exists(staging),
-                                    "Expected extraction failure and visible warning");
-                    }
-                });
-        connect(&process, &QProcess::errorOccurred, this, [this](QProcess::ProcessError e) {
-            if (e == QProcess::FailedToStart) {
-                status->setText("Cannot start the packaged worker: " + process.errorString());
-                setBusy(false);
-                if (!smokeReport.isEmpty())
-                    finishSmoke(false, "Worker failed to start");
+        jobs.onFinished = [this](int code, QProcess::ExitStatus exit) {
+            killTimer.stop();
+            terminal = !jobs.result.terminal.isEmpty();
+            if (exit != QProcess::NormalExit) passwordRetry = false;
+            if (jobs.result.success) completed(jobs.result.terminal);
+            else if (jobs.result.terminal["event"] != "error" && jobs.result.terminal["event"] != "cancelled") showFailure(jobs.result.failure);
+            if (!jobs.result.success && operation == "list") { listingValid = false; model.clear(); }
+            if (operation != "list" || !jobs.result.success) showResult();
+            setBusy(false);
+            if (!stagingJournal.isEmpty()) {
+                if (!QFileInfo::exists(staging)) QFile::remove(stagingJournal);
+                else if (!recoveryRequired) { pendingRecovery.append({stagingRecord, stagingJournal}); beginRecovery(); }
             }
-        });
+            if (jobs.result.success && (operation == "create" || operation == "update"))
+                QTimer::singleShot(0, this, [this] { openArchive(archive); });
+            if (smokePhase == 4 && terminal) {
+                smoke["stage_removed"] = !QFileInfo::exists(staging);
+                finishSmoke(code != 0 && smoke["error_dialog_visible"].toBool() && !QFileInfo::exists(staging), "Expected extraction failure and visible warning");
+            } else if (!smokeReport.isEmpty() && !jobs.result.success && smokePhase != 3) finishSmoke(false, jobs.result.failure);
+            maybeRetryPassword();
+            if (jobs.result.success && operation == "export_classic" && jobs.result.terminal["preflight"].toBool()) {
+                const auto plan = jobs.result.terminal["plan"].toObject();
+                const auto reviewedRequest = request;
+                QTimer::singleShot(0, this, [this, plan, reviewedRequest] { reviewClassic(plan, reviewedRequest); });
+            }
+            Q_UNUSED(exit);
+        };
+        jobs.onStartFailure = [this] {
+            showFailure(jobs.result.failure); showResult(); setBusy(false);
+            if (!smokeReport.isEmpty()) finishSmoke(false, jobs.result.failure);
+        };
         killTimer.setSingleShot(true);
         killTimer.setInterval(3000);
         connect(&killTimer, &QTimer::timeout, this, [this] { process.kill(); });
@@ -353,27 +292,36 @@ class Window final : public QMainWindow {
         connect(&recovery, &QProcess::readyReadStandardOutput, this,
                 [this] { recoveryOutput += recovery.readAllStandardOutput(); });
         connect(&recovery, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-                [this](int code, QProcess::ExitStatus) {
+                [this](int code, QProcess::ExitStatus exit) {
                     recoveryOutput += recovery.readAllStandardOutput();
                     auto item = pendingRecovery.takeFirst();
-                    if (code == 0) {
+                    QJsonObject recoveryTerminal;
+                    int terminals = 0;
+                    for (const auto &line : recoveryOutput.split('\n')) {
+                        auto e = QJsonDocument::fromJson(line).object();
+                        if (e["event"] == "complete" || e["event"] == "error" || e["event"] == "cancelled") { recoveryTerminal = e; ++terminals; }
+                    }
+                    const bool recovered = code == 0 && exit == QProcess::NormalExit && terminals == 1 && recoveryTerminal["event"] == "complete" && !QFileInfo::exists(item.first["path"].toString());
+                    if (recovered) {
                         QFile::remove(item.second);
-                        status->setText(
-                            "Interrupted staging cleaned. Original archives were retained.");
-                    } else
-                        status->setText("Recovery needs review: " + item.second);
+                        jobs.result.cleanup = "Interrupted staging cleaned. Original archives were retained.";
+                    } else { jobs.result.cleanup = "Recovery needs review: " + item.second + " " + recoveryTerminal["message"].toString(); passwordRetry = false; }
+                    showResult();
                     setBusy(false);
                     beginRecovery();
+                    maybeRetryPassword();
                     if (smokePhase == 3) {
                         smoke["recovery_ms"] = jobClock.elapsed();
                         smoke["stage_removed"] = !QFileInfo::exists(staging);
-                        finishSmoke(code == 0 && !QFileInfo::exists(staging),
-                                    code == 0 ? QString() : "Interrupted-job recovery failed");
+                        finishSmoke(recovered && !QFileInfo::exists(staging),
+                                    recovered ? QString() : "Interrupted-job recovery failed");
                     }
                 });
         connect(&recovery, &QProcess::errorOccurred, this, [this](QProcess::ProcessError e) {
             if (e == QProcess::FailedToStart) {
-                status->setText("Recovery worker could not start; keep the recovery journal.");
+                jobs.result.cleanup = "Recovery worker could not start; keep the recovery journal: " + pendingRecovery.first().second;
+                showResult();
+                passwordRetry = false;
                 pendingRecovery.clear();
                 setBusy(false);
             }
@@ -399,7 +347,8 @@ class Window final : public QMainWindow {
                         continue;
                     auto r = QJsonDocument::fromJson(f.read(8192)).object();
                     if (r["manual_review"].toBool()) {
-                        status->setText("An archive commit needs recovery review: " + f.fileName());
+                        jobs.result.cleanup = "An archive commit needs recovery review: " + f.fileName();
+                        showResult();
                         continue;
                     }
                     if (!r.isEmpty())
@@ -409,6 +358,9 @@ class Window final : public QMainWindow {
         });
     }
     ~Window() {
+        table->selectionModel()->disconnect(this);
+        recovery.disconnect(this);
+        jobs.onEvent = {}; jobs.onFinished = {}; jobs.onStartFailure = {};
         for (auto p : {&process, &recovery})
             if (p->state() != QProcess::NotRunning) {
                 p->kill();
@@ -416,6 +368,7 @@ class Window final : public QMainWindow {
             }
     }
     void openArchive(const QString &path) {
+        extractedEntries.clear();
         archive = path;
         listingValid = false;
         fingerprint.clear();
@@ -470,6 +423,131 @@ class Window final : public QMainWindow {
     }
 
   private:
+    void updateActions() {
+        if (!extractAction) return;
+        extractAction->setEnabled(!busy && listingValid &&
+            (!model.searching() || !table->selectionModel()->selectedRows().isEmpty()));
+        if (classicAction) {
+            classicAction->setEnabled(readOnly && extractAction->isEnabled());
+            classicAllAction->setEnabled(!busy && listingValid && readOnly);
+        }
+        bool editable = false;
+        bool replaceable = false;
+        const auto selection = table->selectionModel()->selectedRows();
+        if (selection.size() == 1) {
+            const auto entry = model.editableAt(proxy.mapToSource(selection.first()).row());
+            editable = entry; replaceable = entry && !entry->directory;
+        }
+        if (edits.size() == 4) {
+            edits[1]->setEnabled(!busy && listingValid && !readOnly && replaceable);
+            edits[2]->setEnabled(!busy && listingValid && !readOnly && editable);
+            edits[3]->setEnabled(!busy && listingValid && !readOnly && !selection.isEmpty());
+        }
+    }
+    void updateNavigation() {
+        if (!backButton) return;
+        backButton->setEnabled(!busy && model.canBack()); upButton->setEnabled(!busy && model.canUp());
+        while (auto item = breadcrumbs->takeAt(0)) { if (auto widget = item->widget()) { widget->hide(); widget->deleteLater(); } delete item; }
+        const auto parts = model.currentParts();
+        for (int depth = 0; depth <= parts.size(); ++depth) {
+            auto button = new QPushButton(depth == 0 ? "Archive" : visibleName(parts[depth - 1]));
+            button->setEnabled(!busy && !model.searching());
+            button->setAccessibleName("Open archive folder " + displayPath(parts.mid(0, depth)));
+            connect(button, &QPushButton::clicked, this, [this, parts, depth] { model.navigate(parts.mid(0, depth)); navigated(); });
+            breadcrumbs->addWidget(button);
+        }
+        if (model.searching()) { auto label = new QLabel("Global search"); label->setTextFormat(Qt::PlainText); breadcrumbs->addWidget(label); }
+        breadcrumbs->addStretch();
+        table->setColumnHidden(5, !model.searching());
+    }
+    void navigated() {
+        table->clearSelection();
+        proxy.sort(table->horizontalHeader()->sortIndicatorSection(), table->horizontalHeader()->sortIndicatorOrder());
+        updateNavigation(); updateActions(); table->setFocus();
+    }
+    void activate(const QModelIndex &index) {
+        if (busy || !index.isValid()) return;
+        const int row = proxy.mapToSource(index).row();
+        if (model.folderAt(row)) {
+            const auto parts = model.partsAt(row);
+            search->clear(); model.navigate(parts); navigated(); return;
+        }
+        const auto entry = model.editableAt(row);
+        if (!entry) return;
+        QStringList detail{"Original archive path: " + displayPath(entry->components), QString("Entry ID: %1").arg(entry->id)};
+        detail.append("Original components: " + QString::fromUtf8(QJsonDocument(QJsonArray::fromStringList(entry->components)).toJson(QJsonDocument::Compact)));
+        detail.append(QString("Data fork: %1 · %2 bytes").arg(entry->metadata.contains("has_data") ? entry->metadata["has_data"].toBool() ? "present" : "absent (an empty data file is exported)" : "present").arg(entry->size));
+        detail.append(QString("Resource fork: %1 · %2 bytes").arg(entry->resourceFork ? "present" : "absent").arg(entry->resourceSize));
+        if (!entry->metadata["encoding"].toString().isEmpty()) detail.append("Filename encoding: " + entry->metadata["encoding"].toString());
+        const auto finder = QByteArray::fromBase64(entry->metadata["finder_info"].toString().toLatin1());
+        if (finder.size() == 32) {
+            detail.append("Finder type: " + visibleName(QString::fromLatin1(finder.left(4))) + " · Creator: " + visibleName(QString::fromLatin1(finder.mid(4, 4))));
+            detail.append("Finder flags: 0x" + QString::number(qFromBigEndian<quint16>(finder.constData() + 8), 16).rightJustified(4, '0'));
+        }
+        if (entry->metadata.contains("modified_ms")) {
+            detail.append("Interpreted modification time: " + QDateTime::fromMSecsSinceEpoch(entry->metadata["modified_ms"].toVariant().toLongLong()).toString(Qt::ISODate));
+            if (readOnly) detail.append("Classic dates have no timezone; this decoder uses the current local UTC offset. Historical daylight-saving dates may shift by an hour.");
+        }
+        for (const auto &key : {QString("created_1904"), QString("modified_1904")}) {
+            const auto label = key.startsWith("created") ? "creation" : "modification";
+            if (entry->metadata.contains(key)) {
+                const auto raw = entry->metadata[key].toInteger();
+                const auto date = raw ? QDateTime(QDate(1904,1,1), QTime(0,0), QTimeZone::UTC).addSecs(raw).toString("yyyy-MM-dd HH:mm:ss") : QString("unknown");
+                detail.append(QString("Raw classic %1: %2 (%3; wall-clock value, no timezone)").arg(label).arg(raw).arg(date));
+            } else if (readOnly) detail.append(QString("Raw classic %1: unavailable").arg(label));
+        }
+        const auto mapping = extractedEntries.value(entry->id);
+        if (mapping.isEmpty()) detail.append("Source checksum status: not yet verified in this session.");
+        else {
+            detail.append("Exported path: " + QDir(lastOutput).filePath(mapping["output"].toString()));
+            for (const auto &part : {QString("data"), QString("resource")})
+                if (mapping.contains(part + "_sha256")) detail.append(part + " fork SHA-256: " + mapping[part + "_sha256"].toString() + "\nSource checksum: " + (mapping[part + "_checksum_checked"].toBool() ? "checked" : "not available"));
+        }
+        auto dialog = new QMessageBox(QMessageBox::Information, "Entry details", visibleName(entry->components.last()), QMessageBox::Ok, this);
+        dialog->setTextFormat(Qt::PlainText); dialog->setInformativeText(detail.join('\n')); dialog->setAttribute(Qt::WA_DeleteOnClose); dialog->open();
+    }
+    void showResult() {
+        const auto &r = jobs.result;
+        resultText->setPlainText(r.report());
+        if (r.terminal["output_committed"].toBool()) {
+            lastOutput = r.terminal["output"].toString();
+            lastMapping = r.terminal["mapping"].toString().isEmpty() ? QString() : QDir(lastOutput).filePath(r.terminal["mapping"].toString());
+            extractedEntries.clear(); QFile file(lastMapping);
+            if (file.open(QIODevice::ReadOnly)) for (auto value : QJsonDocument::fromJson(file.readAll()).object()["entries"].toArray()) {
+                auto entry = value.toObject(); extractedEntries.insert(quint32(entry["id"].toInteger()), entry);
+            }
+        } else { lastOutput.clear(); lastMapping.clear(); extractedEntries.clear(); }
+        outputButton->setEnabled(!lastOutput.isEmpty()); mappingButton->setEnabled(!lastMapping.isEmpty() || (r.success && r.operation == "export_classic" && r.terminal["output_committed"].toBool()));
+        if (!r.success && r.finished) status->setText(r.redact(r.failure));
+        else if (!r.cleanup.isEmpty()) status->setText(r.redact(r.cleanup));
+    }
+    void showFailure(const QString &message) {
+        const QString summary = jobs.result.terminal["output_committed"].toBool()
+            ? "Archive operation failed after output was committed. Review the job result."
+            : operation == "extract" ? "Extraction failed. No completed output was exported." : "Archive operation failed.";
+        status->setText(summary + " " + jobs.result.redact(message));
+        auto dialog = new QMessageBox(QMessageBox::Critical, "Packsmith — Archive error", summary, QMessageBox::Ok, this);
+        dialog->setAttribute(Qt::WA_DeleteOnClose); dialog->setTextFormat(Qt::PlainText);
+        dialog->setInformativeText(jobs.result.redact(message)); dialog->setDetailedText(jobs.result.redact("Archive: " + archive)); dialog->open();
+        if (smokePhase == 4) {
+            smoke["error_dialog_visible"] = dialog->isVisible(); smoke["error_dialog_text"] = dialog->text(); smoke["error_dialog_detail"] = dialog->informativeText();
+            dialog->grab().save(QFileInfo(smokeReport).absolutePath() + "/error.png"); dialog->close();
+        }
+    }
+    void maybeRetryPassword() {
+        if (!passwordRetry || busy || !pendingRecovery.isEmpty() || recoveryRequired) return;
+        passwordRetry = false;
+        QTimer::singleShot(0, this, [this] {
+            if (busy || process.state() != QProcess::NotRunning) return;
+            bool ok = false;
+            const auto p = QInputDialog::getText(this, "Archive password", "Password", QLineEdit::Password, {}, &ok);
+            if (ok) {
+                password = p; passwordDefined = true; auto retry = request; retry["password"] = p;
+                if (operation == "list") model.clear();
+                run(retry);
+            }
+        });
+    }
     void setBusy(bool value) {
         busy = value;
         for (auto a : operations)
@@ -479,6 +557,7 @@ class Window final : public QMainWindow {
         cancel->setVisible(busy);
         progress->setVisible(busy);
         table->setSortingEnabled(!busy);
+        updateNavigation(); updateActions();
     }
     bool idle() {
         if (!busy)
@@ -504,17 +583,19 @@ class Window final : public QMainWindow {
         recovery.start();
     }
     QJsonArray selected() {
-        QJsonArray ids;
+        QSet<qint64> unique;
         for (auto index : table->selectionModel()->selectedRows())
-            ids.append(qint64(model.rows[proxy.mapToSource(index).row()].id));
-        return ids;
+            for (auto id : model.idsAt(proxy.mapToSource(index).row())) unique.insert(id.toInteger());
+        auto values = unique.values(); std::sort(values.begin(), values.end());
+        QJsonArray ids; for (auto id : values) ids.append(id); return ids;
     }
     bool one(QJsonArray &ids) {
-        ids = selected();
-        if (ids.size() == 1)
-            return true;
-        status->setText("Select exactly one archive entry.");
-        return false;
+        const auto selectedRows = table->selectionModel()->selectedRows();
+        if (selectedRows.size() == 1) {
+            const auto r = model.editableAt(proxy.mapToSource(selectedRows.first()).row());
+            if (r) { ids = {qint64(r->id)}; return true; }
+        }
+        status->setText("Select exactly one real entry. Grouped folders cannot be renamed."); return false;
     }
     void chooseArchive() {
         if (!idle())
@@ -542,7 +623,7 @@ class Window final : public QMainWindow {
         stagingRecord = {};
         stagingJournal.clear();
         recoveryRequired = false;
-        incoming.clear();
+
         jobClock.start();
         maxEventGap = 0;
         heartbeatClock.restart();
@@ -550,31 +631,16 @@ class Window final : public QMainWindow {
         cancel->setEnabled(true);
         progress->setRange(0, 0);
         status->setText(operation == "list" ? "Reading archive…" : "Working…");
-        process.setProgram(QCoreApplication::applicationDirPath() +
-                           "/workers/packsmith-worker.exe");
-        process.setArguments({});
-        process.start();
+        if (operation == "extract" && !request.contains("selection_scope")) request["selection_scope"] = request["ids"].toArray().isEmpty() ? "all" : "entries";
+        jobs.start(request, QCoreApplication::applicationDirPath() + "/workers/packsmith-worker.exe");
     }
     void cancelJob() {
         if (!busy)
             return;
-        process.write("{\"cancel\":true}\n");
         status->setText("Cancelling…");
         cancel->setEnabled(false);
         killTimer.start();
-    }
-    void readOutput() {
-        incoming += process.readAllStandardOutput();
-        qsizetype pos;
-        while ((pos = incoming.indexOf('\n')) >= 0) {
-            auto line = incoming.left(pos);
-            incoming.remove(0, pos + 1);
-            QJsonParseError error;
-            auto doc = QJsonDocument::fromJson(line, &error);
-            if (error.error != QJsonParseError::NoError || !doc.isObject())
-                continue;
-            event(doc.object());
-        }
+        jobs.cancel();
     }
     void event(const QJsonObject &e) {
         auto kind = e["event"].toString();
@@ -607,15 +673,29 @@ class Window final : public QMainWindow {
             }
         }
         if (kind == "progress") {
+            if (!e["phase"].toString().isEmpty()) {
+                QString text = e["phase"].toString();
+                if (e["id"].toInteger(-1) >= 0) text += QString(" · Entry %1 · %2").arg(e["id"].toInteger()).arg(e["part"].toString());
+                status->setText(text);
+            }
             quint64 total = e["total"].toString().toULongLong(),
                     done = e["completed"].toString().toULongLong();
             if (total) {
                 progress->setRange(0, 1000);
                 progress->setValue(int(qMin(1.0, double(done) / double(total)) * 1000));
-            }
+            } else progress->setRange(0, 0);
         }
-        if (kind == "complete") {
+        if (kind == "error" || kind == "cancelled") {
+            terminal = true;
+            if (e["code"] == "password_required") passwordRetry = true;
+            else if (kind == "error") showFailure(jobs.result.redact(e["message"].toString()));
+            else status->setText(e["message"].toString());
+        }
+    }
+    void completed(const QJsonObject &e) {
             if (operation == "list") {
+                QElapsedTimer modelClock; modelClock.start(); model.finish(); navigated();
+                smoke["model_build_ms"] = modelClock.elapsed();
                 fingerprint = e["fingerprint"].toString();
                 listingValid = true;
                 readOnly = e["read_only"].toBool();
@@ -640,9 +720,14 @@ class Window final : public QMainWindow {
                     smoke["read_only"] = readOnly;
                     smoke["columns"] = model.columnCount();
                     smoke["entries"] = model.rows.size();
+                    for (int i = 0; i < model.rowCount(); ++i) if (model.folderAt(i)) {
+                        const auto parts = model.partsAt(i); QElapsedTimer navClock; navClock.start();
+                        model.navigate(parts); navigated(); smoke["folder_navigation_ms"] = navClock.elapsed();
+                        smoke["folder_entries"] = model.rowCount(); model.up(); navigated(); break;
+                    }
                     QJsonArray names;
                     for (int i = 0; i < model.rows.size(); ++i)
-                        names.append(model.data(model.index(i, 0), Qt::DisplayRole).toString());
+                        names.append(displayPath(model.rows[i].components));
                     smoke["display_names"] = names;
                     smoke["listing_ms"] = jobClock.elapsed();
                     smoke["max_event_gap_ms"] = maxEventGap;
@@ -665,54 +750,9 @@ class Window final : public QMainWindow {
                     }
                     smoke["output"] = e["output"];
                     smoke["extract_ms"] = jobClock.elapsed();
-                    finishSmoke(true, {});
+                    QTimer::singleShot(0, this, [this] { finishSmoke(true, {}); });
                 }
             }
-        }
-        if (kind == "error" || kind == "cancelled") {
-            terminal = true;
-            cancel->setEnabled(true);
-            QString message = e["message"].toString();
-            QString summary = operation == "extract"
-                                  ? "Extraction failed. No completed output was exported."
-                                  : "Archive operation failed.";
-            status->setText(kind == "cancelled" ? message : summary + " " + message);
-            if (kind == "error" && message != "Password required") {
-                auto dialog = new QMessageBox(QMessageBox::Critical, "Packsmith — Archive error",
-                                              summary, QMessageBox::Ok, this);
-                dialog->setAttribute(Qt::WA_DeleteOnClose);
-                dialog->setTextFormat(Qt::PlainText);
-                dialog->setInformativeText(message);
-                dialog->setDetailedText("Archive: " + QDir::toNativeSeparators(archive));
-                dialog->open();
-                if (smokePhase == 4) {
-                    smoke["error_dialog_visible"] = dialog->isVisible();
-                    smoke["error_dialog_text"] = dialog->text();
-                    smoke["error_dialog_detail"] = dialog->informativeText();
-                    dialog->grab().save(QFileInfo(smokeReport).absolutePath() + "/error.png");
-                    dialog->close();
-                }
-            }
-            if (!smokeReport.isEmpty() && smokePhase != 4) {
-                finishSmoke(false, message);
-                return;
-            }
-            if (message == "Password required")
-                QTimer::singleShot(100, this, [this] {
-                    bool ok = false;
-                    auto p = QInputDialog::getText(this, "Archive password", "Password",
-                                                   QLineEdit::Password, {}, &ok);
-                    if (ok) {
-                        password = p;
-                        passwordDefined = true;
-                        if (operation == "list")
-                            model.clear();
-                        auto retry = request;
-                        retry["password"] = p;
-                        run(retry);
-                    }
-                });
-        }
     }
     void smokeExtract() {
         if (busy) {
@@ -730,7 +770,7 @@ class Window final : public QMainWindow {
             finishSmoke(false, "No file for selection smoke test");
             return;
         }
-        search->setText(visibleName(model.rows[sourceRow].name));
+        search->setText(displayPath(model.rows[sourceRow].components));
         table->selectRow(proxy.mapFromSource(model.index(sourceRow, 0)).row());
         auto ids = selected();
         if (ids.size() != 1 || ids[0].toInteger() != model.rows[sourceRow].id) {
@@ -742,6 +782,8 @@ class Window final : public QMainWindow {
         run({{"operation", "extract"}, {"destination", smokeDestination}, {"ids", ids}});
     }
     void finishSmoke(bool ok, QString reason) {
+        smoke["result_panel"] = resultText->toPlainText();
+        smoke["worker_exit_verified"] = jobs.result.finished && process.state() == QProcess::NotRunning;
         smoke["journal_directory"] = journalFolder();
         smoke["application_name"] = QApplication::applicationName();
         smoke["window_title"] = windowTitle();
@@ -758,13 +800,60 @@ class Window final : public QMainWindow {
         }
         QTimer::singleShot(0, qApp, [ok] { qApp->exit(ok ? 0 : 1); });
     }
-    void extract() {
-        if (!idle())
-            return;
-        auto destination =
-            QFileDialog::getExistingDirectory(this, "Extract into a new folder inside…");
-        if (!destination.isEmpty())
-            run({{"operation", "extract"}, {"destination", destination}, {"ids", selected()}});
+    void extract(bool all = false) {
+        if (!idle()) return;
+        auto ids = selected();
+        if (!all && ids.isEmpty()) {
+            if (model.searching()) { status->setText("Select search results to extract, or use Extract All."); return; }
+            ids = model.currentIds();
+        }
+        if (!all && ids.isEmpty()) { status->setText("This folder has no extractable entries."); return; }
+        auto destination = QFileDialog::getExistingDirectory(this, "Extract into a new folder inside…");
+        if (!destination.isEmpty()) run({{"operation", "extract"}, {"destination", destination}, {"selection_scope", all ? "all" : "entries"}, {"ids", all ? QJsonArray{} : ids}});
+    }
+    QJsonObject classicRequest(bool all) {
+        auto ids = selected();
+        if (!all && ids.isEmpty()) {
+            if (model.searching()) return {};
+            ids = model.currentIds();
+        }
+        if (!all && ids.isEmpty()) return {};
+        return {{"operation", "export_classic"}, {"mode", "preflight"}, {"name_policy", "strict"},
+                {"selection_scope", all ? "all" : "entries"}, {"ids", all ? QJsonArray{} : ids}};
+    }
+    void exportClassic(bool all = false) {
+        if (!idle() || !readOnly || !listingValid) return;
+        auto r = classicRequest(all);
+        if (r.isEmpty()) { status->setText(model.searching() ? "Select search results for classic export." : "This folder has no exportable entries."); return; }
+        auto path = QFileDialog::getSaveFileName(this, "Export a new Classic Mac transfer ZIP", QFileInfo(archive).completeBaseName()+"-classic.zip", "ZIP (*.zip)", nullptr, QFileDialog::DontConfirmOverwrite);
+        if (path.isEmpty()) return;
+        if (QFileInfo::exists(path)) { status->setText("Choose a new ZIP filename. Existing files are preserved."); return; }
+        r["destination"] = path; run(r);
+    }
+    void reviewClassic(const QJsonObject &plan, const QJsonObject &reviewedRequest) {
+        auto dialog = new QDialog(this);
+        dialog->setObjectName("classicPreflight"); dialog->setWindowTitle("Review Classic Mac export");
+        dialog->setWindowModality(Qt::WindowModal); dialog->setAttribute(Qt::WA_DeleteOnClose); dialog->resize(720,500);
+        auto layout = new QVBoxLayout(dialog);
+        auto summary = new QLabel(QString("%1 files · %2 data forks · %3 resource forks\nStrict naming is the default. Review every proposed substitution before exporting.").arg(plan["file_count"].toInteger()).arg(plan["data_forks"].toInteger()).arg(plan["resource_forks"].toInteger()));
+        summary->setTextFormat(Qt::PlainText); summary->setWordWrap(true); layout->addWidget(summary);
+        QStringList lines;
+        for (auto value : plan["changes"].toArray()) {
+            auto change = value.toObject(); lines.append(QString("Entry %1, component %2: %3 → %4 (%5)").arg(change["id"].toInteger()).arg(change["component"].toInteger()).arg(change["original"].toString(),change["restored"].toString(),change["reason"].toString()));
+        }
+        if (lines.isEmpty()) lines.append("All selected names fit the strict classic HFS profile.");
+        lines.append("\n"+plan["limitations"].toString());
+        lines.append("\nTested restoration: StuffIt Expander 5.5 on System 7.6 and Mac OS 9. Expander 7.0.3 is unqualified in the tested emulator.");
+        auto text = new QPlainTextEdit(lines.join('\n')); text->setReadOnly(true); text->setAccessibleName("Classic export name changes and preservation limits"); layout->addWidget(text);
+        auto buttons = new QDialogButtonBox(QDialogButtonBox::Cancel);
+        auto strict = buttons->addButton("Export", QDialogButtonBox::AcceptRole); strict->setEnabled(plan["strict_allowed"].toBool());
+        auto mapped = buttons->addButton("Export with mapped names", QDialogButtonBox::ActionRole); mapped->setEnabled(!plan["changes"].toArray().isEmpty());
+        auto execute = [this, dialog, reviewedRequest, plan](QString policy) { auto r = reviewedRequest; r["mode"] = "execute"; r["name_policy"] = policy; r["plan_digest"] = plan["plan_digest"]; dialog->accept(); run(r); };
+        connect(strict, &QPushButton::clicked, this, [execute] { execute("strict"); });
+        connect(mapped, &QPushButton::clicked, this, [execute] { execute("mapped"); });
+        connect(buttons, &QDialogButtonBox::rejected, dialog, &QDialog::reject); layout->addWidget(buttons);
+        if (strict->isEnabled()) strict->setDefault(true); else buttons->button(QDialogButtonBox::Cancel)->setDefault(true);
+        dialog->open();
     }
     void createArchive() {
         if (!idle())
@@ -808,6 +897,10 @@ class Window final : public QMainWindow {
         QJsonArray ids;
         if (!one(ids))
             return;
+        const auto index = table->selectionModel()->selectedRows().first();
+        if (model.editableAt(proxy.mapToSource(index).row())->directory) {
+            status->setText("Select a file entry for replacement."); return;
+        }
         auto file = QFileDialog::getOpenFileName(this, "Replacement file");
         if (!file.isEmpty())
             run({{"operation", "update"},
@@ -822,7 +915,7 @@ class Window final : public QMainWindow {
         auto index = table->selectionModel()->selectedRows().first();
         bool ok = false;
         auto path = QInputDialog::getText(this, "Rename entry", "Archive path", QLineEdit::Normal,
-                                          model.rows[proxy.mapToSource(index).row()].name, &ok);
+                                          model.editableAt(proxy.mapToSource(index).row())->name, &ok);
         if (ok && !path.isEmpty())
             run({{"operation", "update"},
                  {"rename", QJsonArray{QJsonObject{{"id", ids[0]}, {"path", path}}}}});

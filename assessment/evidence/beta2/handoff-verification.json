@@ -1,0 +1,51 @@
+{
+  "handoff_integrity": "pass",
+  "production_release_qualified": false,
+  "errors": [],
+  "reference_count": 11,
+  "fixture_count": 36,
+  "checks": {
+    "suite-linux-wsl.json": {
+      "pass": 176,
+      "fail": 7,
+      "unverified": 8
+    },
+    "suite-windows.json": {
+      "pass": 101,
+      "fail": 15,
+      "unverified": 7
+    },
+    "followup-linux-wsl.json": {
+      "pass": 18,
+      "fail": 4,
+      "unverified": 0
+    },
+    "followup-windows.json": {
+      "pass": 6,
+      "fail": 0,
+      "unverified": 0
+    },
+    "metadata-linux-wsl.json": {
+      "pass": 60,
+      "fail": 1,
+      "unverified": 0
+    },
+    "metadata-windows.json": {
+      "pass": 33,
+      "fail": 2,
+      "unverified": 2
+    },
+    "windows-first/suite.json": {
+      "pass": 70,
+      "fail": 2,
+      "unverified": 4
+    },
+    "desktop": {
+      "worker_behavior_tests": 22,
+      "legacy_behavior_tests": 14,
+      "native_gui_checks": 8,
+      "generated_legacy_fixtures": 21
+    }
+  },
+  "limits": "Validates artifact/receipt integrity; known engine and application-policy failures remain reported, not waived."
+}

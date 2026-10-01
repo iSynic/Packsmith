@@ -12,6 +12,8 @@ static BOOL passwordMissing = NO;
 static NSString *password = nil;
 static HANDLE input;
 static NSUInteger checkedForks = 0, uncheckedForks = 0;
+static NSNumber *activeId = nil;
+static NSString *activePart = nil;
 static void sendEvent(NSDictionary *object) {
     NSError *error = nil;
     NSData *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:&error];
@@ -122,6 +124,7 @@ static NSString *pathName(NSDictionary *entry) {
 @interface XADPath (PacksmithRawName)
 - (void)packsmithAppendRawName:(NSMutableData *)data;
 - (NSData *)packsmithRawName;
+- (void)packsmithRawComponents:(NSMutableArray *)parts;
 @end
 @implementation XADPath (PacksmithRawName)
 - (void)packsmithAppendRawName:(NSMutableData *)data {
@@ -136,6 +139,16 @@ static NSString *pathName(NSDictionary *entry) {
     NSMutableData *data = [NSMutableData data];
     [self packsmithAppendRawName:data];
     return [NSData dataWithData:data];
+}
+- (void)packsmithRawComponents:(NSMutableArray *)parts {
+    if (parent) [parent packsmithRawComponents:parts];
+    if ([self _isPartEmpty]) return;
+    NSMutableArray *decoded = [NSMutableArray array];
+    [self _addPathComponentsOfPartToArray:decoded encodingName:[self encodingName]];
+    NSMutableData *raw = [NSMutableData data];
+    [self _appendPathForPartToData:raw];
+    if ([decoded count] == 1) [parts addObject:[raw base64EncodedStringWithOptions:0]];
+    else for (id unused in decoded) { (void)unused; [parts addObject:[NSNull null]]; }
 }
 @end
 static BOOL flag(NSDictionary *entry, NSString *key) {
@@ -163,6 +176,8 @@ static BOOL forkPair(XADArchiveParser *parser, NSDictionary *resource, NSDiction
 
 static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger index,
                      NSString *part, BOOL output) {
+    activeId = @(index); activePart = part;
+    sendEvent(@{@"event": @"progress", @"phase": @"decoding", @"id": activeId, @"part": part});
     checkStop();
     if (flag(entry, XADIsCorruptedKey))
         fail(@"integrity_failed", @"Entry is marked corrupt");
@@ -199,6 +214,7 @@ static void readFork(XADArchiveParser *parser, NSDictionary *entry, NSUInteger i
             }
         }
         BOOL checksum = [handle hasChecksum];
+        sendEvent(@{@"event": @"progress", @"phase": @"verifying", @"id": activeId, @"part": part});
         if (checksum && ![handle isChecksumCorrect])
             fail(@"integrity_failed", @"Legacy fork checksum failed");
         NSNumber *size = [entry objectForKey:XADFileSizeKey];
@@ -338,10 +354,13 @@ int main(void) {
             NSDictionary *data = [group objectForKey:@"data"],
                          *resource = [group objectForKey:@"resource"], *main = data ?: resource;
             NSData *finder = [parser finderInfoForDictionary:main];
+            NSMutableArray *rawParts = [NSMutableArray array];
+            [[main objectForKey:XADFileNameKey] packsmithRawComponents:rawParts];
             NSMutableDictionary *row = [NSMutableDictionary dictionaryWithDictionary:@{
                 @"id" : @(index++),
                 @"path" : [group objectForKey:@"path"],
                 @"components" : [[main objectForKey:XADFileNameKey] pathComponents],
+                @"raw_components" : rawParts,
                 @"absolute" : @([[main objectForKey:XADFileNameKey] isAbsolute]),
                 @"size" : [bytes(data) stringValue],
                 @"resource_size" : [bytes(resource) stringValue],
@@ -358,10 +377,14 @@ int main(void) {
                     base64EncodedStringWithOptions:0],
                 @"encoding" : [[main objectForKey:XADFileNameKey] encodingName] ?: @"unknown"
             }];
+            [row setObject:([[data objectForKey:XADCompressionNameKey] description] ?: @"unknown") forKey:@"data_method"];
+            [row setObject:([[resource objectForKey:XADCompressionNameKey] description] ?: @"unknown") forKey:@"resource_method"];
             NSDate *modified = [main objectForKey:XADLastModificationDateKey];
             if (modified)
                 [row setObject:@((long long)([modified timeIntervalSince1970] * 1000))
                         forKey:@"modified_ms"];
+            for (NSString *key in @[@"PacksmithCreated1904", @"PacksmithModified1904"])
+                if ([main objectForKey:key]) [row setObject:[main objectForKey:key] forKey:[key isEqual:@"PacksmithCreated1904"] ? @"created_1904" : @"modified_1904"];
             for (NSString *key in @[
                      @"link", @"absolute", @"encrypted", @"directory", @"has_data", @"has_resource"
                  ])
@@ -384,7 +407,10 @@ int main(void) {
         NSString *operation = [request objectForKey:@"operation"];
         if (![operation isEqual:@"list"]) {
             NSMutableIndexSet *selected = [NSMutableIndexSet indexSet];
-            for (NSNumber *id in [request objectForKey:@"ids"]) {
+            id requestedIds = [request objectForKey:@"ids"];
+            if (!requestedIds || requestedIds == [NSNull null]) requestedIds = @[];
+            if (![requestedIds isKindOfClass:[NSArray class]]) fail(@"invalid_selection", @"Entry IDs must be an array");
+            for (NSNumber *id in requestedIds) {
                 if ([id longLongValue] < 0 || [id unsignedLongLongValue] >= [groups count])
                     fail(@"invalid_id", @"Invalid legacy entry ID");
                 [selected addIndex:[id unsignedIntegerValue]];
@@ -452,6 +478,7 @@ int main(void) {
         sendEvent(@{
             @"event" : stopped ? @"cancelled" : @"error",
             @"code" : code,
+            @"id": activeId ?: @(-1), @"part": activePart ?: @"",
             @"message" : message ?: @"Legacy decoding failed"
         });
         result = 1;

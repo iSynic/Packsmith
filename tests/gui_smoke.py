@@ -14,7 +14,7 @@ legacy_fixtures.generate()
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "dist/Packsmith-preview"
-EVIDENCE = ROOT / "assessment/evidence/desktop-preview"
+EVIDENCE = ROOT / "assessment/evidence/beta3/desktop-preview"
 EVIDENCE.mkdir(parents=True, exist_ok=True)
 env = os.environ.copy()
 env["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")
@@ -22,7 +22,7 @@ for key in ("QT_PLUGIN_PATH", "QT_QPA_PLATFORM_PLUGIN_PATH", "QTDIR", "QML2_IMPO
     env.pop(key, None)
 results = []
 with tempfile.TemporaryDirectory(prefix="unarchiver-relocation-") as temporary:
-    relocated = Path(temporary) / "日本-café preview"
+    relocated = Path(temporary) / "æ—¥æœ¬-cafÃ© preview"
     shutil.copytree(SOURCE, relocated)
     for fixture, mode in (("mainstream.zip", "--smoke"), ("scale-100k.zip", "--smoke"), ("large-5g.zip", "--smoke-recovery"), ("forks.sit", "--smoke"), ("forks.hqx", "--smoke"), ("recovery.sit", "--smoke-recovery"), ("large-wrapped.hqx", "--smoke"), ("bad-large-wrapper-data.hqx", "--smoke-error")):
         folder = EVIDENCE / (Path(fixture).stem if fixture.endswith('.zip') else fixture.replace('.','-'))
@@ -56,11 +56,12 @@ with tempfile.TemporaryDirectory(prefix="unarchiver-relocation-") as temporary:
         assert data['application_name']=='Packsmith' and data['window_title'].startswith('Packsmith')
         assert data['application_icon_loaded'] and data['archive_icon_loaded']
         if mode == "--smoke":
+            assert data['worker_exit_verified'] and 'Output committed: yes' in data['result_panel']
             # Compare the selected file to the ZIP oracle, not only the process exit code.
             import zipfile
             if legacy:
                 expected=b'' if fixture=='large-wrapped.hqx' and data['selected_id']==1 else legacy_fixtures.LARGE_DATA if fixture=='large-wrapped.hqx' and data['selected_id']==2 else b'Classic data\0\x90\xff\n'
-                assert data['read_only'] and data['edit_actions_disabled'] and data['columns']==5
+                assert data['read_only'] and data['edit_actions_disabled'] and data['columns']==6
                 if fixture=='large-wrapped.hqx':
                     assert data['display_names'][1]=='folder/'+'\\t'*14+'\\x20'
             else:
@@ -82,6 +83,7 @@ with tempfile.TemporaryDirectory(prefix="unarchiver-relocation-") as temporary:
         else:
             assert data["stage_removed"] and not list(destination.iterdir())
             if mode=='--smoke-error':
+                assert 'checksum' in data['result_panel'].lower() and 'Output committed: no' in data['result_panel']
                 assert data['error_dialog_visible']
                 assert data['error_dialog_text']=='Extraction failed. No completed output was exported.'
                 assert 'checksum' in data['error_dialog_detail'].lower()

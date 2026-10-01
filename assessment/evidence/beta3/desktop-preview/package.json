@@ -1,0 +1,1160 @@
+{
+  "scope": "Local Windows preview; fresh-machine qualification pending",
+  "product": "Packsmith",
+  "version": "0.1.0-beta.3",
+  "branding": {
+    "tool": "Built-in image_gen",
+    "created_date": "2026-10-01",
+    "assets": [
+      {
+        "name": "packsmith",
+        "source": "packsmith-master.png",
+        "prompt": "Use case: logo-brand. Asset type: final application icon for Packsmith, a modern native desktop archive manager that creates, explores, edits and extracts archives, including preserved classic Macintosh files. Create ONE polished standalone square application icon: a compact archive box with a bold central zipper/clasp, incorporating a subtle forged-metal/anvil-like base into the same simple silhouette to suggest the smith name. Restrained harmonious two-tone colors, precise edges, understated dimensional highlights, distinctive and professional. Prioritize a strong readable silhouette and large simple forms that survive at 16, 24, 32 and 48 pixels. Center the mark with generous equal safe padding; no circular enclosing badge, no background tile, no scenery. True transparent background outside the mark. No text, letters, wordmark, tiny decorative details, watermarks, mockup, multiple concepts, or contact sheet. Deliver a high-resolution square master suitable for conversion to Windows ICO and PNG size variants."
+      },
+      {
+        "name": "packsmith-archive",
+        "source": "packsmith-archive-master.png",
+        "reference": "packsmith-master.png",
+        "prompt": "Use case: logo-brand. Asset type: companion archive-document icon for Packsmith. Transform the supplied Packsmith application icon into ONE matching document/file icon. Preserve its warm golden archive box, dark zipper, metal materials and polished desktop-icon style. Put a large simplified version of the box-and-zipper mark on the face of a thick light silver paper/document silhouette with one clearly folded corner; omit the anvil base for this document variant. A distinct file glyph, not a duplicate application silhouette. Keep the emblem large and readable at 24 and 32 pixels, generous even safe padding, centered square composition. True transparent background outside the document; no background tile or scenery. No letters, filenames, text, badge, watermark, multiple options or contact sheet. High-resolution square master for Windows ICO and PNG variants."
+      }
+    ],
+    "integration": "Application/Explorer/taskbar icon, native version resources, in-app branding and Open action; archive icon asset available for future associations"
+  },
+  "icon_formats": {
+    "conversion": "Pillow RGBA downsampling/ICO encoding; generated artwork and alpha preserved",
+    "icons": [
+      {
+        "name": "packsmith",
+        "source": "packsmith-master.png",
+        "sha256": "5895fb69920a4bb8b5b41fbe5f432cd8df382a2299316604fd25be9f054b1870",
+        "png_sizes": [
+          16,
+          20,
+          24,
+          32,
+          40,
+          48,
+          64,
+          96,
+          128,
+          256,
+          512
+        ],
+        "ico_sizes": [
+          16,
+          20,
+          24,
+          32,
+          40,
+          48,
+          64,
+          96,
+          128,
+          256
+        ]
+      },
+      {
+        "name": "packsmith-archive",
+        "source": "packsmith-archive-master.png",
+        "sha256": "51ccd98685c0bc0230290d1056aa4eea24c003f3cb7589ba935788a60df20c8e",
+        "png_sizes": [
+          16,
+          20,
+          24,
+          32,
+          40,
+          48,
+          64,
+          96,
+          128,
+          256,
+          512
+        ],
+        "ico_sizes": [
+          16,
+          20,
+          24,
+          32,
+          40,
+          48,
+          64,
+          96,
+          128,
+          256
+        ]
+      }
+    ]
+  },
+  "resource_compiler_sha256": "7220e22b61677f43a75dbc495c6f785396561412190f2dc5a589b78b51325c5e",
+  "sdk_revision": "0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17",
+  "qt": "6.10.2",
+  "compiler": "15.2.0",
+  "commands": [
+    [
+      "C:\\msys64\\mingw64\\bin\\cmake.exe",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\windows",
+      "-G",
+      "Ninja",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_CXX_COMPILER=C:\\msys64\\mingw64\\bin\\g++.exe",
+      "-DCMAKE_RC_COMPILER=C:\\msys64\\mingw64\\bin\\windres.exe",
+      "-DCMAKE_PREFIX_PATH=C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64"
+    ],
+    [
+      "C:\\msys64\\mingw64\\bin\\cmake.exe",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\windows",
+      "-j",
+      "4"
+    ]
+  ],
+  "build_inputs": {
+    "compiler/g++.exe": "51911fb398529fa19769da935279c1a8a56f1c3508b2df295624aaa3dae34aa5",
+    "compiler/cc1plus.exe": "de69bacf358b6232fc13d97879a1639ba026177b163d8ebf57fa9a63c6ecc7d8",
+    "compiler/cmake.exe": "7ac00ef53a57a3c998027db5acbb707d64e313a84dd1191b1b74a2055859b099",
+    "compiler/ninja.exe": "44cc3ec245c0dfb74dcc6f1c79034f746977c374fa5adb9ae0553408c651dfda",
+    "compiler/libstdc++-6.dll": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+    "compiler/libgcc_s_seh-1.dll": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+    "compiler/libwinpthread-1.dll": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+    "qt-sdk": "4f7ce8d701427f22483ec66cb2e5659fcffeacf1eb25e888b61be1a03321849a",
+    "7zip-sdk": "e5d88198ea1241a55b1e200fbcc738e8ca54244dd78366100c424e3f1a5fe99f",
+    "7z.dll": "65e4c1f855f9ef6e8f0f5df8e3f27d9eb5f07311408639da0a1ca0b8f4871b0d"
+  },
+  "legacy_build": {
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\clang.exe",
+      "-O2",
+      "-fobjc-runtime=gnustep-2.0",
+      "-fexceptions",
+      "-fobjc-exceptions",
+      "-fblocks",
+      "-fconstant-string-class=NSConstantString",
+      "-DSTRICT_APPLE_COMPATIBILITY=1",
+      "-D_NATIVE_OBJC_EXCEPTIONS",
+      "-D_FILE_OFFSET_BITS=64",
+      "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\include",
+      "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\XADMaster",
+      "-IC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\compat-include",
+      "-LC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime-gcc16_1\\mingw64\\lib",
+      "-LC:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\lib",
+      "-fuse-ld=lld",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\app\\xad_stream.m",
+      "-Wl,--whole-archive",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\libxad.a",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\libdetector.a",
+      "-Wl,--no-whole-archive",
+      "-lgnustep-base",
+      "-lobjc",
+      "-lstdc++",
+      "-lz",
+      "-lbz2",
+      "-lwavpack",
+      "-lwinmm",
+      "-lgdi32",
+      "-o",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\xad-stream.exe"
+    ],
+    "libraries_command": [
+      "C:\\msys64\\mingw64\\bin\\cmake.exe",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22",
+      "--target",
+      "xad",
+      "detector",
+      "-j",
+      "4"
+    ],
+    "libraries_sha256": {
+      "libxad.a": "427755fbb23c3df40d0410a849b6b9dc54a53acbab4373c55187fa0baba708bc",
+      "libdetector.a": "42311e691ef804de5dbd69e7ebe84761c05f46b1f04615117617a2a63b94c578"
+    },
+    "source_sha256": "b38e8e9adfd75b41566518b8d8c05de8214031043f60bd1f905b9d030f9d5e5f",
+    "exit_code": 0
+  },
+  "legacy_build_inputs": {
+    "provenance": "Observed local compiler/headers/imports/source hashes; acquired packages and engine build receipts are in windows-first. Not fresh-machine proof.",
+    "hashes": {
+      "tools\\windows-runtime\\mingw64\\bin\\clang.exe": "49bd90436620bd252aa2bc82e62309ee52ed16b61238ca0ccb54594dbc288bed",
+      "tools\\windows-runtime\\mingw64\\bin\\clang++.exe": "49bd90436620bd252aa2bc82e62309ee52ed16b61238ca0ccb54594dbc288bed",
+      "tools\\windows-runtime\\mingw64\\bin\\ld.lld.exe": "b0e55c1d12b730d8f174737dcf8a30bc2f07bdc3cea81003d00a7fd8882d9efb",
+      "tools\\windows-runtime\\mingw64\\lib\\libgnustep-base.dll.a": "5c0e1048dd27f2d531176ac2c856a0541ae5655448412fe8b226dd288c5fdd38",
+      "tools\\windows-runtime\\mingw64\\lib\\libobjc.dll.a": "6abd994aafdbca0223b84c64fab9724f9180fa53514cf21f20b0e145d185217d",
+      "tools\\windows-runtime\\mingw64\\lib\\libz.dll.a": "0c4848c6215d524133447d4449e0cb8a0b6673376b19be2b579506fc1d57c492",
+      "tools\\windows-runtime\\mingw64\\lib\\libbz2.dll.a": "34fa80eaec24704410a5cb2183a946d0689be4f98878961e0f1cbce1923a5b7a",
+      "tools\\windows-runtime\\mingw64\\lib\\libwavpack.dll.a": "8e69d1619d57d1b091692785b0062fbde830d9c549f77ff3e4a484227ae99089",
+      "tools\\windows-runtime-gcc16_1\\mingw64\\lib\\libstdc++.dll.a": "fd94388c7a6e393e74bc6eb1fdc07a7704f7a109f975a29193c79ed5270e09c9",
+      "experiments\\xad-windows\\project\\CMakeLists.txt": "ab4c8078a6bf8fe84da3c5493a35c4c149e34cc74f1afe2a25b1121fc2144b12",
+      "experiments\\xad-windows\\compat-include\\regex.h": "329a2f74982d9714dc808557e21aeabaf052b060510052e217932e1c63a020f0",
+      "evidence\\windows-first\\windows-wide-unlink.patch": "545068a595ac4611e67a75e7f2559e7ea0f5585df3892cf15eb39ff835e85bb1",
+      "evidence\\windows-first\\windows-encoding.patch": "e8ef8c205c3bdee05365b905f9fba457732b9fd8f30b695f14430513605baf21",
+      "tools\\windows-runtime\\mingw64\\include": "667d92b6e2c7116b0dacc7d7a77c186cf0204d876a39e4c14a756c982e214356",
+      "tools\\windows-runtime\\mingw64\\lib\\clang": "738107b6a5923d3dc26f942678eb6a17d9931213a9f1b9f2dede6a88386468cc",
+      "experiments\\xad-windows\\XADMaster": "7f7d7367739ee11ddd48974babc48c7f8136888bc7adfd96413eab7b2c4be5a4",
+      "experiments\\xad-windows\\UniversalDetector": "432bedb98ee6fbfc0ab4f57fffaafe07fb508e8a7fff361d6a82645cd8e94497"
+    }
+  },
+  "authored_sources": {
+    "CMakeLists.txt": "e366d793b28d9cc29f52b7a85b617c0c625df9d3fed264768f85d50631db2705",
+    "app\\main.cpp": "f17670031cda0914a74280bcc7f6069550df80fecddc5f5ce9d3c0941158f0be",
+    "app\\archive_model.h": "a85e9e33d8bb6c9ae1aa7253c99a2f9ccda717047dbc4df3b8a9bd05076b1fd6",
+    "app\\job_controller.h": "f6a5c843b1b0e4598e5c3cdea2f536652ae41df35ca28bb1275c47ef0fb5d613",
+    "app\\classic_export.h": "c901a38fee4dc5bda541df4adaffb567259c43c1af30cade3d1d1b6c33f1ba10",
+    "app\\classic_format.h": "dd81b59dd3fe1794d2b282552a69bbe3654b6eac8c3754b96badd34b364c8909",
+    "app\\version.h": "82ace1f71281ab6ea2e5ab6e0aeaae12d8621320f7ed17c53a3528f1bdc2459c",
+    "app\\worker.cpp": "0afdab56589a6e588cea5b2b08c15bd245ea8f1dba51b8d005938afaef6747e9",
+    "app\\legacy_worker.h": "62f4f1a062084436046985c072636df742a083a180d11dd93396a824d5ac7389",
+    "app\\xad_stream.m": "b38e8e9adfd75b41566518b8d8c05de8214031043f60bd1f905b9d030f9d5e5f",
+    "app\\packsmith.rc": "c3f73627013c5136aac68b087893f55746a1d17b647b9931c4f4c91098d74338",
+    "assets\\icons\\packsmith.ico": "65f3254824da1fa97a700714b457ac07ad320df0bb3cc8de42da502402348122",
+    "assets\\icons\\packsmith-archive.ico": "d579bf57057ea05ceeef13ab11476f8cdcec8f4bf8bc4c3390084c667a087156",
+    "scripts\\build_icons.py": "7fde06c85c39e98d78e71c0f799aecffd0eaf76e5d443a1302e2c5725b3e21c3",
+    "scripts\\build_legacy_windows.py": "bbed868e69d0f37ec894c3bcd33a316c40713e9358f56dcb2caa33ea6d010eb5",
+    "scripts\\build_windows.py": "d460b55db6fec3282ad27bf5981ed2026aff29861d0abeafd72263e2aaf5e34f"
+  },
+  "files": [
+    {
+      "path": "icons\\packsmith-256.png",
+      "sha256": "cd7f7de1753a662bae735f177cc6fbe8cd23fded257cbabbcc2c90a727ad4ec3",
+      "bytes": 68882,
+      "origin": null
+    },
+    {
+      "path": "icons\\packsmith-archive-256.png",
+      "sha256": "269005717378ab3f0cb57dc35cea2e918be37ae7a264b325874e8accae0b7e86",
+      "bytes": 66115,
+      "origin": null
+    },
+    {
+      "path": "icons\\packsmith-archive.ico",
+      "sha256": "d579bf57057ea05ceeef13ab11476f8cdcec8f4bf8bc4c3390084c667a087156",
+      "bytes": 112399,
+      "origin": null
+    },
+    {
+      "path": "icons\\packsmith.ico",
+      "sha256": "65f3254824da1fa97a700714b457ac07ad320df0bb3cc8de42da502402348122",
+      "bytes": 120312,
+      "origin": null
+    },
+    {
+      "path": "imageformats\\qico.dll",
+      "sha256": "3fca6f3092df4e01aa9d48186ce3df857521fc014f28b2edf9c331de4b9bda1b",
+      "bytes": 50024,
+      "origin": null
+    },
+    {
+      "path": "libgcc_s_seh-1.dll",
+      "sha256": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+      "bytes": 150196,
+      "origin": "C:\\msys64\\mingw64\\bin\\libgcc_s_seh-1.dll"
+    },
+    {
+      "path": "libstdc++-6.dll",
+      "sha256": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+      "bytes": 2461848,
+      "origin": "C:\\msys64\\mingw64\\bin\\libstdc++-6.dll"
+    },
+    {
+      "path": "libwinpthread-1.dll",
+      "sha256": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+      "bytes": 64403,
+      "origin": "C:\\msys64\\mingw64\\bin\\libwinpthread-1.dll"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "06eb1c441443cf15ac84f309003f4c43c62246939d37c75fc3e056c2d34cd300",
+      "bytes": 26965,
+      "origin": null
+    },
+    {
+      "path": "licenses\\7-Zip.txt",
+      "sha256": "519ac0a4bded9c18ea02e0afb71f663d8c47373bd9facd3ac96a79f51d77765d",
+      "bytes": 6031,
+      "origin": null
+    },
+    {
+      "path": "licenses\\gcc-libs\\COPYING.LIB",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "bytes": 26527,
+      "origin": null
+    },
+    {
+      "path": "licenses\\gcc-libs\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\gcc-libs\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\gcc-libs\\README",
+      "sha256": "33400d067fa3e2bd670a0868dcdb60c9486e8f559b675cf9ff1ff55d4e0d06ab",
+      "bytes": 236,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\binutils\\COPYING",
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c",
+      "bytes": 18002,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\binutils\\COPYING.LIB",
+      "sha256": "56bdea73b6145ef6ac5259b3da390b981d840c24cb03b8e1cbc678de7ecfa18d",
+      "bytes": 25291,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\binutils\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\binutils\\COPYING3.LIB",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "bytes": 7639,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\brotli\\LICENSE",
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+      "bytes": 1084,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\bzip2\\LICENSE",
+      "sha256": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3",
+      "bytes": 1896,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\clang\\LICENSE",
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "bytes": 15140,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\clang-libs\\LICENSE",
+      "sha256": "ebcd9bbf783a73d05c53ba4d586b8d5813dcdf3bbec50265860ccc885e606f47",
+      "bytes": 15140,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\crt\\COPYING",
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "bytes": 2326,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\crt\\COPYING.MinGW-w64-runtime.txt",
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f",
+      "bytes": 12155,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\crt\\COPYING.MinGW-w64.txt",
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1",
+      "bytes": 5905,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\detector\\LICENSE",
+      "sha256": "319daefe38ebeead3df178e5937898a52d67c0c795f54f1c0bb10ac3b9cffb63",
+      "bytes": 26940,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc-libs\\COPYING.LIB",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861",
+      "bytes": 26527,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc-libs\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc-libs\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gcc-libs\\README",
+      "sha256": "33400d067fa3e2bd670a0868dcdb60c9486e8f559b675cf9ff1ff55d4e0d06ab",
+      "bytes": 236,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gettext-runtime\\COPYING",
+      "sha256": "7ef2cdfe58e0c0460657b6598b49af29d4e03c1e41cbaf0e1da1eb8ad74b95d0",
+      "bytes": 495,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gettext-runtime\\intl\\COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gettext-runtime\\libasprintf\\COPYING",
+      "sha256": "03133addae5b99a6148c538300e6d97074453089be1423b741bd081f18e2b298",
+      "bytes": 65,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gettext-runtime\\libasprintf\\COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gnustep-base\\COPYING",
+      "sha256": "1728469c6d062a8930e6eb276055e20f4f54b179c6945b39c743d3155249fe95",
+      "bytes": 17968,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\gnustep-make\\COPYING",
+      "sha256": "ca372a7d92560b1fa9f6d832b440e8bcd62d9adfa8870c98287deab66d98310e",
+      "bytes": 35148,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\headers\\COPYING",
+      "sha256": "99a69660981156c21336fdb5661f89341b013c94e4bf9e1c7467b4745718397f",
+      "bytes": 2326,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\headers\\COPYING.MinGW-w64-runtime.txt",
+      "sha256": "1db8da07b436c68833c0673ffee3d9fcb2526047f3820b81661865dfedc79a1f",
+      "bytes": 12155,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\headers\\COPYING.MinGW-w64.txt",
+      "sha256": "f38e6194bd3bfa1b654f118e5acefe0aead437bbe669eee43957ccc65a7127f1",
+      "bytes": 5905,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\headers\\ddk-readme.txt",
+      "sha256": "8d8f9924e4ea5466932000bdb9a4104da1d8ca3e4c979bb8207225522ba63826",
+      "bytes": 650,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libatomic\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libatomic\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libffi\\LICENSE",
+      "sha256": "17b64dc60f3b6897a60f971e288b973f655c2edcdf08b25f3c3dd5549857881c",
+      "bytes": 1132,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libgcc\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libgcc\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libiconv\\COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libiconv\\COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libiconv\\libcharset\\COPYING.LIB",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libiconv\\README",
+      "sha256": "4ae66e61d1c6593c84c47105b368d579bcee1af566dbb959ec63a0c48425dcf4",
+      "bytes": 5741,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libobjc2\\COPYING",
+      "sha256": "56b923b1db99c7975c4e4ad4847381b32d3c9401fb2c8270b41fb6d31d6014fb",
+      "bytes": 1059,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libquadmath\\COPYING.LIB",
+      "sha256": "32434afcc8666ba060e111d715bfdb6c2d5dd8a35fa4d3ab8ad67d8f850d2f2b",
+      "bytes": 26440,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libstdc++\\COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+      "bytes": 3324,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libstdc++\\COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libtasn1\\COPYING",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libtasn1\\COPYING.LESSERv2",
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "bytes": 26419,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libunistring\\LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libunistring\\LICENSE.LIB",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+      "bytes": 7639,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libwinpthread\\COPYING",
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "bytes": 2883,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\libxml2\\COPYING",
+      "sha256": "5d4873884a890122a4b9b20ad56ac6f7da1d796a5bfcf04a427970ac96217626",
+      "bytes": 1314,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\lld\\LICENSE",
+      "sha256": "f7891568956e34643eb6a0db1462db30820d40d7266e2a78063f2fe233ece5a0",
+      "bytes": 15138,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\llvm-libs\\LICENSE",
+      "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee",
+      "bytes": 15141,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\make\\COPYING",
+      "sha256": "e79e9c8a0c85d735ff98185918ec94ed7d175efc377012787aebcf3b80f0d90b",
+      "bytes": 35151,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\tzdata\\LICENSE",
+      "sha256": "0613408568889f5739e5ae252b722a2659c02002839ad970a63dc5e9174b27cf",
+      "bytes": 252,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\wavpack\\COPYING",
+      "sha256": "1703dd391c9b422910287add8483a27d9bead0b0b5ccd6d5017e995a7192b3e2",
+      "bytes": 1561,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\winpthreads\\COPYING",
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "bytes": 2883,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\xad-head\\LICENSE",
+      "sha256": "06eb1c441443cf15ac84f309003f4c43c62246939d37c75fc3e056c2d34cd300",
+      "bytes": 26965,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\zlib\\LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+      "bytes": 1002,
+      "origin": null
+    },
+    {
+      "path": "licenses\\legacy\\zstd\\LICENSE",
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+      "bytes": 1549,
+      "origin": null
+    },
+    {
+      "path": "licenses\\libwinpthread\\COPYING",
+      "sha256": "63263614cdd29f2f93cba85e992f041b31f9fc7b4033692f31269489a8a1b177",
+      "bytes": 2883,
+      "origin": null
+    },
+    {
+      "path": "licenses\\machfs.txt",
+      "sha256": "1df882042cb67c08b4d8bb3ed48f4f4b62f403f3c3e7dee2151a4dd538513dcf",
+      "bytes": 1068,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\AFL-2.1.txt",
+      "sha256": "93bb4f7417aa775bab9026cc3d0af28aeb64451fc5a8ec651876785edd8eaf9b",
+      "bytes": 8948,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Apache-2.0.txt",
+      "sha256": "e3ba223bb1423f0aad8c3dfce0fe3148db48926d41e6fbc3afbbf5ff9e1c89cb",
+      "bytes": 10398,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Bitstream-Vera.txt",
+      "sha256": "7a083b136e64d064794c3419751e5c7dd10d2f64c108fe5ba161eae5e5958a93",
+      "bytes": 8816,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\blessing.txt",
+      "sha256": "592db1199aab67aafe4515db9808b420db122083807c5329b2f061951e79acbe",
+      "bytes": 244,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\BSD-2-Clause.txt",
+      "sha256": "8fda146749ca071ac9cdce2e24d25444676ea48d1f9dccc2b7c15c054b717db8",
+      "bytes": 1276,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\BSD-3-Clause.txt",
+      "sha256": "9f0490f18656c6f2435bd14f603ef0c96434d1825615363dce43abb42ed1dcce",
+      "bytes": 1469,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\BSD-4-Clause.txt",
+      "sha256": "83faa0d205c316ce3efeafee465b6a165914fb29595968c08dc6437021b7b6fd",
+      "bytes": 1672,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\BSL-1.0.txt",
+      "sha256": "3abd6471b9a9a08d65ce771143f8e278bb4c1aeb10c1c2d476935a6b049653f5",
+      "bytes": 1340,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes": 7048,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\config_qtbase.opt",
+      "sha256": "de57876a9b3611cbd28cf8e70d5d58c52fbf59764529e60b54cc1a5b72ad36f8",
+      "bytes": 907,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\FTL.txt",
+      "sha256": "08c135755dd589039470f1fdbb400daaabaaa50d0b366d19cebff4d22986baa1",
+      "bytes": 6743,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\GFDL-1.3-no-invariants-only.txt",
+      "sha256": "110535522396708cea37c72a802c5e7e81391139f5f7985631c93ef242b206a4",
+      "bytes": 22955,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\GPL-2.0-only.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\GPL-2.0-or-later.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\GPL-3.0-only.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\HPND.txt",
+      "sha256": "67ac968431270291f5e9cd3ed76705e1169f57082ee102093b2543b28cef63cf",
+      "bytes": 1188,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\IJG.txt",
+      "sha256": "1cb448f5e2e6d3aca60943f4eee1a04675628dc0266a074a42bc1560ebc28d61",
+      "bytes": 1815,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Imlib2.txt",
+      "sha256": "8846f2baba1a7f4c36f7ca19a923a000d8a21afa37cf0fe006f6ce88a6058a89",
+      "bytes": 1986,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\IPL-1.0.txt",
+      "sha256": "d5328e672fb1bff47ee18e890784541453380081cf3771bb7b3c06fc19c7d503",
+      "bytes": 11789,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LGPL-2.1-or-later.txt",
+      "sha256": "1ccf09bf2f598308df4bed9cd8e9657dc5cd0973d2800318f2e241486e2edf3f",
+      "bytes": 25906,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LGPL-3.0-only.txt",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\libpng-2.0.txt",
+      "sha256": "7317e078e2d3b5d7ba5a6159e650945153262b44b76f6700f8e9edb261c5143e",
+      "bytes": 5345,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Libpng.txt",
+      "sha256": "58fe669792f9b4e0740bf75ecfe90b5326128bb2ce7e27e1c342abd9db4d8ea6",
+      "bytes": 4120,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LicenseRef-BSD-3-Clause-with-PCRE2-Binary-Like-Packages-Exception.txt",
+      "sha256": "0526625fcc746a42d3f19a0ab357d3dc8479fdbe3bfd168825498f50215c7a63",
+      "bytes": 1852,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LicenseRef-ICC-License.txt",
+      "sha256": "9e34ff47b3a44814e183342e7e198d127a6740e29d20e8381fba7688dafc79dd",
+      "bytes": 463,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LicenseRef-Lcs-Telegraphics.txt",
+      "sha256": "c10225ebbd5191bfdd761b0d7752c785f2453ab665d6c454473fb12d254668aa",
+      "bytes": 139,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LicenseRef-Qt-Commercial.txt",
+      "sha256": "9b1f50aae6267f9d5e0ceb6775ee86450262c25ec7c0573e151fe5d3f18a4700",
+      "bytes": 462,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\LicenseRef-SHA1-Public-Domain.txt",
+      "sha256": "65d86b8ec6b1cd8b8f6e64fd8710274ba00d6a3c520e00dfdcd1c3d2071f3305",
+      "bytes": 144,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Linux-syscall-note.txt",
+      "sha256": "3f9e477523febab58de8b716ccfbcf02e6ef1c8e7728953905e8558637abe2a9",
+      "bytes": 624,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\MIT-Khronos-old.txt",
+      "sha256": "3c58021633974f9ed3c3d445a374240a5244fd039628f4d7f6f3e674bc8e6694",
+      "bytes": 1306,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\MIT-open-group.txt",
+      "sha256": "c55d2ab72d8a4f9e9cd8fbd1379268e575e8cfa16874affa5899b75a6d754514",
+      "bytes": 897,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\MIT.txt",
+      "sha256": "d040359701c01996a017d5c515678929cd1b0625e64cb86db44025fbb6cdf1fc",
+      "bytes": 1111,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\MPL-2.0.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Qt-GPL-exception-1.0.txt",
+      "sha256": "40678d338ce53cd93f8b22b281a2ecbcaa3ee65ce60b25ffb0c462b0530846b2",
+      "bytes": 965,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\SPL-1.0.txt",
+      "sha256": "f58f2f30909982445f97f1a61667261920a7caeab21ef5bea1b740f5b144d141",
+      "bytes": 23547,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Unicode-3.0.txt",
+      "sha256": "80bb6294022d8764adb36a9d65ebb6bd94efb1865918a71e31e6c247607d7634",
+      "bytes": 1995,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\X11.txt",
+      "sha256": "e2936c6509784b4f0ec27bac74182393866fad9422b29a70e085ff14aba87193",
+      "bytes": 1338,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Xerox.txt",
+      "sha256": "b6bc52205d01e10cf43dbb7b8aec06dcaa3b21d1486e7c9c0bec329ee8244d8d",
+      "bytes": 965,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qt\\Zlib.txt",
+      "sha256": "d7e3139972874dc8abdbbfce27ec1e6f942b28279dd7d27453630a8b4610e080",
+      "bytes": 1465,
+      "origin": null
+    },
+    {
+      "path": "licenses\\qtbase-6.10.2.spdx",
+      "sha256": "ae0f5dc7070bbb47bb9bfdb637dbc0fb86c6f80aa30dd867437dfef6c67de536",
+      "bytes": 1164026,
+      "origin": null
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "c056096d83fa76d8d82fe7c36819bf413eb1a6fd346bd22cfaf7954054a97cbb",
+      "bytes": 3560,
+      "origin": null
+    },
+    {
+      "path": "Packsmith.exe",
+      "sha256": "1eb235af59394b7b433f1eb681aff93f76d3ea52efbd37d1bc950ec1b04333c5",
+      "bytes": 1074463,
+      "origin": null
+    },
+    {
+      "path": "platforms\\qwindows.dll",
+      "sha256": "664cda539addfa1917e5b728f45a82a0f83694810c81df5604b86b200ad4aab1",
+      "bytes": 1263976,
+      "origin": null
+    },
+    {
+      "path": "Qt6Core.dll",
+      "sha256": "7e14027a0bb4017325db707c315c70ee008c8f2364f60bb2eb04d53c017ee762",
+      "bytes": 11100000,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64\\bin\\Qt6Core.dll"
+    },
+    {
+      "path": "Qt6Gui.dll",
+      "sha256": "5a6a0971e71979520b01682ce7dcd5b4138ee95f208286ac45010050aa386d9d",
+      "bytes": 11387736,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64\\bin\\Qt6Gui.dll"
+    },
+    {
+      "path": "Qt6Widgets.dll",
+      "sha256": "18dce4f681cdbf0970301b5e6fbf5e8eb32182051c684b9366435269301870b9",
+      "bytes": 7155032,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64\\bin\\Qt6Widgets.dll"
+    },
+    {
+      "path": "README.md",
+      "sha256": "acde6ec0922380bf1464e361141a1cab753b5d0fff9b48af0f2e1fafbf11ce44",
+      "bytes": 10615,
+      "origin": null
+    },
+    {
+      "path": "source-materials.json",
+      "sha256": "2e585751f762da138738ad47f393553322e660b9e9d30e732696e5e3c64b9209",
+      "bytes": 22895,
+      "origin": null
+    },
+    {
+      "path": "styles\\qmodernwindowsstyle.dll",
+      "sha256": "3f0b77397d04039b555519a3fb494b4fe2f64d058424b8a550b78836c20ff8fa",
+      "bytes": 242536,
+      "origin": null
+    },
+    {
+      "path": "workers\\7z.dll",
+      "sha256": "65e4c1f855f9ef6e8f0f5df8e3f27d9eb5f07311408639da0a1ca0b8f4871b0d",
+      "bytes": 1906688,
+      "origin": null
+    },
+    {
+      "path": "workers\\legacy\\gnustep-base-1_31.dll",
+      "sha256": "428456388343d6d0d6f5780d70a8b04257d4daca668f340b3f17c57cbc7d0013",
+      "bytes": 5040128,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\gnustep-base-1_31.dll"
+    },
+    {
+      "path": "workers\\legacy\\libbrotlicommon.dll",
+      "sha256": "ca7bc06ead80259971badf2cd0bfc688db9154dad65f139f49a38b4be9976f97",
+      "bytes": 143429,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libbrotlicommon.dll"
+    },
+    {
+      "path": "workers\\legacy\\libbrotlidec.dll",
+      "sha256": "a142dc6cfa77cb907028aa9426f486f3d8de37855e8db2ae2894147908121881",
+      "bytes": 62461,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libbrotlidec.dll"
+    },
+    {
+      "path": "workers\\legacy\\libbrotlienc.dll",
+      "sha256": "50c3aca8abcf0d5576f0b62dbd608be285246f8fd1b48ef87d58fa6b8b744e5f",
+      "bytes": 788364,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libbrotlienc.dll"
+    },
+    {
+      "path": "workers\\legacy\\libbz2-1.dll",
+      "sha256": "a4fbb97c26662d2b8a80bf4597ed3effb69b12048b0cb1eef2c3f211e2e66673",
+      "bytes": 108633,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libbz2-1.dll"
+    },
+    {
+      "path": "workers\\legacy\\libffi-8.dll",
+      "sha256": "b649c515907436a3299326f83aea0e8d75c61853eb1609602603bbcb9b00b4db",
+      "bytes": 39699,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libffi-8.dll"
+    },
+    {
+      "path": "workers\\legacy\\libgcc_s_seh-1.dll",
+      "sha256": "851e164d1a8a7ec4a8991315339b8090853c8d4a27224332cea293e01ff18cbf",
+      "bytes": 151732,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libgcc_s_seh-1.dll"
+    },
+    {
+      "path": "workers\\legacy\\libgmp-10.dll",
+      "sha256": "37248cda33845e7c5c35a574e57da762dd0a8268f0270d179f30a33746809681",
+      "bytes": 679747,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libgmp-10.dll"
+    },
+    {
+      "path": "workers\\legacy\\libgnutls-30.dll",
+      "sha256": "aca67ef2c8429557e9ac3a02ad313e9fdad35a1416972a248f0a205f83d39fbd",
+      "bytes": 2316158,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libgnutls-30.dll"
+    },
+    {
+      "path": "workers\\legacy\\libhogweed-7.dll",
+      "sha256": "8a4785b98e5418c32035f570904f65360c89825358702954b53c77ee2df8c97d",
+      "bytes": 275389,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libhogweed-7.dll"
+    },
+    {
+      "path": "workers\\legacy\\libiconv-2.dll",
+      "sha256": "7a282a854e01be726c6cccfe46f548c716aa45b3014818468253aaa4efbcd067",
+      "bytes": 1143148,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libiconv-2.dll"
+    },
+    {
+      "path": "workers\\legacy\\libicudt78.dll",
+      "sha256": "60255653982986c9fb72ad1b10b8dc502e498d890e0218cb0a47bc5907aa4e43",
+      "bytes": 33120806,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libicudt78.dll"
+    },
+    {
+      "path": "workers\\legacy\\libicuin78.dll",
+      "sha256": "c9bb34526709a81bfae231d4190f13adad0b4c63e345262f448aaa720291feec",
+      "bytes": 3186867,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libicuin78.dll"
+    },
+    {
+      "path": "workers\\legacy\\libicuuc78.dll",
+      "sha256": "27edc25710faa3489cd9cbd6cbc64c305b69ce5dbb9e0a29273d85e9badddde9",
+      "bytes": 1999466,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libicuuc78.dll"
+    },
+    {
+      "path": "workers\\legacy\\libidn2-0.dll",
+      "sha256": "9880b52651a0247640a2531d777380f7c35fac7efa7e3979b265ddcb78db8642",
+      "bytes": 247081,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libidn2-0.dll"
+    },
+    {
+      "path": "workers\\legacy\\libintl-8.dll",
+      "sha256": "0537c3dd2378218508ebe3cc416d72a99ee2d24ae1c5525e23458f32544ef861",
+      "bytes": 298731,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libintl-8.dll"
+    },
+    {
+      "path": "workers\\legacy\\libnettle-9.dll",
+      "sha256": "208002d990684946c7923a87022bedea588fef8e31286598c08805e37be2a95a",
+      "bytes": 360977,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libnettle-9.dll"
+    },
+    {
+      "path": "workers\\legacy\\libobjc-4.6.dll",
+      "sha256": "7a931695f61179292de70821283441a5a29a20d198011c7da8e57904f03fb1d0",
+      "bytes": 167936,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libobjc-4.6.dll"
+    },
+    {
+      "path": "workers\\legacy\\libp11-kit-0.dll",
+      "sha256": "ada3949f3763db47a754eec56388f3305c41c259eb3bbae188a820fd01c5445b",
+      "bytes": 1594910,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libp11-kit-0.dll"
+    },
+    {
+      "path": "workers\\legacy\\libstdc++-6.dll",
+      "sha256": "4d4495104abe4dca9df029db8434f1f7d37067d67be644a7eb7bb79b1fb2c66f",
+      "bytes": 2673229,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libstdc++-6.dll"
+    },
+    {
+      "path": "workers\\legacy\\libtasn1-6.dll",
+      "sha256": "95821132a7d4ea90f7c37540118ad1459809ff23162d6dc3d5600b15755a644b",
+      "bytes": 113467,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libtasn1-6.dll"
+    },
+    {
+      "path": "workers\\legacy\\libunistring-5.dll",
+      "sha256": "b91e2850d3668d4931056a8f4d35783b8ec3eea3735485108a936a072cd16071",
+      "bytes": 2251328,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libunistring-5.dll"
+    },
+    {
+      "path": "workers\\legacy\\libwavpack-1.dll",
+      "sha256": "98f58782e269d18d5c0d9a2be19993225dcbf46e3b67e06d209ba2b1f9d1990d",
+      "bytes": 228099,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libwavpack-1.dll"
+    },
+    {
+      "path": "workers\\legacy\\libwinpthread-1.dll",
+      "sha256": "72bf8802de3a99d28f0bc2db9a11f281a9f9f3fa83dab2bc67e69fac3bd3d9c0",
+      "bytes": 66333,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libwinpthread-1.dll"
+    },
+    {
+      "path": "workers\\legacy\\libxml2-16.dll",
+      "sha256": "81e97f59e486f95de3b8b12973860102cddebbaaeedbbc22786aaec0728b2c68",
+      "bytes": 1255475,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libxml2-16.dll"
+    },
+    {
+      "path": "workers\\legacy\\libxslt-1.dll",
+      "sha256": "d2e2bc93cb8fd03eb5a681e75995e27ce3df0430b359d4717b3c5232776ad99a",
+      "bytes": 307859,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libxslt-1.dll"
+    },
+    {
+      "path": "workers\\legacy\\libzstd.dll",
+      "sha256": "b95c223a9548a9ecf51377c962e0bc8f0c51eb0c6f67a296dbc885996f0dd40d",
+      "bytes": 1218273,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\libzstd.dll"
+    },
+    {
+      "path": "workers\\legacy\\xad-stream.exe",
+      "sha256": "518d49f1ad8a229d3e2874f336bb7037af8302dafbf3cc6e9b34ccaf391654fe",
+      "bytes": 2673152,
+      "origin": null
+    },
+    {
+      "path": "workers\\legacy\\zlib1.dll",
+      "sha256": "93e9243a44c29200eeacaf9658efe2558581770e4b11ca4b500e18e424a6e3b5",
+      "bytes": 128488,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\build\\legacy\\zlib1.dll"
+    },
+    {
+      "path": "workers\\libgcc_s_seh-1.dll",
+      "sha256": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+      "bytes": 150196,
+      "origin": "C:\\msys64\\mingw64\\bin\\libgcc_s_seh-1.dll"
+    },
+    {
+      "path": "workers\\libstdc++-6.dll",
+      "sha256": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+      "bytes": 2461848,
+      "origin": "C:\\msys64\\mingw64\\bin\\libstdc++-6.dll"
+    },
+    {
+      "path": "workers\\libwinpthread-1.dll",
+      "sha256": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+      "bytes": 64403,
+      "origin": "C:\\msys64\\mingw64\\bin\\libwinpthread-1.dll"
+    },
+    {
+      "path": "workers\\packsmith-worker.exe",
+      "sha256": "46f9e338049e21376df53c35ced9c5b853f9bc49e3c3df9433f238fa08f6e200",
+      "bytes": 711520,
+      "origin": null
+    },
+    {
+      "path": "workers\\Qt6Core.dll",
+      "sha256": "7e14027a0bb4017325db707c315c70ee008c8f2364f60bb2eb04d53c017ee762",
+      "bytes": 11100000,
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64\\bin\\Qt6Core.dll"
+    }
+  ],
+  "portable_zip": {
+    "path": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\dist\\Packsmith-preview-windows-x64.zip",
+    "sha256": "fa1ea8678812a955d86ae76f347c207ab71bd7e076305c9fc2b22d788002ba70",
+    "bytes": 47520037
+  }
+}

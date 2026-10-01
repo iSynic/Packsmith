@@ -11,7 +11,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "dist/Packsmith-preview"
-EVIDENCE = ROOT / "assessment/evidence/desktop-preview"
+EVIDENCE = ROOT / "assessment/evidence/beta3/desktop-preview"
 kernel = ctypes.WinDLL("kernel32", use_last_error=True)
 kernel.LoadLibraryExW.argtypes = (wintypes.LPCWSTR, ctypes.c_void_p, wintypes.DWORD)
 kernel.LoadLibraryExW.restype = ctypes.c_void_p
@@ -67,7 +67,7 @@ def main():
     buffer = ctypes.create_string_buffer(size)
     assert version.GetFileVersionInfoW(str(executable), 0, size, buffer)
     values = {}
-    for key, expected in (("ProductName", "Packsmith"), ("FileDescription", "Packsmith archive manager"), ("OriginalFilename", "Packsmith.exe"), ("FileVersion", "0.1.0-beta.1"), ("ProductVersion", "0.1.0-beta.1")):
+    for key, expected in (("ProductName", "Packsmith"), ("FileDescription", "Packsmith archive manager"), ("OriginalFilename", "Packsmith.exe"), ("FileVersion", "0.1.0-beta.3"), ("ProductVersion", "0.1.0-beta.3")):
         value = ctypes.c_void_p(); length = wintypes.UINT()
         assert version.VerQueryValueW(buffer, "\\StringFileInfo\\040904b0\\" + key, ctypes.byref(value), ctypes.byref(length))
         values[key] = ctypes.wstring_at(value, length.value).rstrip("\0")
@@ -87,6 +87,7 @@ def main():
         worker = subprocess.Popen([str(PACKAGE / "workers/packsmith-worker.exe")], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", env=env)
         worker.stdin.write(json.dumps({"operation": "extract", "archive": str(archive), "destination": str(destination)}) + "\n"); worker.stdin.flush()
         stage = json.loads(worker.stdout.readline())
+        while stage["event"] != "staging": stage = json.loads(worker.stdout.readline())
         assert stage["event"] == "staging"
         worker.kill(); worker.communicate(timeout=10)
         assert Path(stage["path"]).exists()

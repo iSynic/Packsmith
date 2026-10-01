@@ -13,7 +13,7 @@ PREFIX = ASSESSMENT / "tools/windows-runtime/mingw64"
 COMPAT = ASSESSMENT / "tools/windows-runtime-gcc16_1/mingw64"
 XAD = ASSESSMENT / "experiments/xad-windows"
 BUILD = ROOT / "build/legacy"
-EVIDENCE = ASSESSMENT / "evidence/desktop-legacy"
+EVIDENCE = ASSESSMENT / "evidence/beta3/desktop-legacy"
 
 
 def sha(path):
@@ -39,7 +39,7 @@ def main():
             raise RuntimeError("Unexpected reference revision or changes: " + name)
     env = os.environ.copy()
     env["PATH"] = str(COMPAT / "bin") + os.pathsep + str(PREFIX / "bin") + os.pathsep + env["PATH"]
-    patches={'XADUnarchiver.m':'windows-wide-unlink.patch','XADStringWindows.m':'windows-encoding.patch'}
+    patches={'XADStuffItParser.m':'XADStuffItParser.m.patch','XADStuffIt5Parser.m':'XADStuffIt5Parser.m.patch','XADMacArchiveParser.m':'XADMacArchiveParser.m.patch','XADUnarchiver.m':'windows-wide-unlink.patch','XADStringWindows.m':'windows-encoding.patch'}
     for name, reference in (('XADMaster','xad-head'),('UniversalDetector','detector')):
         source=ASSESSMENT/'references'/reference
         for path in source.rglob('*'):
@@ -47,7 +47,7 @@ def main():
             relative=path.relative_to(source);copy=XAD/name/relative
             if name=='XADMaster' and relative.as_posix() in patches:
                 patch=''.join(difflib.unified_diff(path.read_text().splitlines(True),copy.read_text().splitlines(True),fromfile='a/'+relative.as_posix(),tofile='b/'+relative.as_posix()))
-                if patch!=(ASSESSMENT/'evidence/windows-first'/patches[relative.as_posix()]).read_text():
+                if patch!=((ROOT/'app/patches' if relative.as_posix() in ('XADStuffItParser.m','XADStuffIt5Parser.m','XADMacArchiveParser.m') else ASSESSMENT/'evidence/windows-first')/patches[relative.as_posix()]).read_text():
                     raise RuntimeError('Unexpected legacy adaptation: '+str(relative))
             elif not copy.exists() or sha(path)!=sha(copy):
                 raise RuntimeError('Unexpected legacy source changes: '+str(relative))
@@ -60,6 +60,9 @@ def main():
     for folder in (PREFIX/'include',PREFIX/'lib/clang',XAD/'XADMaster',XAD/'UniversalDetector'):
         frozen[str(folder.relative_to(ASSESSMENT))]=tree_sha(folder)
     lock=EVIDENCE/'build-inputs.lock.json'
+    historical=json.loads((ASSESSMENT/'evidence/desktop-legacy/build-inputs.lock.json').read_text())['hashes']
+    for key,value in historical.items():
+        if key.replace('\\','/')!='experiments/xad-windows/XADMaster' and frozen.get(key)!=value:raise RuntimeError('Frozen toolchain drift: '+key)
     if lock.exists():
         if json.loads(lock.read_text(encoding='utf-8'))['hashes']!=frozen:
             raise RuntimeError('Legacy build inputs differ from the frozen toolchain')

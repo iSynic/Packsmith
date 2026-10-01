@@ -1,0 +1,33 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "columns": 6,
+  "display_names": [
+    "caf\u00c3\u00a9.txt"
+  ],
+  "edit_actions_disabled": true,
+  "entries": 1,
+  "error": "",
+  "extract_ms": 118,
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "listing_ms": 772,
+  "max_event_gap_ms": 16,
+  "model_build_ms": 0,
+  "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-0cd86zi8/forks.sit/forks",
+  "passed": true,
+  "read_only": true,
+  "result_panel": "extract: Completed\nArchive: C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\desktop-legacy-fixtures\\forks.sit\nOutput committed: yes\nOutput: C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-0cd86zi8/forks.sit/forks\nBackend: xad\nEntries: 1\nFiles: 1 \u00b7 Data forks: 1 \u00b7 Resource forks: 1\nSource checksums: 2 checked fork streams; 0 without source checksums; 0 expanded wrappers.\nMapped names: 0 (see mapping for substitutions and collisions)",
+  "selected_id": 0,
+  "selected_path": "caf\u00c3\u00a9.txt",
+  "window_title": "Packsmith 0.1.0-beta.3 \u00b7 Windows beta",
+  "worker_exit_verified": true,
+  "screenshot_sha256": "91fb757ea8496ea01ab3999cbb49d0579823b9608e05fdcf8de2e5dc97b1cc25",
+  "peak_gui_rss": 55353344,
+  "peak_workers_rss": 52629504,
+  "gui_sha256": "1eb235af59394b7b433f1eb681aff93f76d3ea52efbd37d1bc950ec1b04333c5",
+  "worker_sha256": "46f9e338049e21376df53c35ced9c5b853f9bc49e3c3df9433f238fa08f6e200",
+  "decoder_sha256": "518d49f1ad8a229d3e2874f336bb7037af8302dafbf3cc6e9b34ccaf391654fe",
+  "total_elapsed_ms": 1358.53,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

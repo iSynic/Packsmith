@@ -1,0 +1,20 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "error": "",
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "passed": true,
+  "recovery_ms": 308,
+  "result_panel": "extract: Failed or cancelled\nArchive: C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\desktop-legacy-fixtures\\recovery.sit\nOutput committed: no\nFailure: Worker exited unsuccessfully after its completion event (exit 62097).\nCleanup/recovery: Interrupted staging cleaned. Original archives were retained.",
+  "stage_removed": true,
+  "window_title": "Packsmith 0.1.0-beta.2 \u00b7 Windows beta",
+  "worker_exit_verified": true,
+  "peak_gui_rss": 57319424,
+  "peak_workers_rss": 54042624,
+  "gui_sha256": "92545c630390c2d0197c1fa1e1d07ded0eee56581615f62b54ad3dd71aff85a6",
+  "worker_sha256": "48e33d61e7c8e5386d05f21383d2f2f70f5f94b9f7e9974515b026a1e9656e04",
+  "decoder_sha256": "726ae6707d0aa02ee8288058f3613152e6d6a0abb75d2803446cffcf7978a2c9",
+  "total_elapsed_ms": 839.8,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

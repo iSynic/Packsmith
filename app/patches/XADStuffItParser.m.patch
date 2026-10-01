@@ -1,0 +1,38 @@
+--- a/XADStuffItParser.m
++++ b/XADStuffItParser.m
+@@ -158,7 +158,9 @@
+ 			{
+ 				NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithObjectsAndKeys:
+ 					path,XADFileNameKey,
++					[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_MODDATE)],@"PacksmithModified1904",
+ 					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_MODDATE)],XADLastModificationDateKey,
++					[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_CREATIONDATE)],@"PacksmithCreated1904",
+ 					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_CREATIONDATE)],XADCreationDateKey,
+ 					[NSNumber numberWithInt:CSUInt16BE(header+SITFH_FNDRFLAGS)],XADFinderFlagsKey,
+ 					[NSNumber numberWithBool:YES],XADIsDirectoryKey,
+@@ -190,8 +192,10 @@
+ 						path,XADFileNameKey,
+ 						[NSNumber numberWithUnsignedInt:resourcelength],XADFileSizeKey,
+ 						[NSNumber numberWithUnsignedInt:resourcecomplen],XADCompressedSizeKey,
+-						[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_MODDATE)],XADLastModificationDateKey,
+-						[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_CREATIONDATE)],XADCreationDateKey,
++						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_MODDATE)],@"PacksmithModified1904",
++					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_MODDATE)],XADLastModificationDateKey,
++						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_CREATIONDATE)],@"PacksmithCreated1904",
++					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_CREATIONDATE)],XADCreationDateKey,
+ 						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_FTYPE)],XADFileTypeKey,
+ 						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_CREATOR)],XADFileCreatorKey,
+ 						[NSNumber numberWithInt:CSUInt16BE(header+SITFH_FNDRFLAGS)],XADFinderFlagsKey,
+@@ -230,8 +234,10 @@
+ 						path,XADFileNameKey,
+ 						[NSNumber numberWithUnsignedInt:datalength],XADFileSizeKey,
+ 						[NSNumber numberWithUnsignedInt:datacomplen],XADCompressedSizeKey,
+-						[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_MODDATE)],XADLastModificationDateKey,
+-						[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_CREATIONDATE)],XADCreationDateKey,
++						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_MODDATE)],@"PacksmithModified1904",
++					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_MODDATE)],XADLastModificationDateKey,
++						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_CREATIONDATE)],@"PacksmithCreated1904",
++					[NSDate XADDateWithTimeIntervalSince1904:CSUInt32BE(header+SITFH_CREATIONDATE)],XADCreationDateKey,
+ 						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_FTYPE)],XADFileTypeKey,
+ 						[NSNumber numberWithUnsignedInt:CSUInt32BE(header+SITFH_CREATOR)],XADFileCreatorKey,
+ 						[NSNumber numberWithInt:CSUInt16BE(header+SITFH_FNDRFLAGS)],XADFinderFlagsKey,

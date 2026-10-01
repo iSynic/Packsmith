@@ -132,6 +132,7 @@ static QString legacySafePath(const QJsonObject &row) {
 }
 static void legacyJob(const QJsonObject &request) {
     QString operation = request["operation"].toString();
+    phase("listing");
     require(operation == "list" || operation == "extract" || operation == "test",
             "Legacy formats support reading, extraction and integrity checks; creation/editing is "
             "unavailable");
@@ -142,6 +143,7 @@ static void legacyJob(const QJsonObject &request) {
         require(fingerprint == request["fingerprint"].toString(),
                 "Archive changed; reopen it before using the selected entry IDs");
     QJsonObject decoder = request;
+    if (!decoder.value("ids").isArray()) decoder["ids"] = QJsonArray{};
     decoder["operation"] = operation == "extract" ? "stream" : operation;
     LegacyChild child(decoder);
     QVector<QJsonObject> rows;
@@ -164,8 +166,10 @@ static void legacyJob(const QJsonObject &request) {
     while (child.next(frame)) {
         QString event = frame["event"].toString();
         if (event == "error" || event == "cancelled")
-            require(false, frame["message"].toString());
-        if (event == "entries") {
+            throw WorkerError(frame["code"].toString("decode_failed"), frame["message"].toString(), frame["id"].toInteger(-1), frame["part"].toString());
+        if (event == "progress") {
+            emitEvent(frame);
+        } else if (event == "entries") {
             require(!ready, "Unexpected legacy listing batch");
             for (auto v : frame["items"].toArray()) {
                 auto row = v.toObject();
@@ -179,10 +183,11 @@ static void legacyJob(const QJsonObject &request) {
                     "Invalid legacy listing count");
             ready = true;
             format = frame["format"].toString();
+            coverage["outer_format"] = frame["outer_format"];
             if (operation == "extract") {
                 for (auto id : request["ids"].toArray()) {
                     auto n = id.toInteger(-1);
-                    require(n >= 0 && n < rows.size(), "Invalid legacy entry ID");
+                    require(n >= 0 && n < rows.size(), "Invalid legacy entry ID", "invalid_id");
                     selected.insert(UInt32(n));
                 }
                 if (selected.isEmpty())
@@ -257,6 +262,7 @@ static void legacyJob(const QJsonObject &request) {
             require(ready && operation == "extract" && !reading, "Unexpected legacy fork start");
             currentId = UInt32(frame["id"].toInteger(-1));
             currentPart = frame["part"].toString();
+            phase("decoding", currentId, currentPart);
             require(selected.contains(currentId) &&
                         (currentPart == "data" || currentPart == "resource"),
                     "Unexpected decoded legacy fork");
@@ -293,6 +299,7 @@ static void legacyJob(const QJsonObject &request) {
             UInt64 value = completed;
             check(progress(total, &value), "Cancelled");
         } else if (event == "end") {
+            phase("verifying", currentId, currentPart);
             require(reading && frame["id"].toInteger(-1) == currentId &&
                         frame["part"].toString() == currentPart &&
                         frame["bytes"].toString().toULongLong() == count &&
@@ -335,7 +342,7 @@ static void legacyJob(const QJsonObject &request) {
         } else if (event == "complete") {
             require(ready && !reading, "Incomplete legacy decoder result");
             child.complete = true;
-            coverage = {{"checked_forks", frame["checked_forks"]},
+            coverage = {{"outer_format", coverage["outer_format"]}, {"checked_forks", frame["checked_forks"]},
                         {"unchecked_forks", frame["unchecked_forks"]},
                         {"expanded_wrappers", frame["expanded_wrappers"]}};
         } else
@@ -343,6 +350,7 @@ static void legacyJob(const QJsonObject &request) {
     }
     require(!cancelled, "Cancelled");
     if (operation == "extract") {
+        phase("verifying");
         require(verified == selected, "Selected legacy entries did not all verify");
         QJsonArray mappings;
         for (int i = 0; i < rows.size(); ++i)
@@ -353,9 +361,12 @@ static void legacyJob(const QJsonObject &request) {
                                 {"components", row["components"]},
                                 {"raw_name", row["raw_name"]},
                                 {"encoding", row["encoding"]},
+                                {"finder_info", row["finder_info"]},
                                 {"output", names[i]}};
                 if (row.contains("modified_ms"))
                     map["modified_ms"] = row["modified_ms"];
+                for (const auto &key : {"raw_components", "created_1904", "modified_1904", "has_data", "has_resource", "resource_size", "size", "directory"})
+                    if (row.contains(key)) map[key] = row[key];
                 if (dataHashes.contains(i)) {
                     map["data_sha256"] = QString::fromLatin1(dataHashes[i].toHex());
                     map["data_checksum_checked"] = dataChecksums[i];
@@ -394,8 +405,9 @@ static void legacyJob(const QJsonObject &request) {
         while (QFileInfo::exists(target))
             target = QDir(destination).filePath(label + QString(" (%1)").arg(suffix++));
         auto from = winPath(stage->temp.path()), to = winPath(target);
-        require(MoveFileExW(from.c_str(), to.c_str(), MOVEFILE_WRITE_THROUGH),
-                winError("Commit verified legacy extraction"));
+        phase("committing");
+        moveFreshDirectory(from, to);
+        committedOutput = target;
         stage->temp.setAutoRemove(false);
         {
             SafeTree committed(target);
@@ -404,7 +416,15 @@ static void legacyJob(const QJsonObject &request) {
                 emitEvent({{"event", "warning"},
                            {"message", "Verified output committed; job marker remains"}});
         }
+        int fileCount = 0, dataCount = 0, resourceCount = 0, mappedNames = 0;
+        for (auto id : selected) {
+            const auto row = rows[id]; fileCount += !row["directory"].toBool();
+            dataCount += !row["directory"].toBool() && row["has_data"].toBool();
+            resourceCount += row["has_resource"].toBool(); mappedNames += names[id] != row["path"].toString();
+        }
         emitEvent({{"event", "complete"},
+                   {"output_committed", true}, {"file_count", fileCount}, {"data_forks", dataCount},
+                   {"resource_forks", resourceCount}, {"mapped_names", mappedNames},
                    {"output", target},
                    {"mapping", mapping},
                    {"count", selected.size()},

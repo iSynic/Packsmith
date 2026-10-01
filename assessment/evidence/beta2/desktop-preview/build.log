@@ -1,0 +1,7 @@
+-- Configuring done (0.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Eric/Documents/ChatGPT/Unarchiver/build/windows
+[1/4] Building CXX object CMakeFiles/Packsmith.dir/app/main.cpp.obj
+[2/4] Linking CXX executable Packsmith.exe
+[3/4] Building CXX object CMakeFiles/packsmith-ui-tests.dir/tests/ui_test.cpp.obj
+[4/4] Linking CXX executable packsmith-ui-tests.exe

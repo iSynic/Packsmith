@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "environment": "Native qwindows UI and model/controller tests; developer PATH removed; developer machine, no accessibility or VM certification",
+  "receipts": [
+    {
+      "name": "packsmith-core-tests",
+      "command": [
+        "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\beta2-test-runtime\\packsmith-core-tests.exe",
+        "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\beta2-test-runtime\\packsmith-fake-worker.exe"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "executable_sha256": "409d8ae881801907481ec7a0e8d7e6f82532abde45291c97ed36f77935735270",
+      "measurements": {
+        "passed": true,
+        "entries": 100000,
+        "model_build_ms": 976,
+        "folder_navigation_ms": 2
+      }
+    },
+    {
+      "name": "packsmith-ui-tests",
+      "command": [
+        "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\beta2-test-runtime\\packsmith-ui-tests.exe"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "executable_sha256": "b60fc411633aded21fc1ebbe2b3cf4cabfbb0ee9793d639b40774d4dc3edbed7"
+    }
+  ]
+}

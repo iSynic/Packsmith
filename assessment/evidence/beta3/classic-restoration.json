@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "fixture": "Generated known bytes; no XAD-based restoration oracle",
+  "zip_sha256": "325e9712c66ee031c18c3ff9ecfcee1a30962e3c8c895ae2eba51215f2f53d29",
+  "reader": "machfs with macresources semantic resource comparison",
+  "procedure": "File > Expand Transfer.zip in Expander 5.5; recursively decoded these three fixtures; shut down guest before reading HFS",
+  "limitation": "System 7.6 Expander changes reserved resource header bytes 16-255. Allowed only with exact resource records and all other bytes unchanged. ZIP retains exact original forks. Directory/Finder-managed metadata not qualified.",
+  "unqualified": "Expander 7.0.3 in this SheepShaver environment crashed on Transfer.zip, including JIT-disabled retry. No 7.0.3 compatibility claim.",
+  "targets": [
+    {
+      "target": "System 7.6 / Basilisk II",
+      "expander": "5.5",
+      "passed": true,
+      "reader_control": true,
+      "restored": [
+        {
+          "name": "Data only",
+          "folder": "",
+          "data_sha256": "816789b919411d227261664f379dfdceec9efbc49791a23f252388dc623ebe3e",
+          "original_resource_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "restored_resource_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource_difference_offsets": [],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        },
+        {
+          "name": "Resource only",
+          "folder": "",
+          "data_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "original_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "restored_resource_sha256": "046e016f56aae35cce3421690f100432e7f35fab7696f340697ebd7e8ff0cbaf",
+          "resource_difference_offsets": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            114,
+            115,
+            116,
+            117,
+            124,
+            125
+          ],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        },
+        {
+          "name": "caf\u00e9",
+          "folder": "Nested",
+          "data_sha256": "3a1edba16b11cd4fd7c8c3c5666e6ea33773254e8de2082e92542a915e281b88",
+          "original_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "restored_resource_sha256": "16261efdb273b5828a9e9324dce0cb37de5a8f2bb87963126aa75851eb43bad3",
+          "resource_difference_offsets": [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            77,
+            114,
+            115,
+            116,
+            117,
+            121,
+            124,
+            125
+          ],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        }
+      ]
+    },
+    {
+      "target": "Mac OS 9 / SheepShaver",
+      "expander": "5.5",
+      "passed": true,
+      "reader_control": true,
+      "restored": [
+        {
+          "name": "Data only",
+          "folder": "",
+          "data_sha256": "816789b919411d227261664f379dfdceec9efbc49791a23f252388dc623ebe3e",
+          "original_resource_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "restored_resource_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "resource_difference_offsets": [],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        },
+        {
+          "name": "Resource only",
+          "folder": "",
+          "data_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "original_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "restored_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "resource_difference_offsets": [],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        },
+        {
+          "name": "caf\u00e9",
+          "folder": "Nested",
+          "data_sha256": "3a1edba16b11cd4fd7c8c3c5666e6ea33773254e8de2082e92542a915e281b88",
+          "original_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "restored_resource_sha256": "6b861b66a081f8e5d435336280d4af403c9853bb3a009f00891586d590ae3097",
+          "resource_difference_offsets": [],
+          "resource_records_equal": true,
+          "dates_equal": true,
+          "type_creator_equal": true,
+          "finder_flags": 0
+        }
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "name": "system76.hfv",
+      "sha256": "8e4e6974c67f9dbe6675823878a63722be8ecd2dcc5685ad7682a775db825f66",
+      "unchanged": true
+    },
+    {
+      "name": "Mac OS 9.hfv",
+      "sha256": "8e63afc99d4312a32f84acefcb7b2d30c5f11c1c68047adba75cda18e027574b",
+      "unchanged": true
+    },
+    {
+      "name": "250MB.dsk",
+      "sha256": "83c97805b95570470e168d2440913024b8b783e75ce2e4fe13a9f418fed4e94b",
+      "unchanged": true
+    },
+    {
+      "name": "Stuffit_Expander_5.5.dsk",
+      "sha256": "9578ebac28c599e4e44cf55cd9226773e376967cd6fac1f251a581508b6006ac",
+      "unchanged": true
+    }
+  ]
+}

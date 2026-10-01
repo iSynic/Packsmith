@@ -13,21 +13,39 @@
 #include <mutex>
 #include <thread>
 #include <stdexcept>
+#include <functional>
 
 // One request per process. The engine never receives destination paths from an archive.
 static std::atomic<bool> cancelled{false};
 static std::mutex outputMutex;
 static QElapsedTimer progressClock;
+static QString backend = "7zip", progressPhase = "opening", progressPart;
+static qint64 progressId = -1;
+static QString committedOutput;
+static std::function<void(const QJsonObject &)> internalEvents;
+struct WorkerError : std::runtime_error {
+    QString code;
+    qint64 id;
+    QString part;
+    WorkerError(const QString &code, const QString &message, qint64 id = -1, const QString &part = {})
+        : std::runtime_error(message.toUtf8().constData()), code(code), id(id), part(part) {}
+};
 static void emitEvent(QJsonObject obj) {
+    if (!obj.contains("engine")) obj["engine"] = backend;
+    if (internalEvents) { internalEvents(obj); return; }
     std::lock_guard<std::mutex> lock(outputMutex);
     auto bytes = QJsonDocument(obj).toJson(QJsonDocument::Compact);
     std::cout.write(bytes.constData(), bytes.size());
     std::cout << '\n';
     std::cout.flush();
 }
-static void require(bool ok, const QString &message) {
+static void require(bool ok, const QString &message, const QString &code = "operation_failed") {
     if (!ok)
-        throw std::runtime_error(message.toUtf8().constData());
+        throw WorkerError(code, message, progressId, progressPart);
+}
+static void phase(const QString &value, qint64 id = -1, const QString &part = {}) {
+    progressPhase = value; progressId = id; progressPart = part;
+    emitEvent({{"event", "progress"}, {"phase", value}, {"id", id}, {"part", part}});
 }
 static void check(HRESULT hr, const QString &what) {
     require(hr == S_OK, what + QString(" (engine code 0x%1)").arg(quint32(hr), 8, 16, QChar('0')));
@@ -44,6 +62,21 @@ static std::wstring winPath(const QString &path) {
 }
 static QString winError(const QString &op) {
     return op + QString(" (Windows error %1)").arg(GetLastError());
+}
+static void moveFreshDirectory(const std::wstring &from, const std::wstring &to) {
+    for (int attempt = 0; ; ++attempt) {
+        require(!cancelled, "Cancelled", "cancelled");
+        if (MoveFileExW(from.c_str(), to.c_str(), MOVEFILE_WRITE_THROUGH)) {
+            if (attempt) emitEvent({{"event", "warning"}, {"message", QString("Output commit waited %1 ms for Windows to release a file handle.").arg(attempt * 100)}});
+            return;
+        }
+        const DWORD error = GetLastError();
+        if (attempt >= 10 || (error != ERROR_ACCESS_DENIED && error != ERROR_SHARING_VIOLATION && error != ERROR_LOCK_VIOLATION)) {
+            SetLastError(error); require(false, winError("Cannot commit verified extraction"), "commit_failed");
+        }
+        emitEvent({{"event", "progress"}, {"phase", "committing"}, {"retry", attempt + 1}});
+        QThread::msleep(100);
+    }
 }
 
 template <class T> struct ComPtr {
@@ -325,6 +358,7 @@ static HRESULT progress(UInt64 total, const UInt64 *completed) {
         return S_OK;
     progressClock.restart();
     QJsonObject obj{{"event", "progress"},
+                    {"phase", progressPhase}, {"id", progressId}, {"part", progressPart}, {"engine", backend},
                     {"total", QString::number(total)},
                     {"completed", QString::number(completed ? *completed : 0)}};
     auto b = QJsonDocument(obj).toJson(QJsonDocument::Compact);
@@ -420,7 +454,8 @@ struct Engine {
         require(false,
                 requested
                     ? (defined ? "Wrong password or damaged encrypted header" : "Password required")
-                    : "Unsupported or damaged archive (this prototype opens ZIP and 7z)");
+                    : "Unsupported or damaged archive (this prototype opens ZIP and 7z)",
+                requested ? (defined ? "decryption_failed" : "password_required") : "unsupported_or_damaged_archive");
     }
 };
 
@@ -481,6 +516,7 @@ struct ExtractCallback final : IArchiveExtractCallback, ICryptoGetTextPassword {
         current.put();
         hash.put();
         currentId = i;
+        progressId = i;
         if (cancelled)
             return E_ABORT;
         if (mode != NArchive::NExtract::NAskMode::kExtract)
@@ -553,10 +589,10 @@ static void extractCheck(Engine &e, ExtractCallback *cb, const QVector<UInt32> &
                                     ids.isEmpty() ? UInt32(-1) : ids.size(), test ? 1 : 0, cb);
     if (cancelled)
         require(false, "Cancelled");
-    if (!cb->error.isEmpty())
-        require(false, cb->error);
     if (cb->requested && !e.defined)
-        require(false, "Password required");
+        require(false, "Password required", "password_required");
+    if (!cb->error.isEmpty())
+        require(false, cb->error, "integrity_or_write_failed");
     check(hr, "Archive operation failed");
 }
 
@@ -571,6 +607,7 @@ static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
     QMap<UInt32, QString> names;
     QMap<QString, bool> used;
     QMap<QString, QString> parents;
+    QSet<QString> explicitDirectories;
     used.insert(".unarchiver-job.json", false);
     for (const auto &e : entries) {
         require(!e.link,
@@ -580,8 +617,10 @@ static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
         for (int j = 0; j < parts.size(); ++j) {
             bool dir = j < parts.size() - 1 || e.dir;
             source = source.isEmpty() ? parts[j] : source + "/" + parts[j];
-            if (dir && parents.contains(source)) {
+            const bool explicitDirectory = j == parts.size() - 1 && e.dir;
+            if (dir && parents.contains(source) && (!explicitDirectory || !explicitDirectories.contains(source))) {
                 parent = parents.value(source);
+                if (explicitDirectory) explicitDirectories.insert(source);
                 continue;
             }
             QString base = parent.isEmpty() ? parts[j] : parent + "/" + parts[j];
@@ -596,6 +635,7 @@ static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
                 used.insert(sidecarName(chosen).toCaseFolded(), false);
             if (dir)
                 parents.insert(source, chosen);
+            if (explicitDirectory) explicitDirectories.insert(source);
             parent = chosen;
         }
         names.insert(e.id, parent);
@@ -626,11 +666,13 @@ struct Staging {
                    {"parent", QDir::cleanPath(QFileInfo(parent).absoluteFilePath())},
                    {"token", token}});
     }
-    ~Staging() {
+    ~Staging() { clean(); }
+    void clean() {
         if (!temp.autoRemove() || !QFileInfo::exists(temp.path()))
             return;
         temp.setAutoRemove(false);
         try {
+            phase("cleaning");
             cleanChildren(temp.path());
             auto p = winPath(temp.path());
             require(RemoveDirectoryW(p.c_str()), winError("Remove staging"));
@@ -657,6 +699,7 @@ static void cleanChildren(const QString &root) {
     }
 }
 static void cleanupJob(const QJsonObject &r) {
+    phase("cleaning");
     QString path = QDir::cleanPath(QFileInfo(r["path"].toString()).absoluteFilePath());
     QString parent = QDir::cleanPath(QFileInfo(r["parent"].toString()).absoluteFilePath());
     require(!r["path"].toString().isEmpty() && !r["parent"].toString().isEmpty(),
@@ -687,6 +730,7 @@ static void cleanupJob(const QJsonObject &r) {
 
 static QByteArray fileHash(const QString &path);
 static void listArchive(Engine &e, const QString &path) {
+    phase("listing");
     UInt32 count = 0;
     check(e.archive->GetNumberOfItems(&count), "Count entries");
     QJsonArray batch;
@@ -696,7 +740,9 @@ static void listArchive(Engine &e, const QString &path) {
         auto v = entry(e.archive.p, i);
         batch.append(QJsonObject{{"id", qint64(i)},
                                  {"path", v.path},
+                                 {"components", QJsonArray::fromStringList(v.path.split('/'))},
                                  {"size", QString::number(v.size)},
+                                 {"has_data", !v.dir}, {"has_resource", false},
                                  {"directory", v.dir},
                                  {"encrypted", v.encrypted},
                                  {"link", v.link}});
@@ -713,6 +759,7 @@ static void listArchive(Engine &e, const QString &path) {
                {"fingerprint", QString::fromLatin1(fileHash(path).toHex())}});
 }
 static void extractArchive(Engine &e, const QJsonObject &r) {
+    phase("decoding");
     QString destination = QFileInfo(r["destination"].toString()).absoluteFilePath();
     require(!r["destination"].toString().isEmpty(), "Destination is required");
     SafeTree parent(destination);
@@ -723,7 +770,7 @@ static void extractArchive(Engine &e, const QJsonObject &r) {
     QSet<UInt32> chosen;
     for (auto id : r["ids"].toArray()) {
         auto n = id.toInteger(-1);
-        require(n >= 0 && n < count, "Invalid entry ID");
+        require(n >= 0 && n < count, "Invalid entry ID", "invalid_id");
         chosen.insert(UInt32(n));
     }
     QStringList selectedFolders;
@@ -753,6 +800,7 @@ static void extractArchive(Engine &e, const QJsonObject &r) {
     cb.p = new ExtractCallback(e, &tree);
     cb->names = names;
     extractCheck(e, cb.p, ids);
+    phase("verifying");
     QJsonArray mappings;
     for (const auto &item : items)
         mappings.append(QJsonObject{
@@ -783,8 +831,9 @@ static void extractArchive(Engine &e, const QJsonObject &r) {
         output = QDir(destination).filePath(label + QString(" (%1)").arg(n++));
     auto from = winPath(stage.temp.path()), to = winPath(output);
     require(!cancelled, "Cancelled");
-    require(MoveFileExW(from.c_str(), to.c_str(), MOVEFILE_WRITE_THROUGH),
-            winError("Cannot commit extraction"));
+    phase("committing");
+    moveFreshDirectory(from, to);
+    committedOutput = output;
     stage.temp.setAutoRemove(false);
     {
         SafeTree committed(output);
@@ -793,8 +842,11 @@ static void extractArchive(Engine &e, const QJsonObject &r) {
             emitEvent({{"event", "warning"},
                        {"message", "Verified output committed; job marker could not be removed"}});
     }
-    emitEvent(
-        {{"event", "complete"}, {"output", output}, {"mapping", mapName}, {"count", items.size()}});
+    int fileCount = 0, mappedNames = 0;
+    for (const auto &item : items) { fileCount += !item.dir; mappedNames += item.path != names.value(item.id); }
+    emitEvent({{"event", "complete"}, {"output", output}, {"output_committed", true}, {"mapping", mapName},
+               {"count", items.size()}, {"file_count", fileCount}, {"data_forks", fileCount},
+               {"resource_forks", 0}, {"mapped_names", mappedNames}, {"message", "Engine integrity checks passed"}});
 }
 
 struct UpdateItem {
@@ -924,6 +976,7 @@ static void addInputs(QVector<UpdateItem> &items, const QString &source, const Q
     }
 }
 static void mutateArchive(Engine &e, const QJsonObject &r, bool update) {
+    phase("decoding");
     QString target = QFileInfo(r["archive"].toString()).absoluteFilePath();
     require(!r["archive"].toString().isEmpty(), "Archive path required");
     SafeTree parent(QFileInfo(target).absolutePath());
@@ -1065,6 +1118,7 @@ static void mutateArchive(Engine &e, const QJsonObject &r, bool update) {
     out.put();
     writer.put();
     // Verify every new payload and pathname before changing the original.
+    phase("verifying");
     {
         Engine verify(r);
         verify.open(replacement, format);
@@ -1084,6 +1138,7 @@ static void mutateArchive(Engine &e, const QJsonObject &r, bool update) {
         }
     }
     require(!cancelled, "Cancelled");
+    phase("committing");
     if (update) {
         require(fileHash(target) == oldDigest, "Original archive changed during update");
         auto targetPath = winPath(target);
@@ -1110,7 +1165,9 @@ static void mutateArchive(Engine &e, const QJsonObject &r, bool update) {
             require(false, winError("Archive commit failed; retain recovery files at " +
                                     stage.temp.path() + " and " + backup));
         }
-        emitEvent({{"event", "complete"},
+        committedOutput = target;
+        stage.clean();
+        emitEvent({{"event", "complete"}, {"output_committed", true},
                    {"output", target},
                    {"backup", backup},
                    {"count", cb->items.size()}});
@@ -1118,11 +1175,14 @@ static void mutateArchive(Engine &e, const QJsonObject &r, bool update) {
         auto from = winPath(replacement), to = winPath(target);
         require(MoveFileExW(from.c_str(), to.c_str(), MOVEFILE_WRITE_THROUGH),
                 winError("Cannot commit new archive"));
-        emitEvent({{"event", "complete"}, {"output", target}, {"count", cb->items.size()}});
+        committedOutput = target;
+        stage.clean();
+        emitEvent({{"event", "complete"}, {"output_committed", true}, {"output", target}, {"count", cb->items.size()}});
     }
 }
 
 #include "legacy_worker.h"
+#include "classic_export.h"
 
 int main(int argc, char **argv) {
     QCoreApplication app(argc, argv);
@@ -1134,7 +1194,7 @@ int main(int argc, char **argv) {
     QJsonParseError parse{};
     auto doc = QJsonDocument::fromJson(QByteArray::fromStdString(line), &parse);
     if (parse.error != QJsonParseError::NoError || !doc.isObject()) {
-        emitEvent({{"event", "error"}, {"message", "Invalid request JSON"}});
+        emitEvent({{"event", "error"}, {"code", "invalid_request"}, {"message", "Invalid request JSON"}});
         return 2;
     }
     std::thread([] {
@@ -1147,8 +1207,21 @@ int main(int argc, char **argv) {
     try {
         QJsonObject r = doc.object();
         QString operation = r["operation"].toString();
+        backend = usesLegacy(r) ? "xad" : "7zip";
+        if (operation == "extract" && r.contains("selection_scope")) {
+            const auto scope = r["selection_scope"].toString();
+            require(scope == "all" || scope == "entries", "Invalid extraction selection scope", "invalid_selection");
+            require(scope != "entries" || !r.value("ids").toArray().isEmpty(), "Entry selection must not be empty", "empty_selection");
+            require(scope != "all" || r.value("ids").toArray().isEmpty(), "Extract All cannot contain selected IDs", "invalid_selection");
+        }
+        if (r.contains("ids") && !r.value("ids").isNull()) require(r.value("ids").isArray(), "Entry IDs must be an array", "invalid_selection");
         if (operation == "cleanup") {
             cleanupJob(r);
+            std::cout.flush();
+            ExitProcess(0);
+        }
+        if (operation == "export_classic") {
+            exportClassic(r);
             std::cout.flush();
             ExitProcess(0);
         }
@@ -1169,6 +1242,7 @@ int main(int argc, char **argv) {
         else if (operation == "extract")
             extractArchive(engine, r);
         else if (operation == "test") {
+            phase("verifying");
             ComPtr<ExtractCallback> cb;
             cb.p = new ExtractCallback(engine, nullptr);
             extractCheck(engine, cb.p, {}, true);
@@ -1177,8 +1251,14 @@ int main(int argc, char **argv) {
             mutateArchive(engine, r, operation == "update");
         else
             require(false, "Unknown operation");
+    } catch (const WorkerError &e) {
+        emitEvent({{"event", cancelled ? "cancelled" : "error"}, {"code", cancelled ? "cancelled" : e.code},
+                   {"message", QString::fromUtf8(e.what())}, {"id", e.id}, {"part", e.part},
+                   {"output_committed", !committedOutput.isEmpty()}, {"output", committedOutput}});
+        result = 1;
     } catch (const std::exception &e) {
         emitEvent({{"event", cancelled ? "cancelled" : "error"},
+                   {"code", cancelled ? "cancelled" : "operation_failed"},
                    {"message", QString::fromUtf8(e.what())}});
         result = 1;
     }

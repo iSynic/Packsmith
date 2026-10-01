@@ -12,6 +12,8 @@ import time
 import unittest
 import warnings
 import zipfile
+import ctypes
+from ctypes import wintypes
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKER = Path(sys.argv.pop(1)).resolve()
@@ -22,6 +24,15 @@ ENV["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")
 for key in ("QT_PLUGIN_PATH", "QT_QPA_PLATFORM_PLUGIN_PATH", "QTDIR", "QML2_IMPORT_PATH"):
     ENV.pop(key, None)
 RECEIPTS = []
+
+def deletion_lock(path):
+    kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+    kernel.CreateFileW.argtypes=(wintypes.LPCWSTR,wintypes.DWORD,wintypes.DWORD,ctypes.c_void_p,wintypes.DWORD,wintypes.DWORD,ctypes.c_void_p)
+    kernel.CreateFileW.restype=ctypes.c_void_p
+    kernel.CloseHandle.argtypes=(ctypes.c_void_p,)
+    handle=kernel.CreateFileW(str(path),0x80000000,3,None,3,0,None)
+    if handle==ctypes.c_void_p(-1).value:raise ctypes.WinError(ctypes.get_last_error())
+    return kernel,handle
 
 
 def job(operation, archive, **extra):
@@ -39,17 +50,81 @@ def job(operation, archive, **extra):
 
 
 class WorkerTests(unittest.TestCase):
+    def test_transient_commit_lock_retries_then_commits(self):
+        archive=self.zip([('payload',bytes(range(256))*65536)])
+        proc=subprocess.Popen([str(WORKER)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env=ENV)
+        proc.stdin.write(json.dumps(dict(operation='extract',archive=str(archive),destination=str(self.dest)))+'\n');proc.stdin.flush()
+        stage=json.loads(proc.stdout.readline())
+        while stage['event']!='staging':stage=json.loads(proc.stdout.readline())
+        kernel,handle=deletion_lock(Path(stage['path'])/'.unarchiver-job.json')
+        retried=False
+        try:
+            while line:=proc.stdout.readline():
+                event=json.loads(line)
+                if event.get('retry'):
+                    retried=True;break
+                if event['event'] in ('error','complete'):break
+        finally:kernel.CloseHandle(handle)
+        stdout,stderr=proc.communicate(timeout=10)
+        self.assertTrue(retried,'A held directory marker must exercise commit retry')
+        self.assertEqual(proc.returncode,0,stdout+stderr)
+        events=[json.loads(line) for line in stdout.splitlines()]
+        self.assertTrue(events[-1]['output_committed']);self.assertTrue(any(e['event']=='warning' for e in events))
+        self.assertEqual(self.mapping(events[-1]),{0:bytes(range(256))*65536})
+    def test_failed_commit_preserves_original_and_retains_recovery(self):
+        archive=self.zip([('original',b'original payload')]);before=hashlib.sha256(archive.read_bytes()).hexdigest()
+        kernel,handle=deletion_lock(archive)
+        try:
+            code,events=job('update',archive,rename=[{'id':0,'path':'renamed'}])
+        finally:kernel.CloseHandle(handle)
+        self.assertNotEqual(code,0);self.assertFalse(events[-1]['output_committed'])
+        self.assertTrue(any(event['event']=='recovery_required' for event in events))
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),before)
+        stage=next(event for event in events if event['event']=='staging')
+        self.assertTrue(Path(stage['path']).exists())
+        self.good('cleanup',archive,**{key:stage[key] for key in ('path','parent','token')})
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),before)
+
+    def test_cleanup_failure_retains_journal_marker_then_can_retry(self):
+        archive=FIXTURES/'large-5g.zip'
+        proc=subprocess.Popen([str(WORKER)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env=ENV)
+        proc.stdin.write(json.dumps(dict(operation='extract',archive=str(archive),destination=str(self.dest)))+'\n');proc.stdin.flush()
+        stage=json.loads(proc.stdout.readline())
+        while stage['event']!='staging':stage=json.loads(proc.stdout.readline())
+        proc.kill();proc.communicate(timeout=10)
+        marker=Path(stage['path'])/'.unarchiver-job.json';kernel,handle=deletion_lock(marker)
+        try:
+            code,events=job('cleanup',archive,**{key:stage[key] for key in ('path','parent','token')})
+            self.assertNotEqual(code,0);self.assertTrue(marker.exists());self.assertIn('Cannot remove',events[-1]['message'])
+        finally:kernel.CloseHandle(handle)
+        self.good('cleanup',archive,**{key:stage[key] for key in ('path','parent','token')})
+        self.assertFalse(Path(stage['path']).exists())
+    def test_explicit_extraction_scope(self):
+        archive=self.zip([('folder/a',b'a'),('folder/b',b'b'),('keep',b'keep'),('empty/',b'')])
+        rows=[row for event in self.good('list',archive) if event['event']=='entries' for row in event['items']]
+        self.assertEqual(rows[0]['components'],['folder','a'])
+        before=hashlib.sha256(archive.read_bytes()).hexdigest()
+        for extra in (dict(selection_scope='entries',ids=[]),dict(selection_scope='unknown'),dict(selection_scope='all',ids=[0])):
+            code,events=job('extract',archive,destination=str(self.dest),**extra)
+            self.assertNotEqual(code,0);self.assertEqual(list(self.dest.iterdir()),[])
+        end=self.good('extract',archive,destination=str(self.dest),selection_scope='entries',ids=[0,1])[-1]
+        self.assertEqual(self.mapping(end),{0:b'a',1:b'b'});self.assertTrue(end['output_committed'])
+        end=self.good('extract',archive,destination=str(self.dest),selection_scope='entries',ids=[3])[-1]
+        self.assertEqual(end['file_count'],0);self.assertTrue((Path(end['output'])/'empty').is_dir())
+        end=self.good('extract',archive,destination=str(self.dest),selection_scope='all')[-1]
+        self.assertEqual(self.mapping(end),{0:b'a',1:b'b',2:b'keep'})
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),before)
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="unarchiver-test-")
         self.root = Path(self.temp.name)
-        self.dest = self.root / "日本-café"
+        self.dest = self.root / "æ—¥æœ¬-cafÃ©"
         self.dest.mkdir()
 
     def tearDown(self):
         self.temp.cleanup()
 
     def zip(self, names):
-        path = self.root / "日本-café.zip"
+        path = self.root / "æ—¥æœ¬-cafÃ©.zip"
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", UserWarning)
             with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
@@ -69,11 +144,11 @@ class WorkerTests(unittest.TestCase):
         return {v["id"]: (output / v["output"]).read_bytes() for v in mappings if (output / v["output"]).is_file()}
 
     def test_unicode_listing_and_numeric_selection(self):
-        path = self.zip([("same.txt", b"first"), ("same.txt", b"second"), ("日本/café.txt", b"Unicode")])
+        path = self.zip([("same.txt", b"first"), ("same.txt", b"second"), ("æ—¥æœ¬/cafÃ©.txt", b"Unicode")])
         events = self.good("list", path)
         items = [v for e in events if e["event"] == "entries" for v in e["items"]]
         self.assertEqual([v["id"] for v in items], [0, 1, 2])
-        self.assertEqual(items[2]["path"], "日本/café.txt")
+        self.assertEqual(items[2]["path"], "æ—¥æœ¬/cafÃ©.txt")
         end = self.good("extract", path, destination=str(self.dest), ids=[1])[-1]
         self.assertEqual(self.mapping(end), {1: b"second"})
 
@@ -121,13 +196,13 @@ class WorkerTests(unittest.TestCase):
 
     def test_create_zip_and_all_edit_operations_independently(self):
         first = self.root / "alpha.txt"; first.write_bytes(b"alpha payload")
-        second = self.root / "日本.txt"; second.write_bytes(b"Japanese payload")
+        second = self.root / "æ—¥æœ¬.txt"; second.write_bytes(b"Japanese payload")
         replacement = self.root / "replacement.txt"; replacement.write_bytes(b"replacement payload")
         archive = self.root / "created.zip"
         self.good("create", archive, format="zip", files=[str(first), str(second)])
         with zipfile.ZipFile(archive) as z:
             self.assertEqual(z.read("alpha.txt"), first.read_bytes())
-            self.assertEqual(z.read("日本.txt"), second.read_bytes())
+            self.assertEqual(z.read("æ—¥æœ¬.txt"), second.read_bytes())
             self.assertIsNone(z.testzip())
         old = archive.read_bytes()
         end = self.good("update", archive, remove=[0], rename=[{"id": 1, "path": "renamed.txt"}], files=[str(replacement)])[-1]
@@ -181,6 +256,7 @@ class WorkerTests(unittest.TestCase):
             extra = {} if password is None else {"password": password}
             code, events = job("list", archive, **extra)
             self.assertNotEqual(code, 0, events[-1])
+            self.assertEqual(events[-1]['code'],'password_required' if password is None else 'decryption_failed')
         self.good("list", archive, password="fixture-password")
         end = self.good("extract", archive, destination=str(self.dest), password="fixture-password")[-1]
         self.assertEqual(self.mapping(end), {0: b"secret payload"})
@@ -219,7 +295,7 @@ class WorkerTests(unittest.TestCase):
         self.assertEqual(list(outside.iterdir()), [])
 
     def test_long_paths_zip64_and_write_failure(self):
-        name = "/".join(["directory" * 6] * 6) + "/日本.txt"
+        name = "/".join(["directory" * 6] * 6) + "/æ—¥æœ¬.txt"
         path = self.zip([(name, b"long path")])
         end = self.good("extract", path, destination=str(self.dest))[-1]
         self.assertEqual(self.mapping(end), {0: b"long path"})
@@ -235,7 +311,8 @@ class WorkerTests(unittest.TestCase):
         digest = hashlib.file_digest(archive.open("rb"), "sha256").hexdigest()
         proc = subprocess.Popen([str(WORKER)], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding="utf-8", env=ENV)
         proc.stdin.write(json.dumps(dict(operation="update", archive=str(archive), rename=[{"id": 0, "path": "renamed.bin"}])) + "\n");proc.stdin.flush()
-        stage = json.loads(proc.stdout.readline());self.assertEqual(stage["event"], "staging")
+        stage = json.loads(proc.stdout.readline())
+        while stage["event"] != "staging": stage = json.loads(proc.stdout.readline());self.assertEqual(stage["event"], "staging")
         with self.assertRaises(PermissionError):
             with archive.open("r+b"):
                 pass
@@ -260,6 +337,7 @@ class WorkerTests(unittest.TestCase):
         proc.stdin.write(json.dumps(dict(operation="extract", archive=str(archive), destination=str(self.dest))) + "\n")
         proc.stdin.flush()
         stage = json.loads(proc.stdout.readline())
+        while stage["event"] != "staging": stage = json.loads(proc.stdout.readline())
         self.assertEqual(stage["event"], "staging")
         start = time.perf_counter()
         proc.stdin.write('{"cancel":true}\n');proc.stdin.flush()
@@ -273,7 +351,7 @@ class WorkerTests(unittest.TestCase):
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(WorkerTests)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
-    evidence = ROOT / "assessment/evidence/desktop-preview"
+    evidence = ROOT / "assessment/evidence/beta3/desktop-preview"
     evidence.mkdir(parents=True, exist_ok=True)
     (evidence / "worker-tests.json").write_text(json.dumps({"tests": result.testsRun, "failures": len(result.failures), "errors": len(result.errors),
         "environment": "Native Windows; developer PATH removed; not a clean VM", "worker_sha256": hashlib.file_digest(WORKER.open("rb"), "sha256").hexdigest(), "receipts": RECEIPTS}, indent=2)+"\n", encoding="utf-8")

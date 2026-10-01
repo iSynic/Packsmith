@@ -1,0 +1,38 @@
+--- a/XADStuffIt5Parser.m
++++ b/XADStuffIt5Parser.m
+@@ -306,7 +306,9 @@
+ 			[dirs setObject:path forKey:[NSNumber numberWithInt:(int)offs]];
+ 			NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithObjectsAndKeys:
+ 				path,XADFileNameKey,
++				[NSNumber numberWithUnsignedInt:modificationdate],@"PacksmithModified1904",
+ 				[NSDate XADDateWithTimeIntervalSince1904:modificationdate],XADLastModificationDateKey,
++				[NSNumber numberWithUnsignedInt:creationdate],@"PacksmithCreated1904",
+ 				[NSDate XADDateWithTimeIntervalSince1904:creationdate],XADCreationDateKey,
+ 				[NSNumber numberWithInt:finderflags],XADFinderFlagsKey,
+ 				[NSNumber numberWithBool:YES],XADIsDirectoryKey,
+@@ -326,8 +328,10 @@
+ 					path,XADFileNameKey,
+ 					[NSNumber numberWithUnsignedInt:resourcelength],XADFileSizeKey,
+ 					[NSNumber numberWithUnsignedInt:resourcecomplen],XADCompressedSizeKey,
+-					[NSDate XADDateWithTimeIntervalSince1904:modificationdate],XADLastModificationDateKey,
+-					[NSDate XADDateWithTimeIntervalSince1904:creationdate],XADCreationDateKey,
++					[NSNumber numberWithUnsignedInt:modificationdate],@"PacksmithModified1904",
++				[NSDate XADDateWithTimeIntervalSince1904:modificationdate],XADLastModificationDateKey,
++					[NSNumber numberWithUnsignedInt:creationdate],@"PacksmithCreated1904",
++				[NSDate XADDateWithTimeIntervalSince1904:creationdate],XADCreationDateKey,
+ 					[NSNumber numberWithUnsignedInt:filetype],XADFileTypeKey,
+ 					[NSNumber numberWithUnsignedInt:filecreator],XADFileCreatorKey,
+ 					[NSNumber numberWithInt:finderflags],XADFinderFlagsKey,
+@@ -359,8 +363,10 @@
+ 					path,XADFileNameKey,
+ 					[NSNumber numberWithUnsignedInt:datalength],XADFileSizeKey,
+ 					[NSNumber numberWithUnsignedInt:datacomplen],XADCompressedSizeKey,
+-					[NSDate XADDateWithTimeIntervalSince1904:modificationdate],XADLastModificationDateKey,
+-					[NSDate XADDateWithTimeIntervalSince1904:creationdate],XADCreationDateKey,
++					[NSNumber numberWithUnsignedInt:modificationdate],@"PacksmithModified1904",
++				[NSDate XADDateWithTimeIntervalSince1904:modificationdate],XADLastModificationDateKey,
++					[NSNumber numberWithUnsignedInt:creationdate],@"PacksmithCreated1904",
++				[NSDate XADDateWithTimeIntervalSince1904:creationdate],XADCreationDateKey,
+ 					[NSNumber numberWithUnsignedInt:filetype],XADFileTypeKey,
+ 					[NSNumber numberWithUnsignedInt:filecreator],XADFileCreatorKey,
+ 					[NSNumber numberWithInt:finderflags],XADFinderFlagsKey,

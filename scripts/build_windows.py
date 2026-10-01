@@ -41,7 +41,7 @@ def main():
         raise RuntimeError(f"Untested Qt {qt_version}; this preview pins Qt 6.10.2")
     env = os.environ.copy()
     env["PATH"] = str(compiler) + os.pathsep + env["PATH"]
-    evidence = ROOT / "assessment/evidence/desktop-preview"
+    evidence = ROOT / "assessment/evidence/beta3/desktop-preview"
     evidence.mkdir(parents=True, exist_ok=True)
     cc1 = Path(subprocess.check_output([str(compiler / "g++.exe"), "-print-prog-name=cc1plus"], text=True).strip()).resolve()
     frozen = {"compiler/" + p.name: sha(p) for p in [compiler / "g++.exe", cc1, compiler / "cmake.exe", compiler / "ninja.exe", compiler / "libstdc++-6.dll", compiler / "libgcc_s_seh-1.dll", compiler / "libwinpthread-1.dll"]}
@@ -53,7 +53,7 @@ def main():
                 digest.update(bytes.fromhex(sha(path)))
         frozen[key] = digest.hexdigest()
     frozen["7z.dll"] = sha(ROOT / "assessment/tools/sevenzip-full/7z.dll")
-    input_lock = evidence / "build-inputs.lock.json"
+    input_lock = ROOT / "assessment/evidence/desktop-preview/build-inputs.lock.json"
     if input_lock.exists():
         if json.loads(input_lock.read_text(encoding="utf-8"))["hashes"] != frozen:
             raise RuntimeError("Build inputs differ from the frozen preview toolchain; qualify the change separately")
@@ -125,6 +125,7 @@ def main():
     shutil.copy2(qt / "sbom/qtbase-6.10.2.spdx", licenses / "qtbase-6.10.2.spdx")
     shutil.copytree(ROOT / "assessment/outputs/windows-first/xad-worker-bundle/licenses", licenses / "legacy", dirs_exist_ok=True)
     shutil.copy2(ROOT / "NOTICE.md", package)
+    shutil.copy2(ROOT / "app/patches/machfs-LICENSE.txt", licenses / "machfs.txt")
     shutil.copy2(ROOT / "README.md", package)
     shutil.copy2(ROOT / "LICENSE", package)
     sources = ROOT / "assessment/evidence/releases/sources.json"
@@ -152,9 +153,9 @@ def main():
         "sdk_revision": revision, "qt": qt_version, "compiler": version,
         "commands": commands,
         "build_inputs": frozen,
-        "legacy_build": json.loads((ROOT / "assessment/evidence/desktop-legacy/build.json").read_text(encoding="utf-8")),
-        "legacy_build_inputs": json.loads((ROOT / "assessment/evidence/desktop-legacy/build-inputs.lock.json").read_text(encoding="utf-8")),
-        "authored_sources": {str(p.relative_to(ROOT)): sha(p) for p in [ROOT / "CMakeLists.txt", ROOT / "app/main.cpp", ROOT / "app/version.h", ROOT / "app/worker.cpp", ROOT / "app/legacy_worker.h", ROOT / "app/xad_stream.m", ROOT / "app/packsmith.rc", ROOT / "assets/icons/packsmith.ico", ROOT / "assets/icons/packsmith-archive.ico", ROOT / "scripts/build_icons.py", ROOT / "scripts/build_legacy_windows.py", Path(__file__)]},
+        "legacy_build": json.loads((ROOT / "assessment/evidence/beta3/desktop-legacy/build.json").read_text(encoding="utf-8")),
+        "legacy_build_inputs": json.loads((ROOT / "assessment/evidence/beta3/desktop-legacy/build-inputs.lock.json").read_text(encoding="utf-8")),
+        "authored_sources": {str(p.relative_to(ROOT)): sha(p) for p in [ROOT / "CMakeLists.txt", ROOT / "app/main.cpp", ROOT / "app/archive_model.h", ROOT / "app/job_controller.h", ROOT / "app/classic_export.h", ROOT / "app/classic_format.h", ROOT / "app/version.h", ROOT / "app/worker.cpp", ROOT / "app/legacy_worker.h", ROOT / "app/xad_stream.m", ROOT / "app/packsmith.rc", ROOT / "assets/icons/packsmith.ico", ROOT / "assets/icons/packsmith-archive.ico", ROOT / "scripts/build_icons.py", ROOT / "scripts/build_legacy_windows.py", Path(__file__)]},
         "files": [{"path": str(p.relative_to(package)), "sha256": sha(p), "bytes": p.stat().st_size,
                    "origin": origins.get(str(p.relative_to(package)))} for p in sorted(package.rglob("*")) if p.is_file() and p.name != "package-manifest.json"],
     }
