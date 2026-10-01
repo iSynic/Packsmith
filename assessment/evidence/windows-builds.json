@@ -1,0 +1,102 @@
+[
+  {
+    "name": "libarchive-windows-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\references\\libarchive",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libarchive-windows-build",
+      "-G",
+      "Ninja",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DCMAKE_C_COMPILER=C:/msys64/mingw64/bin/gcc.exe",
+      "-DCMAKE_PREFIX_PATH=C:/msys64/mingw64",
+      "-DENABLE_TEST=ON",
+      "-DENABLE_CPIO=OFF",
+      "-DENABLE_CAT=OFF",
+      "-DENABLE_UNZIP=OFF"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 223.91,
+    "log": "libarchive-windows-configure.log"
+  },
+  {
+    "name": "libarchive-windows-build",
+    "command": [
+      "cmake",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libarchive-windows-build",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 153.264,
+    "log": "libarchive-windows-build.log"
+  },
+  {
+    "name": "libarchive-windows-ctest",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libarchive-windows-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 116.634,
+    "log": "libarchive-windows-ctest.log"
+  },
+  {
+    "name": "libzip-windows-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\references\\libzip",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "-G",
+      "Ninja",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DCMAKE_C_COMPILER=C:/msys64/mingw64/bin/gcc.exe",
+      "-DCMAKE_PREFIX_PATH=C:/msys64/mingw64",
+      "-DBUILD_DOC=OFF",
+      "-DBUILD_EXAMPLES=OFF",
+      "-DBUILD_OSSFUZZ=OFF",
+      "-DBUILD_REGRESS=ON"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 50.638,
+    "log": "libzip-windows-configure.log"
+  },
+  {
+    "name": "libzip-windows-build",
+    "command": [
+      "cmake",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 9.304,
+    "log": "libzip-windows-build.log"
+  },
+  {
+    "name": "libzip-windows-ctest",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.655,
+    "log": "libzip-windows-ctest.log"
+  }
+]

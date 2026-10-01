@@ -1,0 +1,1994 @@
+Internal ctest changing into directory: /home/riceric/unarchiver-assessment-20260930/libarchive-build
+Test project /home/riceric/unarchiver-assessment-20260930/libarchive-build
+        Start   1: libarchive_test_7zip_filename_encoding_UTF16_win
+        Start   2: libarchive_test_acl_from_text_overread
+        Start   3: libarchive_test_acl_nfs4
+        Start   4: libarchive_test_acl_nfs4_null_id_overflow
+  1/924 Test   #1: libarchive_test_7zip_filename_encoding_UTF16_win ..............................***Skipped   0.01 sec
+        Start   5: libarchive_test_acl_nfs4_null_id_overflow_w
+  2/924 Test   #2: libarchive_test_acl_from_text_overread ........................................   Passed    0.01 sec
+        Start   6: libarchive_test_acl_nfs4_text_roundtrip
+  3/924 Test   #3: libarchive_test_acl_nfs4 ......................................................   Passed    0.01 sec
+        Start   7: libarchive_test_acl_nfs4_text_types
+  4/924 Test   #4: libarchive_test_acl_nfs4_null_id_overflow .....................................   Passed    0.01 sec
+        Start   8: libarchive_test_acl_nfs4_text_numeric_id
+  5/924 Test   #5: libarchive_test_acl_nfs4_null_id_overflow_w ...................................   Passed    0.01 sec
+        Start   9: libarchive_test_acl_nfs4_text_invalid
+  6/924 Test   #6: libarchive_test_acl_nfs4_text_roundtrip .......................................   Passed    0.01 sec
+        Start  10: libarchive_test_acl_pax_posix1e
+  7/924 Test   #7: libarchive_test_acl_nfs4_text_types ...........................................   Passed    0.01 sec
+        Start  11: libarchive_test_acl_pax_nfs4
+  8/924 Test   #8: libarchive_test_acl_nfs4_text_numeric_id ......................................   Passed    0.01 sec
+        Start  12: libarchive_test_acl_platform_nfs4
+  9/924 Test   #9: libarchive_test_acl_nfs4_text_invalid .........................................   Passed    0.01 sec
+        Start  13: libarchive_test_acl_platform_posix1e_restore
+ 10/924 Test  #12: libarchive_test_acl_platform_nfs4 .............................................***Skipped   0.01 sec
+        Start  14: libarchive_test_acl_platform_posix1e_read
+ 11/924 Test  #10: libarchive_test_acl_pax_posix1e ...............................................   Passed    0.02 sec
+        Start  15: libarchive_test_acl_posix1e
+ 12/924 Test  #11: libarchive_test_acl_pax_nfs4 ..................................................   Passed    0.01 sec
+        Start  16: libarchive_test_acl_posix1e_text_roundtrip
+ 13/924 Test  #13: libarchive_test_acl_platform_posix1e_restore ..................................   Passed    0.01 sec
+        Start  17: libarchive_test_acl_posix1e_text_solaris
+ 14/924 Test  #15: libarchive_test_acl_posix1e ...................................................   Passed    0.01 sec
+        Start  18: libarchive_test_acl_posix1e_text_ismode
+ 15/924 Test  #14: libarchive_test_acl_platform_posix1e_read .....................................   Passed    0.02 sec
+        Start  19: libarchive_test_acl_posix1e_text_numeric_id
+ 16/924 Test  #16: libarchive_test_acl_posix1e_text_roundtrip ....................................   Passed    0.01 sec
+        Start  20: libarchive_test_acl_posix1e_text_invalid
+ 17/924 Test  #17: libarchive_test_acl_posix1e_text_solaris ......................................   Passed    0.02 sec
+        Start  21: libarchive_test_acl_from_text
+ 18/924 Test  #18: libarchive_test_acl_posix1e_text_ismode .......................................   Passed    0.01 sec
+        Start  22: libarchive_test_acl_to_text
+ 19/924 Test  #19: libarchive_test_acl_posix1e_text_numeric_id ...................................   Passed    0.01 sec
+        Start  23: libarchive_test_ar_mode
+ 20/924 Test  #20: libarchive_test_acl_posix1e_text_invalid ......................................   Passed    0.01 sec
+        Start  24: libarchive_test_archive_api_feature
+ 21/924 Test  #21: libarchive_test_acl_from_text .................................................   Passed    0.01 sec
+        Start  25: libarchive_test_archive_clear_error
+ 22/924 Test  #22: libarchive_test_acl_to_text ...................................................   Passed    0.01 sec
+        Start  26: libarchive_test_archive_cmdline
+ 23/924 Test  #23: libarchive_test_ar_mode .......................................................   Passed    0.01 sec
+        Start  27: libarchive_test_archive_md5
+ 24/924 Test  #24: libarchive_test_archive_api_feature ...........................................   Passed    0.01 sec
+        Start  28: libarchive_test_archive_rmd160
+ 25/924 Test  #25: libarchive_test_archive_clear_error ...........................................   Passed    0.01 sec
+        Start  29: libarchive_test_archive_sha1
+ 26/924 Test  #26: libarchive_test_archive_cmdline ...............................................   Passed    0.01 sec
+        Start  30: libarchive_test_archive_sha256
+ 27/924 Test  #27: libarchive_test_archive_md5 ...................................................   Passed    0.01 sec
+        Start  31: libarchive_test_archive_sha384
+ 28/924 Test  #28: libarchive_test_archive_rmd160 ................................................   Passed    0.02 sec
+        Start  32: libarchive_test_archive_sha512
+ 29/924 Test  #29: libarchive_test_archive_sha1 ..................................................   Passed    0.02 sec
+        Start  33: libarchive_test_archive_match_owner
+ 30/924 Test  #30: libarchive_test_archive_sha256 ................................................   Passed    0.02 sec
+        Start  34: libarchive_test_archive_match_path
+ 31/924 Test  #31: libarchive_test_archive_sha384 ................................................   Passed    0.02 sec
+        Start  35: libarchive_test_archive_match_time
+ 32/924 Test  #32: libarchive_test_archive_sha512 ................................................   Passed    0.01 sec
+        Start  36: libarchive_test_archive_parse_date
+ 33/924 Test  #33: libarchive_test_archive_match_owner ...........................................   Passed    0.01 sec
+        Start  37: libarchive_test_archive_pathmatch
+ 34/924 Test  #34: libarchive_test_archive_match_path ............................................   Passed    0.01 sec
+        Start  38: libarchive_test_archive_pathmatch_oob_bracket
+ 35/924 Test  #36: libarchive_test_archive_parse_date ............................................   Passed    0.01 sec
+        Start  39: libarchive_test_archive_pathmatch_oob_strchr
+ 36/924 Test  #37: libarchive_test_archive_pathmatch .............................................   Passed    0.01 sec
+        Start  40: libarchive_test_archive_pathmatch_oob_bracket_w
+ 37/924 Test  #38: libarchive_test_archive_pathmatch_oob_bracket .................................   Passed    0.01 sec
+        Start  41: libarchive_test_archive_read_ahead_eof
+ 38/924 Test  #40: libarchive_test_archive_pathmatch_oob_bracket_w ...............................   Passed    0.01 sec
+        Start  42: libarchive_test_archive_read_add_passphrase
+ 39/924 Test  #39: libarchive_test_archive_pathmatch_oob_strchr ..................................   Passed    0.01 sec
+        Start  43: libarchive_test_archive_read_add_passphrase_incorrect_sequance
+ 40/924 Test  #41: libarchive_test_archive_read_ahead_eof ........................................   Passed    0.02 sec
+        Start  44: libarchive_test_archive_read_add_passphrase_single
+ 41/924 Test  #42: libarchive_test_archive_read_add_passphrase ...................................   Passed    0.01 sec
+        Start  45: libarchive_test_archive_read_add_passphrase_multiple
+ 42/924 Test  #43: libarchive_test_archive_read_add_passphrase_incorrect_sequance ................   Passed    0.01 sec
+        Start  46: libarchive_test_archive_read_add_passphrase_set_callback1
+ 43/924 Test  #44: libarchive_test_archive_read_add_passphrase_single ............................   Passed    0.01 sec
+        Start  47: libarchive_test_archive_read_add_passphrase_set_callback2
+ 44/924 Test  #45: libarchive_test_archive_read_add_passphrase_multiple ..........................   Passed    0.01 sec
+        Start  48: libarchive_test_archive_read_add_passphrase_set_callback3
+ 45/924 Test  #46: libarchive_test_archive_read_add_passphrase_set_callback1 .....................   Passed    0.01 sec
+        Start  49: libarchive_test_archive_read_add_passphrase_multiple_with_callback
+ 46/924 Test  #47: libarchive_test_archive_read_add_passphrase_set_callback2 .....................   Passed    0.01 sec
+        Start  50: libarchive_test_archive_read_add_passphrase_multiple_with_callback2
+ 47/924 Test  #48: libarchive_test_archive_read_add_passphrase_set_callback3 .....................   Passed    0.01 sec
+        Start  51: libarchive_test_archive_read_close_twice
+ 48/924 Test  #49: libarchive_test_archive_read_add_passphrase_multiple_with_callback ............   Passed    0.01 sec
+        Start  52: libarchive_test_archive_read_close_twice_open_fd
+ 49/924 Test  #50: libarchive_test_archive_read_add_passphrase_multiple_with_callback2 ...........   Passed    0.01 sec
+        Start  53: libarchive_test_archive_read_close_twice_open_filename
+ 50/924 Test  #52: libarchive_test_archive_read_close_twice_open_fd ..............................   Passed    0.01 sec
+        Start  54: libarchive_test_archive_read_multiple_data_objects
+ 51/924 Test  #51: libarchive_test_archive_read_close_twice ......................................   Passed    0.02 sec
+        Start  55: libarchive_test_archive_read_next_header_empty
+ 52/924 Test  #53: libarchive_test_archive_read_close_twice_open_filename ........................   Passed    0.01 sec
+        Start  56: libarchive_test_archive_read_next_header_raw
+ 53/924 Test  #55: libarchive_test_archive_read_next_header_empty ................................   Passed    0.01 sec
+        Start  57: libarchive_test_archive_read_open2
+ 54/924 Test  #56: libarchive_test_archive_read_next_header_raw ..................................   Passed    0.01 sec
+        Start  58: libarchive_test_archive_read_set_filter_option
+ 55/924 Test  #57: libarchive_test_archive_read_open2 ............................................   Passed    0.01 sec
+        Start  59: libarchive_test_archive_read_set_format_option
+ 56/924 Test  #58: libarchive_test_archive_read_set_filter_option ................................   Passed    0.01 sec
+        Start  60: libarchive_test_archive_read_set_option
+ 57/924 Test  #59: libarchive_test_archive_read_set_format_option ................................   Passed    0.01 sec
+        Start  61: libarchive_test_archive_read_set_options
+ 58/924 Test  #60: libarchive_test_archive_read_set_option .......................................   Passed    0.01 sec
+        Start  62: libarchive_test_archive_read_support
+ 59/924 Test  #61: libarchive_test_archive_read_set_options ......................................   Passed    0.01 sec
+        Start  63: libarchive_test_archive_seek_data_unsupported
+ 60/924 Test  #62: libarchive_test_archive_read_support ..........................................   Passed    0.01 sec
+        Start  64: libarchive_test_archive_set_error
+ 61/924 Test  #63: libarchive_test_archive_seek_data_unsupported .................................   Passed    0.01 sec
+        Start  65: libarchive_test_archive_string
+ 62/924 Test  #64: libarchive_test_archive_set_error .............................................   Passed    0.01 sec
+        Start  66: libarchive_test_archive_string_sort
+ 63/924 Test  #65: libarchive_test_archive_string ................................................   Passed    0.01 sec
+        Start  67: libarchive_test_archive_string_conversion
+ 64/924 Test  #66: libarchive_test_archive_string_sort ...........................................   Passed    0.01 sec
+        Start  68: libarchive_test_archive_string_conversion_fail_c
+ 65/924 Test  #68: libarchive_test_archive_string_conversion_fail_c ..............................   Passed    0.01 sec
+        Start  69: libarchive_test_archive_string_conversion_fail_latin1
+ 66/924 Test  #67: libarchive_test_archive_string_conversion .....................................***Skipped   0.03 sec
+        Start  70: libarchive_test_archive_string_conversion_utf16_utf8
+ 67/924 Test  #69: libarchive_test_archive_string_conversion_fail_latin1 .........................***Skipped   0.02 sec
+        Start  71: libarchive_test_archive_string_conversion_utf8_utf16
+ 68/924 Test  #70: libarchive_test_archive_string_conversion_utf16_utf8 ..........................***Skipped   0.02 sec
+        Start  72: libarchive_test_archive_string_update_utf8_win
+ 69/924 Test  #71: libarchive_test_archive_string_conversion_utf8_utf16 ..........................***Skipped   0.02 sec
+        Start  73: libarchive_test_archive_string_update_utf8_utf8
+ 70/924 Test  #72: libarchive_test_archive_string_update_utf8_win ................................***Skipped   0.02 sec
+        Start  74: libarchive_test_archive_string_update_utf8_koi8
+ 71/924 Test  #73: libarchive_test_archive_string_update_utf8_utf8 ...............................***Skipped   0.02 sec
+        Start  75: libarchive_test_archive_string_conversion_overread
+ 72/924 Test  #74: libarchive_test_archive_string_update_utf8_koi8 ...............................***Skipped   0.02 sec
+        Start  76: libarchive_test_archive_write_add_filter_none
+ 73/924 Test  #75: libarchive_test_archive_string_conversion_overread ............................   Passed    0.02 sec
+        Start  77: libarchive_test_archive_write_add_filter_gzip
+ 74/924 Test  #76: libarchive_test_archive_write_add_filter_none .................................   Passed    0.02 sec
+        Start  78: libarchive_test_archive_write_add_filter_bzip2
+ 75/924 Test  #77: libarchive_test_archive_write_add_filter_gzip .................................   Passed    0.01 sec
+        Start  79: libarchive_test_archive_write_add_filter_compress
+ 76/924 Test  #78: libarchive_test_archive_write_add_filter_bzip2 ................................   Passed    0.02 sec
+        Start  80: libarchive_test_archive_write_add_filter_grzip
+ 77/924 Test  #79: libarchive_test_archive_write_add_filter_compress .............................   Passed    0.02 sec
+        Start  81: libarchive_test_archive_write_add_filter_lrzip
+ 78/924 Test  #54: libarchive_test_archive_read_multiple_data_objects ............................   Passed    0.23 sec
+        Start  82: libarchive_test_archive_write_add_filter_lz4
+ 79/924 Test  #82: libarchive_test_archive_write_add_filter_lz4 ..................................   Passed    0.02 sec
+        Start  83: libarchive_test_archive_write_add_filter_lzip
+ 80/924 Test  #83: libarchive_test_archive_write_add_filter_lzip .................................   Passed    0.01 sec
+        Start  84: libarchive_test_archive_write_add_filter_lzma
+ 81/924 Test  #84: libarchive_test_archive_write_add_filter_lzma .................................   Passed    0.01 sec
+        Start  85: libarchive_test_archive_write_add_filter_lzop
+ 82/924 Test  #80: libarchive_test_archive_write_add_filter_grzip ................................***Skipped   0.12 sec
+        Start  86: libarchive_test_archive_write_add_filter_uuencode
+ 83/924 Test  #81: libarchive_test_archive_write_add_filter_lrzip ................................***Skipped   0.11 sec
+        Start  87: libarchive_test_archive_write_add_filter_xz
+ 84/924 Test  #86: libarchive_test_archive_write_add_filter_uuencode .............................   Passed    0.01 sec
+        Start  88: libarchive_test_archive_write_add_filter_zstd
+ 85/924 Test  #87: libarchive_test_archive_write_add_filter_xz ...................................   Passed    0.01 sec
+        Start  89: libarchive_test_archive_write_add_filter_by_name_b64encode
+ 86/924 Test  #89: libarchive_test_archive_write_add_filter_by_name_b64encode ....................   Passed    0.01 sec
+        Start  90: libarchive_test_archive_write_add_filter_by_name_bzip2
+ 87/924 Test  #88: libarchive_test_archive_write_add_filter_zstd .................................   Passed    0.02 sec
+        Start  91: libarchive_test_archive_write_add_filter_by_name_compress
+ 88/924 Test  #90: libarchive_test_archive_write_add_filter_by_name_bzip2 ........................   Passed    0.01 sec
+        Start  92: libarchive_test_archive_write_add_filter_by_name_grzip
+ 89/924 Test  #91: libarchive_test_archive_write_add_filter_by_name_compress .....................   Passed    0.01 sec
+        Start  93: libarchive_test_archive_write_add_filter_by_name_gzip
+ 90/924 Test  #93: libarchive_test_archive_write_add_filter_by_name_gzip .........................   Passed    0.01 sec
+        Start  94: libarchive_test_archive_write_add_filter_by_name_lrzip
+ 91/924 Test  #85: libarchive_test_archive_write_add_filter_lzop .................................***Skipped   0.16 sec
+        Start  95: libarchive_test_archive_write_add_filter_by_name_lz4
+ 92/924 Test  #95: libarchive_test_archive_write_add_filter_by_name_lz4 ..........................   Passed    0.02 sec
+        Start  96: libarchive_test_archive_write_add_filter_by_name_lzip
+ 93/924 Test  #96: libarchive_test_archive_write_add_filter_by_name_lzip .........................   Passed    0.01 sec
+        Start  97: libarchive_test_archive_write_add_filter_by_name_lzma
+ 94/924 Test  #97: libarchive_test_archive_write_add_filter_by_name_lzma .........................   Passed    0.01 sec
+        Start  98: libarchive_test_archive_write_add_filter_by_name_lzop
+ 95/924 Test  #92: libarchive_test_archive_write_add_filter_by_name_grzip ........................***Skipped   0.15 sec
+        Start  99: libarchive_test_archive_write_add_filter_by_name_uuencode
+ 96/924 Test  #94: libarchive_test_archive_write_add_filter_by_name_lrzip ........................***Skipped   0.14 sec
+        Start 100: libarchive_test_archive_write_add_filter_by_name_xz
+ 97/924 Test  #99: libarchive_test_archive_write_add_filter_by_name_uuencode .....................   Passed    0.01 sec
+        Start 101: libarchive_test_archive_write_add_filter_by_name_zstd
+ 98/924 Test #100: libarchive_test_archive_write_add_filter_by_name_xz ...........................   Passed    0.02 sec
+        Start 102: libarchive_test_archive_write_set_format_by_name_7zip
+ 99/924 Test #101: libarchive_test_archive_write_add_filter_by_name_zstd .........................   Passed    0.01 sec
+        Start 103: libarchive_test_archive_write_set_format_by_name_ar
+100/924 Test #102: libarchive_test_archive_write_set_format_by_name_7zip .........................   Passed    0.01 sec
+        Start 104: libarchive_test_archive_write_set_format_by_name_arbsd
+101/924 Test #103: libarchive_test_archive_write_set_format_by_name_ar ...........................   Passed    0.02 sec
+        Start 105: libarchive_test_archive_write_set_format_by_name_argnu
+102/924 Test #104: libarchive_test_archive_write_set_format_by_name_arbsd ........................   Passed    0.01 sec
+        Start 106: libarchive_test_archive_write_set_format_by_name_arsvr4
+103/924 Test #105: libarchive_test_archive_write_set_format_by_name_argnu ........................   Passed    0.01 sec
+        Start 107: libarchive_test_archive_write_set_format_by_name_bsdtar
+104/924 Test #106: libarchive_test_archive_write_set_format_by_name_arsvr4 .......................   Passed    0.01 sec
+        Start 108: libarchive_test_archive_write_set_format_by_name_cd9660
+105/924 Test #107: libarchive_test_archive_write_set_format_by_name_bsdtar .......................   Passed    0.01 sec
+        Start 109: libarchive_test_archive_write_set_format_by_name_cpio
+106/924 Test #108: libarchive_test_archive_write_set_format_by_name_cd9660 .......................   Passed    0.01 sec
+        Start 110: libarchive_test_archive_write_set_format_by_name_gnutar
+107/924 Test #109: libarchive_test_archive_write_set_format_by_name_cpio .........................   Passed    0.01 sec
+        Start 111: libarchive_test_archive_write_set_format_by_name_iso
+108/924 Test #110: libarchive_test_archive_write_set_format_by_name_gnutar .......................   Passed    0.01 sec
+        Start 112: libarchive_test_archive_write_set_format_by_name_iso9660
+109/924 Test #111: libarchive_test_archive_write_set_format_by_name_iso ..........................   Passed    0.01 sec
+        Start 113: libarchive_test_archive_write_set_format_by_name_mtree
+110/924 Test #112: libarchive_test_archive_write_set_format_by_name_iso9660 ......................   Passed    0.01 sec
+        Start 114: libarchive_test_archive_write_set_format_by_name_mtree_classic
+111/924 Test #113: libarchive_test_archive_write_set_format_by_name_mtree ........................   Passed    0.01 sec
+        Start 115: libarchive_test_archive_write_set_format_by_name_newc
+112/924 Test #114: libarchive_test_archive_write_set_format_by_name_mtree_classic ................   Passed    0.02 sec
+        Start 116: libarchive_test_archive_write_set_format_by_name_odc
+113/924 Test  #98: libarchive_test_archive_write_add_filter_by_name_lzop .........................***Skipped   0.16 sec
+        Start 117: libarchive_test_archive_write_set_format_by_name_oldtar
+114/924 Test #115: libarchive_test_archive_write_set_format_by_name_newc .........................   Passed    0.02 sec
+        Start 118: libarchive_test_archive_write_set_format_by_name_pax
+115/924 Test #116: libarchive_test_archive_write_set_format_by_name_odc ..........................   Passed    0.01 sec
+        Start 119: libarchive_test_archive_write_set_format_by_name_paxr
+116/924 Test #117: libarchive_test_archive_write_set_format_by_name_oldtar .......................   Passed    0.01 sec
+        Start 120: libarchive_test_archive_write_set_format_by_name_posix
+117/924 Test #118: libarchive_test_archive_write_set_format_by_name_pax ..........................   Passed    0.01 sec
+        Start 121: libarchive_test_archive_write_set_format_by_name_rpax
+118/924 Test #119: libarchive_test_archive_write_set_format_by_name_paxr .........................   Passed    0.01 sec
+        Start 122: libarchive_test_archive_write_set_format_by_name_shar
+119/924 Test #120: libarchive_test_archive_write_set_format_by_name_posix ........................   Passed    0.01 sec
+        Start 123: libarchive_test_archive_write_set_format_by_name_shardump
+120/924 Test #121: libarchive_test_archive_write_set_format_by_name_rpax .........................   Passed    0.02 sec
+        Start 124: libarchive_test_archive_write_set_format_by_name_ustar
+121/924 Test #122: libarchive_test_archive_write_set_format_by_name_shar .........................   Passed    0.01 sec
+        Start 125: libarchive_test_archive_write_set_format_by_name_v7tar
+122/924 Test #123: libarchive_test_archive_write_set_format_by_name_shardump .....................   Passed    0.01 sec
+        Start 126: libarchive_test_archive_write_set_format_by_name_v7
+123/924 Test #124: libarchive_test_archive_write_set_format_by_name_ustar ........................   Passed    0.01 sec
+        Start 127: libarchive_test_archive_write_set_format_by_name_warc
+124/924 Test #125: libarchive_test_archive_write_set_format_by_name_v7tar ........................   Passed    0.01 sec
+        Start 128: libarchive_test_archive_write_set_format_by_name_xar
+125/924 Test #127: libarchive_test_archive_write_set_format_by_name_warc .........................   Passed    0.01 sec
+        Start 129: libarchive_test_archive_write_set_format_by_name_zip
+126/924 Test #126: libarchive_test_archive_write_set_format_by_name_v7 ...........................   Passed    0.01 sec
+        Start 130: libarchive_test_archive_write_set_format_filter_by_ext_7zip
+127/924 Test #129: libarchive_test_archive_write_set_format_by_name_zip ..........................   Passed    0.01 sec
+        Start 131: libarchive_test_archive_write_set_format_filter_by_ext_zip
+128/924 Test #130: libarchive_test_archive_write_set_format_filter_by_ext_7zip ...................   Passed    0.01 sec
+        Start 132: libarchive_test_archive_write_set_format_filter_by_ext_jar
+129/924 Test #128: libarchive_test_archive_write_set_format_by_name_xar ..........................   Passed    0.02 sec
+        Start 133: libarchive_test_archive_write_set_format_filter_by_ext_a
+130/924 Test #131: libarchive_test_archive_write_set_format_filter_by_ext_zip ....................   Passed    0.01 sec
+        Start 134: libarchive_test_archive_write_set_format_filter_by_ext_ar
+131/924 Test #132: libarchive_test_archive_write_set_format_filter_by_ext_jar ....................   Passed    0.01 sec
+        Start 135: libarchive_test_archive_write_set_format_filter_by_ext_cpio
+132/924 Test #133: libarchive_test_archive_write_set_format_filter_by_ext_a ......................   Passed    0.02 sec
+        Start 136: libarchive_test_archive_write_set_format_filter_by_ext_iso
+133/924 Test #135: libarchive_test_archive_write_set_format_filter_by_ext_cpio ...................   Passed    0.01 sec
+        Start 137: libarchive_test_archive_write_set_format_filter_by_ext_tar
+134/924 Test #134: libarchive_test_archive_write_set_format_filter_by_ext_ar .....................   Passed    0.02 sec
+        Start 138: libarchive_test_archive_write_set_format_filter_by_ext_tar_gz
+135/924 Test #136: libarchive_test_archive_write_set_format_filter_by_ext_iso ....................   Passed    0.01 sec
+        Start 139: libarchive_test_archive_write_set_format_filter_by_ext_tar_bz2
+136/924 Test #138: libarchive_test_archive_write_set_format_filter_by_ext_tar_gz .................   Passed    0.01 sec
+        Start 140: libarchive_test_archive_write_set_format_filter_by_ext_tar_xz
+137/924 Test #137: libarchive_test_archive_write_set_format_filter_by_ext_tar ....................   Passed    0.02 sec
+        Start 141: libarchive_test_archive_write_set_format_filter_by_no_ext_def_zip
+138/924 Test #139: libarchive_test_archive_write_set_format_filter_by_ext_tar_bz2 ................   Passed    0.01 sec
+        Start 142: libarchive_test_archive_write_set_format_filter_by_ext_tar_bz2_def_zip
+139/924 Test #140: libarchive_test_archive_write_set_format_filter_by_ext_tar_xz .................   Passed    0.02 sec
+        Start 143: libarchive_test_archive_write_set_filter_option
+140/924 Test #141: libarchive_test_archive_write_set_format_filter_by_no_ext_def_zip .............   Passed    0.02 sec
+        Start 144: libarchive_test_archive_write_set_format_option
+141/924 Test #142: libarchive_test_archive_write_set_format_filter_by_ext_tar_bz2_def_zip ........   Passed    0.02 sec
+        Start 145: libarchive_test_archive_write_set_option
+142/924 Test #143: libarchive_test_archive_write_set_filter_option ...............................   Passed    0.01 sec
+        Start 146: libarchive_test_archive_write_set_options
+143/924 Test #144: libarchive_test_archive_write_set_format_option ...............................   Passed    0.01 sec
+        Start 147: libarchive_test_archive_write_set_passphrase
+144/924 Test #145: libarchive_test_archive_write_set_option ......................................   Passed    0.01 sec
+        Start 148: libarchive_test_archive_write_set_passphrase_callback
+145/924 Test #146: libarchive_test_archive_write_set_options .....................................   Passed    0.02 sec
+        Start 149: libarchive_test_bad_fd
+146/924 Test #147: libarchive_test_archive_write_set_passphrase ..................................   Passed    0.02 sec
+        Start 150: libarchive_test_compat_bzip2
+147/924 Test #148: libarchive_test_archive_write_set_passphrase_callback .........................   Passed    0.01 sec
+        Start 151: libarchive_test_compat_cpio
+148/924 Test #149: libarchive_test_bad_fd ........................................................   Passed    0.01 sec
+        Start 152: libarchive_test_compat_gtar
+149/924 Test #150: libarchive_test_compat_bzip2 ..................................................   Passed    0.02 sec
+        Start 153: libarchive_test_compat_gtar_large
+150/924 Test #151: libarchive_test_compat_cpio ...................................................   Passed    0.02 sec
+        Start 154: libarchive_test_compat_gzip
+151/924 Test #152: libarchive_test_compat_gtar ...................................................   Passed    0.02 sec
+        Start 155: libarchive_test_compat_lz4
+152/924 Test #154: libarchive_test_compat_gzip ...................................................   Passed    0.02 sec
+        Start 156: libarchive_test_compat_lzip
+153/924 Test #156: libarchive_test_compat_lzip ...................................................   Passed    0.03 sec
+        Start 157: libarchive_test_compat_lzma
+154/924 Test #153: libarchive_test_compat_gtar_large .............................................   Passed    0.06 sec
+        Start 158: libarchive_test_compat_lzop
+155/924 Test #158: libarchive_test_compat_lzop ...................................................***Skipped   0.01 sec
+        Start 159: libarchive_test_compat_mac
+156/924 Test #157: libarchive_test_compat_lzma ...................................................   Passed    0.02 sec
+        Start 160: libarchive_test_compat_perl_archive_tar
+157/924 Test #159: libarchive_test_compat_mac ....................................................   Passed    0.01 sec
+        Start 161: libarchive_test_compat_plexus_archiver_tar
+158/924 Test #160: libarchive_test_compat_perl_archive_tar .......................................   Passed    0.01 sec
+        Start 162: libarchive_test_compat_solaris_pax_sparse
+159/924 Test #161: libarchive_test_compat_plexus_archiver_tar ....................................   Passed    0.01 sec
+        Start 163: libarchive_test_compat_solaris_tar_acl
+160/924 Test #162: libarchive_test_compat_solaris_pax_sparse .....................................   Passed    0.02 sec
+        Start 164: libarchive_test_compat_star_acl_posix1e
+161/924 Test #163: libarchive_test_compat_solaris_tar_acl ........................................   Passed    0.01 sec
+        Start 165: libarchive_test_compat_star_acl_nfs4
+162/924 Test #164: libarchive_test_compat_star_acl_posix1e .......................................   Passed    0.01 sec
+        Start 166: libarchive_test_compat_tar_directory
+163/924 Test #165: libarchive_test_compat_star_acl_nfs4 ..........................................   Passed    0.01 sec
+        Start 167: libarchive_test_compat_tar_hardlink
+164/924 Test #166: libarchive_test_compat_tar_directory ..........................................   Passed    0.01 sec
+        Start 168: libarchive_test_compat_uudecode
+165/924 Test #167: libarchive_test_compat_tar_hardlink ...........................................   Passed    0.02 sec
+        Start 169: libarchive_test_compat_uudecode_large
+166/924 Test #168: libarchive_test_compat_uudecode ...............................................   Passed    0.01 sec
+        Start 170: libarchive_test_compat_xz
+167/924 Test #170: libarchive_test_compat_xz .....................................................   Passed    0.01 sec
+        Start 171: libarchive_test_compat_zip_1
+168/924 Test #169: libarchive_test_compat_uudecode_large .........................................   Passed    0.02 sec
+        Start 172: libarchive_test_compat_zip_2
+169/924 Test #171: libarchive_test_compat_zip_1 ..................................................   Passed    0.01 sec
+        Start 173: libarchive_test_compat_zip_3
+170/924 Test #172: libarchive_test_compat_zip_2 ..................................................   Passed    0.01 sec
+        Start 174: libarchive_test_compat_zip_4
+171/924 Test #155: libarchive_test_compat_lz4 ....................................................   Passed    0.17 sec
+        Start 175: libarchive_test_compat_zip_5
+172/924 Test #173: libarchive_test_compat_zip_3 ..................................................   Passed    0.02 sec
+        Start 176: libarchive_test_compat_zip_6
+173/924 Test #174: libarchive_test_compat_zip_4 ..................................................   Passed    0.02 sec
+        Start 177: libarchive_test_compat_zip_7
+174/924 Test #175: libarchive_test_compat_zip_5 ..................................................   Passed    0.02 sec
+        Start 178: libarchive_test_compat_zip_8
+175/924 Test #176: libarchive_test_compat_zip_6 ..................................................   Passed    0.02 sec
+        Start 179: libarchive_test_compat_zstd
+176/924 Test #178: libarchive_test_compat_zip_8 ..................................................   Passed    0.02 sec
+        Start 180: libarchive_test_empty_write
+177/924 Test #179: libarchive_test_compat_zstd ...................................................   Passed    0.02 sec
+        Start 181: libarchive_test_entry
+178/924 Test #180: libarchive_test_empty_write ...................................................   Passed    0.01 sec
+        Start 182: libarchive_test_entry_mac_metadata_self_copy
+179/924 Test #177: libarchive_test_compat_zip_7 ..................................................   Passed    0.04 sec
+        Start 183: libarchive_test_entry_strmode
+180/924 Test #181: libarchive_test_entry .........................................................***Skipped   0.01 sec
+        Start 184: libarchive_test_extattr_freebsd
+181/924 Test #182: libarchive_test_entry_mac_metadata_self_copy ..................................   Passed    0.01 sec
+        Start 185: libarchive_test_filter_count
+182/924 Test #183: libarchive_test_entry_strmode .................................................   Passed    0.01 sec
+        Start 186: libarchive_test_fuzz_ar
+183/924 Test #184: libarchive_test_extattr_freebsd ...............................................***Skipped   0.01 sec
+        Start 187: libarchive_test_fuzz_cab
+184/924 Test #185: libarchive_test_filter_count ..................................................   Passed    0.02 sec
+        Start 188: libarchive_test_fuzz_cpio
+185/924 Test #186: libarchive_test_fuzz_ar .......................................................   Passed    0.20 sec
+        Start 189: libarchive_test_fuzz_iso9660
+186/924 Test #187: libarchive_test_fuzz_cab ......................................................   Passed    0.22 sec
+        Start 190: libarchive_test_fuzz_lzh
+187/924 Test #190: libarchive_test_fuzz_lzh ......................................................   Passed    0.27 sec
+        Start 191: libarchive_test_fuzz_mtree
+188/924 Test #188: libarchive_test_fuzz_cpio .....................................................   Passed    0.59 sec
+        Start 192: libarchive_test_fuzz_rar
+189/924 Test #191: libarchive_test_fuzz_mtree ....................................................   Passed    0.23 sec
+        Start 193: libarchive_test_fuzz_tar
+190/924 Test  #35: libarchive_test_archive_match_time ............................................   Passed    2.01 sec
+        Start 194: libarchive_test_fuzz_zip
+191/924 Test #189: libarchive_test_fuzz_iso9660 ..................................................   Passed    3.53 sec
+        Start 195: libarchive_test_gnutar_filename_encoding_UTF8_CP866
+192/924 Test #195: libarchive_test_gnutar_filename_encoding_UTF8_CP866 ...........................***Skipped   0.01 sec
+        Start 196: libarchive_test_gnutar_filename_encoding_KOI8R_UTF8
+193/924 Test #196: libarchive_test_gnutar_filename_encoding_KOI8R_UTF8 ...........................***Skipped   0.01 sec
+        Start 197: libarchive_test_gnutar_filename_encoding_KOI8R_CP866
+194/924 Test #197: libarchive_test_gnutar_filename_encoding_KOI8R_CP866 ..........................***Skipped   0.01 sec
+        Start 198: libarchive_test_gnutar_filename_encoding_CP1251_UTF8
+195/924 Test #198: libarchive_test_gnutar_filename_encoding_CP1251_UTF8 ..........................***Skipped   0.01 sec
+        Start 199: libarchive_test_gnutar_filename_encoding_ru_RU_CP1251
+196/924 Test #199: libarchive_test_gnutar_filename_encoding_ru_RU_CP1251 .........................***Skipped   0.01 sec
+        Start 200: libarchive_test_gnutar_filename_encoding_Russian_Russia
+197/924 Test #200: libarchive_test_gnutar_filename_encoding_Russian_Russia .......................***Skipped   0.01 sec
+        Start 201: libarchive_test_gnutar_filename_encoding_EUCJP_UTF8
+198/924 Test #201: libarchive_test_gnutar_filename_encoding_EUCJP_UTF8 ...........................***Skipped   0.01 sec
+        Start 202: libarchive_test_gnutar_filename_encoding_EUCJP_CP932
+199/924 Test #202: libarchive_test_gnutar_filename_encoding_EUCJP_CP932 ..........................***Skipped   0.02 sec
+        Start 203: libarchive_test_gnutar_filename_encoding_CP932_UTF8
+200/924 Test #203: libarchive_test_gnutar_filename_encoding_CP932_UTF8 ...........................***Skipped   0.01 sec
+        Start 204: libarchive_test_gnutar_filename_encoding_long_gname_utf16
+201/924 Test #204: libarchive_test_gnutar_filename_encoding_long_gname_utf16 .....................   Passed    0.01 sec
+        Start 205: libarchive_test_gnutar_filename_encoding_UTF16_win
+202/924 Test #205: libarchive_test_gnutar_filename_encoding_UTF16_win ............................***Skipped   0.01 sec
+        Start 206: libarchive_test_gnutar_filename_encoding_fail_UTF16_win
+203/924 Test #206: libarchive_test_gnutar_filename_encoding_fail_UTF16_win .......................***Skipped   0.01 sec
+        Start 207: libarchive_test_link_resolver
+204/924 Test #207: libarchive_test_link_resolver .................................................   Passed    0.01 sec
+        Start 208: libarchive_test_link_resolver_unicode_win
+205/924 Test #208: libarchive_test_link_resolver_unicode_win .....................................***Skipped   0.01 sec
+        Start 209: libarchive_test_open_failure
+206/924 Test #209: libarchive_test_open_failure ..................................................   Passed    0.01 sec
+        Start 210: libarchive_test_open_fd
+207/924 Test #210: libarchive_test_open_fd .......................................................   Passed    0.01 sec
+        Start 211: libarchive_test_open_file
+208/924 Test #211: libarchive_test_open_file .....................................................   Passed    0.03 sec
+        Start 212: libarchive_test_open_filename
+209/924 Test #212: libarchive_test_open_filename .................................................   Passed    0.02 sec
+        Start 213: libarchive_test_open_filename_wcs_oob
+210/924 Test #213: libarchive_test_open_filename_wcs_oob .........................................   Passed    0.01 sec
+        Start 214: libarchive_test_pax_filename_encoding_KOI8R
+211/924 Test #214: libarchive_test_pax_filename_encoding_KOI8R ...................................***Skipped   0.01 sec
+        Start 215: libarchive_test_pax_filename_encoding_CP1251
+212/924 Test #215: libarchive_test_pax_filename_encoding_CP1251 ..................................***Skipped   0.01 sec
+        Start 216: libarchive_test_pax_filename_encoding_EUCJP
+213/924 Test #216: libarchive_test_pax_filename_encoding_EUCJP ...................................***Skipped   0.01 sec
+        Start 217: libarchive_test_pax_filename_encoding_CP932
+214/924 Test #217: libarchive_test_pax_filename_encoding_CP932 ...................................***Skipped   0.01 sec
+        Start 218: libarchive_test_pax_filename_encoding_KOI8R_BINARY
+215/924 Test #218: libarchive_test_pax_filename_encoding_KOI8R_BINARY ............................***Skipped   0.01 sec
+        Start 219: libarchive_test_pax_filename_encoding_KOI8R_CP1251
+216/924 Test #219: libarchive_test_pax_filename_encoding_KOI8R_CP1251 ............................***Skipped   0.01 sec
+        Start 220: libarchive_test_pax_filename_encoding_UTF16_win
+217/924 Test #220: libarchive_test_pax_filename_encoding_UTF16_win ...............................***Skipped   0.01 sec
+        Start 221: libarchive_test_pax_filename_encoding
+218/924 Test #221: libarchive_test_pax_filename_encoding .........................................***Skipped   0.02 sec
+        Start 222: libarchive_test_pax_xattr_header
+219/924 Test #222: libarchive_test_pax_xattr_header ..............................................   Passed    0.03 sec
+        Start 223: libarchive_test_read_data_into_fd_size_exceeds_declared_stored
+220/924 Test #223: libarchive_test_read_data_into_fd_size_exceeds_declared_stored ................   Passed    0.02 sec
+        Start 224: libarchive_test_read_data_into_fd_size_exceeds_declared_deflate
+221/924 Test #224: libarchive_test_read_data_into_fd_size_exceeds_declared_deflate ...............   Passed    0.02 sec
+        Start 225: libarchive_test_read_data_large
+222/924 Test #225: libarchive_test_read_data_large ...............................................   Passed    0.05 sec
+        Start 226: libarchive_test_read_data_into_fd_sparse
+223/924 Test #226: libarchive_test_read_data_into_fd_sparse ......................................   Passed    0.01 sec
+        Start 227: libarchive_test_read_disk
+224/924 Test #227: libarchive_test_read_disk .....................................................   Passed    0.01 sec
+        Start 228: libarchive_test_read_disk_directory_traversals
+225/924 Test #228: libarchive_test_read_disk_directory_traversals ................................   Passed    0.02 sec
+        Start 229: libarchive_test_read_disk_entry_from_file
+226/924 Test #229: libarchive_test_read_disk_entry_from_file .....................................   Passed    0.01 sec
+        Start 230: libarchive_test_read_extract
+227/924 Test #230: libarchive_test_read_extract ..................................................   Passed    0.02 sec
+        Start 231: libarchive_test_read_file_nonexistent
+228/924 Test #231: libarchive_test_read_file_nonexistent .........................................   Passed    0.01 sec
+        Start 232: libarchive_test_read_files_compressed
+229/924 Test #232: libarchive_test_read_files_compressed .........................................   Passed    0.03 sec
+        Start 233: libarchive_test_read_filter_compress_truncated
+230/924 Test #233: libarchive_test_read_filter_compress_truncated ................................   Passed    0.01 sec
+        Start 234: libarchive_test_read_filter_compress_empty2
+231/924 Test #234: libarchive_test_read_filter_compress_empty2 ...................................   Passed    0.02 sec
+        Start 235: libarchive_test_read_filter_compress_invalid
+232/924 Test #235: libarchive_test_read_filter_compress_invalid ..................................   Passed    0.02 sec
+        Start 236: libarchive_test_read_filter_grzip
+233/924 Test #193: libarchive_test_fuzz_tar ......................................................   Passed    3.75 sec
+        Start 237: libarchive_test_read_filter_gzip_recursive
+234/924 Test #237: libarchive_test_read_filter_gzip_recursive ....................................   Passed    0.03 sec
+        Start 238: libarchive_test_read_filter_lrzip
+235/924 Test #236: libarchive_test_read_filter_grzip .............................................***Skipped   0.15 sec
+        Start 239: libarchive_test_read_filter_lz4_raw_skip
+236/924 Test #239: libarchive_test_read_filter_lz4_raw_skip ......................................   Passed    0.02 sec
+        Start 240: libarchive_test_read_filter_lzop
+237/924 Test #238: libarchive_test_read_filter_lrzip .............................................***Skipped   0.15 sec
+        Start 241: libarchive_test_read_filter_lzop_multiple_parts
+238/924 Test #240: libarchive_test_read_filter_lzop ..............................................***Skipped   0.15 sec
+        Start 242: libarchive_test_read_filter_program
+239/924 Test #241: libarchive_test_read_filter_lzop_multiple_parts ...............................***Skipped   0.15 sec
+        Start 243: libarchive_test_read_filter_program_signature
+240/924 Test #242: libarchive_test_read_filter_program ...........................................   Passed    0.15 sec
+        Start 244: libarchive_test_read_filter_uudecode
+241/924 Test #244: libarchive_test_read_filter_uudecode ..........................................   Passed    0.02 sec
+        Start 245: libarchive_test_read_filter_uudecode_base64
+242/924 Test #245: libarchive_test_read_filter_uudecode_base64 ...................................   Passed    0.02 sec
+        Start 246: libarchive_test_read_filter_uudecode_raw
+243/924 Test #246: libarchive_test_read_filter_uudecode_raw ......................................   Passed    0.02 sec
+        Start 247: libarchive_test_read_filter_uudecode_base64_raw
+244/924 Test #243: libarchive_test_read_filter_program_signature .................................   Passed    0.16 sec
+        Start 248: libarchive_test_read_filter_zstd_raw_loop
+245/924 Test #248: libarchive_test_read_filter_zstd_raw_loop .....................................   Passed    0.01 sec
+        Start 249: libarchive_test_read_format_7zip_archive_properties
+246/924 Test #247: libarchive_test_read_filter_uudecode_base64_raw ...............................   Passed    0.02 sec
+        Start 250: libarchive_test_read_format_7zip
+247/924 Test #249: libarchive_test_read_format_7zip_archive_properties ...........................   Passed    0.01 sec
+        Start 251: libarchive_test_read_format_7zip_bzip2
+248/924 Test #250: libarchive_test_read_format_7zip ..............................................   Passed    0.03 sec
+        Start 252: libarchive_test_read_format_7zip_from_fd
+249/924 Test #251: libarchive_test_read_format_7zip_bzip2 ........................................   Passed    0.02 sec
+        Start 253: libarchive_test_read_format_7zip_copy
+250/924 Test #252: libarchive_test_read_format_7zip_from_fd ......................................   Passed    0.02 sec
+        Start 254: libarchive_test_read_format_7zip_deflate
+251/924 Test #254: libarchive_test_read_format_7zip_deflate ......................................   Passed    0.02 sec
+        Start 255: libarchive_test_read_format_7zip_zstd
+252/924 Test #253: libarchive_test_read_format_7zip_copy .........................................   Passed    0.03 sec
+        Start 256: libarchive_test_read_format_7zip_zstd_solid
+253/924 Test #255: libarchive_test_read_format_7zip_zstd .........................................   Passed    0.01 sec
+        Start 257: libarchive_test_read_format_7zip_zstd_bcj
+254/924 Test #256: libarchive_test_read_format_7zip_zstd_solid ...................................   Passed    0.01 sec
+        Start 258: libarchive_test_read_format_7zip_zstd_nobcj
+255/924 Test #257: libarchive_test_read_format_7zip_zstd_bcj .....................................   Passed    0.01 sec
+        Start 259: libarchive_test_read_format_7zip_empty
+256/924 Test #258: libarchive_test_read_format_7zip_zstd_nobcj ...................................   Passed    0.02 sec
+        Start 260: libarchive_test_read_format_7zip_lzma1
+257/924 Test #259: libarchive_test_read_format_7zip_empty ........................................   Passed    0.02 sec
+        Start 261: libarchive_test_read_format_7zip_lzma2
+258/924 Test #260: libarchive_test_read_format_7zip_lzma1 ........................................   Passed    0.05 sec
+        Start 262: libarchive_test_read_format_7zip_zstd_arm
+259/924 Test #261: libarchive_test_read_format_7zip_lzma2 ........................................   Passed    0.04 sec
+        Start 263: libarchive_test_read_format_7zip_lzma2_arm
+260/924 Test #262: libarchive_test_read_format_7zip_zstd_arm .....................................   Passed    0.02 sec
+        Start 264: libarchive_test_read_format_7zip_ppmd
+261/924 Test #263: libarchive_test_read_format_7zip_lzma2_arm ....................................   Passed    0.02 sec
+        Start 265: libarchive_test_read_format_7zip_lzma2_arm64
+262/924 Test #264: libarchive_test_read_format_7zip_ppmd .........................................   Passed    0.02 sec
+        Start 266: libarchive_test_read_format_7zip_deflate_arm64
+263/924 Test #265: libarchive_test_read_format_7zip_lzma2_arm64 ..................................   Passed    0.02 sec
+        Start 267: libarchive_test_read_format_7zip_win_attrib
+264/924 Test #266: libarchive_test_read_format_7zip_deflate_arm64 ................................   Passed    0.02 sec
+        Start 268: libarchive_test_read_format_7zip_sfx_pe
+265/924 Test #267: libarchive_test_read_format_7zip_win_attrib ...................................   Passed    0.02 sec
+        Start 269: libarchive_test_read_format_7zip_sfx_modified_pe
+266/924 Test #269: libarchive_test_read_format_7zip_sfx_modified_pe ..............................   Passed    0.02 sec
+        Start 270: libarchive_test_read_format_7zip_sfx_elf
+267/924 Test #268: libarchive_test_read_format_7zip_sfx_pe .......................................   Passed    0.03 sec
+        Start 271: libarchive_test_read_format_7zip_sfx_boundary_pe
+268/924 Test #271: libarchive_test_read_format_7zip_sfx_boundary_pe ..............................   Passed    0.02 sec
+        Start 272: libarchive_test_read_format_7zip_sfx_boundary_elf
+269/924 Test #272: libarchive_test_read_format_7zip_sfx_boundary_elf .............................   Passed    0.01 sec
+        Start 273: libarchive_test_read_format_7zip_sfx_elf64trunc
+270/924 Test #270: libarchive_test_read_format_7zip_sfx_elf ......................................   Passed    0.05 sec
+        Start 274: libarchive_test_read_format_7zip_extract_second
+271/924 Test #273: libarchive_test_read_format_7zip_sfx_elf64trunc ...............................   Passed    0.02 sec
+        Start 275: libarchive_test_read_format_7zip_lzma2_riscv
+272/924 Test #275: libarchive_test_read_format_7zip_lzma2_riscv ..................................***Skipped   0.01 sec
+        Start 276: libarchive_test_read_format_7zip_lzma2_sparc
+273/924 Test #274: libarchive_test_read_format_7zip_extract_second ...............................   Passed    0.02 sec
+        Start 277: libarchive_test_read_format_7zip_zstd_sparc
+274/924 Test #277: libarchive_test_read_format_7zip_zstd_sparc ...................................   Passed    0.04 sec
+        Start 278: libarchive_test_read_format_7zip_deflate_powerpc
+275/924 Test #276: libarchive_test_read_format_7zip_lzma2_sparc ..................................   Passed    0.05 sec
+        Start 279: libarchive_test_read_format_7zip_lzma2_powerpc
+276/924 Test #278: libarchive_test_read_format_7zip_deflate_powerpc ..............................   Passed    0.02 sec
+        Start 280: libarchive_test_read_format_7zip_encryption_data
+277/924 Test #279: libarchive_test_read_format_7zip_lzma2_powerpc ................................   Passed    0.02 sec
+        Start 281: libarchive_test_read_format_7zip_encryption_header
+278/924 Test #281: libarchive_test_read_format_7zip_encryption_header ............................   Passed    0.01 sec
+        Start 282: libarchive_test_read_format_7zip_encryption_partially
+279/924 Test #280: libarchive_test_read_format_7zip_encryption_data ..............................   Passed    0.02 sec
+        Start 283: libarchive_test_read_format_7zip_entries_oom
+280/924 Test #283: libarchive_test_read_format_7zip_entries_oom ..................................   Passed    0.01 sec
+        Start 284: libarchive_test_read_format_7zip_folders_oom
+281/924 Test #282: libarchive_test_read_format_7zip_encryption_partially .........................   Passed    0.01 sec
+        Start 285: libarchive_test_read_format_7zip_issue2765
+282/924 Test #284: libarchive_test_read_format_7zip_folders_oom ..................................   Passed    0.02 sec
+        Start 286: libarchive_test_read_format_7zip_malformed
+283/924 Test #285: libarchive_test_read_format_7zip_issue2765 ....................................   Passed    0.01 sec
+        Start 287: libarchive_test_read_format_7zip_packinfo_digests
+284/924 Test #287: libarchive_test_read_format_7zip_packinfo_digests .............................   Passed    0.01 sec
+        Start 288: libarchive_test_read_format_ar
+285/924 Test #286: libarchive_test_read_format_7zip_malformed ....................................   Passed    0.02 sec
+        Start 289: libarchive_test_read_format_cab
+286/924 Test #288: libarchive_test_read_format_ar ................................................   Passed    0.02 sec
+        Start 290: libarchive_test_read_format_cab_filename
+287/924 Test #290: libarchive_test_read_format_cab_filename ......................................***Skipped   0.01 sec
+        Start 291: libarchive_test_read_format_cab_lzx_16bit
+288/924 Test #291: libarchive_test_read_format_cab_lzx_16bit .....................................   Passed    0.01 sec
+        Start 292: libarchive_test_read_format_cab_lzx_e8
+289/924 Test #289: libarchive_test_read_format_cab ...............................................   Passed    0.04 sec
+        Start 293: libarchive_test_read_format_cab_lzx_oob
+290/924 Test #292: libarchive_test_read_format_cab_lzx_e8 ........................................   Passed    0.02 sec
+        Start 294: libarchive_test_read_format_cab_mszip_oob
+291/924 Test #293: libarchive_test_read_format_cab_lzx_oob .......................................   Passed    0.02 sec
+        Start 295: libarchive_test_read_format_cab_multi
+292/924 Test #294: libarchive_test_read_format_cab_mszip_oob .....................................   Passed    0.02 sec
+        Start 296: libarchive_test_read_format_cab_skip_malformed
+293/924 Test #295: libarchive_test_read_format_cab_multi .........................................   Passed    0.02 sec
+        Start 297: libarchive_test_read_format_cpio_afio
+294/924 Test #296: libarchive_test_read_format_cab_skip_malformed ................................   Passed    0.01 sec
+        Start 298: libarchive_test_read_format_cpio_afio_broken
+295/924 Test #298: libarchive_test_read_format_cpio_afio_broken ..................................   Passed    0.01 sec
+        Start 299: libarchive_test_read_format_cpio_afio_header
+296/924 Test #297: libarchive_test_read_format_cpio_afio .........................................   Passed    0.02 sec
+        Start 300: libarchive_test_read_format_cpio_bin
+297/924 Test #299: libarchive_test_read_format_cpio_afio_header ..................................   Passed    0.02 sec
+        Start 301: libarchive_test_read_format_cpio_bin_Z
+298/924 Test #300: libarchive_test_read_format_cpio_bin ..........................................   Passed    0.01 sec
+        Start 302: libarchive_test_read_format_cpio_bin_be
+299/924 Test #301: libarchive_test_read_format_cpio_bin_Z ........................................   Passed    0.01 sec
+        Start 303: libarchive_test_read_format_cpio_bin_bz2
+300/924 Test #302: libarchive_test_read_format_cpio_bin_be .......................................   Passed    0.02 sec
+        Start 304: libarchive_test_read_format_cpio_bin_gz
+301/924 Test #303: libarchive_test_read_format_cpio_bin_bz2 ......................................   Passed    0.01 sec
+        Start 305: libarchive_test_read_format_cpio_bin_le
+302/924 Test #304: libarchive_test_read_format_cpio_bin_gz .......................................   Passed    0.01 sec
+        Start 306: libarchive_test_read_format_cpio_bin_lzip
+303/924 Test #305: libarchive_test_read_format_cpio_bin_le .......................................   Passed    0.02 sec
+        Start 307: libarchive_test_read_format_cpio_bin_lzma
+304/924 Test #306: libarchive_test_read_format_cpio_bin_lzip .....................................   Passed    0.01 sec
+        Start 308: libarchive_test_read_format_cpio_bin_xz
+305/924 Test #307: libarchive_test_read_format_cpio_bin_lzma .....................................   Passed    0.01 sec
+        Start 309: libarchive_test_read_format_cpio_filename_eucJP_UTF8
+306/924 Test #308: libarchive_test_read_format_cpio_bin_xz .......................................   Passed    0.01 sec
+        Start 310: libarchive_test_read_format_cpio_newc_large_pathname
+307/924 Test #309: libarchive_test_read_format_cpio_filename_eucJP_UTF8 ..........................***Skipped   0.02 sec
+        Start 311: libarchive_test_read_format_cpio_filename_UTF8_eucJP
+308/924 Test #310: libarchive_test_read_format_cpio_newc_large_pathname ..........................   Passed    0.02 sec
+        Start 312: libarchive_test_read_format_cpio_filename_UTF8_UTF8_jp
+309/924 Test #311: libarchive_test_read_format_cpio_filename_UTF8_eucJP ..........................***Skipped   0.01 sec
+        Start 313: libarchive_test_read_format_cpio_filename_CP866_KOI8R
+310/924 Test #312: libarchive_test_read_format_cpio_filename_UTF8_UTF8_jp ........................***Skipped   0.01 sec
+        Start 314: libarchive_test_read_format_cpio_filename_CP866_UTF8
+311/924 Test #313: libarchive_test_read_format_cpio_filename_CP866_KOI8R .........................***Skipped   0.01 sec
+        Start 315: libarchive_test_read_format_cpio_filename_KOI8R_CP866
+312/924 Test #314: libarchive_test_read_format_cpio_filename_CP866_UTF8 ..........................***Skipped   0.01 sec
+        Start 316: libarchive_test_read_format_cpio_filename_KOI8R_UTF8
+313/924 Test #315: libarchive_test_read_format_cpio_filename_KOI8R_CP866 .........................***Skipped   0.01 sec
+        Start 317: libarchive_test_read_format_cpio_filename_UTF8_KOI8R
+314/924 Test #316: libarchive_test_read_format_cpio_filename_KOI8R_UTF8 ..........................***Skipped   0.01 sec
+        Start 318: libarchive_test_read_format_cpio_filename_UTF8_CP866
+315/924 Test #317: libarchive_test_read_format_cpio_filename_UTF8_KOI8R ..........................***Skipped   0.01 sec
+        Start 319: libarchive_test_read_format_cpio_filename_UTF8_UTF8_ru
+316/924 Test #318: libarchive_test_read_format_cpio_filename_UTF8_CP866 ..........................***Skipped   0.02 sec
+        Start 320: libarchive_test_read_format_cpio_filename_eucJP_CP932
+317/924 Test #319: libarchive_test_read_format_cpio_filename_UTF8_UTF8_ru ........................***Skipped   0.01 sec
+        Start 321: libarchive_test_read_format_cpio_filename_UTF8_CP932
+318/924 Test #320: libarchive_test_read_format_cpio_filename_eucJP_CP932 .........................***Skipped   0.02 sec
+        Start 322: libarchive_test_read_format_cpio_filename_CP866_CP1251
+319/924 Test #321: libarchive_test_read_format_cpio_filename_UTF8_CP932 ..........................***Skipped   0.02 sec
+        Start 323: libarchive_test_read_format_cpio_filename_CP866_CP1251_win
+320/924 Test #322: libarchive_test_read_format_cpio_filename_CP866_CP1251 ........................***Skipped   0.02 sec
+        Start 324: libarchive_test_read_format_cpio_filename_KOI8R_CP1251
+321/924 Test #323: libarchive_test_read_format_cpio_filename_CP866_CP1251_win ....................***Skipped   0.01 sec
+        Start 325: libarchive_test_read_format_cpio_filename_UTF8_CP1251
+322/924 Test #324: libarchive_test_read_format_cpio_filename_KOI8R_CP1251 ........................***Skipped   0.01 sec
+        Start 326: libarchive_test_read_format_cpio_odc
+323/924 Test #325: libarchive_test_read_format_cpio_filename_UTF8_CP1251 .........................***Skipped   0.01 sec
+        Start 327: libarchive_test_read_format_cpio_svr4_bzip2_rpm
+324/924 Test #326: libarchive_test_read_format_cpio_odc ..........................................   Passed    0.02 sec
+        Start 328: libarchive_test_read_format_cpio_svr4_gzip
+325/924 Test #327: libarchive_test_read_format_cpio_svr4_bzip2_rpm ...............................   Passed    0.02 sec
+        Start 329: libarchive_test_read_format_cpio_svr4_gzip_rpm
+326/924 Test #328: libarchive_test_read_format_cpio_svr4_gzip ....................................   Passed    0.01 sec
+        Start 330: libarchive_test_read_format_cpio_svr4c_Z
+327/924 Test #330: libarchive_test_read_format_cpio_svr4c_Z ......................................   Passed    0.01 sec
+        Start 331: libarchive_test_read_format_cpio_symlink_trailer
+328/924 Test #329: libarchive_test_read_format_cpio_svr4_gzip_rpm ................................   Passed    0.02 sec
+        Start 332: libarchive_test_read_format_empty
+329/924 Test #332: libarchive_test_read_format_empty .............................................   Passed    0.01 sec
+        Start 333: libarchive_test_read_format_gtar_filename_eucJP_UTF8
+330/924 Test #331: libarchive_test_read_format_cpio_symlink_trailer ..............................   Passed    0.02 sec
+        Start 334: libarchive_test_read_format_gtar_filename_CP866_KOI8R
+331/924 Test #333: libarchive_test_read_format_gtar_filename_eucJP_UTF8 ..........................***Skipped   0.01 sec
+        Start 335: libarchive_test_read_format_gtar_filename_CP866_UTF8
+332/924 Test #334: libarchive_test_read_format_gtar_filename_CP866_KOI8R .........................***Skipped   0.01 sec
+        Start 336: libarchive_test_read_format_gtar_filename_KOI8R_CP866
+333/924 Test #335: libarchive_test_read_format_gtar_filename_CP866_UTF8 ..........................***Skipped   0.01 sec
+        Start 337: libarchive_test_read_format_gtar_filename_KOI8R_UTF8
+334/924 Test #336: libarchive_test_read_format_gtar_filename_KOI8R_CP866 .........................***Skipped   0.01 sec
+        Start 338: libarchive_test_read_format_gtar_filename_eucJP_CP932
+335/924 Test #337: libarchive_test_read_format_gtar_filename_KOI8R_UTF8 ..........................***Skipped   0.02 sec
+        Start 339: libarchive_test_read_format_gtar_filename_CP866_CP1251
+336/924 Test #338: libarchive_test_read_format_gtar_filename_eucJP_CP932 .........................***Skipped   0.01 sec
+        Start 340: libarchive_test_read_format_gtar_filename_CP866_CP1251_win
+337/924 Test #339: libarchive_test_read_format_gtar_filename_CP866_CP1251 ........................***Skipped   0.01 sec
+        Start 341: libarchive_test_read_format_gtar_filename_KOI8R_CP1251
+338/924 Test #340: libarchive_test_read_format_gtar_filename_CP866_CP1251_win ....................***Skipped   0.01 sec
+        Start 342: libarchive_test_read_format_gtar_gz
+339/924 Test #341: libarchive_test_read_format_gtar_filename_KOI8R_CP1251 ........................***Skipped   0.01 sec
+        Start 343: libarchive_test_read_format_gtar_lzma
+340/924 Test #342: libarchive_test_read_format_gtar_gz ...........................................   Passed    0.01 sec
+        Start 344: libarchive_test_read_format_gtar_redundant_L
+341/924 Test #343: libarchive_test_read_format_gtar_lzma .........................................   Passed    0.01 sec
+        Start 345: libarchive_test_read_format_gtar_sparse
+342/924 Test #344: libarchive_test_read_format_gtar_redundant_L ..................................   Passed    0.02 sec
+        Start 346: libarchive_test_read_format_gtar_sparse_length
+343/924 Test #346: libarchive_test_read_format_gtar_sparse_length ................................   Passed    0.01 sec
+        Start 347: libarchive_test_read_format_gtar_sparse_skip_entry
+344/924 Test #347: libarchive_test_read_format_gtar_sparse_skip_entry ............................   Passed    0.01 sec
+        Start 348: libarchive_test_read_format_huge_rpm
+345/924 Test #348: libarchive_test_read_format_huge_rpm ..........................................   Passed    0.02 sec
+        Start 349: libarchive_test_read_format_iso_Z
+346/924 Test #349: libarchive_test_read_format_iso_Z .............................................   Passed    0.02 sec
+        Start 350: libarchive_test_read_format_iso_joliet_utf16be_overflow
+347/924 Test #345: libarchive_test_read_format_gtar_sparse .......................................   Passed    0.09 sec
+        Start 351: libarchive_test_read_format_iso_multi_extent
+348/924 Test #351: libarchive_test_read_format_iso_multi_extent ..................................   Passed    0.01 sec
+        Start 352: libarchive_test_read_format_iso_xorriso
+349/924 Test #350: libarchive_test_read_format_iso_joliet_utf16be_overflow .......................   Passed    0.02 sec
+        Start 353: libarchive_test_read_format_isojoliet_compress
+350/924 Test #352: libarchive_test_read_format_iso_xorriso .......................................   Passed    0.02 sec
+        Start 354: libarchive_test_read_format_isojoliet_long
+351/924 Test #353: libarchive_test_read_format_isojoliet_compress ................................   Passed    0.02 sec
+        Start 355: libarchive_test_read_format_isojoliet_rr
+352/924 Test #354: libarchive_test_read_format_isojoliet_long ....................................   Passed    0.02 sec
+        Start 356: libarchive_test_read_format_isojoliet_versioned
+353/924 Test #355: libarchive_test_read_format_isojoliet_rr ......................................   Passed    0.02 sec
+        Start 357: libarchive_test_read_format_isorr_compress
+354/924 Test #356: libarchive_test_read_format_isojoliet_versioned ...............................   Passed    0.02 sec
+        Start 358: libarchive_test_read_format_isorr_ce
+355/924 Test #357: libarchive_test_read_format_isorr_compress ....................................   Passed    0.02 sec
+        Start 359: libarchive_test_read_format_isorr_ce_loop
+356/924 Test #358: libarchive_test_read_format_isorr_ce ..........................................   Passed    0.02 sec
+        Start 360: libarchive_test_read_format_isorr_new_compress
+357/924 Test #359: libarchive_test_read_format_isorr_ce_loop .....................................   Passed    0.02 sec
+        Start 361: libarchive_test_read_format_isorr_rr_moved
+358/924 Test #360: libarchive_test_read_format_isorr_new_compress ................................   Passed    0.02 sec
+        Start 362: libarchive_test_read_format_isozisofs_compress
+359/924 Test #362: libarchive_test_read_format_isozisofs_compress ................................   Passed    0.02 sec
+        Start 363: libarchive_test_read_format_iso_rockridge_zf_overflow
+360/924 Test #363: libarchive_test_read_format_iso_rockridge_zf_overflow .........................   Passed    0.02 sec
+        Start 364: libarchive_test_read_format_iso_zisofs_overflow
+361/924 Test #361: libarchive_test_read_format_isorr_rr_moved ....................................   Passed    0.05 sec
+        Start 365: libarchive_test_read_format_lha
+362/924 Test #364: libarchive_test_read_format_iso_zisofs_overflow ...............................   Passed    0.02 sec
+        Start 366: libarchive_test_read_format_lha_bugfix_0
+363/924 Test #366: libarchive_test_read_format_lha_bugfix_0 ......................................   Passed    0.01 sec
+        Start 367: libarchive_test_read_format_lha_filename
+364/924 Test #365: libarchive_test_read_format_lha ...............................................   Passed    0.04 sec
+        Start 368: libarchive_test_read_format_lha_filename_UTF16
+365/924 Test #368: libarchive_test_read_format_lha_filename_UTF16 ................................***Skipped   0.01 sec
+        Start 369: libarchive_test_read_format_lha_oversize_header
+366/924 Test #367: libarchive_test_read_format_lha_filename ......................................***Skipped   0.02 sec
+        Start 370: libarchive_test_read_format_lha_symlink_missing_target
+367/924 Test #369: libarchive_test_read_format_lha_oversize_header ...............................   Passed    0.02 sec
+        Start 371: libarchive_test_read_format_mtree
+368/924 Test #371: libarchive_test_read_format_mtree .............................................   Passed    0.02 sec
+        Start 372: libarchive_test_read_format_mtree_filenames_only
+369/924 Test #370: libarchive_test_read_format_lha_symlink_missing_target ........................   Passed    0.04 sec
+        Start 373: libarchive_test_read_format_mtree_nochange
+370/924 Test #372: libarchive_test_read_format_mtree_filenames_only ..............................   Passed    0.01 sec
+        Start 374: libarchive_test_read_format_mtree_nomagic_v1_form
+371/924 Test #373: libarchive_test_read_format_mtree_nochange ....................................   Passed    0.02 sec
+        Start 375: libarchive_test_read_format_mtree_nomagic_v2_form
+372/924 Test #374: libarchive_test_read_format_mtree_nomagic_v1_form .............................   Passed    0.02 sec
+        Start 376: libarchive_test_read_format_mtree_nomagic_v2_netbsd_form
+373/924 Test #375: libarchive_test_read_format_mtree_nomagic_v2_form .............................   Passed    0.02 sec
+        Start 377: libarchive_test_read_format_mtree_nonexistent_contents_file
+374/924 Test #376: libarchive_test_read_format_mtree_nomagic_v2_netbsd_form ......................   Passed    0.02 sec
+        Start 378: libarchive_test_read_format_mtree_noprint
+375/924 Test #377: libarchive_test_read_format_mtree_nonexistent_contents_file ...................   Passed    0.02 sec
+        Start 379: libarchive_test_read_format_mtree_tab
+376/924 Test #379: libarchive_test_read_format_mtree_tab .........................................   Passed    0.01 sec
+        Start 380: libarchive_test_read_format_mtree_nano
+377/924 Test #378: libarchive_test_read_format_mtree_noprint .....................................   Passed    0.02 sec
+        Start 381: libarchive_test_read_format_mtree_global_set_no_value
+378/924 Test #380: libarchive_test_read_format_mtree_nano ........................................   Passed    0.01 sec
+        Start 382: libarchive_test_read_format_mtree_crash747
+379/924 Test #381: libarchive_test_read_format_mtree_global_set_no_value .........................   Passed    0.02 sec
+        Start 383: libarchive_test_read_format_pax_bz2
+380/924 Test #382: libarchive_test_read_format_mtree_crash747 ....................................   Passed    0.02 sec
+        Start 384: libarchive_test_read_format_rar_set_format
+381/924 Test #383: libarchive_test_read_format_pax_bz2 ...........................................   Passed    0.02 sec
+        Start 385: libarchive_test_read_format_rar_basic
+382/924 Test #384: libarchive_test_read_format_rar_set_format ....................................   Passed    0.02 sec
+        Start 386: libarchive_test_read_format_rar_subblock
+383/924 Test #385: libarchive_test_read_format_rar_basic .........................................   Passed    0.02 sec
+        Start 387: libarchive_test_read_format_rar_noeof
+384/924 Test #386: libarchive_test_read_format_rar_subblock ......................................   Passed    0.02 sec
+        Start 388: libarchive_test_read_format_rar_unicode_UTF8
+385/924 Test #387: libarchive_test_read_format_rar_noeof .........................................   Passed    0.02 sec
+        Start 389: libarchive_test_read_format_rar_unicode_CP932
+386/924 Test #388: libarchive_test_read_format_rar_unicode_UTF8 ..................................***Skipped   0.02 sec
+        Start 390: libarchive_test_read_format_rar_compress_normal
+387/924 Test #389: libarchive_test_read_format_rar_unicode_CP932 .................................***Skipped   0.02 sec
+        Start 391: libarchive_test_read_format_rar_multi_lzss_blocks
+388/924 Test #390: libarchive_test_read_format_rar_compress_normal ...............................   Passed    0.03 sec
+        Start 392: libarchive_test_read_format_rar3_lowdist_reset
+389/924 Test #392: libarchive_test_read_format_rar3_lowdist_reset ................................   Passed    0.02 sec
+        Start 393: libarchive_test_read_format_rar_compress_best
+390/924 Test #391: libarchive_test_read_format_rar_multi_lzss_blocks .............................   Passed    0.04 sec
+        Start 394: libarchive_test_read_format_rar_ppmd_lzss_conversion
+391/924 Test #393: libarchive_test_read_format_rar_compress_best .................................   Passed    0.03 sec
+        Start 395: libarchive_test_read_format_rar_binary
+392/924 Test #395: libarchive_test_read_format_rar_binary ........................................   Passed    0.12 sec
+        Start 396: libarchive_test_read_format_rar_windows
+393/924 Test #396: libarchive_test_read_format_rar_windows .......................................   Passed    0.02 sec
+        Start 397: libarchive_test_read_format_rar_multivolume
+394/924 Test #394: libarchive_test_read_format_rar_ppmd_lzss_conversion ..........................   Passed    0.23 sec
+        Start 398: libarchive_test_read_format_rar_multivolume_w
+395/924 Test #398: libarchive_test_read_format_rar_multivolume_w .................................***Skipped   0.02 sec
+        Start 399: libarchive_test_read_format_rar_multivolume_skip
+396/924 Test #399: libarchive_test_read_format_rar_multivolume_skip ..............................   Passed    0.05 sec
+        Start 400: libarchive_test_read_format_rar_sfx
+397/924 Test #400: libarchive_test_read_format_rar_sfx ...........................................   Passed    0.03 sec
+        Start 401: libarchive_test_read_format_rar_multivolume_stored_file
+398/924 Test #401: libarchive_test_read_format_rar_multivolume_stored_file .......................   Passed    0.03 sec
+        Start 402: libarchive_test_read_format_rar_multivolume_stored_file_skip
+399/924 Test #402: libarchive_test_read_format_rar_multivolume_stored_file_skip ..................   Passed    0.03 sec
+        Start 403: libarchive_test_read_format_rar_multivolume_seek_data
+400/924 Test #397: libarchive_test_read_format_rar_multivolume ...................................   Passed    0.24 sec
+        Start 404: libarchive_test_read_format_rar_multivolume_seek_multiple_files
+401/924 Test #403: libarchive_test_read_format_rar_multivolume_seek_data .........................   Passed    0.03 sec
+        Start 405: libarchive_test_read_format_rar_multivolume_uncompressed_files
+402/924 Test #404: libarchive_test_read_format_rar_multivolume_seek_multiple_files ...............   Passed    0.04 sec
+        Start 406: libarchive_test_read_format_rar_endarc_huge
+403/924 Test #406: libarchive_test_read_format_rar_endarc_huge ...................................   Passed    0.02 sec
+        Start 407: libarchive_test_read_format_rar_ppmd_use_after_free
+404/924 Test #407: libarchive_test_read_format_rar_ppmd_use_after_free ...........................   Passed    0.02 sec
+        Start 408: libarchive_test_read_format_rar_ppmd_use_after_free2
+405/924 Test #405: libarchive_test_read_format_rar_multivolume_uncompressed_files ................   Passed    0.06 sec
+        Start 409: libarchive_test_read_format_rar_seek_data_cursor0
+406/924 Test #408: libarchive_test_read_format_rar_ppmd_use_after_free2 ..........................   Passed    0.02 sec
+        Start 410: libarchive_test_read_format_rar_newsub_huge
+407/924 Test #409: libarchive_test_read_format_rar_seek_data_cursor0 .............................   Passed    0.02 sec
+        Start 411: libarchive_test_read_format_rar_newsub_rr_over_1m
+408/924 Test #410: libarchive_test_read_format_rar_newsub_huge ...................................***Skipped   0.02 sec
+        Start 412: libarchive_test_read_format_rar_newsub_huge64
+409/924 Test #412: libarchive_test_read_format_rar_newsub_huge64 .................................   Passed    0.01 sec
+        Start 413: libarchive_test_read_format_rar_symlink_huge
+410/924 Test #413: libarchive_test_read_format_rar_symlink_huge ..................................***Skipped   0.01 sec
+        Start 414: libarchive_test_read_format_rar_unbound_staticdata
+411/924 Test #414: libarchive_test_read_format_rar_unbound_staticdata ............................   Passed    0.01 sec
+        Start 415: libarchive_test_read_format_rar4_encrypted
+412/924 Test #415: libarchive_test_read_format_rar4_encrypted ....................................   Passed    0.01 sec
+        Start 416: libarchive_test_read_format_rar4_encrypted_filenames
+413/924 Test #416: libarchive_test_read_format_rar4_encrypted_filenames ..........................   Passed    0.01 sec
+        Start 417: libarchive_test_read_format_rar4_solid_encrypted
+414/924 Test #417: libarchive_test_read_format_rar4_solid_encrypted ..............................***Skipped   0.01 sec
+        Start 418: libarchive_test_read_format_rar4_solid_encrypted_filenames
+415/924 Test #411: libarchive_test_read_format_rar_newsub_rr_over_1m .............................   Passed    0.10 sec
+        Start 419: libarchive_test_read_format_rar5_encrypted
+416/924 Test #418: libarchive_test_read_format_rar4_solid_encrypted_filenames ....................   Passed    0.02 sec
+        Start 420: libarchive_test_read_format_rar5_encrypted_filenames
+417/924 Test #419: libarchive_test_read_format_rar5_encrypted ....................................   Passed    0.02 sec
+        Start 421: libarchive_test_read_format_rar5_solid_encrypted
+418/924 Test #420: libarchive_test_read_format_rar5_encrypted_filenames ..........................   Passed    0.02 sec
+        Start 422: libarchive_test_read_format_rar5_solid_encrypted_filenames
+419/924 Test #421: libarchive_test_read_format_rar5_solid_encrypted ..............................   Passed    0.02 sec
+        Start 423: libarchive_test_read_format_rar_encryption_data
+420/924 Test #422: libarchive_test_read_format_rar5_solid_encrypted_filenames ....................   Passed    0.01 sec
+        Start 424: libarchive_test_read_format_rar_encryption_header
+421/924 Test #423: libarchive_test_read_format_rar_encryption_data ...............................   Passed    0.01 sec
+        Start 425: libarchive_test_read_format_rar_encryption_partially
+422/924 Test #424: libarchive_test_read_format_rar_encryption_header .............................   Passed    0.01 sec
+        Start 426: libarchive_test_read_format_rar_invalid1
+423/924 Test #425: libarchive_test_read_format_rar_encryption_partially ..........................   Passed    0.01 sec
+        Start 427: libarchive_test_read_format_rar_filter
+424/924 Test #426: libarchive_test_read_format_rar_invalid1 ......................................   Passed    0.01 sec
+        Start 428: libarchive_test_read_format_rar_overflow
+425/924 Test #427: libarchive_test_read_format_rar_filter ........................................   Passed    0.02 sec
+        Start 429: libarchive_test_read_format_rar5_set_format
+426/924 Test #428: libarchive_test_read_format_rar_overflow ......................................   Passed    0.02 sec
+        Start 430: libarchive_test_read_format_rar5_stored
+427/924 Test #429: libarchive_test_read_format_rar5_set_format ...................................   Passed    0.02 sec
+        Start 431: libarchive_test_read_format_rar5_compressed
+428/924 Test #430: libarchive_test_read_format_rar5_stored .......................................   Passed    0.02 sec
+        Start 432: libarchive_test_read_format_rar5_multiple_files
+429/924 Test #431: libarchive_test_read_format_rar5_compressed ...................................   Passed    0.02 sec
+        Start 433: libarchive_test_read_format_rar5_multiple_files_solid
+430/924 Test #432: libarchive_test_read_format_rar5_multiple_files ...............................   Passed    0.02 sec
+        Start 434: libarchive_test_read_format_rar5_multiarchive_skip_all
+431/924 Test #433: libarchive_test_read_format_rar5_multiple_files_solid .........................   Passed    0.02 sec
+        Start 435: libarchive_test_read_format_rar5_multiarchive_skip_all_but_first
+432/924 Test #434: libarchive_test_read_format_rar5_multiarchive_skip_all ........................   Passed    0.04 sec
+        Start 436: libarchive_test_read_format_rar5_multiarchive_skip_all_but_second
+433/924 Test #435: libarchive_test_read_format_rar5_multiarchive_skip_all_but_first ..............   Passed    0.04 sec
+        Start 437: libarchive_test_read_format_rar5_blake2
+434/924 Test #437: libarchive_test_read_format_rar5_blake2 .......................................   Passed    0.01 sec
+        Start 438: libarchive_test_read_format_rar5_arm_filter
+435/924 Test #438: libarchive_test_read_format_rar5_arm_filter ...................................   Passed    0.02 sec
+        Start 439: libarchive_test_read_format_rar5_stored_skip_all
+436/924 Test #436: libarchive_test_read_format_rar5_multiarchive_skip_all_but_second .............   Passed    0.06 sec
+        Start 440: libarchive_test_read_format_rar5_stored_skip_in_part
+437/924 Test #439: libarchive_test_read_format_rar5_stored_skip_all ..............................   Passed    0.02 sec
+        Start 441: libarchive_test_read_format_rar5_stored_skip_all_but_first
+438/924 Test #440: libarchive_test_read_format_rar5_stored_skip_in_part ..........................   Passed    0.02 sec
+        Start 442: libarchive_test_read_format_rar5_stored_skip_all_in_part
+439/924 Test #441: libarchive_test_read_format_rar5_stored_skip_all_but_first ....................   Passed    0.02 sec
+        Start 443: libarchive_test_read_format_rar5_multiarchive_solid_extr_all
+440/924 Test #442: libarchive_test_read_format_rar5_stored_skip_all_in_part ......................   Passed    0.02 sec
+        Start 444: libarchive_test_read_format_rar5_multiarchive_solid_skip_all
+441/924 Test #443: libarchive_test_read_format_rar5_multiarchive_solid_extr_all ..................   Passed    0.03 sec
+        Start 445: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_first
+442/924 Test #444: libarchive_test_read_format_rar5_multiarchive_solid_skip_all ..................   Passed    0.02 sec
+        Start 446: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_scnd
+443/924 Test #445: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_first ........   Passed    0.02 sec
+        Start 447: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_third
+444/924 Test #446: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_scnd .........   Passed    0.02 sec
+        Start 448: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_last
+445/924 Test #447: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_third ........   Passed    0.03 sec
+        Start 449: libarchive_test_read_format_rar5_solid_skip_all
+446/924 Test #448: libarchive_test_read_format_rar5_multiarchive_solid_skip_all_but_last .........   Passed    0.03 sec
+        Start 450: libarchive_test_read_format_rar5_solid_skip_all_but_first
+447/924 Test #449: libarchive_test_read_format_rar5_solid_skip_all ...............................   Passed    0.02 sec
+        Start 451: libarchive_test_read_format_rar5_solid_skip_all_but_second
+448/924 Test #450: libarchive_test_read_format_rar5_solid_skip_all_but_first .....................   Passed    0.02 sec
+        Start 452: libarchive_test_read_format_rar5_solid_skip_all_but_last
+449/924 Test #451: libarchive_test_read_format_rar5_solid_skip_all_but_second ....................   Passed    0.02 sec
+        Start 453: libarchive_test_read_format_rar5_extract_win32
+450/924 Test #452: libarchive_test_read_format_rar5_solid_skip_all_but_last ......................   Passed    0.02 sec
+        Start 454: libarchive_test_read_format_rar5_unicode
+451/924 Test #454: libarchive_test_read_format_rar5_unicode ......................................***Skipped   0.01 sec
+        Start 455: libarchive_test_read_format_rar5_block_by_block
+452/924 Test #453: libarchive_test_read_format_rar5_extract_win32 ................................   Passed    0.02 sec
+        Start 456: libarchive_test_read_format_rar5_owner
+453/924 Test #455: libarchive_test_read_format_rar5_block_by_block ...............................   Passed    0.02 sec
+        Start 457: libarchive_test_read_format_rar5_symlink
+454/924 Test #456: libarchive_test_read_format_rar5_owner ........................................   Passed    0.02 sec
+        Start 458: libarchive_test_read_format_rar5_hardlink
+455/924 Test #457: libarchive_test_read_format_rar5_symlink ......................................   Passed    0.01 sec
+        Start 459: libarchive_test_read_format_rar5_extra_field_version
+456/924 Test #458: libarchive_test_read_format_rar5_hardlink .....................................   Passed    0.01 sec
+        Start 460: libarchive_test_read_format_rar5_readtables_overflow
+457/924 Test #460: libarchive_test_read_format_rar5_readtables_overflow ..........................   Passed    0.01 sec
+        Start 461: libarchive_test_read_format_rar5_leftshift1
+458/924 Test #459: libarchive_test_read_format_rar5_extra_field_version ..........................   Passed    0.02 sec
+        Start 462: libarchive_test_read_format_rar5_leftshift2
+459/924 Test #461: libarchive_test_read_format_rar5_leftshift1 ...................................   Passed    0.02 sec
+        Start 463: libarchive_test_read_format_rar5_truncated_huff
+460/924 Test #462: libarchive_test_read_format_rar5_leftshift2 ...................................   Passed    0.02 sec
+        Start 464: libarchive_test_read_format_rar5_invalid_dict_reference
+461/924 Test #463: libarchive_test_read_format_rar5_truncated_huff ...............................   Passed    0.02 sec
+        Start 465: libarchive_test_read_format_rar5_distance_overflow
+462/924 Test #464: libarchive_test_read_format_rar5_invalid_dict_reference .......................   Passed    0.02 sec
+        Start 466: libarchive_test_read_format_rar5_nonempty_dir_stream
+463/924 Test #465: libarchive_test_read_format_rar5_distance_overflow ............................   Passed    0.02 sec
+        Start 467: libarchive_test_read_format_rar5_nonempty_dir_data
+464/924 Test #466: libarchive_test_read_format_rar5_nonempty_dir_stream ..........................   Passed    0.02 sec
+        Start 468: libarchive_test_read_format_rar5_fileattr
+465/924 Test #467: libarchive_test_read_format_rar5_nonempty_dir_data ............................   Passed    0.02 sec
+        Start 469: libarchive_test_read_format_rar5_different_window_size
+466/924 Test #468: libarchive_test_read_format_rar5_fileattr .....................................   Passed    0.02 sec
+        Start 470: libarchive_test_read_format_rar5_window_buf_and_size_desync
+467/924 Test #469: libarchive_test_read_format_rar5_different_window_size ........................   Passed    0.02 sec
+        Start 471: libarchive_test_read_format_rar5_arm_filter_on_window_boundary
+468/924 Test #470: libarchive_test_read_format_rar5_window_buf_and_size_desync ...................   Passed    0.02 sec
+        Start 472: libarchive_test_read_format_rar5_different_solid_window_size
+469/924 Test #471: libarchive_test_read_format_rar5_arm_filter_on_window_boundary ................   Passed    0.02 sec
+        Start 473: libarchive_test_read_format_rar5_different_winsize_on_merge
+470/924 Test #472: libarchive_test_read_format_rar5_different_solid_window_size ..................   Passed    0.02 sec
+        Start 474: libarchive_test_read_format_rar5_block_size_is_too_small
+471/924 Test #473: libarchive_test_read_format_rar5_different_winsize_on_merge ...................   Passed    0.02 sec
+        Start 475: libarchive_test_read_format_rar5_sfx
+472/924 Test #474: libarchive_test_read_format_rar5_block_size_is_too_small ......................   Passed    0.02 sec
+        Start 476: libarchive_test_read_format_rar5_decode_number_out_of_bounds_read
+473/924 Test #476: libarchive_test_read_format_rar5_decode_number_out_of_bounds_read .............   Passed    0.02 sec
+        Start 477: libarchive_test_read_format_rar5_bad_window_size_in_multiarchive_file
+474/924 Test #477: libarchive_test_read_format_rar5_bad_window_size_in_multiarchive_file .........   Passed    0.01 sec
+        Start 478: libarchive_test_read_format_rar5_read_data_block_uninitialized_offset
+475/924 Test #475: libarchive_test_read_format_rar5_sfx ..........................................   Passed    0.04 sec
+        Start 479: libarchive_test_read_format_rar5_data_ready_pointer_leak
+476/924 Test #478: libarchive_test_read_format_rar5_read_data_block_uninitialized_offset .........   Passed    0.02 sec
+        Start 480: libarchive_test_read_format_rar5_only_crypt_exfld
+477/924 Test #479: libarchive_test_read_format_rar5_data_ready_pointer_leak ......................   Passed    0.02 sec
+        Start 481: libarchive_test_read_format_rar5_only_unsupported_exfld
+478/924 Test #480: libarchive_test_read_format_rar5_only_crypt_exfld .............................   Passed    0.02 sec
+        Start 482: libarchive_test_read_format_rar5_invalidhash_and_validhtime_exfld
+479/924 Test #481: libarchive_test_read_format_rar5_only_unsupported_exfld .......................   Passed    0.02 sec
+        Start 483: libarchive_test_read_format_rar5_main_block_extra_bytes
+480/924 Test #482: libarchive_test_read_format_rar5_invalidhash_and_validhtime_exfld .............   Passed    0.02 sec
+        Start 484: libarchive_test_read_format_rar5_skip_block_extra_bytes
+481/924 Test #483: libarchive_test_read_format_rar5_main_block_extra_bytes .......................   Passed    0.02 sec
+        Start 485: libarchive_test_read_format_rar5_bytes_remaining_underflow
+482/924 Test #484: libarchive_test_read_format_rar5_skip_block_extra_bytes .......................   Passed    0.02 sec
+        Start 486: libarchive_test_read_format_rar5_unpacked_size_exceeds_declared
+483/924 Test #485: libarchive_test_read_format_rar5_bytes_remaining_underflow ....................   Passed    0.02 sec
+        Start 487: libarchive_test_read_format_rar5_seek_data_unsupported
+484/924 Test #486: libarchive_test_read_format_rar5_unpacked_size_exceeds_declared ...............   Passed    0.02 sec
+        Start 488: libarchive_test_read_format_rar5_bad_filter
+485/924 Test #487: libarchive_test_read_format_rar5_seek_data_unsupported ........................   Passed    0.02 sec
+        Start 489: libarchive_test_read_format_rar5_bad_tables
+486/924 Test #488: libarchive_test_read_format_rar5_bad_filter ...................................   Passed    0.02 sec
+        Start 490: libarchive_test_read_format_rar5_block_hdr_fail_loop
+487/924 Test #489: libarchive_test_read_format_rar5_bad_tables ...................................   Passed    0.02 sec
+        Start 491: libarchive_test_read_format_rar5_loop_bug
+488/924 Test #490: libarchive_test_read_format_rar5_block_hdr_fail_loop ..........................   Passed    0.01 sec
+        Start 492: libarchive_test_read_format_raw
+489/924 Test #491: libarchive_test_read_format_rar5_loop_bug .....................................   Passed    0.02 sec
+        Start 493: libarchive_test_read_format_tar
+490/924 Test #493: libarchive_test_read_format_tar ...............................................   Passed    0.01 sec
+        Start 494: libarchive_test_read_format_tar_acl_oob_read
+491/924 Test #492: libarchive_test_read_format_raw ...............................................   Passed    0.03 sec
+        Start 495: libarchive_test_read_format_tar_V_negative_size
+492/924 Test #495: libarchive_test_read_format_tar_V_negative_size ...............................   Passed    0.01 sec
+        Start 496: libarchive_test_read_format_tar_concatenated
+493/924 Test #494: libarchive_test_read_format_tar_acl_oob_read ..................................   Passed    0.02 sec
+        Start 497: libarchive_test_read_format_tar_empty_filename
+494/924 Test #497: libarchive_test_read_format_tar_empty_filename ................................   Passed    0.02 sec
+        Start 498: libarchive_test_read_format_tar_empty_with_gnulabel
+495/924 Test #496: libarchive_test_read_format_tar_concatenated ..................................   Passed    0.02 sec
+        Start 499: libarchive_test_read_format_tar_empty_pax
+496/924 Test #498: libarchive_test_read_format_tar_empty_with_gnulabel ...........................   Passed    0.02 sec
+        Start 500: libarchive_test_read_format_tar_filename
+497/924 Test #499: libarchive_test_read_format_tar_empty_pax .....................................   Passed    0.02 sec
+        Start 501: libarchive_test_read_format_tar_invalid_pax_size
+498/924 Test #500: libarchive_test_read_format_tar_filename ......................................***Skipped   0.02 sec
+        Start 502: libarchive_test_read_format_tar_mac_metadata
+499/924 Test #501: libarchive_test_read_format_tar_invalid_pax_size ..............................   Passed    0.02 sec
+        Start 503: libarchive_test_read_format_tar_pax_g_large
+500/924 Test #502: libarchive_test_read_format_tar_mac_metadata ..................................   Passed    0.02 sec
+        Start 504: libarchive_test_read_format_tar_pax_large_attr
+501/924 Test #503: libarchive_test_read_format_tar_pax_g_large ...................................   Passed    0.02 sec
+        Start 505: libarchive_test_read_format_tar_pax_negative_time
+502/924 Test #505: libarchive_test_read_format_tar_pax_negative_time .............................   Passed    0.02 sec
+        Start 506: libarchive_test_read_format_tar_pax_sun_holesdata
+503/924 Test #504: libarchive_test_read_format_tar_pax_large_attr ................................   Passed    0.04 sec
+        Start 507: libarchive_test_read_format_tar_pax_timestamps
+504/924 Test #506: libarchive_test_read_format_tar_pax_sun_holesdata .............................   Passed    0.02 sec
+        Start 508: libarchive_test_read_format_tar_timestamp_overflow
+505/924 Test #507: libarchive_test_read_format_tar_pax_timestamps ................................   Passed    0.02 sec
+        Start 509: libarchive_test_read_format_tbz
+506/924 Test #508: libarchive_test_read_format_tar_timestamp_overflow ............................   Passed    0.02 sec
+        Start 510: libarchive_test_read_format_tgz
+507/924 Test #509: libarchive_test_read_format_tbz ...............................................   Passed    0.01 sec
+        Start 511: libarchive_test_read_format_tlz
+508/924 Test #510: libarchive_test_read_format_tgz ...............................................   Passed    0.02 sec
+        Start 512: libarchive_test_read_format_txz
+509/924 Test #511: libarchive_test_read_format_tlz ...............................................   Passed    0.01 sec
+        Start 513: libarchive_test_read_format_tz
+510/924 Test #512: libarchive_test_read_format_txz ...............................................   Passed    0.02 sec
+        Start 514: libarchive_test_read_format_ustar_filename
+511/924 Test #513: libarchive_test_read_format_tz ................................................   Passed    0.02 sec
+        Start 515: libarchive_test_read_format_warc
+512/924 Test #515: libarchive_test_read_format_warc ..............................................   Passed    0.01 sec
+        Start 516: libarchive_test_read_format_warc_incomplete
+513/924 Test #514: libarchive_test_read_format_ustar_filename ....................................***Skipped   0.03 sec
+        Start 517: libarchive_test_read_format_warc_skip_after_extract
+514/924 Test #517: libarchive_test_read_format_warc_skip_after_extract ...........................   Passed    0.01 sec
+        Start 518: libarchive_test_read_format_warc_truncated_body
+515/924 Test #516: libarchive_test_read_format_warc_incomplete ...................................   Passed    0.02 sec
+        Start 519: libarchive_test_read_format_xar
+516/924 Test #518: libarchive_test_read_format_warc_truncated_body ...............................   Passed    0.01 sec
+        Start 520: libarchive_test_read_format_xar_xattr_fstype_cleanup
+517/924 Test #519: libarchive_test_read_format_xar ...............................................   Passed    0.02 sec
+        Start 521: libarchive_test_read_format_xar_duplicate_filename_node
+518/924 Test #520: libarchive_test_read_format_xar_xattr_fstype_cleanup ..........................   Passed    0.02 sec
+        Start 522: libarchive_test_read_format_xar_large_mode
+519/924 Test #521: libarchive_test_read_format_xar_duplicate_filename_node .......................   Passed    0.02 sec
+        Start 523: libarchive_test_read_format_xar_base64_oob
+520/924 Test #522: libarchive_test_read_format_xar_large_mode ....................................   Passed    0.02 sec
+        Start 524: libarchive_test_read_format_xar_atou64_overread
+521/924 Test #523: libarchive_test_read_format_xar_base64_oob ....................................   Passed    0.02 sec
+        Start 525: libarchive_test_read_format_xar_parse_time_overread
+522/924 Test #524: libarchive_test_read_format_xar_atou64_overread ...............................   Passed    0.03 sec
+        Start 526: libarchive_test_read_format_xar_doublelink
+523/924 Test #525: libarchive_test_read_format_xar_parse_time_overread ...........................   Passed    0.02 sec
+        Start 527: libarchive_test_read_format_zip
+524/924 Test #526: libarchive_test_read_format_xar_doublelink ....................................   Passed    0.02 sec
+        Start 528: libarchive_test_read_format_zip_ppmd_one_file
+525/924 Test #528: libarchive_test_read_format_zip_ppmd_one_file .................................   Passed    0.02 sec
+        Start 529: libarchive_test_read_format_zip_ppmd_one_file_blockread
+526/924 Test #527: libarchive_test_read_format_zip ...............................................   Passed    0.03 sec
+        Start 530: libarchive_test_read_format_zip_ppmd_multi
+527/924 Test #529: libarchive_test_read_format_zip_ppmd_one_file_blockread .......................   Passed    0.02 sec
+        Start 531: libarchive_test_read_format_zip_ppmd_multi_blockread
+528/924 Test #530: libarchive_test_read_format_zip_ppmd_multi ....................................   Passed    0.02 sec
+        Start 532: libarchive_test_read_format_zip_lzma_one_file
+529/924 Test #531: libarchive_test_read_format_zip_ppmd_multi_blockread ..........................   Passed    0.02 sec
+        Start 533: libarchive_test_read_format_zip_lzma_one_file_blockread
+530/924 Test #532: libarchive_test_read_format_zip_lzma_one_file .................................   Passed    0.02 sec
+        Start 534: libarchive_test_read_format_zip_lzma_multi
+531/924 Test #533: libarchive_test_read_format_zip_lzma_one_file_blockread .......................   Passed    0.02 sec
+        Start 535: libarchive_test_read_format_zip_lzma_multi_blockread
+532/924 Test #534: libarchive_test_read_format_zip_lzma_multi ....................................   Passed    0.02 sec
+        Start 536: libarchive_test_read_format_zip_bzip2_one_file
+533/924 Test #535: libarchive_test_read_format_zip_lzma_multi_blockread ..........................   Passed    0.02 sec
+        Start 537: libarchive_test_read_format_zip_bzip2_one_file_blockread
+534/924 Test #536: libarchive_test_read_format_zip_bzip2_one_file ................................   Passed    0.02 sec
+        Start 538: libarchive_test_read_format_zip_bzip2_multi
+535/924 Test #537: libarchive_test_read_format_zip_bzip2_one_file_blockread ......................   Passed    0.02 sec
+        Start 539: libarchive_test_read_format_zip_bzip2_multi_blockread
+536/924 Test #538: libarchive_test_read_format_zip_bzip2_multi ...................................   Passed    0.02 sec
+        Start 540: libarchive_test_read_format_zip_zstd_one_file
+537/924 Test #540: libarchive_test_read_format_zip_zstd_one_file .................................   Passed    0.02 sec
+        Start 541: libarchive_test_read_format_zip_zstd_one_file_blockread
+538/924 Test #539: libarchive_test_read_format_zip_bzip2_multi_blockread .........................   Passed    0.03 sec
+        Start 542: libarchive_test_read_format_zip_zstd_multi
+539/924 Test #541: libarchive_test_read_format_zip_zstd_one_file_blockread .......................   Passed    0.02 sec
+        Start 543: libarchive_test_read_format_zip_zstd_multi_blockread
+540/924 Test #542: libarchive_test_read_format_zip_zstd_multi ....................................   Passed    0.02 sec
+        Start 544: libarchive_test_read_format_zip_xz_multi
+541/924 Test #543: libarchive_test_read_format_zip_zstd_multi_blockread ..........................   Passed    0.02 sec
+        Start 545: libarchive_test_read_format_zip_xz_multi_blockread
+542/924 Test #544: libarchive_test_read_format_zip_xz_multi ......................................   Passed    0.02 sec
+        Start 546: libarchive_test_read_format_zip_ppmd8_crash_1
+543/924 Test #546: libarchive_test_read_format_zip_ppmd8_crash_1 .................................   Passed    0.02 sec
+        Start 547: libarchive_test_read_format_zip_bz2_hang_on_invalid
+544/924 Test #545: libarchive_test_read_format_zip_xz_multi_blockread ............................   Passed    0.02 sec
+        Start 548: libarchive_test_read_format_zip_ppmd8_crash_2
+545/924 Test #548: libarchive_test_read_format_zip_ppmd8_crash_2 .................................   Passed    0.02 sec
+        Start 549: libarchive_test_read_format_zip_lzma_alone_leak
+546/924 Test #547: libarchive_test_read_format_zip_bz2_hang_on_invalid ...........................   Passed    0.02 sec
+        Start 550: libarchive_test_read_format_zip_lzma_stream_end
+547/924 Test #549: libarchive_test_read_format_zip_lzma_alone_leak ...............................   Passed    0.02 sec
+        Start 551: libarchive_test_read_format_zip_lzma_stream_end_blockread
+548/924 Test #550: libarchive_test_read_format_zip_lzma_stream_end ...............................   Passed    0.02 sec
+        Start 552: libarchive_test_read_format_zip_7z_lzma
+549/924 Test #551: libarchive_test_read_format_zip_lzma_stream_end_blockread .....................   Passed    0.02 sec
+        Start 553: libarchive_test_read_format_zip_7z_deflate
+550/924 Test #552: libarchive_test_read_format_zip_7z_lzma .......................................   Passed    0.02 sec
+        Start 554: libarchive_test_read_format_zip_utf8_paths
+551/924 Test #553: libarchive_test_read_format_zip_7z_deflate ....................................   Passed    0.02 sec
+        Start 555: libarchive_test_read_format_zip_comment_stored
+552/924 Test #554: libarchive_test_read_format_zip_utf8_paths ....................................***Skipped   0.02 sec
+        Start 556: libarchive_test_read_format_zip_encryption_data
+553/924 Test #556: libarchive_test_read_format_zip_encryption_data ...............................   Passed    0.01 sec
+        Start 557: libarchive_test_read_format_zip_encryption_header
+554/924 Test #555: libarchive_test_read_format_zip_comment_stored ................................   Passed    0.02 sec
+        Start 558: libarchive_test_read_format_zip_encryption_partially
+555/924 Test #557: libarchive_test_read_format_zip_encryption_header .............................   Passed    0.01 sec
+        Start 559: libarchive_test_read_format_zip_extra_padding
+556/924 Test #558: libarchive_test_read_format_zip_encryption_partially ..........................   Passed    0.01 sec
+        Start 560: libarchive_test_read_format_zip_filename_CP932_eucJP
+557/924 Test #560: libarchive_test_read_format_zip_filename_CP932_eucJP ..........................***Skipped   0.01 sec
+        Start 561: libarchive_test_read_format_zip_filename_CP932_UTF8
+558/924 Test #559: libarchive_test_read_format_zip_extra_padding .................................   Passed    0.02 sec
+        Start 562: libarchive_test_read_format_zip_filename_UTF8_eucJP
+559/924 Test #561: libarchive_test_read_format_zip_filename_CP932_UTF8 ...........................***Skipped   0.01 sec
+        Start 563: libarchive_test_read_format_zip_filename_UTF8_UTF8
+560/924 Test #562: libarchive_test_read_format_zip_filename_UTF8_eucJP ...........................***Skipped   0.02 sec
+        Start 564: libarchive_test_read_format_zip_filename_CP866_KOI8R
+561/924 Test #563: libarchive_test_read_format_zip_filename_UTF8_UTF8 ............................***Skipped   0.02 sec
+        Start 565: libarchive_test_read_format_zip_filename_CP866_UTF8
+562/924 Test #564: libarchive_test_read_format_zip_filename_CP866_KOI8R ..........................***Skipped   0.01 sec
+        Start 566: libarchive_test_read_format_zip_filename_KOI8R_CP866
+563/924 Test #565: libarchive_test_read_format_zip_filename_CP866_UTF8 ...........................***Skipped   0.01 sec
+        Start 567: libarchive_test_read_format_zip_filename_KOI8R_UTF8
+564/924 Test #566: libarchive_test_read_format_zip_filename_KOI8R_CP866 ..........................***Skipped   0.02 sec
+        Start 568: libarchive_test_read_format_zip_filename_UTF8_KOI8R
+565/924 Test #567: libarchive_test_read_format_zip_filename_KOI8R_UTF8 ...........................***Skipped   0.01 sec
+        Start 569: libarchive_test_read_format_zip_filename_UTF8_CP866
+566/924 Test #568: libarchive_test_read_format_zip_filename_UTF8_KOI8R ...........................***Skipped   0.01 sec
+        Start 570: libarchive_test_read_format_zip_filename_UTF8_UTF8_ru
+567/924 Test #569: libarchive_test_read_format_zip_filename_UTF8_CP866 ...........................***Skipped   0.01 sec
+        Start 571: libarchive_test_read_format_zip_filename_CP932_CP932
+568/924 Test #570: libarchive_test_read_format_zip_filename_UTF8_UTF8_ru .........................***Skipped   0.01 sec
+        Start 572: libarchive_test_read_format_zip_filename_UTF8_CP932
+569/924 Test #571: libarchive_test_read_format_zip_filename_CP932_CP932 ..........................***Skipped   0.02 sec
+        Start 573: libarchive_test_read_format_zip_filename_CP866_CP1251
+570/924 Test #572: libarchive_test_read_format_zip_filename_UTF8_CP932 ...........................***Skipped   0.02 sec
+        Start 574: libarchive_test_read_format_zip_filename_CP866_CP1251_win
+571/924 Test #573: libarchive_test_read_format_zip_filename_CP866_CP1251 .........................***Skipped   0.02 sec
+        Start 575: libarchive_test_read_format_zip_filename_KOI8R_CP1251
+572/924 Test #574: libarchive_test_read_format_zip_filename_CP866_CP1251_win .....................***Skipped   0.02 sec
+        Start 576: libarchive_test_read_format_zip_filename_UTF8_CP1251
+573/924 Test #575: libarchive_test_read_format_zip_filename_KOI8R_CP1251 .........................***Skipped   0.02 sec
+        Start 577: libarchive_test_read_format_zip_filename_KOI8R_UTF8_2
+574/924 Test #576: libarchive_test_read_format_zip_filename_UTF8_CP1251 ..........................***Skipped   0.02 sec
+        Start 578: libarchive_test_read_format_zip_high_compression
+575/924 Test #577: libarchive_test_read_format_zip_filename_KOI8R_UTF8_2 .........................***Skipped   0.02 sec
+        Start 579: libarchive_test_read_format_zip_high_compression2
+576/924 Test #578: libarchive_test_read_format_zip_high_compression ..............................   Passed    0.02 sec
+        Start 580: libarchive_test_read_format_zip_jar
+577/924 Test #580: libarchive_test_read_format_zip_jar ...........................................   Passed    0.02 sec
+        Start 581: libarchive_test_read_format_zip_mac_metadata
+578/924 Test #581: libarchive_test_read_format_zip_mac_metadata ..................................   Passed    0.02 sec
+        Start 582: libarchive_test_read_format_zip_malformed
+579/924 Test #582: libarchive_test_read_format_zip_malformed .....................................   Passed    0.02 sec
+        Start 583: libarchive_test_read_format_zip_msdos
+580/924 Test #583: libarchive_test_read_format_zip_msdos .........................................   Passed    0.02 sec
+        Start 584: libarchive_test_read_format_zip_nested
+581/924 Test #584: libarchive_test_read_format_zip_nested ........................................   Passed    0.02 sec
+        Start 585: libarchive_test_read_format_zip_nofiletype
+582/924 Test #585: libarchive_test_read_format_zip_nofiletype ....................................   Passed    0.02 sec
+        Start 586: libarchive_test_read_format_zip_padded1
+583/924 Test #586: libarchive_test_read_format_zip_padded1 .......................................   Passed    0.02 sec
+        Start 587: libarchive_test_read_format_zip_padded2
+584/924 Test #587: libarchive_test_read_format_zip_padded2 .......................................   Passed    0.02 sec
+        Start 588: libarchive_test_read_format_zip_padded3
+585/924 Test #588: libarchive_test_read_format_zip_padded3 .......................................   Passed    0.02 sec
+        Start 589: libarchive_test_read_format_zip_sfx
+586/924 Test #589: libarchive_test_read_format_zip_sfx ...........................................   Passed    0.02 sec
+        Start 590: libarchive_test_read_format_zip_size_exceeds_declared_stored
+587/924 Test #590: libarchive_test_read_format_zip_size_exceeds_declared_stored ..................   Passed    0.02 sec
+        Start 591: libarchive_test_read_format_zip_size_exceeds_declared_deflate
+588/924 Test #591: libarchive_test_read_format_zip_size_exceeds_declared_deflate .................   Passed    0.02 sec
+        Start 592: libarchive_test_read_format_zip_symlink_unsupported_compression
+589/924 Test #592: libarchive_test_read_format_zip_symlink_unsupported_compression ...............   Passed    0.04 sec
+        Start 593: libarchive_test_read_format_zip_traditional_encryption_data
+590/924 Test #593: libarchive_test_read_format_zip_traditional_encryption_data ...................   Passed    0.02 sec
+        Start 594: libarchive_test_read_format_zip_uncompressed_size_off_by_4gib
+591/924 Test #594: libarchive_test_read_format_zip_uncompressed_size_off_by_4gib .................   Passed    0.02 sec
+        Start 595: libarchive_test_read_format_zip_winzip_aes128
+592/924 Test #595: libarchive_test_read_format_zip_winzip_aes128 .................................   Passed    0.03 sec
+        Start 596: libarchive_test_read_format_zip_winzip_aes256
+593/924 Test #596: libarchive_test_read_format_zip_winzip_aes256 .................................   Passed    0.02 sec
+        Start 597: libarchive_test_read_format_zip_winzip_aes256_stored
+594/924 Test #597: libarchive_test_read_format_zip_winzip_aes256_stored ..........................   Passed    0.02 sec
+        Start 598: libarchive_test_read_format_zip_winzip_aes256_large
+595/924 Test #598: libarchive_test_read_format_zip_winzip_aes256_large ...........................   Passed    0.04 sec
+        Start 599: libarchive_test_read_format_zip_winzip_aes256_large_bzip2
+596/924 Test #599: libarchive_test_read_format_zip_winzip_aes256_large_bzip2 .....................   Passed    0.07 sec
+        Start 600: libarchive_test_read_format_zip_winzip_aes256_large_lzma
+597/924 Test #600: libarchive_test_read_format_zip_winzip_aes256_large_lzma ......................   Passed    0.04 sec
+        Start 601: libarchive_test_read_format_zip_winzip_aes256_large_ppmd
+598/924 Test #601: libarchive_test_read_format_zip_winzip_aes256_large_ppmd ......................   Passed    0.05 sec
+        Start 602: libarchive_test_read_format_zip_winzip_aes256_large_xz
+599/924 Test #602: libarchive_test_read_format_zip_winzip_aes256_large_xz ........................   Passed    0.05 sec
+        Start 603: libarchive_test_read_format_zip_winzip_aes256_large_zstd
+600/924 Test #603: libarchive_test_read_format_zip_winzip_aes256_large_zstd ......................   Passed    0.04 sec
+        Start 604: libarchive_test_read_format_zip_zip64a
+601/924 Test #604: libarchive_test_read_format_zip_zip64a ........................................   Passed    0.02 sec
+        Start 605: libarchive_test_read_format_zip_zip64b
+602/924 Test #605: libarchive_test_read_format_zip_zip64b ........................................   Passed    0.02 sec
+        Start 606: libarchive_test_read_format_zip_deflate_encrypted
+603/924 Test #606: libarchive_test_read_format_zip_deflate_encrypted .............................   Passed    0.02 sec
+        Start 607: libarchive_test_read_format_zip_zipx_bzip2_encrypted
+604/924 Test #607: libarchive_test_read_format_zip_zipx_bzip2_encrypted ..........................   Passed    0.03 sec
+        Start 608: libarchive_test_read_format_zip_zipx_lzma_encrypted
+605/924 Test #608: libarchive_test_read_format_zip_zipx_lzma_encrypted ...........................   Passed    0.03 sec
+        Start 609: libarchive_test_read_format_zip_zipx_xz_encrypted
+606/924 Test #609: libarchive_test_read_format_zip_zipx_xz_encrypted .............................   Passed    0.03 sec
+        Start 610: libarchive_test_read_format_zip_zipx_zstd_encrypted
+607/924 Test #610: libarchive_test_read_format_zip_zipx_zstd_encrypted ...........................   Passed    0.05 sec
+        Start 611: libarchive_test_read_format_zip_deflate_encrypted_streaming
+608/924 Test #611: libarchive_test_read_format_zip_deflate_encrypted_streaming ...................   Passed    0.03 sec
+        Start 612: libarchive_test_read_format_zip_zipx_bzip2_encrypted_streaming
+609/924 Test #612: libarchive_test_read_format_zip_zipx_bzip2_encrypted_streaming ................   Passed    0.02 sec
+        Start 613: libarchive_test_read_format_zip_zipx_lzma_encrypted_streaming
+610/924 Test #613: libarchive_test_read_format_zip_zipx_lzma_encrypted_streaming .................   Passed    0.03 sec
+        Start 614: libarchive_test_read_format_zip_zipx_xz_encrypted_streaming
+611/924 Test #614: libarchive_test_read_format_zip_zipx_xz_encrypted_streaming ...................   Passed    0.03 sec
+        Start 615: libarchive_test_read_format_zip_zipx_zstd_encrypted_streaming
+612/924 Test #615: libarchive_test_read_format_zip_zipx_zstd_encrypted_streaming .................   Passed    0.04 sec
+        Start 616: libarchive_test_read_format_zip_ppmd8_aes256_streaming
+613/924 Test #616: libarchive_test_read_format_zip_ppmd8_aes256_streaming ........................   Passed    0.03 sec
+        Start 617: libarchive_test_read_format_zip_zipx_lzma_oom
+614/924 Test #617: libarchive_test_read_format_zip_zipx_lzma_oom .................................   Passed    0.02 sec
+        Start 618: libarchive_test_read_format_zip_with_invalid_traditional_eocd
+615/924 Test #618: libarchive_test_read_format_zip_with_invalid_traditional_eocd .................   Passed    0.02 sec
+        Start 619: libarchive_test_read_large
+616/924 Test #619: libarchive_test_read_large ....................................................   Passed    0.05 sec
+        Start 620: libarchive_test_read_pax_empty_val_no_nl
+617/924 Test #620: libarchive_test_read_pax_empty_val_no_nl ......................................   Passed    0.02 sec
+        Start 621: libarchive_test_read_pax_xattr_rht_security_selinux
+618/924 Test #579: libarchive_test_read_format_zip_high_compression2 .............................   Passed    1.22 sec
+        Start 622: libarchive_test_read_pax_xattr_schily
+619/924 Test #621: libarchive_test_read_pax_xattr_rht_security_selinux ...........................   Passed    0.02 sec
+        Start 623: libarchive_test_read_pax_truncated
+620/924 Test #622: libarchive_test_read_pax_xattr_schily .........................................   Passed    0.02 sec
+        Start 624: libarchive_test_read_position
+621/924 Test #624: libarchive_test_read_position .................................................   Passed    0.02 sec
+        Start 625: libarchive_test_read_set_format
+622/924 Test #625: libarchive_test_read_set_format ...............................................   Passed    0.02 sec
+        Start 626: libarchive_test_read_set_wrong_format
+623/924 Test #626: libarchive_test_read_set_wrong_format .........................................   Passed    0.02 sec
+        Start 627: libarchive_test_read_append_filter
+624/924 Test #627: libarchive_test_read_append_filter ............................................   Passed    0.01 sec
+        Start 628: libarchive_test_read_append_wrong_filter
+625/924 Test #628: libarchive_test_read_append_wrong_filter ......................................   Passed    0.01 sec
+        Start 629: libarchive_test_read_append_lzop_filter
+626/924 Test #194: libarchive_test_fuzz_zip ......................................................   Passed    9.20 sec
+        Start 630: libarchive_test_read_append_grzip_filter
+627/924 Test #623: libarchive_test_read_pax_truncated ............................................   Passed    0.15 sec
+        Start 631: libarchive_test_read_append_compress_filter
+628/924 Test #631: libarchive_test_read_append_compress_filter ...................................   Passed    0.01 sec
+        Start 632: libarchive_test_read_append_bzip2_filter
+629/924 Test #632: libarchive_test_read_append_bzip2_filter ......................................   Passed    0.02 sec
+        Start 633: libarchive_test_read_append_lrzip_filter
+630/924 Test #629: libarchive_test_read_append_lzop_filter .......................................   Passed    0.29 sec
+        Start 634: libarchive_test_read_append_lz4_filter
+631/924 Test #634: libarchive_test_read_append_lz4_filter ........................................   Passed    0.01 sec
+        Start 635: libarchive_test_read_append_lzip_filter
+632/924 Test #630: libarchive_test_read_append_grzip_filter ......................................   Passed    0.28 sec
+        Start 636: libarchive_test_read_append_lzma_filter
+633/924 Test #635: libarchive_test_read_append_lzip_filter .......................................   Passed    0.02 sec
+        Start 637: libarchive_test_read_append_zstd_filter
+634/924 Test #636: libarchive_test_read_append_lzma_filter .......................................   Passed    0.02 sec
+        Start 638: libarchive_test_read_append_rpm_filter
+635/924 Test #637: libarchive_test_read_append_zstd_filter .......................................   Passed    0.01 sec
+        Start 639: libarchive_test_read_append_uu_filter
+636/924 Test #638: libarchive_test_read_append_rpm_filter ........................................   Passed    0.01 sec
+        Start 640: libarchive_test_read_append_none_filter
+637/924 Test #639: libarchive_test_read_append_uu_filter .........................................   Passed    0.01 sec
+        Start 641: libarchive_test_read_append_filter_program
+638/924 Test #640: libarchive_test_read_append_none_filter .......................................   Passed    0.01 sec
+        Start 642: libarchive_test_read_append_filter_wrong_program
+639/924 Test #641: libarchive_test_read_append_filter_program ....................................   Passed    0.02 sec
+        Start 643: libarchive_test_read_too_many_filters
+640/924 Test #642: libarchive_test_read_append_filter_wrong_program ..............................   Passed    0.02 sec
+        Start 644: libarchive_test_read_truncated
+641/924 Test #643: libarchive_test_read_too_many_filters .........................................   Passed    0.02 sec
+        Start 645: libarchive_test_read_truncated_filter_bzip2
+642/924 Test #633: libarchive_test_read_append_lrzip_filter ......................................***Skipped   0.32 sec
+        Start 646: libarchive_test_read_truncated_filter_compress
+643/924 Test #644: libarchive_test_read_truncated ................................................   Passed    0.03 sec
+        Start 647: libarchive_test_read_truncated_filter_gzip
+644/924 Test #646: libarchive_test_read_truncated_filter_compress ................................   Passed    0.09 sec
+        Start 648: libarchive_test_read_truncated_filter_lzip
+645/924 Test #647: libarchive_test_read_truncated_filter_gzip ....................................   Passed    0.12 sec
+        Start 649: libarchive_test_read_truncated_filter_lzma
+646/924 Test #645: libarchive_test_read_truncated_filter_bzip2 ...................................   Passed    0.33 sec
+        Start 650: libarchive_test_read_truncated_filter_lzop
+647/924 Test #650: libarchive_test_read_truncated_filter_lzop ....................................***Skipped   0.15 sec
+        Start 651: libarchive_test_read_truncated_filter_xz
+648/924 Test #649: libarchive_test_read_truncated_filter_lzma ....................................   Passed    0.57 sec
+        Start 652: libarchive_test_short_writes
+649/924 Test #652: libarchive_test_short_writes ..................................................   Passed    0.01 sec
+        Start 653: libarchive_test_sparse_basic
+650/924 Test #648: libarchive_test_read_truncated_filter_lzip ....................................   Passed    0.68 sec
+        Start 654: libarchive_test_fully_sparse_files
+651/924 Test #654: libarchive_test_fully_sparse_files ............................................   Passed    0.01 sec
+        Start 655: libarchive_test_sparse_iterator
+652/924 Test #655: libarchive_test_sparse_iterator ...............................................   Passed    0.01 sec
+        Start 656: libarchive_test_tar_filenames
+653/924 Test #656: libarchive_test_tar_filenames .................................................   Passed    0.04 sec
+        Start 657: libarchive_test_tar_large
+654/924 Test #657: libarchive_test_tar_large .....................................................   Passed    0.04 sec
+        Start 658: libarchive_test_ustar_filename_encoding_UTF8_CP866
+655/924 Test #658: libarchive_test_ustar_filename_encoding_UTF8_CP866 ............................***Skipped   0.02 sec
+        Start 659: libarchive_test_ustar_filename_encoding_KOI8R_UTF8
+656/924 Test #659: libarchive_test_ustar_filename_encoding_KOI8R_UTF8 ............................***Skipped   0.01 sec
+        Start 660: libarchive_test_ustar_filename_encoding_KOI8R_CP866
+657/924 Test #660: libarchive_test_ustar_filename_encoding_KOI8R_CP866 ...........................***Skipped   0.01 sec
+        Start 661: libarchive_test_ustar_filename_encoding_CP1251_UTF8
+658/924 Test #661: libarchive_test_ustar_filename_encoding_CP1251_UTF8 ...........................***Skipped   0.02 sec
+        Start 662: libarchive_test_ustar_filename_encoding_ru_RU_CP1251
+659/924 Test #662: libarchive_test_ustar_filename_encoding_ru_RU_CP1251 ..........................***Skipped   0.01 sec
+        Start 663: libarchive_test_ustar_filename_encoding_Russian_Russia
+660/924 Test #663: libarchive_test_ustar_filename_encoding_Russian_Russia ........................***Skipped   0.01 sec
+        Start 664: libarchive_test_ustar_filename_encoding_EUCJP_UTF8
+661/924 Test #664: libarchive_test_ustar_filename_encoding_EUCJP_UTF8 ............................***Skipped   0.01 sec
+        Start 665: libarchive_test_ustar_filename_encoding_EUCJP_CP932
+662/924 Test #665: libarchive_test_ustar_filename_encoding_EUCJP_CP932 ...........................***Skipped   0.01 sec
+        Start 666: libarchive_test_ustar_filename_encoding_CP932_UTF8
+663/924 Test #651: libarchive_test_read_truncated_filter_xz ......................................   Passed    0.55 sec
+        Start 667: libarchive_test_ustar_filename_encoding_UTF16_win
+664/924 Test #666: libarchive_test_ustar_filename_encoding_CP932_UTF8 ............................***Skipped   0.01 sec
+        Start 668: libarchive_test_ustar_filename_encoding_fail_UTF16_win
+665/924 Test #667: libarchive_test_ustar_filename_encoding_UTF16_win .............................***Skipped   0.02 sec
+        Start 669: libarchive_test_ustar_filenames
+666/924 Test #668: libarchive_test_ustar_filename_encoding_fail_UTF16_win ........................***Skipped   0.02 sec
+        Start 670: libarchive_test_v7tar_filename_encoding_fail_UTF16_win
+667/924 Test #669: libarchive_test_ustar_filenames ...............................................   Passed    0.02 sec
+        Start 671: libarchive_test_warn_missing_hardlink_target
+668/924 Test #670: libarchive_test_v7tar_filename_encoding_fail_UTF16_win ........................***Skipped   0.01 sec
+        Start 672: libarchive_test_write_disk
+669/924 Test #671: libarchive_test_warn_missing_hardlink_target ..................................   Passed    0.01 sec
+        Start 673: libarchive_test_write_disk_appledouble
+670/924 Test #672: libarchive_test_write_disk ....................................................   Passed    0.01 sec
+        Start 674: libarchive_test_write_disk_appledouble_zip
+671/924 Test #673: libarchive_test_write_disk_appledouble ........................................***Skipped   0.02 sec
+        Start 675: libarchive_test_write_disk_failures
+672/924 Test #674: libarchive_test_write_disk_appledouble_zip ....................................***Skipped   0.02 sec
+        Start 676: libarchive_test_write_disk_fixup
+673/924 Test #675: libarchive_test_write_disk_failures ...........................................   Passed    0.02 sec
+        Start 677: libarchive_test_write_disk_hardlink
+674/924 Test #676: libarchive_test_write_disk_fixup ..............................................   Passed    0.01 sec
+        Start 678: libarchive_test_write_disk_hfs_compression
+675/924 Test #677: libarchive_test_write_disk_hardlink ...........................................   Passed    0.02 sec
+        Start 679: libarchive_test_write_disk_lookup
+676/924 Test #678: libarchive_test_write_disk_hfs_compression ....................................***Skipped   0.01 sec
+        Start 680: libarchive_test_write_disk_mac_metadata
+677/924 Test #679: libarchive_test_write_disk_lookup .............................................   Passed    0.01 sec
+        Start 681: libarchive_test_write_disk_no_hfs_compression
+678/924 Test #680: libarchive_test_write_disk_mac_metadata .......................................***Skipped   0.01 sec
+        Start 682: libarchive_test_write_disk_perms
+679/924 Test #681: libarchive_test_write_disk_no_hfs_compression .................................***Skipped   0.01 sec
+        Start 683: libarchive_test_write_disk_secure
+680/924 Test #682: libarchive_test_write_disk_perms ..............................................   Passed    0.02 sec
+        Start 684: libarchive_test_write_disk_secure_symlinks_only
+681/924 Test #684: libarchive_test_write_disk_secure_symlinks_only ...............................   Passed    0.02 sec
+        Start 685: libarchive_test_write_disk_secure_noabsolutepaths
+682/924 Test #683: libarchive_test_write_disk_secure .............................................   Passed    0.02 sec
+        Start 686: libarchive_test_write_disk_secure744
+683/924 Test #685: libarchive_test_write_disk_secure_noabsolutepaths .............................   Passed    0.01 sec
+        Start 687: libarchive_test_write_disk_secure745
+684/924 Test #687: libarchive_test_write_disk_secure745 ..........................................   Passed    0.02 sec
+        Start 688: libarchive_test_write_disk_secure746a
+685/924 Test #688: libarchive_test_write_disk_secure746a .........................................   Passed    0.01 sec
+        Start 689: libarchive_test_write_disk_secure746b
+686/924 Test #689: libarchive_test_write_disk_secure746b .........................................   Passed    0.02 sec
+        Start 690: libarchive_test_write_disk_sparse
+687/924 Test #690: libarchive_test_write_disk_sparse .............................................   Passed    0.09 sec
+        Start 691: libarchive_test_write_disk_symlink
+688/924 Test #691: libarchive_test_write_disk_symlink ............................................   Passed    0.02 sec
+        Start 692: libarchive_test_write_disk_times
+689/924 Test #692: libarchive_test_write_disk_times ..............................................***Skipped   0.01 sec
+        Start 693: libarchive_test_write_filter_b64encode
+690/924 Test #693: libarchive_test_write_filter_b64encode ........................................   Passed    0.03 sec
+        Start 694: libarchive_test_write_filter_bzip2
+691/924 Test #686: libarchive_test_write_disk_secure744 ..........................................   Passed    0.56 sec
+        Start 695: libarchive_test_write_filter_compress
+692/924 Test #695: libarchive_test_write_filter_compress .........................................   Passed    0.02 sec
+        Start 696: libarchive_test_write_filter_gzip
+693/924 Test #696: libarchive_test_write_filter_gzip .............................................   Passed    0.03 sec
+        Start 697: libarchive_test_write_filter_gzip_timestamp
+694/924 Test #697: libarchive_test_write_filter_gzip_timestamp ...................................   Passed    0.01 sec
+        Start 698: libarchive_test_write_filter_lrzip
+695/924 Test #694: libarchive_test_write_filter_bzip2 ............................................   Passed    0.45 sec
+        Start 699: libarchive_test_write_filter_lz4
+696/924 Test #699: libarchive_test_write_filter_lz4 ..............................................   Passed    0.01 sec
+        Start 700: libarchive_test_write_filter_lz4_disable_stream_checksum
+697/924 Test #700: libarchive_test_write_filter_lz4_disable_stream_checksum ......................   Passed    0.01 sec
+        Start 701: libarchive_test_write_filter_lz4_enable_block_checksum
+698/924 Test #701: libarchive_test_write_filter_lz4_enable_block_checksum ........................   Passed    0.01 sec
+        Start 702: libarchive_test_write_filter_lz4_block_size_4
+699/924 Test #702: libarchive_test_write_filter_lz4_block_size_4 .................................   Passed    0.02 sec
+        Start 703: libarchive_test_write_filter_lz4_block_size_5
+700/924 Test #703: libarchive_test_write_filter_lz4_block_size_5 .................................   Passed    0.01 sec
+        Start 704: libarchive_test_write_filter_lz4_block_size_6
+701/924 Test #704: libarchive_test_write_filter_lz4_block_size_6 .................................   Passed    0.01 sec
+        Start 705: libarchive_test_write_filter_lz4_block_dependence
+702/924 Test #705: libarchive_test_write_filter_lz4_block_dependence .............................   Passed    0.01 sec
+        Start 706: libarchive_test_write_filter_lzip
+703/924 Test #698: libarchive_test_write_filter_lrzip ............................................***Skipped   0.16 sec
+        Start 707: libarchive_test_write_filter_lzma
+704/924 Test #706: libarchive_test_write_filter_lzip .............................................   Passed    0.08 sec
+        Start 708: libarchive_test_write_filter_lzop
+705/924 Test #707: libarchive_test_write_filter_lzma .............................................   Passed    0.08 sec
+        Start 709: libarchive_test_write_filter_program
+706/924 Test #709: libarchive_test_write_filter_program ..........................................   Passed    0.02 sec
+        Start 710: libarchive_test_write_filter_uuencode
+707/924 Test #710: libarchive_test_write_filter_uuencode .........................................   Passed    0.03 sec
+        Start 711: libarchive_test_write_filter_xz
+708/924 Test #711: libarchive_test_write_filter_xz ...............................................   Passed    0.08 sec
+        Start 712: libarchive_test_write_filter_zstd
+709/924 Test #708: libarchive_test_write_filter_lzop .............................................***Skipped   0.15 sec
+        Start 713: libarchive_test_write_format_7zip
+710/924 Test #712: libarchive_test_write_filter_zstd .............................................   Passed    0.03 sec
+        Start 714: libarchive_test_write_format_7zip_basic_bzip2
+711/924 Test #713: libarchive_test_write_format_7zip .............................................   Passed    0.03 sec
+        Start 715: libarchive_test_write_format_7zip_basic_copy
+712/924 Test #714: libarchive_test_write_format_7zip_basic_bzip2 .................................   Passed    0.02 sec
+        Start 716: libarchive_test_write_format_7zip_basic_deflate
+713/924 Test #715: libarchive_test_write_format_7zip_basic_copy ..................................   Passed    0.01 sec
+        Start 717: libarchive_test_write_format_7zip_basic_lzma1
+714/924 Test #716: libarchive_test_write_format_7zip_basic_deflate ...............................   Passed    0.02 sec
+        Start 718: libarchive_test_write_format_7zip_basic_lzma2
+715/924 Test #717: libarchive_test_write_format_7zip_basic_lzma1 .................................   Passed    0.02 sec
+        Start 719: libarchive_test_write_format_7zip_basic_ppmd
+716/924 Test #718: libarchive_test_write_format_7zip_basic_lzma2 .................................   Passed    0.01 sec
+        Start 720: libarchive_test_write_format_7zip_basic_zstd
+717/924 Test #719: libarchive_test_write_format_7zip_basic_ppmd ..................................   Passed    0.02 sec
+        Start 721: libarchive_test_write_format_7zip_unregister
+718/924 Test #720: libarchive_test_write_format_7zip_basic_zstd ..................................   Passed    0.02 sec
+        Start 722: libarchive_test_write_format_7zip_empty_archive
+719/924 Test #721: libarchive_test_write_format_7zip_unregister ..................................   Passed    0.02 sec
+        Start 723: libarchive_test_write_format_7zip_empty_files
+720/924 Test #722: libarchive_test_write_format_7zip_empty_archive ...............................   Passed    0.02 sec
+        Start 724: libarchive_test_write_format_7zip_large_bzip2
+721/924 Test #723: libarchive_test_write_format_7zip_empty_files .................................   Passed    0.02 sec
+        Start 725: libarchive_test_write_format_7zip_large_copy
+722/924 Test #725: libarchive_test_write_format_7zip_large_copy ..................................   Passed    0.03 sec
+        Start 726: libarchive_test_write_format_7zip_large_deflate
+723/924 Test #726: libarchive_test_write_format_7zip_large_deflate ...............................   Passed    0.05 sec
+        Start 727: libarchive_test_write_format_7zip_large_lzma1
+724/924 Test #724: libarchive_test_write_format_7zip_large_bzip2 .................................   Passed    0.31 sec
+        Start 728: libarchive_test_write_format_7zip_large_lzma2
+725/924 Test #192: libarchive_test_fuzz_rar ......................................................   Passed   12.57 sec
+        Start 729: libarchive_test_write_format_7zip_large_ppmd
+726/924 Test #729: libarchive_test_write_format_7zip_large_ppmd ..................................   Passed    0.03 sec
+        Start 730: libarchive_test_write_format_7zip_large_zstd
+727/924 Test #730: libarchive_test_write_format_7zip_large_zstd ..................................   Passed    0.03 sec
+        Start 731: libarchive_test_write_format_ar
+728/924 Test #727: libarchive_test_write_format_7zip_large_lzma1 .................................   Passed    0.46 sec
+        Start 732: libarchive_test_write_format_cpio
+729/924 Test #731: libarchive_test_write_format_ar ...............................................   Passed    0.01 sec
+        Start 733: libarchive_test_write_format_cpio_empty
+730/924 Test #732: libarchive_test_write_format_cpio .............................................   Passed    0.01 sec
+        Start 734: libarchive_test_write_format_cpio_newc
+731/924 Test #733: libarchive_test_write_format_cpio_empty .......................................   Passed    0.01 sec
+        Start 735: libarchive_test_write_format_cpio_odc
+732/924 Test #734: libarchive_test_write_format_cpio_newc ........................................   Passed    0.01 sec
+        Start 736: libarchive_test_write_format_gnutar
+733/924 Test #735: libarchive_test_write_format_cpio_odc .........................................   Passed    0.01 sec
+        Start 737: libarchive_test_write_format_gnutar_switch
+734/924 Test #736: libarchive_test_write_format_gnutar ...........................................   Passed    0.01 sec
+        Start 738: libarchive_test_write_format_gnutar_filenames
+735/924 Test #737: libarchive_test_write_format_gnutar_switch ....................................   Passed    0.02 sec
+        Start 739: libarchive_test_write_format_gnutar_linknames
+736/924 Test #738: libarchive_test_write_format_gnutar_filenames .................................   Passed    0.07 sec
+        Start 740: libarchive_test_write_format_gnutar_huge
+737/924 Test #739: libarchive_test_write_format_gnutar_linknames .................................   Passed    0.07 sec
+        Start 741: libarchive_test_write_format_iso9660
+738/924 Test #740: libarchive_test_write_format_gnutar_huge ......................................   Passed    0.01 sec
+        Start 742: libarchive_test_write_format_iso9660_boot
+739/924 Test #728: libarchive_test_write_format_7zip_large_lzma2 .................................   Passed    0.36 sec
+        Start 743: libarchive_test_write_format_iso9660_empty
+740/924 Test #741: libarchive_test_write_format_iso9660 ..........................................   Passed    0.01 sec
+        Start 744: libarchive_test_write_format_iso9660_filename
+741/924 Test #742: libarchive_test_write_format_iso9660_boot .....................................   Passed    0.02 sec
+        Start 745: libarchive_test_write_format_iso9660_joliet_id
+742/924 Test #743: libarchive_test_write_format_iso9660_empty ....................................   Passed    0.02 sec
+        Start 746: libarchive_test_write_format_iso9660_rockridge
+743/924 Test #745: libarchive_test_write_format_iso9660_joliet_id ................................   Passed    0.02 sec
+        Start 747: libarchive_test_write_format_iso9660_rockridge_overflow
+744/924 Test #746: libarchive_test_write_format_iso9660_rockridge ................................   Passed    0.02 sec
+        Start 748: libarchive_test_write_format_iso9660_zisofs
+745/924 Test #747: libarchive_test_write_format_iso9660_rockridge_overflow .......................   Passed    0.01 sec
+        Start 749: libarchive_test_write_format_iso9660_zisofs_overflow
+746/924 Test #748: libarchive_test_write_format_iso9660_zisofs ...................................   Passed    0.02 sec
+        Start 750: libarchive_test_write_format_iso9660_null_deref
+747/924 Test #750: libarchive_test_write_format_iso9660_null_deref ...............................   Passed    0.02 sec
+        Start 751: libarchive_test_write_format_iso9660_underflow
+748/924 Test #744: libarchive_test_write_format_iso9660_filename .................................   Passed    0.07 sec
+        Start 752: libarchive_test_write_format_iso9660_joliet_overflow
+749/924 Test #752: libarchive_test_write_format_iso9660_joliet_overflow ..........................   Passed    0.01 sec
+        Start 753: libarchive_test_write_format_iso9660_duplicate_identifier_truncation
+750/924 Test #751: libarchive_test_write_format_iso9660_underflow ................................   Passed    0.02 sec
+        Start 754: libarchive_test_write_format_iso9660_symlink
+751/924 Test #753: libarchive_test_write_format_iso9660_duplicate_identifier_truncation ..........   Passed    0.01 sec
+        Start 755: libarchive_test_write_format_mtree
+752/924 Test #755: libarchive_test_write_format_mtree ............................................   Passed    0.02 sec
+        Start 756: libarchive_test_write_format_mtree_no_leading_dotslash
+753/924 Test #756: libarchive_test_write_format_mtree_no_leading_dotslash ........................   Passed    0.01 sec
+        Start 757: libarchive_test_write_format_mtree_absolute
+754/924 Test #757: libarchive_test_write_format_mtree_absolute ...................................   Passed    0.01 sec
+        Start 758: libarchive_test_write_format_mtree_absolute_path
+755/924 Test #758: libarchive_test_write_format_mtree_absolute_path ..............................   Passed    0.01 sec
+        Start 759: libarchive_test_write_format_mtree_classic
+756/924 Test #759: libarchive_test_write_format_mtree_classic ....................................   Passed    0.01 sec
+        Start 760: libarchive_test_write_format_mtree_classic_indent
+757/924 Test #754: libarchive_test_write_format_iso9660_symlink ..................................   Passed    0.09 sec
+        Start 761: libarchive_test_write_format_mtree_dotdot
+758/924 Test #760: libarchive_test_write_format_mtree_classic_indent .............................   Passed    0.01 sec
+        Start 762: libarchive_test_write_format_mtree_fflags
+759/924 Test #761: libarchive_test_write_format_mtree_dotdot .....................................   Passed    0.01 sec
+        Start 763: libarchive_test_write_format_mtree_no_separator
+760/924 Test #762: libarchive_test_write_format_mtree_fflags .....................................***Skipped   0.01 sec
+        Start 764: libarchive_test_write_format_mtree_digests_no_digests_set_no_data
+761/924 Test #763: libarchive_test_write_format_mtree_no_separator ...............................   Passed    0.01 sec
+        Start 765: libarchive_test_write_format_mtree_digests_no_digests_set_empty_data
+762/924 Test #764: libarchive_test_write_format_mtree_digests_no_digests_set_no_data .............   Passed    0.01 sec
+        Start 766: libarchive_test_write_format_mtree_digests_no_digests_set_non_empty_data
+763/924 Test #765: libarchive_test_write_format_mtree_digests_no_digests_set_empty_data ..........   Passed    0.02 sec
+        Start 767: libarchive_test_write_format_mtree_digests_md5_digest_set_no_data
+764/924 Test #766: libarchive_test_write_format_mtree_digests_no_digests_set_non_empty_data ......   Passed    0.02 sec
+        Start 768: libarchive_test_write_format_mtree_digests_md5_digest_set_empty_data
+765/924 Test #767: libarchive_test_write_format_mtree_digests_md5_digest_set_no_data .............   Passed    0.01 sec
+        Start 769: libarchive_test_write_format_mtree_digests_md5_digest_set_non_empty_data
+766/924 Test #768: libarchive_test_write_format_mtree_digests_md5_digest_set_empty_data ..........   Passed    0.01 sec
+        Start 770: libarchive_test_write_format_mtree_digests_rmd160_digest_set_no_data
+767/924 Test #769: libarchive_test_write_format_mtree_digests_md5_digest_set_non_empty_data ......   Passed    0.01 sec
+        Start 771: libarchive_test_write_format_mtree_digests_rmd160_digest_set_empty_data
+768/924 Test #770: libarchive_test_write_format_mtree_digests_rmd160_digest_set_no_data ..........   Passed    0.02 sec
+        Start 772: libarchive_test_write_format_mtree_digests_rmd160_digest_set_non_empty_data
+769/924 Test #771: libarchive_test_write_format_mtree_digests_rmd160_digest_set_empty_data .......   Passed    0.02 sec
+        Start 773: libarchive_test_write_format_mtree_digests_sha1_digest_set_no_data
+770/924 Test #772: libarchive_test_write_format_mtree_digests_rmd160_digest_set_non_empty_data ...   Passed    0.02 sec
+        Start 774: libarchive_test_write_format_mtree_digests_sha1_digest_set_empty_data
+771/924 Test #773: libarchive_test_write_format_mtree_digests_sha1_digest_set_no_data ............   Passed    0.02 sec
+        Start 775: libarchive_test_write_format_mtree_digests_sha1_digest_set_non_empty_data
+772/924 Test #774: libarchive_test_write_format_mtree_digests_sha1_digest_set_empty_data .........   Passed    0.02 sec
+        Start 776: libarchive_test_write_format_mtree_digests_sha256_digest_set_no_data
+773/924 Test #775: libarchive_test_write_format_mtree_digests_sha1_digest_set_non_empty_data .....   Passed    0.01 sec
+        Start 777: libarchive_test_write_format_mtree_digests_sha256_digest_set_empty_data
+774/924 Test #776: libarchive_test_write_format_mtree_digests_sha256_digest_set_no_data ..........   Passed    0.02 sec
+        Start 778: libarchive_test_write_format_mtree_digests_sha256_digest_set_non_empty_data
+775/924 Test #777: libarchive_test_write_format_mtree_digests_sha256_digest_set_empty_data .......   Passed    0.02 sec
+        Start 779: libarchive_test_write_format_mtree_digests_sha384_digest_set_no_data
+776/924 Test #778: libarchive_test_write_format_mtree_digests_sha256_digest_set_non_empty_data ...   Passed    0.01 sec
+        Start 780: libarchive_test_write_format_mtree_digests_sha384_digest_set_empty_data
+777/924 Test #779: libarchive_test_write_format_mtree_digests_sha384_digest_set_no_data ..........   Passed    0.01 sec
+        Start 781: libarchive_test_write_format_mtree_digests_sha384_digest_set_non_empty_data
+778/924 Test #780: libarchive_test_write_format_mtree_digests_sha384_digest_set_empty_data .......   Passed    0.01 sec
+        Start 782: libarchive_test_write_format_mtree_digests_sha512_digest_set_no_data
+779/924 Test #781: libarchive_test_write_format_mtree_digests_sha384_digest_set_non_empty_data ...   Passed    0.02 sec
+        Start 783: libarchive_test_write_format_mtree_digests_sha512_digest_set_empty_data
+780/924 Test #782: libarchive_test_write_format_mtree_digests_sha512_digest_set_no_data ..........   Passed    0.02 sec
+        Start 784: libarchive_test_write_format_mtree_digests_sha512_digest_set_non_empty_data
+781/924 Test #783: libarchive_test_write_format_mtree_digests_sha512_digest_set_empty_data .......   Passed    0.01 sec
+        Start 785: libarchive_test_write_format_mtree_quoted_filename
+782/924 Test #784: libarchive_test_write_format_mtree_digests_sha512_digest_set_non_empty_data ...   Passed    0.01 sec
+        Start 786: libarchive_test_write_format_mtree_null_deref
+783/924 Test #785: libarchive_test_write_format_mtree_quoted_filename ............................   Passed    0.02 sec
+        Start 787: libarchive_test_write_format_mtree_no_set_symlink
+784/924 Test #786: libarchive_test_write_format_mtree_null_deref .................................   Passed    0.01 sec
+        Start 788: libarchive_test_write_format_mtree_reg_dot_root
+785/924 Test #787: libarchive_test_write_format_mtree_no_set_symlink .............................   Passed    0.01 sec
+        Start 789: libarchive_test_write_format_pax
+786/924 Test #788: libarchive_test_write_format_mtree_reg_dot_root ...............................   Passed    0.01 sec
+        Start 790: libarchive_test_write_format_pax_align
+787/924 Test #789: libarchive_test_write_format_pax ..............................................   Passed    0.02 sec
+        Start 791: libarchive_test_write_format_raw
+788/924 Test #790: libarchive_test_write_format_pax_align ........................................   Passed    0.02 sec
+        Start 792: libarchive_test_write_format_raw_b64
+789/924 Test #791: libarchive_test_write_format_raw ..............................................   Passed    0.01 sec
+        Start 793: libarchive_test_write_format_shar_empty
+790/924 Test #792: libarchive_test_write_format_raw_b64 ..........................................   Passed    0.02 sec
+        Start 794: libarchive_test_write_format_tar
+791/924 Test #793: libarchive_test_write_format_shar_empty .......................................   Passed    0.01 sec
+        Start 795: libarchive_test_write_format_tar_empty_dirname
+792/924 Test #794: libarchive_test_write_format_tar ..............................................   Passed    0.01 sec
+        Start 796: libarchive_test_write_format_tar_empty
+793/924 Test #795: libarchive_test_write_format_tar_empty_dirname ................................   Passed    0.01 sec
+        Start 797: libarchive_test_write_format_tar_sparse
+794/924 Test #796: libarchive_test_write_format_tar_empty ........................................   Passed    0.01 sec
+        Start 798: libarchive_test_write_format_tar_ustar
+795/924 Test #797: libarchive_test_write_format_tar_sparse .......................................   Passed    0.01 sec
+        Start 799: libarchive_test_write_format_tar_v7tar
+796/924 Test #798: libarchive_test_write_format_tar_ustar ........................................   Passed    0.01 sec
+        Start 800: libarchive_test_write_format_warc
+797/924 Test #799: libarchive_test_write_format_tar_v7tar ........................................   Passed    0.01 sec
+        Start 801: libarchive_test_write_format_warc_size
+798/924 Test #800: libarchive_test_write_format_warc .............................................   Passed    0.01 sec
+        Start 802: libarchive_test_write_format_warc_incomplete
+799/924 Test #801: libarchive_test_write_format_warc_size ........................................   Passed    0.01 sec
+        Start 803: libarchive_test_write_format_warc_warcinfo_output_error
+800/924 Test #802: libarchive_test_write_format_warc_incomplete ..................................   Passed    0.01 sec
+        Start 804: libarchive_test_write_format_warc_resource_output_error
+801/924 Test #803: libarchive_test_write_format_warc_warcinfo_output_error .......................   Passed    0.01 sec
+        Start 805: libarchive_test_write_format_warc_empty
+802/924 Test #804: libarchive_test_write_format_warc_resource_output_error .......................   Passed    0.01 sec
+        Start 806: libarchive_test_write_format_xar
+803/924 Test #805: libarchive_test_write_format_warc_empty .......................................   Passed    0.02 sec
+        Start 807: libarchive_test_write_format_xar_entry_trunc
+804/924 Test #806: libarchive_test_write_format_xar ..............................................***Skipped   0.01 sec
+        Start 808: libarchive_test_write_format_xar_unregister
+805/924 Test #807: libarchive_test_write_format_xar_entry_trunc ..................................   Passed    0.02 sec
+        Start 809: libarchive_test_write_format_xar_empty
+806/924 Test #808: libarchive_test_write_format_xar_unregister ...................................   Passed    0.02 sec
+        Start 810: libarchive_test_write_format_xar_fflags
+807/924 Test #809: libarchive_test_write_format_xar_empty ........................................   Passed    0.01 sec
+        Start 811: libarchive_test_write_format_xar_strcpy_overlap
+808/924 Test #810: libarchive_test_write_format_xar_fflags .......................................   Passed    0.01 sec
+        Start 812: libarchive_test_write_format_xar_underflow
+809/924 Test #811: libarchive_test_write_format_xar_strcpy_overlap ...............................   Passed    0.02 sec
+        Start 813: libarchive_test_write_format_zip
+810/924 Test #812: libarchive_test_write_format_xar_underflow ....................................   Passed    0.02 sec
+        Start 814: libarchive_test_write_format_zip64
+811/924 Test #813: libarchive_test_write_format_zip ..............................................   Passed    0.01 sec
+        Start 815: libarchive_test_write_format_zip_traditional_pkware_encryption
+812/924 Test #814: libarchive_test_write_format_zip64 ............................................   Passed    0.01 sec
+        Start 816: libarchive_test_write_format_zip_winzip_aes128_encryption
+813/924 Test #815: libarchive_test_write_format_zip_traditional_pkware_encryption ................   Passed    0.02 sec
+        Start 817: libarchive_test_write_format_zip_winzip_aes256_encryption
+814/924 Test #816: libarchive_test_write_format_zip_winzip_aes128_encryption .....................   Passed    0.04 sec
+        Start 818: libarchive_test_write_format_zip64_stream
+815/924 Test #818: libarchive_test_write_format_zip64_stream .....................................   Passed    0.01 sec
+        Start 819: libarchive_test_write_format_zip_compression_store
+816/924 Test #819: libarchive_test_write_format_zip_compression_store ............................   Passed    0.01 sec
+        Start 820: libarchive_test_write_format_zip_compression_bzip2
+817/924 Test #817: libarchive_test_write_format_zip_winzip_aes256_encryption .....................   Passed    0.07 sec
+        Start 821: libarchive_test_write_format_zip_compression_lzma_xz
+818/924 Test #820: libarchive_test_write_format_zip_compression_bzip2 ............................   Passed    0.01 sec
+        Start 822: libarchive_test_write_format_zip_compression_zstd
+819/924 Test #821: libarchive_test_write_format_zip_compression_lzma_xz ..........................   Passed    0.01 sec
+        Start 823: libarchive_test_write_format_zip_empty
+820/924 Test #823: libarchive_test_write_format_zip_empty ........................................   Passed    0.01 sec
+        Start 824: libarchive_test_write_format_zip_empty_pathname
+821/924 Test #824: libarchive_test_write_format_zip_empty_pathname ...............................   Passed    0.02 sec
+        Start 825: libarchive_test_write_format_zip_empty_zip64
+822/924 Test #822: libarchive_test_write_format_zip_compression_zstd .............................   Passed    0.05 sec
+        Start 826: libarchive_test_write_format_zip_size_unset
+823/924 Test #825: libarchive_test_write_format_zip_empty_zip64 ..................................   Passed    0.01 sec
+        Start 827: libarchive_test_write_format_zip_file
+824/924 Test #826: libarchive_test_write_format_zip_size_unset ...................................   Passed    0.01 sec
+        Start 828: libarchive_test_write_format_zip_file_zip64
+825/924 Test #827: libarchive_test_write_format_zip_file .........................................   Passed    0.01 sec
+        Start 829: libarchive_test_write_format_zip_large
+826/924 Test #828: libarchive_test_write_format_zip_file_zip64 ...................................   Passed    0.01 sec
+        Start 830: libarchive_test_write_format_zip_long_pathname
+827/924 Test #830: libarchive_test_write_format_zip_long_pathname ................................   Passed    0.01 sec
+        Start 831: libarchive_test_write_format_zip_stream
+828/924 Test #831: libarchive_test_write_format_zip_stream .......................................   Passed    0.01 sec
+        Start 832: libarchive_test_write_format_zip_windows_path
+829/924 Test #832: libarchive_test_write_format_zip_windows_path .................................   Passed    0.01 sec
+        Start 833: libarchive_test_write_format_zip_zip64_oversize
+830/924 Test #833: libarchive_test_write_format_zip_zip64_oversize ...............................   Passed    0.01 sec
+        Start 834: libarchive_test_write_open_memory
+831/924 Test #834: libarchive_test_write_open_memory .............................................   Passed    0.02 sec
+        Start 835: libarchive_test_write_read_format_zip
+832/924 Test #835: libarchive_test_write_read_format_zip .........................................   Passed    0.02 sec
+        Start 836: libarchive_test_write_read_format_zip_improved_streaming
+833/924 Test #836: libarchive_test_write_read_format_zip_improved_streaming ......................   Passed    0.02 sec
+        Start 837: libarchive_test_write_read_format_zip64
+834/924 Test #837: libarchive_test_write_read_format_zip64 .......................................   Passed    0.02 sec
+        Start 838: libarchive_test_write_read_format_zip64_improved_streaming
+835/924 Test #838: libarchive_test_write_read_format_zip64_improved_streaming ....................   Passed    0.01 sec
+        Start 839: libarchive_test_xattr_platform
+836/924 Test #839: libarchive_test_xattr_platform ................................................   Passed    0.01 sec
+        Start 840: libarchive_test_zip_filename_encoding_UTF8
+837/924 Test #840: libarchive_test_zip_filename_encoding_UTF8 ....................................***Skipped   0.01 sec
+        Start 841: libarchive_test_zip_filename_encoding_KOI8R
+838/924 Test #841: libarchive_test_zip_filename_encoding_KOI8R ...................................***Skipped   0.01 sec
+        Start 842: libarchive_test_zip_filename_encoding_ru_RU_CP1251
+839/924 Test #842: libarchive_test_zip_filename_encoding_ru_RU_CP1251 ............................***Skipped   0.01 sec
+        Start 843: libarchive_test_zip_filename_encoding_Russian_Russia
+840/924 Test #843: libarchive_test_zip_filename_encoding_Russian_Russia ..........................***Skipped   0.01 sec
+        Start 844: libarchive_test_zip_filename_encoding_EUCJP
+841/924 Test #844: libarchive_test_zip_filename_encoding_EUCJP ...................................***Skipped   0.01 sec
+        Start 845: libarchive_test_zip_filename_encoding_CP932
+842/924 Test #845: libarchive_test_zip_filename_encoding_CP932 ...................................***Skipped   0.01 sec
+        Start 846: libarchive_test_zip_filename_encoding_UTF16_win
+843/924 Test #846: libarchive_test_zip_filename_encoding_UTF16_win ...............................***Skipped   0.02 sec
+        Start 847: libarchive_test_zip_filename_encoding_fail_UTF16_win
+844/924 Test #847: libarchive_test_zip_filename_encoding_fail_UTF16_win ..........................***Skipped   0.02 sec
+        Start 848: bsdtar_test_0
+845/924 Test #848: bsdtar_test_0 .................................................................   Passed    0.03 sec
+        Start 849: bsdtar_test_basic
+846/924 Test #849: bsdtar_test_basic .............................................................   Passed    0.04 sec
+        Start 850: bsdtar_test_copy
+847/924 Test #850: bsdtar_test_copy ..............................................................   Passed    0.50 sec
+        Start 851: bsdtar_test_crlf_mtree
+848/924 Test #851: bsdtar_test_crlf_mtree ........................................................   Passed    0.02 sec
+        Start 852: bsdtar_test_empty_mtree
+849/924 Test #852: bsdtar_test_empty_mtree .......................................................   Passed    0.02 sec
+        Start 853: bsdtar_test_extract_tar_Z
+850/924 Test #853: bsdtar_test_extract_tar_Z .....................................................   Passed    0.03 sec
+        Start 854: bsdtar_test_extract_tar_bz2
+851/924 Test #749: libarchive_test_write_format_iso9660_zisofs_overflow ..........................   Passed    1.66 sec
+        Start 855: bsdtar_test_extract_tar_grz
+852/924 Test #854: bsdtar_test_extract_tar_bz2 ...................................................   Passed    0.04 sec
+        Start 856: bsdtar_test_extract_tar_gz
+853/924 Test #856: bsdtar_test_extract_tar_gz ....................................................   Passed    0.04 sec
+        Start 857: bsdtar_test_extract_tar_lrz
+854/924 Test #855: bsdtar_test_extract_tar_grz ...................................................***Skipped   0.34 sec
+        Start 858: bsdtar_test_extract_tar_lz
+855/924 Test #858: bsdtar_test_extract_tar_lz ....................................................   Passed    0.04 sec
+        Start 859: bsdtar_test_extract_tar_lz4
+856/924 Test #857: bsdtar_test_extract_tar_lrz ...................................................***Skipped   0.35 sec
+        Start 860: bsdtar_test_extract_tar_lzma
+857/924 Test #859: bsdtar_test_extract_tar_lz4 ...................................................   Passed    0.04 sec
+        Start 861: bsdtar_test_extract_tar_lzo
+858/924 Test #860: bsdtar_test_extract_tar_lzma ..................................................   Passed    0.05 sec
+        Start 862: bsdtar_test_extract_tar_xz
+859/924 Test #862: bsdtar_test_extract_tar_xz ....................................................   Passed    0.04 sec
+        Start 863: bsdtar_test_extract_tar_zstd
+860/924 Test #863: bsdtar_test_extract_tar_zstd ..................................................   Passed    0.04 sec
+        Start 864: bsdtar_test_format_newc
+861/924 Test #864: bsdtar_test_format_newc .......................................................   Passed    0.04 sec
+        Start 865: bsdtar_test_help
+862/924 Test #865: bsdtar_test_help ..............................................................   Passed    0.03 sec
+        Start 866: bsdtar_test_leading_slash
+863/924 Test #866: bsdtar_test_leading_slash .....................................................   Passed    0.03 sec
+        Start 867: bsdtar_test_list_item
+864/924 Test #867: bsdtar_test_list_item .........................................................   Passed    0.04 sec
+        Start 868: bsdtar_test_missing_file
+865/924 Test #868: bsdtar_test_missing_file ......................................................   Passed    0.03 sec
+        Start 869: bsdtar_test_option_C_upper
+866/924 Test #861: bsdtar_test_extract_tar_lzo ...................................................***Skipped   0.35 sec
+        Start 870: bsdtar_test_option_C_mtree
+867/924 Test #870: bsdtar_test_option_C_mtree ....................................................   Passed    0.02 sec
+        Start 871: bsdtar_test_option_H_upper
+868/924 Test #869: bsdtar_test_option_C_upper ....................................................   Passed    0.08 sec
+        Start 872: bsdtar_test_option_L_upper
+869/924 Test #871: bsdtar_test_option_H_upper ....................................................   Passed    0.06 sec
+        Start 873: bsdtar_test_option_O_upper
+870/924 Test #872: bsdtar_test_option_L_upper ....................................................   Passed    0.05 sec
+        Start 874: bsdtar_test_extract_tar_absolute_paths
+871/924 Test #874: bsdtar_test_extract_tar_absolute_paths ........................................   Passed    0.03 sec
+        Start 875: bsdtar_test_option_T_upper
+872/924 Test #873: bsdtar_test_option_O_upper ....................................................   Passed    0.05 sec
+        Start 876: bsdtar_test_option_U_upper
+873/924 Test #875: bsdtar_test_option_T_upper ....................................................   Passed    0.04 sec
+        Start 877: bsdtar_test_option_X_upper
+874/924 Test #876: bsdtar_test_option_U_upper ....................................................   Passed    0.07 sec
+        Start 878: bsdtar_test_option_a
+875/924 Test #877: bsdtar_test_option_X_upper ....................................................   Passed    0.07 sec
+        Start 879: bsdtar_test_option_acls
+876/924 Test #878: bsdtar_test_option_a ..........................................................   Passed    0.06 sec
+        Start 880: bsdtar_test_option_b
+877/924 Test #879: bsdtar_test_option_acls .......................................................   Passed    0.05 sec
+        Start 881: bsdtar_test_option_b64encode
+878/924 Test #881: bsdtar_test_option_b64encode ..................................................   Passed    0.03 sec
+        Start 882: bsdtar_test_option_exclude
+879/924 Test #880: bsdtar_test_option_b ..........................................................   Passed    0.07 sec
+        Start 883: bsdtar_test_option_exclude_vcs
+880/924 Test #883: bsdtar_test_option_exclude_vcs ................................................   Passed    0.05 sec
+        Start 884: bsdtar_test_option_fflags
+881/924 Test #882: bsdtar_test_option_exclude ....................................................   Passed    0.06 sec
+        Start 885: bsdtar_test_option_gid_gname
+882/924 Test #884: bsdtar_test_option_fflags .....................................................   Passed    0.05 sec
+        Start 886: bsdtar_test_option_group
+883/924 Test #885: bsdtar_test_option_gid_gname ..................................................   Passed    0.04 sec
+        Start 887: bsdtar_test_option_grzip
+884/924 Test #886: bsdtar_test_option_group ......................................................   Passed    0.03 sec
+        Start 888: bsdtar_test_option_ignore_zeros_mode_t
+885/924 Test #888: bsdtar_test_option_ignore_zeros_mode_t ........................................   Passed    0.04 sec
+        Start 889: bsdtar_test_option_ignore_zeros_mode_x
+886/924 Test #889: bsdtar_test_option_ignore_zeros_mode_x ........................................   Passed    0.03 sec
+        Start 890: bsdtar_test_option_ignore_zeros_mode_c
+887/924 Test #890: bsdtar_test_option_ignore_zeros_mode_c ........................................   Passed    0.04 sec
+        Start 891: bsdtar_test_option_ignore_zeros_mode_r
+888/924 Test #887: bsdtar_test_option_grzip ......................................................***Skipped   0.17 sec
+        Start 892: bsdtar_test_option_ignore_zeros_mode_u
+889/924 Test #891: bsdtar_test_option_ignore_zeros_mode_r ........................................   Passed    0.03 sec
+        Start 893: bsdtar_test_option_j
+890/924 Test #893: bsdtar_test_option_j ..........................................................   Passed    0.02 sec
+        Start 894: bsdtar_test_option_k
+891/924 Test #892: bsdtar_test_option_ignore_zeros_mode_u ........................................   Passed    0.04 sec
+        Start 895: bsdtar_test_option_keep_newer_files
+892/924 Test #895: bsdtar_test_option_keep_newer_files ...........................................   Passed    0.04 sec
+        Start 896: bsdtar_test_option_lrzip
+893/924 Test #894: bsdtar_test_option_k ..........................................................   Passed    0.06 sec
+        Start 897: bsdtar_test_option_lz4
+894/924 Test #897: bsdtar_test_option_lz4 ........................................................   Passed    0.02 sec
+        Start 898: bsdtar_test_option_lzma
+895/924 Test #898: bsdtar_test_option_lzma .......................................................   Passed    0.02 sec
+        Start 899: bsdtar_test_option_lzop
+896/924 Test #896: bsdtar_test_option_lrzip ......................................................***Skipped   0.16 sec
+        Start 900: bsdtar_test_option_mtime
+897/924 Test #900: bsdtar_test_option_mtime ......................................................   Passed    0.05 sec
+        Start 901: bsdtar_test_option_n
+898/924 Test #901: bsdtar_test_option_n ..........................................................   Passed    0.06 sec
+        Start 902: bsdtar_test_option_newer_than
+899/924 Test #899: bsdtar_test_option_lzop .......................................................***Skipped   0.35 sec
+        Start 903: bsdtar_test_option_nodump
+900/924 Test #903: bsdtar_test_option_nodump .....................................................   Passed    0.03 sec
+        Start 904: bsdtar_test_option_older_than
+901/924 Test #653: libarchive_test_sparse_basic ..................................................   Passed    7.70 sec
+        Start 905: bsdtar_test_option_owner
+902/924 Test #905: bsdtar_test_option_owner ......................................................   Passed    0.03 sec
+        Start 906: bsdtar_test_option_passphrase
+903/924 Test #902: bsdtar_test_option_newer_than .................................................   Passed    2.04 sec
+        Start 907: bsdtar_test_option_q
+904/924 Test #906: bsdtar_test_option_passphrase .................................................   Passed    0.03 sec
+        Start 908: bsdtar_test_option_r
+905/924 Test #908: bsdtar_test_option_r ..........................................................   Passed    0.04 sec
+        Start 909: bsdtar_test_option_s
+906/924 Test #907: bsdtar_test_option_q ..........................................................   Passed    0.06 sec
+        Start 910: bsdtar_test_option_safe_writes
+907/924 Test #829: libarchive_test_write_format_zip_large ........................................   Passed    4.83 sec
+        Start 911: bsdtar_test_option_stdout_size_exceeds_declared
+908/924 Test #910: bsdtar_test_option_safe_writes ................................................   Passed    0.02 sec
+        Start 912: bsdtar_test_option_uid_uname
+909/924 Test #912: bsdtar_test_option_uid_uname ..................................................   Passed    0.03 sec
+        Start 913: bsdtar_test_option_uuencode
+910/924 Test #913: bsdtar_test_option_uuencode ...................................................   Passed    0.02 sec
+        Start 914: bsdtar_test_option_xattrs
+911/924 Test #911: bsdtar_test_option_stdout_size_exceeds_declared ...............................   Passed    0.06 sec
+        Start 915: bsdtar_test_option_xz
+912/924 Test #904: bsdtar_test_option_older_than .................................................   Passed    2.04 sec
+        Start 916: bsdtar_test_option_z
+913/924 Test #915: bsdtar_test_option_xz .........................................................   Passed    0.02 sec
+        Start 917: bsdtar_test_option_zstd
+914/924 Test #916: bsdtar_test_option_z ..........................................................   Passed    0.03 sec
+        Start 918: bsdtar_test_patterns
+915/924 Test #914: bsdtar_test_option_xattrs .....................................................   Passed    0.05 sec
+        Start 919: bsdtar_test_print_longpath
+916/924 Test #917: bsdtar_test_option_zstd .......................................................   Passed    0.02 sec
+        Start 920: bsdtar_test_stdio
+917/924 Test #919: bsdtar_test_print_longpath ....................................................   Passed    0.03 sec
+        Start 921: bsdtar_test_strip_components
+918/924 Test #921: bsdtar_test_strip_components ..................................................   Passed    0.03 sec
+        Start 922: bsdtar_test_symlink_dir
+919/924 Test #920: bsdtar_test_stdio .............................................................   Passed    0.07 sec
+        Start 923: bsdtar_test_version
+920/924 Test #918: bsdtar_test_patterns ..........................................................   Passed    0.09 sec
+        Start 924: bsdtar_test_windows
+921/924 Test #923: bsdtar_test_version ...........................................................   Passed    0.02 sec
+922/924 Test #924: bsdtar_test_windows ...........................................................***Skipped   0.01 sec
+923/924 Test #922: bsdtar_test_symlink_dir .......................................................   Passed    0.04 sec
+924/924 Test #909: bsdtar_test_option_s ..........................................................   Passed    0.25 sec
+
+100% tests passed, 0 tests failed out of 924
+
+Total Test time (real) =  20.50 sec
+
+The following tests did not run:
+	  1 - libarchive_test_7zip_filename_encoding_UTF16_win (Skipped)
+	 12 - libarchive_test_acl_platform_nfs4 (Skipped)
+	 67 - libarchive_test_archive_string_conversion (Skipped)
+	 69 - libarchive_test_archive_string_conversion_fail_latin1 (Skipped)
+	 70 - libarchive_test_archive_string_conversion_utf16_utf8 (Skipped)
+	 71 - libarchive_test_archive_string_conversion_utf8_utf16 (Skipped)
+	 72 - libarchive_test_archive_string_update_utf8_win (Skipped)
+	 73 - libarchive_test_archive_string_update_utf8_utf8 (Skipped)
+	 74 - libarchive_test_archive_string_update_utf8_koi8 (Skipped)
+	 80 - libarchive_test_archive_write_add_filter_grzip (Skipped)
+	 81 - libarchive_test_archive_write_add_filter_lrzip (Skipped)
+	 85 - libarchive_test_archive_write_add_filter_lzop (Skipped)
+	 92 - libarchive_test_archive_write_add_filter_by_name_grzip (Skipped)
+	 94 - libarchive_test_archive_write_add_filter_by_name_lrzip (Skipped)
+	 98 - libarchive_test_archive_write_add_filter_by_name_lzop (Skipped)
+	158 - libarchive_test_compat_lzop (Skipped)
+	181 - libarchive_test_entry (Skipped)
+	184 - libarchive_test_extattr_freebsd (Skipped)
+	195 - libarchive_test_gnutar_filename_encoding_UTF8_CP866 (Skipped)
+	196 - libarchive_test_gnutar_filename_encoding_KOI8R_UTF8 (Skipped)
+	197 - libarchive_test_gnutar_filename_encoding_KOI8R_CP866 (Skipped)
+	198 - libarchive_test_gnutar_filename_encoding_CP1251_UTF8 (Skipped)
+	199 - libarchive_test_gnutar_filename_encoding_ru_RU_CP1251 (Skipped)
+	200 - libarchive_test_gnutar_filename_encoding_Russian_Russia (Skipped)
+	201 - libarchive_test_gnutar_filename_encoding_EUCJP_UTF8 (Skipped)
+	202 - libarchive_test_gnutar_filename_encoding_EUCJP_CP932 (Skipped)
+	203 - libarchive_test_gnutar_filename_encoding_CP932_UTF8 (Skipped)
+	205 - libarchive_test_gnutar_filename_encoding_UTF16_win (Skipped)
+	206 - libarchive_test_gnutar_filename_encoding_fail_UTF16_win (Skipped)
+	208 - libarchive_test_link_resolver_unicode_win (Skipped)
+	214 - libarchive_test_pax_filename_encoding_KOI8R (Skipped)
+	215 - libarchive_test_pax_filename_encoding_CP1251 (Skipped)
+	216 - libarchive_test_pax_filename_encoding_EUCJP (Skipped)
+	217 - libarchive_test_pax_filename_encoding_CP932 (Skipped)
+	218 - libarchive_test_pax_filename_encoding_KOI8R_BINARY (Skipped)
+	219 - libarchive_test_pax_filename_encoding_KOI8R_CP1251 (Skipped)
+	220 - libarchive_test_pax_filename_encoding_UTF16_win (Skipped)
+	221 - libarchive_test_pax_filename_encoding (Skipped)
+	236 - libarchive_test_read_filter_grzip (Skipped)
+	238 - libarchive_test_read_filter_lrzip (Skipped)
+	240 - libarchive_test_read_filter_lzop (Skipped)
+	241 - libarchive_test_read_filter_lzop_multiple_parts (Skipped)
+	275 - libarchive_test_read_format_7zip_lzma2_riscv (Skipped)
+	290 - libarchive_test_read_format_cab_filename (Skipped)
+	309 - libarchive_test_read_format_cpio_filename_eucJP_UTF8 (Skipped)
+	311 - libarchive_test_read_format_cpio_filename_UTF8_eucJP (Skipped)
+	312 - libarchive_test_read_format_cpio_filename_UTF8_UTF8_jp (Skipped)
+	313 - libarchive_test_read_format_cpio_filename_CP866_KOI8R (Skipped)
+	314 - libarchive_test_read_format_cpio_filename_CP866_UTF8 (Skipped)
+	315 - libarchive_test_read_format_cpio_filename_KOI8R_CP866 (Skipped)
+	316 - libarchive_test_read_format_cpio_filename_KOI8R_UTF8 (Skipped)
+	317 - libarchive_test_read_format_cpio_filename_UTF8_KOI8R (Skipped)
+	318 - libarchive_test_read_format_cpio_filename_UTF8_CP866 (Skipped)
+	319 - libarchive_test_read_format_cpio_filename_UTF8_UTF8_ru (Skipped)
+	320 - libarchive_test_read_format_cpio_filename_eucJP_CP932 (Skipped)
+	321 - libarchive_test_read_format_cpio_filename_UTF8_CP932 (Skipped)
+	322 - libarchive_test_read_format_cpio_filename_CP866_CP1251 (Skipped)
+	323 - libarchive_test_read_format_cpio_filename_CP866_CP1251_win (Skipped)
+	324 - libarchive_test_read_format_cpio_filename_KOI8R_CP1251 (Skipped)
+	325 - libarchive_test_read_format_cpio_filename_UTF8_CP1251 (Skipped)
+	333 - libarchive_test_read_format_gtar_filename_eucJP_UTF8 (Skipped)
+	334 - libarchive_test_read_format_gtar_filename_CP866_KOI8R (Skipped)
+	335 - libarchive_test_read_format_gtar_filename_CP866_UTF8 (Skipped)
+	336 - libarchive_test_read_format_gtar_filename_KOI8R_CP866 (Skipped)
+	337 - libarchive_test_read_format_gtar_filename_KOI8R_UTF8 (Skipped)
+	338 - libarchive_test_read_format_gtar_filename_eucJP_CP932 (Skipped)
+	339 - libarchive_test_read_format_gtar_filename_CP866_CP1251 (Skipped)
+	340 - libarchive_test_read_format_gtar_filename_CP866_CP1251_win (Skipped)
+	341 - libarchive_test_read_format_gtar_filename_KOI8R_CP1251 (Skipped)
+	367 - libarchive_test_read_format_lha_filename (Skipped)
+	368 - libarchive_test_read_format_lha_filename_UTF16 (Skipped)
+	388 - libarchive_test_read_format_rar_unicode_UTF8 (Skipped)
+	389 - libarchive_test_read_format_rar_unicode_CP932 (Skipped)
+	398 - libarchive_test_read_format_rar_multivolume_w (Skipped)
+	410 - libarchive_test_read_format_rar_newsub_huge (Skipped)
+	413 - libarchive_test_read_format_rar_symlink_huge (Skipped)
+	417 - libarchive_test_read_format_rar4_solid_encrypted (Skipped)
+	454 - libarchive_test_read_format_rar5_unicode (Skipped)
+	500 - libarchive_test_read_format_tar_filename (Skipped)
+	514 - libarchive_test_read_format_ustar_filename (Skipped)
+	554 - libarchive_test_read_format_zip_utf8_paths (Skipped)
+	560 - libarchive_test_read_format_zip_filename_CP932_eucJP (Skipped)
+	561 - libarchive_test_read_format_zip_filename_CP932_UTF8 (Skipped)
+	562 - libarchive_test_read_format_zip_filename_UTF8_eucJP (Skipped)
+	563 - libarchive_test_read_format_zip_filename_UTF8_UTF8 (Skipped)
+	564 - libarchive_test_read_format_zip_filename_CP866_KOI8R (Skipped)
+	565 - libarchive_test_read_format_zip_filename_CP866_UTF8 (Skipped)
+	566 - libarchive_test_read_format_zip_filename_KOI8R_CP866 (Skipped)
+	567 - libarchive_test_read_format_zip_filename_KOI8R_UTF8 (Skipped)
+	568 - libarchive_test_read_format_zip_filename_UTF8_KOI8R (Skipped)
+	569 - libarchive_test_read_format_zip_filename_UTF8_CP866 (Skipped)
+	570 - libarchive_test_read_format_zip_filename_UTF8_UTF8_ru (Skipped)
+	571 - libarchive_test_read_format_zip_filename_CP932_CP932 (Skipped)
+	572 - libarchive_test_read_format_zip_filename_UTF8_CP932 (Skipped)
+	573 - libarchive_test_read_format_zip_filename_CP866_CP1251 (Skipped)
+	574 - libarchive_test_read_format_zip_filename_CP866_CP1251_win (Skipped)
+	575 - libarchive_test_read_format_zip_filename_KOI8R_CP1251 (Skipped)
+	576 - libarchive_test_read_format_zip_filename_UTF8_CP1251 (Skipped)
+	577 - libarchive_test_read_format_zip_filename_KOI8R_UTF8_2 (Skipped)
+	633 - libarchive_test_read_append_lrzip_filter (Skipped)
+	650 - libarchive_test_read_truncated_filter_lzop (Skipped)
+	658 - libarchive_test_ustar_filename_encoding_UTF8_CP866 (Skipped)
+	659 - libarchive_test_ustar_filename_encoding_KOI8R_UTF8 (Skipped)
+	660 - libarchive_test_ustar_filename_encoding_KOI8R_CP866 (Skipped)
+	661 - libarchive_test_ustar_filename_encoding_CP1251_UTF8 (Skipped)
+	662 - libarchive_test_ustar_filename_encoding_ru_RU_CP1251 (Skipped)
+	663 - libarchive_test_ustar_filename_encoding_Russian_Russia (Skipped)
+	664 - libarchive_test_ustar_filename_encoding_EUCJP_UTF8 (Skipped)
+	665 - libarchive_test_ustar_filename_encoding_EUCJP_CP932 (Skipped)
+	666 - libarchive_test_ustar_filename_encoding_CP932_UTF8 (Skipped)
+	667 - libarchive_test_ustar_filename_encoding_UTF16_win (Skipped)
+	668 - libarchive_test_ustar_filename_encoding_fail_UTF16_win (Skipped)
+	670 - libarchive_test_v7tar_filename_encoding_fail_UTF16_win (Skipped)
+	673 - libarchive_test_write_disk_appledouble (Skipped)
+	674 - libarchive_test_write_disk_appledouble_zip (Skipped)
+	678 - libarchive_test_write_disk_hfs_compression (Skipped)
+	680 - libarchive_test_write_disk_mac_metadata (Skipped)
+	681 - libarchive_test_write_disk_no_hfs_compression (Skipped)
+	692 - libarchive_test_write_disk_times (Skipped)
+	698 - libarchive_test_write_filter_lrzip (Skipped)
+	708 - libarchive_test_write_filter_lzop (Skipped)
+	762 - libarchive_test_write_format_mtree_fflags (Skipped)
+	806 - libarchive_test_write_format_xar (Skipped)
+	840 - libarchive_test_zip_filename_encoding_UTF8 (Skipped)
+	841 - libarchive_test_zip_filename_encoding_KOI8R (Skipped)
+	842 - libarchive_test_zip_filename_encoding_ru_RU_CP1251 (Skipped)
+	843 - libarchive_test_zip_filename_encoding_Russian_Russia (Skipped)
+	844 - libarchive_test_zip_filename_encoding_EUCJP (Skipped)
+	845 - libarchive_test_zip_filename_encoding_CP932 (Skipped)
+	846 - libarchive_test_zip_filename_encoding_UTF16_win (Skipped)
+	847 - libarchive_test_zip_filename_encoding_fail_UTF16_win (Skipped)
+	855 - bsdtar_test_extract_tar_grz (Skipped)
+	857 - bsdtar_test_extract_tar_lrz (Skipped)
+	861 - bsdtar_test_extract_tar_lzo (Skipped)
+	887 - bsdtar_test_option_grzip (Skipped)
+	896 - bsdtar_test_option_lrzip (Skipped)
+	899 - bsdtar_test_option_lzop (Skipped)
+	924 - bsdtar_test_windows (Skipped)

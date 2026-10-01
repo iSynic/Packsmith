@@ -1,0 +1,47 @@
+[  1%] Building C object regress/CMakeFiles/nonrandomopen.dir/nonrandomopen.c.o
+[  1%] Building C object regress/CMakeFiles/liboverride.dir/liboverride.c.o
+[  2%] Linking C shared module libliboverride.so
+[  3%] Linking C shared module libnonrandomopen.so
+[  3%] Built target testinput
+[ 82%] Built target zip
+[ 82%] Built target liboverride
+[ 82%] Built target nonrandomopen
+[ 83%] Built target zipmerge
+[ 85%] Built target zipcmp
+[ 85%] Building C object regress/CMakeFiles/add_from_filep.dir/add_from_filep.c.o
+[ 87%] Built target ziptool
+[ 87%] Building C object regress/CMakeFiles/can_clone_file.dir/can_clone_file.c.o
+[ 88%] Building C object regress/CMakeFiles/fopen_unchanged.dir/fopen_unchanged.c.o
+[ 88%] Building C object regress/CMakeFiles/fseek.dir/fseek.c.o
+[ 89%] Linking C executable add_from_filep
+[ 89%] Linking C executable fopen_unchanged
+[ 90%] Linking C executable fseek
+[ 91%] Linking C executable can_clone_file
+[ 91%] Built target can_clone_file
+[ 91%] Built target add_from_filep
+[ 91%] Built target fopen_unchanged
+[ 91%] Building C object regress/CMakeFiles/nonrandomopentest.dir/nonrandomopentest.c.o
+[ 92%] Building C object regress/CMakeFiles/liboverride-test.dir/liboverride-test.c.o
+[ 93%] Building C object regress/CMakeFiles/fread.dir/fread.c.o
+[ 93%] Built target fseek
+[ 94%] Building C object regress/CMakeFiles/tryopen.dir/tryopen.c.o
+[ 95%] Linking C executable nonrandomopentest
+[ 95%] Linking C executable liboverride-test
+[ 96%] Linking C executable fread
+[ 96%] Linking C executable tryopen
+[ 96%] Built target nonrandomopentest
+[ 96%] Built target liboverride-test
+[ 97%] Building C object regress/CMakeFiles/hole.dir/hole.c.o
+[ 97%] Building C object regress/CMakeFiles/ziptool_regress.dir/ziptool_regress.c.o
+[ 97%] Built target fread
+[ 98%] Building C object regress/CMakeFiles/ziptool_regress.dir/source_hole.c.o
+[ 98%] Built target tryopen
+[ 98%] Building C object regress/CMakeFiles/hole.dir/source_hole.c.o
+/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/ziptool_regress.c: In function ‘get_stdin_commands’:
+/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/ziptool_regress.c:99:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   99 |     fgets(stdin_line, sizeof(stdin_line), stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 99%] Linking C executable hole
+[100%] Linking C executable ziptool_regress
+[100%] Built target hole
+[100%] Built target ziptool_regress

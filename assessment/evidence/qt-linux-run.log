@@ -1,0 +1,2 @@
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+{"cancel_latency_ms":2,"cancel_requested_ms":75,"evidence_limit":"Synthetic table model and process listing probe; not a production archive UI or accessibility test","font_loaded":true,"heartbeat_ticks":50,"maximum_event_gap_ms":11,"model_rows":100000,"platform_plugin":"offscreen","qt_version":"6.4.2","worker_finished_ms":77,"worker_started":true}

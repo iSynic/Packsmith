@@ -1,0 +1,30 @@
+{
+  "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+  "archive_bytes": 1383382,
+  "implementation": "Python stdlib six-bit decode, BinHex RLE and binascii.crc_hqx; no XAD code",
+  "sections": {
+    "header": {
+      "bytes": 33,
+      "sha256": "ed2f410242d647ef862bfe813252b3d342fd64386deafdfe6ab690a8ea80f5e2",
+      "stored_crc": 10094,
+      "computed_crc": 10094,
+      "crc_valid": true
+    },
+    "data": {
+      "bytes": 1005963,
+      "sha256": "a42bc7affc4af990c20a4abcfa74ae13d478975c96ccb499efc96e39ecec1607",
+      "stored_crc": 47425,
+      "computed_crc": 47425,
+      "crc_valid": true
+    },
+    "resource": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_crc": 0,
+      "computed_crc": 0,
+      "crc_valid": true
+    }
+  },
+  "trailing_decoded_bytes": 0,
+  "passed": true
+}

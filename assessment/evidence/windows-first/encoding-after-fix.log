@@ -1,0 +1,7 @@
+{"encoding":"macintosh","case":0,"roundtrip":true,"hex":"31323334353637"}
+{"encoding":"macintosh","case":1,"roundtrip":true,"hex":"6361668e"}
+{"encoding":"windows-1252","case":2,"roundtrip":true,"hex":"636166e9"}
+{"encoding":"shift_jis","case":3,"roundtrip":true,"hex":"93fa967b"}
+{"encoding":"utf-8","case":4,"roundtrip":true,"hex":"636166c3a92de697a5e69cac"}
+{"encoding":"gb18030","case":5,"roundtrip":true,"hex":"c8d5b1be"}
+{"lossy_rejected":true,"malformed_utf16_rejected":true}

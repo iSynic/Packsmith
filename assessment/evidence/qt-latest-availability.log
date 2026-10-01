@@ -1,0 +1,23 @@
+ERROR   : Failed to download checksum for the file 'Updates.xml' from mirrors '['https://download.qt.io']
+==============================Suggested follow-up:==============================
+* Check your internet connection
+* Consider modifying `requests.max_retries_to_retrieve_hash` in settings.ini
+* Consider modifying `mirrors.trusted_mirrors` in settings.ini (see https://aqtinstall.readthedocs.io/en/stable/configuration.html#configuration)
+* Please use 'aqt list-qt windows desktop' to show versions of Qt available.
+usage: aqt [-h] [-c CONFIG]
+           {install-qt,install-tool,install-qt-official,list-qt-official,install-doc,install-example,install-src,list-qt,list-tool,list-doc,list-example,list-src,help,version} ...
+
+Another unofficial Qt Installer.
+aqt helps you install Qt SDK, tools, examples and others
+
+options:
+  -h, --help            show this help message and exit
+  -c, --config CONFIG   Configuration ini file.
+
+subcommands:
+  aqt accepts several subcommands:
+  install-* subcommands are commands that install components
+  list-* subcommands are commands that show available components
+
+  {install-qt,install-tool,install-qt-official,list-qt-official,install-doc,install-example,install-src,list-qt,list-tool,list-doc,list-example,list-src,help,version}
+                        Please refer to each help message by using '--help' with each subcommand

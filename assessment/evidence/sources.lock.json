@@ -1,0 +1,110 @@
+{
+  "assessment_date": "2026-09-30",
+  "baseline_commit": "28a2330b16139f6d074cdf75ea34eee0ccd218c4",
+  "references": [
+    {
+      "name": "xad-stable",
+      "repository": "https://github.com/MacPaw/XADMaster",
+      "ref": "v1.10.8",
+      "commit": "881e0ec25e249c9ad5bbc1b6782ae8dcdf48a6ed",
+      "kind": "stable-release",
+      "published_at": "2023-10-12T11:22:04Z"
+    },
+    {
+      "name": "xad-head",
+      "repository": "https://github.com/MacPaw/XADMaster",
+      "ref": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+      "commit": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+      "kind": "unreleased-reference",
+      "note": "Not represented as a stable release"
+    },
+    {
+      "name": "detector",
+      "repository": "https://github.com/MacPaw/universal-detector",
+      "ref": "4eb832d999628edcd3d134e46bd35357c8c99a85",
+      "commit": "4eb832d999628edcd3d134e46bd35357c8c99a85",
+      "kind": "unreleased-reference",
+      "note": "Not represented as a stable release"
+    },
+    {
+      "name": "libarchive",
+      "repository": "https://github.com/libarchive/libarchive",
+      "ref": "v3.8.9",
+      "commit": "27cbc7827172698143e440801fc0ba39ccb4f1f5",
+      "kind": "stable-release",
+      "published_at": "2026-07-28T10:13:39Z"
+    },
+    {
+      "name": "libzip",
+      "repository": "https://github.com/nih-at/libzip",
+      "ref": "v1.11.4",
+      "commit": "6f8a0cdd24a0dc6cce9dac4a7679da784ab124ea",
+      "kind": "stable-release",
+      "published_at": "2025-05-23T14:02:12Z"
+    },
+    {
+      "name": "sevenzip",
+      "repository": "https://github.com/ip7z/7zip",
+      "ref": "26.03",
+      "commit": "0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17",
+      "kind": "stable-release",
+      "published_at": "2026-09-04T07:34:42Z"
+    },
+    {
+      "name": "peazip",
+      "repository": "https://github.com/peazip/PeaZip",
+      "ref": "11.3.0",
+      "commit": "52140702007e6b5e4d3d8a7e3f06bfb4ff5f5b37",
+      "kind": "stable-release",
+      "published_at": "2026-09-26T07:51:15Z"
+    },
+    {
+      "name": "ark",
+      "repository": "https://github.com/KDE/ark",
+      "ref": "v26.08.1",
+      "commit": "ce842bc2046c8718d7559d9f88ce1fc4c0fbde9d",
+      "kind": "upstream-tag"
+    },
+    {
+      "name": "nanazip",
+      "repository": "https://github.com/M2Team/NanaZip",
+      "ref": "7.0.1843.0",
+      "commit": "df5db3c4a327c980e9f66dc28fbabd6782cda5e0",
+      "kind": "stable-release",
+      "published_at": "2026-09-17T12:41:06Z"
+    },
+    {
+      "name": "nihtest",
+      "repository": "https://github.com/nih-at/nihtest",
+      "ref": "v1.11.1",
+      "commit": "01d2588dbec93c7560236ad1b0ba5be30bc0a785",
+      "kind": "supporting-test-tool"
+    }
+  ],
+  "downloads": [
+    {
+      "filename": "7z2603-extra.7z",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-extra.7z",
+      "sha256": "191894e6acb3647ffb69ce630479ff318523b2e2b9890aa7f05c1127c2e59b8f",
+      "bytes": 1764178
+    },
+    {
+      "filename": "7z2603-linux-x64.tar.xz",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-linux-x64.tar.xz",
+      "sha256": "dc99eff5008f1ab79bd7084c68513701547a808a89502bf4133683535ab3c695",
+      "bytes": 1575072
+    },
+    {
+      "filename": "7z2603-src.tar.xz",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-src.tar.xz",
+      "sha256": "9cbde5099c6deb73691b0579063da5827522ccbbcba3f0020fd04e8c8c16c0d4",
+      "bytes": 1552200
+    },
+    {
+      "filename": "7z2603-x64.exe",
+      "url": "https://github.com/ip7z/7zip/releases/download/26.03/7z2603-x64.exe",
+      "sha256": "0859c524b8a63551848f0c246abddcb1d0b7b656b0fbfe879f8d85e61a9e6edd",
+      "bytes": 1661239
+    }
+  ]
+}

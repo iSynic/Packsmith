@@ -1,0 +1,605 @@
+-- The C compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PkgConfig: C:/msys64/mingw64/bin/pkg-config.exe (found version "2.5.1")
+-- Found ZLIB: C:/msys64/mingw64/lib/libz.dll.a (found suitable version "1.3.1", minimum required is "1.2.1")
+-- Performing Test ZLIB_WINAPI
+-- Performing Test ZLIB_WINAPI - Failed
+-- Performing Test ZLIB_DLL
+-- Performing Test ZLIB_DLL - Success
+-- Performing Test WITHOUT_ZLIB_DLL
+-- Performing Test WITHOUT_ZLIB_DLL - Success
+-- Found BZip2: C:/msys64/mingw64/lib/libbz2.dll.a (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - found
+-- Performing Test USE_BZIP2_DLL
+-- Performing Test USE_BZIP2_DLL - Success
+-- Performing Test USE_BZIP2_STATIC
+-- Performing Test USE_BZIP2_STATIC - Success
+-- Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Found LibLZMA: C:/msys64/mingw64/lib/liblzma.dll.a (found version "5.8.1")
+-- Performing Test WITHOUT_LZMA_API_STATIC
+-- Performing Test WITHOUT_LZMA_API_STATIC - Success
+-- Performing Test LZMA_API_STATIC
+-- Performing Test LZMA_API_STATIC - Success
+-- Performing Test HAVE_LZMA_STREAM_ENCODER_MT
+-- Performing Test HAVE_LZMA_STREAM_ENCODER_MT - Success
+-- Found LIBB2: C:/msys64/mingw64/lib/libb2.dll.a
+-- Checking for module 'libb2'
+--   Found libb2, version 0.98.1
+-- Found LZ4: C:/msys64/mingw64/lib/liblz4.dll.a
+-- Looking for include file lz4hc.h
+-- Looking for include file lz4hc.h - found
+-- Found ZSTD: C:/msys64/mingw64/lib/libzstd.dll.a
+-- Looking for ZSTD_decompressStream
+-- Looking for ZSTD_decompressStream - found
+-- Looking for ZSTD_compressStream
+-- Looking for ZSTD_compressStream - found
+-- Looking for ZSTD_minCLevel
+-- Looking for ZSTD_minCLevel - found
+-- Performing Test HAVE_DIRENT_H
+-- Performing Test HAVE_DIRENT_H - Success
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include files sys/types.h, acl/libacl.h
+-- Looking for include files sys/types.h, acl/libacl.h - not found
+-- Looking for include files sys/types.h, attr/xattr.h
+-- Looking for include files sys/types.h, attr/xattr.h - not found
+-- Looking for include files sys/types.h, ctype.h
+-- Looking for include files sys/types.h, ctype.h - found
+-- Looking for 3 include files sys/types.h, ..., copyfile.h
+-- Looking for 3 include files sys/types.h, ..., copyfile.h - not found
+-- Looking for 3 include files sys/types.h, ..., direct.h
+-- Looking for 3 include files sys/types.h, ..., direct.h - found
+-- Looking for 4 include files sys/types.h, ..., dlfcn.h
+-- Looking for 4 include files sys/types.h, ..., dlfcn.h - not found
+-- Looking for 4 include files sys/types.h, ..., errno.h
+-- Looking for 4 include files sys/types.h, ..., errno.h - found
+-- Looking for 5 include files sys/types.h, ..., ext2fs/ext2_fs.h
+-- Looking for 5 include files sys/types.h, ..., ext2fs/ext2_fs.h - not found
+-- Performing Test HAVE_WORKING_EXT2_IOC_GETFLAGS
+-- Performing Test HAVE_WORKING_EXT2_IOC_GETFLAGS - Failed
+-- Looking for 5 include files sys/types.h, ..., fcntl.h
+-- Looking for 5 include files sys/types.h, ..., fcntl.h - found
+-- Looking for 6 include files sys/types.h, ..., fnmatch.h
+-- Looking for 6 include files sys/types.h, ..., fnmatch.h - not found
+-- Looking for 6 include files sys/types.h, ..., grp.h
+-- Looking for 6 include files sys/types.h, ..., grp.h - not found
+-- Looking for 6 include files sys/types.h, ..., inttypes.h
+-- Looking for 6 include files sys/types.h, ..., inttypes.h - found
+-- Looking for 7 include files sys/types.h, ..., io.h
+-- Looking for 7 include files sys/types.h, ..., io.h - found
+-- Looking for 8 include files sys/types.h, ..., langinfo.h
+-- Looking for 8 include files sys/types.h, ..., langinfo.h - not found
+-- Looking for 8 include files sys/types.h, ..., limits.h
+-- Looking for 8 include files sys/types.h, ..., limits.h - found
+-- Looking for 9 include files sys/types.h, ..., linux/types.h
+-- Looking for 9 include files sys/types.h, ..., linux/types.h - not found
+-- Looking for 9 include files sys/types.h, ..., linux/fiemap.h
+-- Looking for 9 include files sys/types.h, ..., linux/fiemap.h - not found
+-- Looking for 9 include files sys/types.h, ..., linux/fs.h
+-- Looking for 9 include files sys/types.h, ..., linux/fs.h - not found
+-- Performing Test HAVE_WORKING_FS_IOC_GETFLAGS
+-- Performing Test HAVE_WORKING_FS_IOC_GETFLAGS - Failed
+-- Looking for 9 include files sys/types.h, ..., intsafe.h
+-- Looking for 9 include files sys/types.h, ..., intsafe.h - found
+-- Looking for 10 include files sys/types.h, ..., linux/magic.h
+-- Looking for 10 include files sys/types.h, ..., linux/magic.h - not found
+-- Looking for 10 include files sys/types.h, ..., locale.h
+-- Looking for 10 include files sys/types.h, ..., locale.h - found
+-- Looking for 11 include files sys/types.h, ..., membership.h
+-- Looking for 11 include files sys/types.h, ..., membership.h - not found
+-- Looking for 11 include files sys/types.h, ..., memory.h
+-- Looking for 11 include files sys/types.h, ..., memory.h - found
+-- Looking for 12 include files sys/types.h, ..., paths.h
+-- Looking for 12 include files sys/types.h, ..., paths.h - not found
+-- Looking for 12 include files sys/types.h, ..., poll.h
+-- Looking for 12 include files sys/types.h, ..., poll.h - not found
+-- Looking for 12 include files sys/types.h, ..., process.h
+-- Looking for 12 include files sys/types.h, ..., process.h - found
+-- Looking for 13 include files sys/types.h, ..., pthread.h
+-- Looking for 13 include files sys/types.h, ..., pthread.h - found
+-- Looking for 14 include files sys/types.h, ..., pwd.h
+-- Looking for 14 include files sys/types.h, ..., pwd.h - not found
+-- Looking for 14 include files sys/types.h, ..., readpassphrase.h
+-- Looking for 14 include files sys/types.h, ..., readpassphrase.h - not found
+-- Looking for 14 include files sys/types.h, ..., regex.h
+-- Looking for 14 include files sys/types.h, ..., regex.h - found
+-- Looking for 15 include files sys/types.h, ..., signal.h
+-- Looking for 15 include files sys/types.h, ..., signal.h - found
+-- Looking for 16 include files sys/types.h, ..., spawn.h
+-- Looking for 16 include files sys/types.h, ..., spawn.h - not found
+-- Looking for 16 include files sys/types.h, ..., stdarg.h
+-- Looking for 16 include files sys/types.h, ..., stdarg.h - found
+-- Looking for 17 include files sys/types.h, ..., stdckdint.h
+-- Looking for 17 include files sys/types.h, ..., stdckdint.h - found
+-- Looking for 18 include files sys/types.h, ..., stdint.h
+-- Looking for 18 include files sys/types.h, ..., stdint.h - found
+-- Looking for 19 include files sys/types.h, ..., stdio.h
+-- Looking for 19 include files sys/types.h, ..., stdio.h - found
+-- Looking for 20 include files sys/types.h, ..., stdlib.h
+-- Looking for 20 include files sys/types.h, ..., stdlib.h - found
+-- Looking for 21 include files sys/types.h, ..., string.h
+-- Looking for 21 include files sys/types.h, ..., string.h - found
+-- Looking for 22 include files sys/types.h, ..., strings.h
+-- Looking for 22 include files sys/types.h, ..., strings.h - found
+-- Looking for 23 include files sys/types.h, ..., sys/acl.h
+-- Looking for 23 include files sys/types.h, ..., sys/acl.h - not found
+-- Looking for 23 include files sys/types.h, ..., sys/cdefs.h
+-- Looking for 23 include files sys/types.h, ..., sys/cdefs.h - found
+-- Looking for 24 include files sys/types.h, ..., sys/extattr.h
+-- Looking for 24 include files sys/types.h, ..., sys/extattr.h - not found
+-- Looking for 24 include files sys/types.h, ..., sys/ioctl.h
+-- Looking for 24 include files sys/types.h, ..., sys/ioctl.h - not found
+-- Looking for 24 include files sys/types.h, ..., sys/mkdev.h
+-- Looking for 24 include files sys/types.h, ..., sys/mkdev.h - not found
+-- Looking for 24 include files sys/types.h, ..., sys/mount.h
+-- Looking for 24 include files sys/types.h, ..., sys/mount.h - not found
+-- Looking for 24 include files sys/types.h, ..., sys/param.h
+-- Looking for 24 include files sys/types.h, ..., sys/param.h - found
+-- Looking for 25 include files sys/types.h, ..., sys/poll.h
+-- Looking for 25 include files sys/types.h, ..., sys/poll.h - not found
+-- Looking for 25 include files sys/types.h, ..., sys/richacl.h
+-- Looking for 25 include files sys/types.h, ..., sys/richacl.h - not found
+-- Looking for 25 include files sys/types.h, ..., sys/select.h
+-- Looking for 25 include files sys/types.h, ..., sys/select.h - not found
+-- Looking for 25 include files sys/types.h, ..., sys/stat.h
+-- Looking for 25 include files sys/types.h, ..., sys/stat.h - found
+-- Looking for 26 include files sys/types.h, ..., sys/statfs.h
+-- Looking for 26 include files sys/types.h, ..., sys/statfs.h - not found
+-- Looking for 26 include files sys/types.h, ..., sys/statvfs.h
+-- Looking for 26 include files sys/types.h, ..., sys/statvfs.h - not found
+-- Looking for 26 include files sys/types.h, ..., sys/sysmacros.h
+-- Looking for 26 include files sys/types.h, ..., sys/sysmacros.h - not found
+-- Looking for 26 include files sys/types.h, ..., sys/time.h
+-- Looking for 26 include files sys/types.h, ..., sys/time.h - found
+-- Looking for 27 include files sys/types.h, ..., sys/utime.h
+-- Looking for 27 include files sys/types.h, ..., sys/utime.h - found
+-- Looking for 28 include files sys/types.h, ..., sys/utsname.h
+-- Looking for 28 include files sys/types.h, ..., sys/utsname.h - not found
+-- Looking for 28 include files sys/types.h, ..., sys/vfs.h
+-- Looking for 28 include files sys/types.h, ..., sys/vfs.h - not found
+-- Looking for 28 include files sys/types.h, ..., sys/wait.h
+-- Looking for 28 include files sys/types.h, ..., sys/wait.h - not found
+-- Looking for 28 include files sys/types.h, ..., sys/xattr.h
+-- Looking for 28 include files sys/types.h, ..., sys/xattr.h - not found
+-- Looking for 28 include files sys/types.h, ..., time.h
+-- Looking for 28 include files sys/types.h, ..., time.h - found
+-- Looking for 29 include files sys/types.h, ..., unistd.h
+-- Looking for 29 include files sys/types.h, ..., unistd.h - found
+-- Looking for 30 include files sys/types.h, ..., utime.h
+-- Looking for 30 include files sys/types.h, ..., utime.h - found
+-- Looking for 31 include files sys/types.h, ..., wchar.h
+-- Looking for 31 include files sys/types.h, ..., wchar.h - found
+-- Looking for 32 include files sys/types.h, ..., wctype.h
+-- Looking for 32 include files sys/types.h, ..., wctype.h - found
+-- Looking for 33 include files sys/types.h, ..., windows.h
+-- Looking for 33 include files sys/types.h, ..., windows.h - found
+-- Looking for 34 include files sys/types.h, ..., bcrypt.h
+-- Looking for 34 include files sys/types.h, ..., bcrypt.h - found
+-- Looking for 35 include files sys/types.h, ..., winioctl.h
+-- Looking for 35 include files sys/types.h, ..., winioctl.h - found
+-- Performing Test SAFE_TO_DEFINE_EXTENSIONS
+-- Performing Test SAFE_TO_DEFINE_EXTENSIONS - Success
+-- Found OpenSSL: C:/msys64/mingw64/lib/libcrypto.dll.a (found version "3.5.2")
+-- Looking for 36 include files sys/types.h, ..., openssl/evp.h
+-- Looking for 36 include files sys/types.h, ..., openssl/evp.h - found
+-- Looking for 37 include files sys/types.h, ..., openssl/opensslv.h
+-- Looking for 37 include files sys/types.h, ..., openssl/opensslv.h - found
+-- Looking for PKCS5_PBKDF2_HMAC_SHA1
+-- Looking for PKCS5_PBKDF2_HMAC_SHA1 - found
+-- Performing Test HAVE_ICONV_libc_const
+-- Performing Test HAVE_ICONV_libc_const - Failed
+-- Performing Test HAVE_ICONV_libc_
+-- Performing Test HAVE_ICONV_libc_ - Failed
+-- Performing Test WITHOUT_LIBICONV_STATIC
+-- Performing Test WITHOUT_LIBICONV_STATIC - Success
+-- Performing Test LIBICONV_STATIC
+-- Performing Test LIBICONV_STATIC - Success
+-- Performing Test HAVE_ICONV_libiconv_const
+-- Performing Test HAVE_ICONV_libiconv_const - Failed
+-- Performing Test HAVE_ICONV_libiconv_
+-- Performing Test HAVE_ICONV_libiconv_ - Success
+-- Looking for include file localcharset.h
+-- Looking for include file localcharset.h - found
+-- Performing Test WITHOUT_LIBCHARSET_STATIC
+-- Performing Test WITHOUT_LIBCHARSET_STATIC - Success
+-- Performing Test LIBCHARSET_STATIC
+-- Performing Test LIBCHARSET_STATIC - Success
+-- Could NOT find LibXml2 (missing: LIBXML2_LIBRARY LIBXML2_INCLUDE_DIR) 
+-- Found EXPAT: C:/msys64/mingw64/lib/libexpat.dll.a (found version "2.7.1")
+-- Looking for 38 include files sys/types.h, ..., expat.h
+-- Looking for 38 include files sys/types.h, ..., expat.h - found
+-- Looking for regcomp
+-- Looking for regcomp - not found
+-- Looking for regcomp
+-- Looking for regcomp - found
+-- Performing Test USE_REGEX_DLL
+-- Performing Test USE_REGEX_DLL - Success
+-- Performing Test USE_REGEX_STATIC
+-- Performing Test USE_REGEX_STATIC - Success
+-- Looking for _CrtSetReportMode
+-- Looking for _CrtSetReportMode - found
+-- Looking for arc4random_buf
+-- Looking for arc4random_buf - not found
+-- Looking for chflags
+-- Looking for chflags - not found
+-- Looking for chown
+-- Looking for chown - not found
+-- Looking for chroot
+-- Looking for chroot - not found
+-- Looking for closefrom
+-- Looking for closefrom - not found
+-- Looking for close_range
+-- Looking for close_range - not found
+-- Looking for ctime_r
+-- Looking for ctime_r - not found
+-- Looking for fchdir
+-- Looking for fchdir - not found
+-- Looking for fchflags
+-- Looking for fchflags - not found
+-- Looking for fchmod
+-- Looking for fchmod - not found
+-- Looking for fchown
+-- Looking for fchown - not found
+-- Looking for fcntl
+-- Looking for fcntl - not found
+-- Looking for fdopendir
+-- Looking for fdopendir - not found
+-- Looking for fnmatch
+-- Looking for fnmatch - not found
+-- Looking for fork
+-- Looking for fork - not found
+-- Looking for fstat
+-- Looking for fstat - found
+-- Looking for fstatat
+-- Looking for fstatat - not found
+-- Looking for fstatfs
+-- Looking for fstatfs - not found
+-- Looking for fstatvfs
+-- Looking for fstatvfs - not found
+-- Looking for ftruncate
+-- Looking for ftruncate - found
+-- Looking for futimens
+-- Looking for futimens - not found
+-- Looking for futimes
+-- Looking for futimes - not found
+-- Looking for futimesat
+-- Looking for futimesat - not found
+-- Looking for getegid
+-- Looking for getegid - not found
+-- Looking for geteuid
+-- Looking for geteuid - not found
+-- Looking for getgrgid_r
+-- Looking for getgrgid_r - not found
+-- Looking for getgrnam_r
+-- Looking for getgrnam_r - not found
+-- Looking for getline
+-- Looking for getline - not found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for getpwnam_r
+-- Looking for getpwnam_r - not found
+-- Looking for getpwuid_r
+-- Looking for getpwuid_r - not found
+-- Looking for getresgid
+-- Looking for getresgid - not found
+-- Looking for getresuid
+-- Looking for getresuid - not found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for getvfsbyname
+-- Looking for getvfsbyname - not found
+-- Looking for gmtime_r
+-- Looking for gmtime_r - not found
+-- Looking for issetugid
+-- Looking for issetugid - not found
+-- Looking for lchflags
+-- Looking for lchflags - not found
+-- Looking for lchmod
+-- Looking for lchmod - not found
+-- Looking for lchown
+-- Looking for lchown - not found
+-- Looking for link
+-- Looking for link - not found
+-- Looking for linkat
+-- Looking for linkat - not found
+-- Looking for localtime_r
+-- Looking for localtime_r - not found
+-- Looking for lstat
+-- Looking for lstat - not found
+-- Looking for lutimes
+-- Looking for lutimes - not found
+-- Looking for mbrtowc
+-- Looking for mbrtowc - found
+-- Looking for memmove
+-- Looking for memmove - found
+-- Looking for mkdir
+-- Looking for mkdir - found
+-- Looking for mkfifo
+-- Looking for mkfifo - not found
+-- Looking for mknod
+-- Looking for mknod - not found
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Looking for nl_langinfo
+-- Looking for nl_langinfo - not found
+-- Looking for openat
+-- Looking for openat - not found
+-- Looking for pipe
+-- Looking for pipe - not found
+-- Looking for poll
+-- Looking for poll - not found
+-- Looking for posix_spawn
+-- Looking for posix_spawn - not found
+-- Looking for posix_spawnp
+-- Looking for posix_spawnp - not found
+-- Looking for readlink
+-- Looking for readlink - not found
+-- Looking for readpassphrase
+-- Looking for readpassphrase - not found
+-- Looking for select
+-- Looking for select - not found
+-- Looking for setenv
+-- Looking for setenv - not found
+-- Looking for setlocale
+-- Looking for setlocale - found
+-- Looking for sigaction
+-- Looking for sigaction - not found
+-- Looking for statfs
+-- Looking for statfs - not found
+-- Looking for statvfs
+-- Looking for statvfs - not found
+-- Looking for strchr
+-- Looking for strchr - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strerror
+-- Looking for strerror - found
+-- Looking for strncpy_s
+-- Looking for strncpy_s - found
+-- Looking for strnlen
+-- Looking for strnlen - found
+-- Looking for strrchr
+-- Looking for strrchr - found
+-- Looking for symlink
+-- Looking for symlink - not found
+-- Looking for sysconf
+-- Looking for sysconf - not found
+-- Looking for tcgetattr
+-- Looking for tcgetattr - not found
+-- Looking for tcsetattr
+-- Looking for tcsetattr - not found
+-- Looking for timegm
+-- Looking for timegm - not found
+-- Looking for tzset
+-- Looking for tzset - found
+-- Looking for unlinkat
+-- Looking for unlinkat - not found
+-- Looking for unsetenv
+-- Looking for unsetenv - not found
+-- Looking for utime
+-- Looking for utime - found
+-- Looking for utimes
+-- Looking for utimes - not found
+-- Looking for utimensat
+-- Looking for utimensat - not found
+-- Looking for vfork
+-- Looking for vfork - not found
+-- Looking for wcrtomb
+-- Looking for wcrtomb - found
+-- Looking for wcscmp
+-- Looking for wcscmp - found
+-- Looking for wcscpy
+-- Looking for wcscpy - found
+-- Looking for wcslen
+-- Looking for wcslen - found
+-- Looking for wctomb
+-- Looking for wctomb - found
+-- Looking for _fseeki64
+-- Looking for _fseeki64 - found
+-- Looking for _get_timezone
+-- Looking for _get_timezone - found
+-- Looking for ctime_s
+-- Looking for ctime_s - found
+-- Looking for gmtime_s
+-- Looking for gmtime_s - found
+-- Looking for localtime_s
+-- Looking for localtime_s - found
+-- Looking for _mkgmtime
+-- Looking for _mkgmtime - found
+-- Looking for cygwin_conv_path
+-- Looking for cygwin_conv_path - not found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for strerror_r
+-- Looking for strerror_r - not found
+-- Looking for strftime
+-- Looking for strftime - found
+-- Looking for vprintf
+-- Looking for vprintf - found
+-- Looking for wmemcmp
+-- Looking for wmemcmp - found
+-- Looking for wmemcpy
+-- Looking for wmemcpy - found
+-- Looking for wmemmove
+-- Looking for wmemmove - found
+-- Performing Test HAVE_STRUCT_VFSCONF
+-- Performing Test HAVE_STRUCT_VFSCONF - Failed
+-- Performing Test HAVE_STRUCT_XVFSCONF
+-- Performing Test HAVE_STRUCT_XVFSCONF - Failed
+-- Performing Test HAVE_STRUCT_STATFS
+-- Performing Test HAVE_STRUCT_STATFS - Failed
+-- Performing Test HAVE_DIRFD
+-- Performing Test HAVE_DIRFD - Failed
+-- Performing Test HAVE_READLINKAT
+-- Performing Test HAVE_READLINKAT - Failed
+-- Performing Test MAJOR_IN_MKDEV
+-- Performing Test MAJOR_IN_MKDEV - Failed
+-- Performing Test MAJOR_IN_SYSMACROS
+-- Performing Test MAJOR_IN_SYSMACROS - Failed
+-- Looking for EFTYPE
+-- Looking for EFTYPE - not found
+-- Looking for EILSEQ
+-- Looking for EILSEQ - found
+-- Looking for D_MD_ORDER
+-- Looking for D_MD_ORDER - not found
+-- Looking for INT32_MAX
+-- Looking for INT32_MAX - found
+-- Looking for INT32_MIN
+-- Looking for INT32_MIN - found
+-- Looking for INT64_MAX
+-- Looking for INT64_MAX - found
+-- Looking for INT64_MIN
+-- Looking for INT64_MIN - found
+-- Looking for INTMAX_MAX
+-- Looking for INTMAX_MAX - found
+-- Looking for INTMAX_MIN
+-- Looking for INTMAX_MIN - found
+-- Looking for UINT32_MAX
+-- Looking for UINT32_MAX - found
+-- Looking for UINT64_MAX
+-- Looking for UINT64_MAX - found
+-- Looking for UINTMAX_MAX
+-- Looking for UINTMAX_MAX - found
+-- Looking for SIZE_MAX
+-- Looking for SIZE_MAX - found
+-- Looking for SSIZE_MAX
+-- Looking for SSIZE_MAX - found
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF
+-- Performing Test HAVE_STRUCT_TM_TM_GMTOFF - Failed
+-- Performing Test HAVE_STRUCT_TM___TM_GMTOFF
+-- Performing Test HAVE_STRUCT_TM___TM_GMTOFF - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIME
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIME - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIM_TV_NSEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_N
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_N - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_UMTIME
+-- Performing Test HAVE_STRUCT_STAT_ST_UMTIME - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_USEC
+-- Performing Test HAVE_STRUCT_STAT_ST_MTIME_USEC - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_BLKSIZE
+-- Performing Test HAVE_STRUCT_STAT_ST_BLKSIZE - Failed
+-- Performing Test HAVE_STRUCT_STAT_ST_FLAGS
+-- Performing Test HAVE_STRUCT_STAT_ST_FLAGS - Failed
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Check size of unsigned
+-- Check size of unsigned - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Check size of unsigned long long
+-- Check size of unsigned long long - done
+-- Check size of __int64
+-- Check size of __int64 - done
+-- Check size of unsigned __int64
+-- Check size of unsigned __int64 - done
+-- Check size of int16_t
+-- Check size of int16_t - done
+-- Check size of int32_t
+-- Check size of int32_t - done
+-- Check size of int64_t
+-- Check size of int64_t - done
+-- Check size of intmax_t
+-- Check size of intmax_t - done
+-- Check size of uint8_t
+-- Check size of uint8_t - done
+-- Check size of uint16_t
+-- Check size of uint16_t - done
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- Check size of uintmax_t
+-- Check size of uintmax_t - done
+-- Check size of dev_t
+-- Check size of dev_t - done
+-- Check size of gid_t
+-- Check size of gid_t - failed
+-- Check size of id_t
+-- Check size of id_t - failed
+-- Check size of mode_t
+-- Check size of mode_t - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of uid_t
+-- Check size of uid_t - failed
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of intptr_t
+-- Check size of intptr_t - done
+-- Check size of uintptr_t
+-- Check size of uintptr_t - done
+-- Check size of wchar_t
+-- Check size of wchar_t - done
+-- Checking _FILE_OFFSET_BITS for large files
+-- Checking _FILE_OFFSET_BITS for large files - needed
+-- Looking for setxattr in attr
+-- Looking for setxattr in attr - not found
+-- Looking for setxattr in gnu
+-- Looking for setxattr in gnu - not found
+-- Looking for EXTATTR_NAMESPACE_USER
+-- Looking for EXTATTR_NAMESPACE_USER - not found
+-- Looking for XATTR_NOFOLLOW
+-- Looking for XATTR_NOFOLLOW - not found
+-- Extended attributes support: none
+-- Looking for acl
+-- Looking for acl - not found
+-- Looking for facl
+-- Looking for facl - not found
+-- Looking for acl_get_file in acl
+-- Looking for acl_get_file in acl - not found
+-- Performing Test HAVE_ACL_T
+-- Performing Test HAVE_ACL_T - Failed
+-- Performing Test HAVE_ACL_ENTRY_T
+-- Performing Test HAVE_ACL_ENTRY_T - Failed
+-- Performing Test HAVE_ACL_PERMSET_T
+-- Performing Test HAVE_ACL_PERMSET_T - Failed
+-- Performing Test HAVE_ACL_TAG_T
+-- Performing Test HAVE_ACL_TAG_T - Failed
+-- Looking for richacl_get_file in richacl
+-- Looking for richacl_get_file in richacl - not found
+-- Performing Test HAVE_STRUCT_RICHACE
+-- Performing Test HAVE_STRUCT_RICHACE - Failed
+-- Performing Test HAVE_STRUCT_RICHACL
+-- Performing Test HAVE_STRUCT_RICHACL - Failed
+-- ACL support: none
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBC
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_RMD160_OPENSSL
+-- Checking support for ARCHIVE_CRYPTO_RMD160_OPENSSL -- not found
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBMD
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBMD -- not found
+-- Performing Test HAVE_VISIBILITY_ATTR
+-- Performing Test HAVE_VISIBILITY_ATTR - Success
+-- Configuring done (223.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/libarchive-windows-build

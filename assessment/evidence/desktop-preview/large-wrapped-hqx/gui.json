@@ -1,0 +1,33 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "columns": 5,
+  "display_names": [
+    "folder",
+    "folder/\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\x20",
+    "folder/large.dat",
+    "folder/last.txt"
+  ],
+  "edit_actions_disabled": true,
+  "entries": 4,
+  "error": "",
+  "extract_ms": 224,
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "listing_ms": 156,
+  "max_event_gap_ms": 16,
+  "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-85medrwm/large-wrapped.hqx/large-wrapped",
+  "passed": true,
+  "read_only": true,
+  "selected_id": 3,
+  "selected_path": "folder/last.txt",
+  "window_title": "Packsmith 0.1.0-beta.1 \u00b7 Windows beta",
+  "screenshot_sha256": "59bf5233187a7a12c48654203902fd30b5aaded1ac5246caef036f7d0b927202",
+  "peak_gui_rss": 54702080,
+  "peak_workers_rss": 54370304,
+  "gui_sha256": "a0a043933bf10c780cf0cc0cabc83709904412fff5c6154d7a1601a0ca113bc5",
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "decoder_sha256": "5f6d305dff8825fd2829f0b2de71c9445fe4217c82ea0dbff02f61ed1efc01c0",
+  "total_elapsed_ms": 779.64,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

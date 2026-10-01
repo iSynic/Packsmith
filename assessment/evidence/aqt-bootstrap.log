@@ -1,0 +1,60 @@
+2026-09-30 22:29:10,242 - aqt.helper - DEBUG - helper 10076 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6120/qt6_6120/Updates.xml.sha256
+2026-09-30 22:29:10,875 - aqt.helper - DEBUG - helper 10076 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6120/qt6_6120/Updates.xml.sha256
+2026-09-30 22:29:11,631 - aqt.helper - DEBUG - helper 10076 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6120/qt6_6120/Updates.xml.sha256
+2026-09-30 22:29:12,275 - aqt.helper - DEBUG - helper 10076 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6120/qt6_6120/Updates.xml.sha256
+2026-09-30 22:29:12,857 - aqt.helper - DEBUG - helper 10076 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6120/qt6_6120/Updates.xml.sha256
+2026-09-30 22:29:13,412 - aqt.main - ERROR - installer 10076 Failed to download checksum for the file 'Updates.xml' from mirrors '['https://download.qt.io']
+==============================Suggested follow-up:==============================
+* Check your internet connection
+* Consider modifying `requests.max_retries_to_retrieve_hash` in settings.ini
+* Consider modifying `mirrors.trusted_mirrors` in settings.ini (see https://aqtinstall.readthedocs.io/en/stable/configuration.html#configuration)
+* Please use 'aqt list-qt windows desktop' to show versions of Qt available.
+2026-09-30 22:29:43,933 - aqt.helper - DEBUG - helper 45808 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6102/qt6_6102/Updates.xml.sha256
+2026-09-30 22:30:01,244 - aqt.main - INFO - installer 46128 aqtinstall(aqt) v3.3.0 on Python 3.14.7 [CPython MSC v.1944 64 bit (AMD64)]
+2026-09-30 22:30:01,244 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6102/qt6_6102/Updates.xml.sha256
+2026-09-30 22:30:02,510 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:03,125 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:03,679 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:04,284 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:04,861 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:05,408 - aqt.helper - DEBUG - helper 46128 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtpdf/6102/mingw/Updates.xml.sha256
+2026-09-30 22:30:06,536 - aqt.archives - INFO - archives 46128 Found extension qtpdf
+2026-09-30 22:30:07,256 - aqt.helper - DEBUG - helper 35120 Attempt to download checksum at https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6102/qt6_6102/qt.qt6.6102.win64_mingw/6.10.2-0-202601261212qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z.sha256
+2026-09-30 22:30:07,992 - aqt.helper - INFO - helper 35120 Downloading qtbase...
+2026-09-30 22:30:07,992 - aqt.installer - DEBUG - installer 35120 Download URL: https://download.qt.io/online/qtsdkrepository/windows_x86/desktop/qt6_6102/qt6_6102/qt.qt6.6102.win64_mingw/6.10.2-0-202601261212qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z
+2026-09-30 22:30:08,548 - aqt.helper - DEBUG - helper 35120 Asked to redirect(302) to: https://qt.mirror.constant.com/online/qtsdkrepository/windows_x86/desktop/qt6_6102/qt6_6102/qt.qt6.6102.win64_mingw/6.10.2-0-202601261212qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z
+2026-09-30 22:30:08,548 - aqt.helper - INFO - helper 35120 Redirected: qt.mirror.constant.com
+2026-09-30 22:30:22,579 - aqt.installer - INFO - installer 35120 Finished installation of qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z in 15.32607630
+2026-09-30 22:30:22,946 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\bin\qmake.exe
+2026-09-30 22:30:22,952 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Concurrent.pc
+2026-09-30 22:30:22,960 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Core.pc
+2026-09-30 22:30:22,970 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6DBus.pc
+2026-09-30 22:30:22,978 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Gui.pc
+2026-09-30 22:30:22,986 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Network.pc
+2026-09-30 22:30:22,995 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6OpenGL.pc
+2026-09-30 22:30:23,003 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6OpenGLWidgets.pc
+2026-09-30 22:30:23,013 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Platform.pc
+2026-09-30 22:30:23,020 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6PrintSupport.pc
+2026-09-30 22:30:23,027 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Sql.pc
+2026-09-30 22:30:23,035 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Test.pc
+2026-09-30 22:30:23,043 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Widgets.pc
+2026-09-30 22:30:23,051 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Xml.pc
+2026-09-30 22:30:23,059 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Concurrent.prl
+2026-09-30 22:30:23,066 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Core.prl
+2026-09-30 22:30:23,073 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6DBus.prl
+2026-09-30 22:30:23,080 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6DeviceDiscoverySupport.prl
+2026-09-30 22:30:23,088 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6EntryPoint.prl
+2026-09-30 22:30:23,096 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6ExampleIcons.prl
+2026-09-30 22:30:23,103 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6ExamplesAssetDownloader.prl
+2026-09-30 22:30:23,110 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6FbSupport.prl
+2026-09-30 22:30:23,117 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Gui.prl
+2026-09-30 22:30:23,124 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Network.prl
+2026-09-30 22:30:23,131 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6OpenGL.prl
+2026-09-30 22:30:23,138 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6OpenGLWidgets.prl
+2026-09-30 22:30:23,145 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6PrintSupport.prl
+2026-09-30 22:30:23,154 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Sql.prl
+2026-09-30 22:30:23,162 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Test.prl
+2026-09-30 22:30:23,169 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Widgets.prl
+2026-09-30 22:30:23,178 - aqt.updater - INFO - updater 46128 Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Xml.prl
+2026-09-30 22:30:23,186 - aqt.main - INFO - installer 46128 Finished installation
+2026-09-30 22:30:23,186 - aqt.main - INFO - installer 46128 Time elapsed: 21.94258160 second

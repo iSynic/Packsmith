@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\references\\libzip",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "-DBUILD_REGRESS=ON",
+      "-DNIHTEST=C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\nihtest.cmd"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.996,
+    "log": "libzip-windows-regress-configure.log"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 2.307,
+    "log": "libzip-windows-regress-build.log"
+  },
+  {
+    "command": [
+      "ctest",
+      "--test-dir",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\libzip-windows-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 30.489,
+    "log": "libzip-windows-regress-ctest.log"
+  }
+]

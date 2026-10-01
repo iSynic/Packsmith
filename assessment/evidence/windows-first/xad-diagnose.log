@@ -1,0 +1,8 @@
+path=C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\outputs\fixtures\mainstream.zip exists=1 class=XADZipParser header=8
+bytes=64 data=<
+00000000   504b0304 14000000 08008318 2250ec6e   PK.........."Pìn
+00000010   609f0800 00000600 00000900 0000616c   `.............al
+00000020   7068612e 7478744b cc29c848 e4020050   pha.txtKÌ)ÈHä..P
+00000030   4b030414 00000008 00831822 50264c0b   K.........."P&L.
+> zip_recognized=1
+parser=(null) error=0

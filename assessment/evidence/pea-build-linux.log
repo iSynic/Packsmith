@@ -1,0 +1,694 @@
+Hint: (lazarus) Missing state file of freetypelaz 1.0: /usr/lib/lazarus/3.0/components/freetype/lib/x86_64-linux/freetypelaz.compiled
+Hint: (lazarus) normal output directory of package freetypelaz 1.0 is not writable: "/usr/lib/lazarus/3.0/components/freetype/lib/x86_64-linux/"
+TParsedCompilerOptions.SetOutputDirectoryOverride New=/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/freetypelaz/lib/x86_64-linux
+Hint: (lazarus) Compiler unit paths changed for LCLBase 3.0.0.3
+  Old="/usr/lib/lazarus/3.0/lcl/forms;/usr/lib/lazarus/3.0/lcl/widgetset;/usr/lib/lazarus/3.0/lcl/nonwin32;/usr/lib/lazarus/3.0/packager/units/x86_64-linux;/usr/lib/lazarus/3.0/components/lazutils/lib/x86_64-linux;/usr/lib/lazarus/3.0/components/freetype/lib/x86_64-linux;/usr/lib/lazarus/3.0/lcl"
+  Now="/usr/lib/lazarus/3.0/lcl/forms;/usr/lib/lazarus/3.0/lcl/widgetset;/usr/lib/lazarus/3.0/lcl/nonwin32;/usr/lib/lazarus/3.0/packager/units/x86_64-linux;/usr/lib/lazarus/3.0/components/lazutils/lib/x86_64-linux;/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/freetypelaz/lib/x86_64-linux;/usr/lib/lazarus/3.0/lcl"
+  State file="/usr/lib/lazarus/3.0/lcl/units/x86_64-linux/lclbase.compiled"
+Hint: (lazarus) normal output directory of package LCLBase 3.0.0.3 is not writable: "/usr/lib/lazarus/3.0/lcl/units/x86_64-linux/"
+TParsedCompilerOptions.SetOutputDirectoryOverride New=/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/LCLBase/units/x86_64-linux
+Hint: (lazarus) Compiler unit paths changed for LCL 3.0.0.3
+  Old="/usr/lib/lazarus/3.0/lcl/interfaces/gtk2;/usr/lib/lazarus/3.0/packager/units/x86_64-linux;/usr/lib/lazarus/3.0/components/lazutils/lib/x86_64-linux;/usr/lib/lazarus/3.0/components/freetype/lib/x86_64-linux;/usr/lib/lazarus/3.0/lcl/units/x86_64-linux;/usr/lib/lazarus/3.0/lcl/interfaces"
+  Now="/usr/lib/lazarus/3.0/lcl/interfaces/gtk2;/usr/lib/lazarus/3.0/packager/units/x86_64-linux;/usr/lib/lazarus/3.0/components/lazutils/lib/x86_64-linux;/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/freetypelaz/lib/x86_64-linux;/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/LCLBase/units/x86_64-linux;/usr/lib/lazarus/3.0/lcl/interfaces"
+  State file="/usr/lib/lazarus/3.0/lcl/units/x86_64-linux/gtk2/lcl.compiled"
+Hint: (lazarus) normal output directory of package LCL 3.0.0.3 is not writable: "/usr/lib/lazarus/3.0/lcl/units/x86_64-linux/gtk2/"
+TParsedCompilerOptions.SetOutputDirectoryOverride New=/home/riceric/unarchiver-assessment-20260930/lazarus-config/lib/units/x86_64-linux/gtk2
+Hint: (11030) Start of reading config file /etc/fpc.cfg
+Hint: (11031) End of reading config file /etc/fpc.cfg
+Free Pascal Compiler version 3.2.2+dfsg-32 [2024/01/05] for x86_64
+Copyright (c) 1993-2021 by Florian Klaempfl and others
+(1002) Target OS: Linux for x86-64
+(3104) Compiling project_pea.lpr
+(3104) Compiling pea.pas
+(3104) Compiling hash.pas
+(3104) Compiling btypes.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/hash.pas(316,20) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/hash.pas(387,18) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/hash.pas(94,3) Hint: (5023) Unit "BTypes" not used in Hash
+(3104) Compiling adler32.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/adler32.pas(80,28) Hint: (5024) Parameter "adler" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/adler32.pas(223,17) Hint: (5057) Local variable "AF" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/adler32.pas(224,17) Hint: (5057) Local variable "A1" does not seem to be initialized
+(3104) Compiling crc16.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc16.pas(90,26) Hint: (5024) Parameter "CRC" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc16.pas(299,17) Hint: (5057) Local variable "CRCF" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc16.pas(300,16) Hint: (5057) Local variable "CRC" does not seem to be initialized
+(3104) Compiling crc24.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc24.pas(352,17) Hint: (5057) Local variable "CRCF" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc24.pas(353,16) Hint: (5057) Local variable "CRC" does not seem to be initialized
+(3104) Compiling crc32.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc32.pas(364,17) Hint: (5057) Local variable "CRCF" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc32.pas(365,16) Hint: (5057) Local variable "CRC" does not seem to be initialized
+(3104) Compiling crc64.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc64.pas(530,16) Hint: (5057) Local variable "CRC" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/crc64.pas(82,6) Hint: (5023) Unit "BTypes" not used in CRC64
+(3104) Compiling ed2k.pas
+(3104) Compiling md4.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md4.pas(572,30) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md4.pas(583,29) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md4.pas(638,18) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md4.pas(659,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/ed2k.pas(260,21) Hint: (5057) Local variable "ResRec" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/ed2k.pas(269,22) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/ed2k.pas(299,20) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/ed2k.pas(343,20) Hint: (5057) Local variable "Context" does not seem to be initialized
+(3104) Compiling md5.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md5.pas(569,30) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md5.pas(587,30) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md5.pas(642,18) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/md5.pas(663,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling rmd160.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/rmd160.pas(1055,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/rmd160.pas(1073,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/rmd160.pas(1136,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/rmd160.pas(1157,36) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha1.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha1.pas(329,24) Hint: (5057) Local variable "W" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha1.pas(779,31) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha1.pas(798,31) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha1.pas(858,19) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha1.pas(879,34) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha224.pas
+(3104) Compiling sha256.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha256.pas(922,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha256.pas(941,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha256.pas(1005,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha256.pas(1026,36) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha224.pas(218,29) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha224.pas(237,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha224.pas(312,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha224.pas(333,36) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha3_256.pas
+(3104) Compiling sha3.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3.pas(197,3) Hint: (5028) Local const "cKeccakNumberOfRounds" is not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_256.pas(294,23) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_256.pas(315,38) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha384.pas
+(3104) Compiling sha512.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha512.pas(1216,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha512.pas(1235,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha512.pas(1328,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha512.pas(1349,36) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha384.pas(223,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha384.pas(242,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha384.pas(326,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha384.pas(348,36) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha3_384.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_384.pas(301,23) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_384.pas(322,38) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling sha3_512.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_512.pas(309,23) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sha3_512.pas(330,38) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling whirl512.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1174,51) Hint: (5057) Local variable "S" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1179,18) Hint: (5057) Local variable "L" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1353,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1372,33) Hint: (5057) Local variable "tmp" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1455,21) Hint: (5057) Local variable "Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/whirl512.pas(1476,35) Hint: (5057) Local variable "tmp" does not seem to be initialized
+(3104) Compiling blake2s.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2s.pas(406,14) Hint: (5057) Local variable "m" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2s.pas(560,18) Hint: (5057) Local variable "tb" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2s.pas(632,22) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2s.pas(679,22) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2s.pas(685,25) Hint: (5057) Local variable "md" does not seem to be initialized
+(3104) Compiling blake2b.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(175,14) Hint: (5057) Local variable "v" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(182,14) Hint: (5057) Local variable "m" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(891,18) Hint: (5057) Local variable "tb" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(907,22) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(955,22) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/blake2b.pas(961,25) Hint: (5057) Local variable "md" does not seem to be initialized
+(3104) Compiling aes_ctr.pas
+(3104) Compiling aes_type.pas
+(3104) Compiling aes_base.pas
+(3104) Compiling aes_encr.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_seek.inc(82,20) Hint: (5057) Local variable "TC" does not seem to be initialized
+(3104) Compiling tf_ctr.pas
+(3104) Compiling tf_base.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/tf_base.pas(506,36) Hint: (5057) Local variable "T" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/tf_base.pas(547,39) Hint: (5057) Local variable "T" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/tf_seek.inc(81,20) Hint: (5057) Local variable "TC" does not seem to be initialized
+(3104) Compiling sp_ctr.pas
+(3104) Compiling sp_base.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sp_seek.inc(81,20) Hint: (5057) Local variable "TC" does not seem to be initialized
+(3104) Compiling aes_eax.pas
+(3104) Compiling aes_omac.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_eax.pas(157,17) Hint: (5057) Local variable "t_n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_eax.pas(223,21) Hint: (5057) Local variable "ht" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_eax.pas(258,51) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_eax.pas(297,23) Hint: (5057) Local variable "atag" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/aes_eax.pas(343,51) Hint: (5057) Local variable "ctx" does not seem to be initialized
+(3104) Compiling fcrypta.pas
+(3104) Compiling hmac.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/hmac.pas(109,27) Hint: (5057) Local variable "kb" does not seem to be initialized
+(3104) Compiling kdf.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(173,14) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(176,23) Hint: (5057) Local variable "Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(222,14) Hint: (5057) Local variable "ii" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(225,18) Hint: (5057) Local variable "ucum" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(227,20) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(289,15) Hint: (5057) Local variable "ctr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(296,23) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(307,30) Hint: (5057) Local variable "Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(393,16) Hint: (5057) Local variable "TI" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(394,18) Hint: (5057) Local variable "ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/kdf.pas(398,22) Hint: (5057) Local variable "PRK" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypta.pas(161,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypta.pas(165,83) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypta.pas(219,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypta.pas(233,99) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling fcaes256.pas
+(3104) Compiling scrypt.pas
+(3104) Compiling memh.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/scrypt.pas(288,14) Hint: (5057) Local variable "X" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcaes256.pas(156,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcaes256.pas(160,86) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcaes256.pas(214,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcaes256.pas(228,107) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcaes256.pas(274,97) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling tf_eax.pas
+(3104) Compiling tf_omac.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/tf_eax.pas(114,17) Hint: (5057) Local variable "t_n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/tf_eax.pas(181,20) Hint: (5057) Local variable "ht" does not seem to be initialized
+(3104) Compiling fcryptt.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcryptt.pas(145,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcryptt.pas(149,83) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcryptt.pas(203,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcryptt.pas(217,99) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling fctf256.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fctf256.pas(145,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fctf256.pas(149,86) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fctf256.pas(203,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fctf256.pas(217,107) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fctf256.pas(263,104) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling sp_eax.pas
+(3104) Compiling sp_omac.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sp_eax.pas(114,17) Hint: (5057) Local variable "t_n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/sp_eax.pas(181,20) Hint: (5057) Local variable "ht" does not seem to be initialized
+(3104) Compiling fcrypts.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypts.pas(145,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypts.pas(149,83) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypts.pas(203,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcrypts.pas(217,99) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling fcsp256.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcsp256.pas(145,15) Hint: (5057) Local variable "CTR" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcsp256.pas(149,86) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcsp256.pas(203,29) Hint: (5057) Local variable "mac" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcsp256.pas(217,107) Hint: (5057) Local variable "XKey" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/fcsp256.pas(275,110) Hint: (5057) Local variable "XKey" does not seem to be initialized
+(3104) Compiling mem_util.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/mem_util.pas(301,14) Hint: (5057) Local variable "ic" does not seem to be initialized
+(3104) Compiling list_utils.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1170,37) Hint: (5057) Local variable "vn" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1396,39) Hint: (5091) Local variable "fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1396,28) Hint: (5091) Local variable "fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1396,21) Hint: (5091) Local variable "ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1396,13) Hint: (5091) Local variable "fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1395,80) Hint: (5091) Local variable "flist" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1454,21) Hint: (5091) Local variable "dirarr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(1769,4) Note: (5025) Local variable "dotprefix" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(391,39) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2021,3) Note: (5025) Local variable "P" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2022,3) Note: (5025) Local variable "cl" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(417,26) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2198,16) Hint: (5091) Local variable "s" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2253,18) Hint: (5091) Local variable "s" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2438,3) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2439,3) Note: (5025) Local variable "s1" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2439,6) Note: (5025) Local variable "delimch" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2776,39) Hint: (5091) Local variable "fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2776,28) Hint: (5091) Local variable "fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2776,21) Hint: (5091) Local variable "ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2776,13) Hint: (5091) Local variable "fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(2775,82) Hint: (5091) Local variable "flist" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3011,3) Note: (5025) Local variable "BufferSize" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3012,3) Note: (5025) Local variable "LocalPath" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3013,3) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3014,3) Note: (5025) Local variable "wb" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3015,3) Note: (5025) Local variable "ws" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3016,3) Note: (5025) Local variable "DummyBuffer" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3017,3) Note: (5025) Local variable "Error" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3018,3) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(533,27) Hint: (5024) Parameter "uLocalPath" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3009,10) Warning: (5033) Function result does not seem to be set
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3069,32) Warning: (5089) Local variable "sout" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3085,8) Warning: (5089) Local variable "stout" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3202,10) Warning: (5033) Function result does not seem to be set
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3203,5) Note: (5025) Local variable "attr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(554,25) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3220,5) Note: (5025) Local variable "attr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3250,21) Hint: (5057) Local variable "n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3250,17) Hint: (5057) Local variable "sbuf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3286,21) Hint: (5057) Local variable "n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3286,17) Hint: (5057) Local variable "sbuf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3388,9) Warning: (5043) Symbol "CommandLine" is deprecated
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/list_utils.pas(3388,20) Warning: (5043) Symbol "SetCommandLine" is deprecated
+(3104) Compiling img_utils.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/img_utils.pas(304,40) Warning: (2031) compiler switches are not supported in // styled comments
+(3104) Compiling pea_utils.pas
+(3104) Compiling tsc.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(516,25) Hint: (5057) Local variable "SHA256Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(518,35) Hint: (5057) Local variable "n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(518,20) Hint: (5057) Local variable "sbuf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(521,14) Warning: (5036) Local variable "k" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(526,39) Hint: (5057) Local variable "SHA256Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(636,20) Warning: (2031) compiler switches are not supported in // styled comments
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(688,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(689,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(691,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(727,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(728,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(730,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(766,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(767,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(769,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(804,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(805,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(807,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(842,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(843,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(845,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(880,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(881,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(883,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(920,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(921,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(923,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(962,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(963,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(965,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1004,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1005,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1007,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1044,22) Hint: (5057) Local variable "salt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1045,21) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1047,33) Hint: (5057) Local variable "shortsalt" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1744,29) Hint: (5057) Local variable "buf_data" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1773,25) Hint: (5057) Local variable "SHA512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1775,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1777,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1781,24) Hint: (5057) Local variable "mentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1784,24) Hint: (5057) Local variable "kentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1787,24) Hint: (5057) Local variable "fentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1794,24) Hint: (5057) Local variable "randarr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1811,45) Hint: (5057) Local variable "aes_ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1819,42) Hint: (5057) Local variable "tf_ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1843,25) Hint: (5057) Local variable "SHA512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1844,24) Hint: (5057) Local variable "WhirlContext" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1846,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1852,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1861,24) Hint: (5057) Local variable "mentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1865,24) Hint: (5057) Local variable "kentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1869,24) Hint: (5057) Local variable "fentd" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1877,24) Hint: (5057) Local variable "randarr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1886,30) Hint: (5057) Local variable "d1" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1887,29) Hint: (5057) Local variable "d2" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1894,30) Hint: (5057) Local variable "d3" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1895,29) Hint: (5057) Local variable "d4" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1907,42) Hint: (5057) Local variable "aes_ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1912,39) Hint: (5057) Local variable "tf_ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1944,25) Hint: (5057) Local variable "SHA512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1947,17) Hint: (5057) Local variable "Ctr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,4) Note: (5025) Local variable "yy" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,7) Note: (5025) Local variable "mt" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,10) Note: (5025) Local variable "dd" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,13) Note: (5025) Local variable "hh" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,16) Note: (5025) Local variable "mm" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,19) Note: (5025) Local variable "ss" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,22) Note: (5025) Local variable "ms" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1940,25) Note: (5025) Local variable "us" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(1972,4) Note: (5025) Local variable "SHA512Context" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(421,26) Hint: (5024) Parameter "memdigest" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2010,25) Hint: (5057) Local variable "SHA512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2011,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2012,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2033,53) Hint: (5091) Local variable "fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2033,43) Hint: (5091) Local variable "fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2033,37) Hint: (5091) Local variable "ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2033,30) Hint: (5091) Local variable "fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2033,23) Hint: (5091) Local variable "flist" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2032,30) Hint: (5057) Local variable "ndirs" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2032,24) Hint: (5057) Local variable "nfiles" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2067,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2068,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2082,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2083,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2099,22) Hint: (5057) Local variable "tdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2100,24) Hint: (5057) Local variable "memdigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2107,26) Hint: (5057) Local variable "bbuff" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2353,33) Hint: (5057) Local variable "pw_strength" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2377,34) Hint: (5057) Local variable "f_size" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2385,25) Hint: (5057) Local variable "SHA256Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2388,35) Hint: (5057) Local variable "n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2388,20) Hint: (5057) Local variable "sbuf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2396,39) Hint: (5057) Local variable "SHA256Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2407,1) Warning: (2005) Comment level 2 found
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea_utils.pas(2423,1) Warning: (2005) Comment level 2 found
+(3104) Compiling rfs_utils.pas
+(3104) Compiling unitreport.pas
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(442,25) Hint: (5024) Parameter "dp" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(476,61) Hint: (5091) Local variable "p" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(538,61) Hint: (5091) Local variable "p" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(170,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(171,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(172,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(173,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(174,7) Hint: (5024) Parameter "Shift" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(175,28) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(176,29) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(177,37) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(178,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(179,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(180,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(181,28) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(182,28) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(183,29) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(223,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(184,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(169,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(187,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(212,28) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(167,36) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(166,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(165,29) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(168,37) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(185,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(214,29) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(215,28) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(186,36) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(213,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(188,25) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(188,46) Hint: (5024) Parameter "CloseAction" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(189,26) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(190,24) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(191,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(192,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(193,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(194,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(195,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(196,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(197,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(198,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(199,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(200,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(201,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(202,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(203,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(204,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(204,52) Hint: (5024) Parameter "Key" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(204,63) Hint: (5024) Parameter "Shift" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1222,67) Hint: (5091) Local variable "p" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(206,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1244,64) Hint: (5091) Local variable "p" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1235,4) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(207,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(208,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1269,4) Note: (5025) Local variable "w" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1286,4) Note: (5025) Local variable "w" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(209,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(210,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(211,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(216,37) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(217,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(218,36) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(219,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(220,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(221,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(222,38) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(224,42) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(224,59) Hint: (5024) Parameter "IsColumn" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(226,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(226,57) Hint: (5024) Parameter "Button" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(227,7) Hint: (5024) Parameter "Shift" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(228,43) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(228,60) Hint: (5024) Parameter "IsColumn" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(1450,28) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/unitreport.pas(79,26) Hint: (5023) Unit "img_utils" not used in UnitReport
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(616,36) Hint: (5091) Local variable "decoded_err" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(726,45) Hint: (5057) Local variable "total" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(735,46) Hint: (5057) Local variable "numread" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(777,30) Hint: (5057) Local variable "j" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(777,24) Hint: (5057) Local variable "randarr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(958,45) Hint: (5057) Local variable "compr_level" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(961,58) Hint: (5057) Local variable "volume_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(966,49) Hint: (5057) Local variable "obj_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(969,63) Hint: (5057) Local variable "niter" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(969,57) Hint: (5057) Local variable "pwneeded" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(969,48) Hint: (5057) Local variable "authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(969,39) Hint: (5057) Local variable "headersize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1188,5) Note: (5025) Local variable "k" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1442,46) Hint: (5091) Local variable "out_file" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1460,3) Note: (5025) Local variable "sbufx" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1715,22) Hint: (5057) Local variable "ct384" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1717,30) Hint: (5057) Local variable "dg384" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1792,5) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(2061,20) Hint: (5057) Local variable "randarr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(1030,49) Note: (5027) Local variable "s" is assigned but never used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(2384,39) Hint: (5057) Local variable "qw" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(2429,36) Hint: (5091) Local variable "fnname" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(2429,29) Hint: (5091) Local variable "fnpath" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(2886,5) Note: (5025) Local variable "k" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3067,25) Hint: (5057) Local variable "ct384" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3069,33) Hint: (5057) Local variable "dg384" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3219,52) Hint: (5057) Local variable "system_datetimeencoding" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3403,114) Hint: (5057) Local variable "niter" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3403,108) Hint: (5057) Local variable "archive_datetimeencoding" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3403,83) Hint: (5091) Local variable "volume_algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3404,56) Hint: (5057) Local variable "volume_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3414,105) Hint: (5091) Local variable "obj_algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3414,95) Hint: (5091) Local variable "algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3414,89) Hint: (5057) Local variable "compr_level" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3414,76) Hint: (5091) Local variable "compr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3419,29) Hint: (5057) Local variable "niterf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3418,31) Hint: (5057) Local variable "pwneeded" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3417,31) Hint: (5057) Local variable "authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3416,33) Hint: (5057) Local variable "headersize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3422,47) Hint: (5057) Local variable "obj_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3431,95) Hint: (5057) Local variable "hdr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3432,97) Hint: (5057) Local variable "fhdr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3433,97) Hint: (5057) Local variable "shdr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3659,19) Warning: (4044) Comparison might be always false due to range of constant and expression
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(3659,34) Warning: (6018) unreachable code
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(550,29) Hint: (5024) Parameter "date_param" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(551,29) Hint: (5024) Parameter "attr_param" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(4217,58) Hint: (5057) Local variable "volume_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(4410,46) Hint: (5091) Local variable "out_file" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(4740,39) Hint: (5057) Local variable "qw" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(4981,28) Hint: (5057) Local variable "sbuf1" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(4990,61) Hint: (5057) Local variable "volume_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5216,82) Hint: (5057) Local variable "ndirs" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5216,76) Hint: (5057) Local variable "nfiles" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,90) Hint: (5057) Local variable "nfound" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,83) Hint: (5091) Local variable "exp_fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,69) Hint: (5091) Local variable "exp_fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,59) Hint: (5091) Local variable "exp_ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,48) Hint: (5091) Local variable "exp_fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5254,37) Hint: (5091) Local variable "exp_files" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5256,25) Hint: (5091) Local variable "exp_dirs" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5275,45) Hint: (5057) Local variable "size" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5303,62) Hint: (5057) Local variable "aes_ctx" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5093,48) Note: (5025) Local variable "attr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5097,47) Note: (5025) Local variable "in_param" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5097,56) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5098,4) Note: (5025) Local variable "sr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5481,17) Warning: (5061) Variable "maxs" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,6) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,8) Note: (5025) Local variable "j" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,29) Warning: (5061) Variable "nlevel" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,36) Note: (5025) Local variable "nleveli" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,44) Note: (5025) Local variable "rc" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5482,47) Warning: (5061) Variable "drivenumber" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5484,4) Note: (5025) Local variable "aes_ctx" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5485,4) Note: (5025) Local variable "aes_iv" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,12) Warning: (5061) Variable "wrkdir" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,19) Note: (5025) Local variable "wrktitle" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,28) Note: (5025) Local variable "fstype" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,35) Note: (5025) Local variable "sdrive" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,42) Note: (5025) Local variable "wincomspec" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,53) Note: (5025) Local variable "winver" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5486,60) Note: (5025) Local variable "majmin" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5487,4) Note: (5025) Local variable "bufVolumeName" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5487,19) Note: (5025) Local variable "bufFSName" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5488,4) Note: (5025) Local variable "sn" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5488,7) Note: (5025) Local variable "mc" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5488,10) Note: (5025) Local variable "flags" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5489,4) Warning: (5061) Variable "sizefree" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5489,13) Warning: (5061) Variable "sizetotal" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5489,29) Note: (5025) Local variable "speed" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5491,4) Warning: (5061) Variable "tsin" read but nowhere assigned
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5470,22) Hint: (5024) Parameter "level" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5753,32) Hint: (5057) Local variable "sizea" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5759,24) Hint: (5057) Local variable "sizeb" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5827,37) Hint: (5057) Local variable "numreada" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5827,22) Hint: (5057) Local variable "bufa" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5828,37) Hint: (5057) Local variable "numreadb" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(5828,22) Hint: (5057) Local variable "bufb" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6317,82) Hint: (5057) Local variable "ndirs" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,84) Hint: (5057) Local variable "nfound" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,77) Hint: (5091) Local variable "exp_fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,63) Hint: (5091) Local variable "exp_fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,53) Hint: (5091) Local variable "exp_ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,42) Hint: (5091) Local variable "exp_fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6337,31) Hint: (5091) Local variable "exp_files" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6356,37) Hint: (5057) Local variable "f_size" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6398,49) Hint: (5057) Local variable "RMD160Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6399,40) Hint: (5057) Local variable "SHA1Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6400,46) Hint: (5057) Local variable "SHA256Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6401,52) Hint: (5057) Local variable "SHA3_256Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6402,50) Hint: (5057) Local variable "Blake2sContext" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6403,50) Hint: (5057) Local variable "Blake2bContext" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6404,46) Hint: (5057) Local variable "SHA512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6405,52) Hint: (5057) Local variable "SHA3_512Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6406,48) Hint: (5057) Local variable "WhirlContext" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6407,41) Hint: (5057) Local variable "ED2KContext" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6408,37) Hint: (5057) Local variable "MD4Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6409,37) Hint: (5057) Local variable "MD5Context" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6410,36) Hint: (5057) Local variable "CRC16" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6411,36) Hint: (5057) Local variable "CRC24" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6412,36) Hint: (5057) Local variable "CRC32" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6413,40) Hint: (5057) Local variable "Adler" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6414,36) Hint: (5057) Local variable "CRC64" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6416,38) Hint: (5057) Local variable "n" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6416,23) Hint: (5057) Local variable "sbuf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6464,63) Hint: (5057) Local variable "pgpsig" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6467,50) Hint: (5057) Local variable "ED2KRes" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6468,48) Hint: (5057) Local variable "MD4Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6469,48) Hint: (5057) Local variable "MD5Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6470,63) Hint: (5057) Local variable "RMD160Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6471,52) Hint: (5057) Local variable "SHA1Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6472,65) Hint: (5057) Local variable "Blake2sDigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6473,60) Hint: (5057) Local variable "SHA256Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6474,68) Hint: (5057) Local variable "SHA3_256Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6475,65) Hint: (5057) Local variable "Blake2bDigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6476,60) Hint: (5057) Local variable "SHA512Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6477,68) Hint: (5057) Local variable "SHA3_512Digest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6478,61) Hint: (5057) Local variable "WhirlDigest" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6112,28) Note: (5025) Local variable "x" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6123,4) Note: (5025) Local variable "dummyansistr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6144,4) Note: (5025) Local variable "SHA224Context" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6145,4) Note: (5025) Local variable "SHA224Digest" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6150,4) Note: (5025) Local variable "SHA384Context" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6151,4) Note: (5025) Local variable "SHA384Digest" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6159,12) Note: (5027) Local variable "SHA224_on" is assigned but never used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(6159,32) Note: (5027) Local variable "SHA384_on" is assigned but never used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7147,4) Note: (5025) Local variable "P" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7145,21) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7165,3) Note: (5025) Local variable "stri" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7166,3) Note: (5025) Local variable "P" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7167,3) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7167,5) Note: (5025) Local variable "BytesRead" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7167,15) Note: (5025) Local variable "j" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7167,17) Note: (5025) Local variable "BytesRead2" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7168,3) Note: (5025) Local variable "M" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7168,5) Note: (5025) Local variable "M2" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7163,21) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7224,4) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7225,4) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7225,6) Note: (5025) Local variable "j" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7226,4) Note: (5025) Local variable "exp_files" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7227,4) Note: (5025) Local variable "exp_fsizes" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7228,4) Note: (5025) Local variable "exp_ftimes" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7229,4) Note: (5025) Local variable "exp_fattr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7230,4) Note: (5025) Local variable "exp_fattr_dec" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7231,4) Note: (5025) Local variable "nfound" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7309,4) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7310,4) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7310,6) Note: (5025) Local variable "j" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7311,4) Note: (5025) Local variable "exp_files" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7312,4) Note: (5025) Local variable "exp_fsizes" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7313,4) Note: (5025) Local variable "exp_ftimes" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7314,4) Note: (5025) Local variable "exp_fattr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7315,4) Note: (5025) Local variable "exp_fattr_dec" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7316,4) Note: (5025) Local variable "ntotal" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7316,11) Note: (5025) Local variable "nfound" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7316,18) Note: (5025) Local variable "nmotw" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,72) Hint: (5057) Local variable "nfound" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,65) Hint: (5091) Local variable "exp_fattr_dec" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,51) Hint: (5091) Local variable "exp_fattr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,41) Hint: (5091) Local variable "exp_ftimes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,30) Hint: (5091) Local variable "exp_fsizes" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7433,19) Hint: (5091) Local variable "exp_files" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7417,4) Note: (5025) Local variable "h" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7502,4) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7704,22) Hint: (5057) Local variable "bufa" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7635,25) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7861,31) Hint: (5057) Local variable "numread" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7861,20) Hint: (5057) Local variable "buf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7866,112) Hint: (5057) Local variable "niter" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7866,106) Hint: (5057) Local variable "archive_datetimeencoding" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7866,81) Hint: (5091) Local variable "volume_algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7867,56) Hint: (5057) Local variable "volume_authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7870,31) Hint: (5057) Local variable "tmp_buf" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7875,64) Hint: (5091) Local variable "obj_algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7875,54) Hint: (5091) Local variable "algo" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7875,48) Hint: (5057) Local variable "compr_level" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7875,35) Hint: (5091) Local variable "compr" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7879,31) Hint: (5057) Local variable "pwneeded" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7878,31) Hint: (5057) Local variable "authsize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(7877,33) Hint: (5057) Local variable "headersize" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(404,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(405,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(406,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(407,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(408,42) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(409,41) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(410,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(411,38) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(412,38) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(413,37) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8113,4) Note: (5025) Local variable "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8114,4) Note: (5025) Local variable "nunits" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8114,11) Note: (5025) Local variable "i" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8115,4) Note: (5025) Local variable "drivestr" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(414,34) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(415,42) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(416,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8369,36) Hint: (5057) Local variable "pw_strength" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8358,4) Note: (5025) Local variable "pw_rating" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(417,27) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(417,48) Hint: (5024) Parameter "Key" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(417,59) Hint: (5024) Parameter "Shift" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8396,17) Hint: (5057) Local variable "randarr" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(418,25) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(418,46) Hint: (5024) Parameter "CloseAction" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(427,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8435,20) Hint: (5091) Local variable "thpath" of a managed type does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8518,28) Hint: (5024) Parameter "s" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8610,4) Warning: (6018) unreachable code
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8658,109) Hint: (5057) Local variable "dummyint" does not seem to be initialized
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(419,26) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(420,29) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(421,24) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(422,31) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(428,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(8955,4) Note: (5025) Local variable "w" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(425,38) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(426,39) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(423,38) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(424,39) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(429,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(430,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(431,40) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(432,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(433,30) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(434,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(435,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(435,49) Hint: (5024) Parameter "Shift" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(437,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(438,27) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(9075,4) Note: (5025) Local variable "w" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(439,33) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(440,32) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(441,35) Hint: (5024) Parameter "Sender" not used
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(300,12) Hint: (5023) Unit "TF_CTR" not used in pea
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(300,20) Hint: (5023) Unit "SP_CTR" not used in pea
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(300,28) Hint: (5023) Unit "TF_Base" not used in pea
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/pea.pas(300,37) Hint: (5023) Unit "sp_base" not used in pea
+/home/riceric/unarchiver-assessment-20260930/peazip/dev/project_pea.lpr(12,19) Hint: (5023) Unit "list_utils" not used in project_pea
+(9022) Compiling resource /home/riceric/unarchiver-assessment-20260930/peazip/dev/project_pea.or
+(9015) Linking /home/riceric/unarchiver-assessment-20260930/peazip/dev/pea
+(1008) 77742 lines compiled, 1.9 sec
+(1021) 21 warning(s) issued
+(1022) 491 hint(s) issued
+(1023) 102 note(s) issued

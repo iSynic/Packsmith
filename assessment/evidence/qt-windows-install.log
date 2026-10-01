@@ -1,0 +1,38 @@
+INFO    : aqtinstall(aqt) v3.3.0 on Python 3.14.7 [CPython MSC v.1944 64 bit (AMD64)]
+INFO    : Found extension qtpdf
+INFO    : Downloading qtbase...
+INFO    : Redirected: qt.mirror.constant.com
+INFO    : Finished installation of qtbase-Windows-Windows_11_24H2-Mingw-Windows-Windows_11_24H2-X86_64.7z in 15.32607630
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\bin\qmake.exe
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Concurrent.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Core.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6DBus.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Gui.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Network.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6OpenGL.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6OpenGLWidgets.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Platform.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6PrintSupport.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Sql.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Test.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Widgets.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\pkgconfig\Qt6Xml.pc
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Concurrent.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Core.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6DBus.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6DeviceDiscoverySupport.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6EntryPoint.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6ExampleIcons.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6ExamplesAssetDownloader.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6FbSupport.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Gui.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Network.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6OpenGL.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6OpenGLWidgets.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6PrintSupport.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Sql.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Test.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Widgets.prl
+INFO    : Patching assessment\tools\qt\6.10.2\mingw_64\lib\Qt6Xml.prl
+INFO    : Finished installation
+INFO    : Time elapsed: 21.94258160 second

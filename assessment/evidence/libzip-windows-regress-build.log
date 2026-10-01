@@ -1,0 +1,27 @@
+[1/27] Building C object regress/CMakeFiles/can_clone_file.dir/can_clone_file.c.obj
+[2/27] Building C object regress/CMakeFiles/add_from_filep.dir/add_from_filep.c.obj
+[3/27] Building C object regress/CMakeFiles/fopen_unchanged.dir/fopen_unchanged.c.obj
+[4/27] Building C object regress/CMakeFiles/fseek.dir/fseek.c.obj
+[5/27] Building C object regress/CMakeFiles/liboverride-test.dir/liboverride-test.c.obj
+[6/27] Building C object regress/CMakeFiles/nonrandomopentest.dir/nonrandomopentest.c.obj
+[7/27] Building C object regress/CMakeFiles/tryopen.dir/tryopen.c.obj
+[8/27] Building C object regress/CMakeFiles/fread.dir/fread.c.obj
+[9/27] Building C object regress/CMakeFiles/hole.dir/hole.c.obj
+[10/27] Building C object regress/CMakeFiles/hole.dir/source_hole.c.obj
+[11/27] Building C object regress/CMakeFiles/nonrandomopen.dir/nonrandomopen.c.obj
+[12/27] Building C object regress/CMakeFiles/ziptool_regress.dir/source_hole.c.obj
+[13/27] Building C object regress/CMakeFiles/liboverride.dir/liboverride.c.obj
+[14/27] Linking C executable regress\can_clone_file.exe
+[15/27] Linking C executable regress\add_from_filep.exe
+[16/27] Linking C executable regress\fopen_unchanged.exe
+[17/27] Building C object regress/CMakeFiles/ziptool_regress.dir/ziptool_regress.c.obj
+[18/27] Linking C executable regress\nonrandomopentest.exe
+[19/27] Linking C executable regress\fseek.exe
+[20/27] Linking C executable regress\liboverride-test.exe
+[21/27] Linking C executable regress\fread.exe
+[22/27] Linking C executable regress\tryopen.exe
+[23/27] Linking C executable regress\hole.exe
+[24/27] Linking C shared module regress\libnonrandomopen.dll
+[25/27] Linking C executable regress\ziptool_regress.exe
+[26/27] Linking C shared module regress\libliboverride.dll
+[27/27] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\experiments\libzip-windows-build\regress && C:\msys64\mingw64\bin\cmake.exe -E tar x C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/manyfiles-zip.zip && C:\msys64\mingw64\bin\cmake.exe -E tar x C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/bigzero-zip.zip"

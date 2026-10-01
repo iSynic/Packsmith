@@ -1,0 +1,20 @@
+{
+  "reason": "GNUstep 1.31.1-10 imports five libstdc++ symbols absent from GCC 16.2. GCC 16.1.0-1 overlay passes the native loader/ABI and worker fixture probes. GCC 15 also fails.",
+  "hash_provenance": "SHA256 recorded after initial download over verified HTTPS from official MSYS2 repository; checked on reuse.",
+  "packages": [
+    {
+      "name": "gcc",
+      "version": "16.1.0-1",
+      "filename": "mingw-w64-x86_64-gcc-16.1.0-1-any.pkg.tar.zst",
+      "url": "https://repo.msys2.org/mingw/mingw64/mingw-w64-x86_64-gcc-16.1.0-1-any.pkg.tar.zst",
+      "sha256": "66131f8a236bc6f2683df212c26f1dc0ecb16e797eabddd328a068ff27fc064d"
+    },
+    {
+      "name": "gcc-libs",
+      "version": "16.1.0-1",
+      "filename": "mingw-w64-x86_64-gcc-libs-16.1.0-1-any.pkg.tar.zst",
+      "url": "https://repo.msys2.org/mingw/mingw64/mingw-w64-x86_64-gcc-libs-16.1.0-1-any.pkg.tar.zst",
+      "sha256": "acfdd5fd61709d9f6cba77ab9dc2bcbf6ef670cb7d20b10434affa7d3bb90357"
+    }
+  ]
+}

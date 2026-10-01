@@ -1,0 +1,588 @@
+{
+  "tests": 18,
+  "failures": 0,
+  "errors": 0,
+  "environment": "Native Windows; developer PATH removed; not a clean VM",
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "receipts": [
+    {
+      "operation": "list",
+      "archive": "scale-100k.zip",
+      "exit_code": 0,
+      "elapsed_ms": 1573.48,
+      "terminal": {
+        "count": 100000,
+        "event": "complete",
+        "fingerprint": "f8e7957c94ca20d7aa96517f0ef158bbd31f8fccafee370dad224b212e25745b",
+        "format": "ZIP"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-checksum.zip",
+      "exit_code": 1,
+      "elapsed_ms": 30.92,
+      "terminal": {
+        "event": "error",
+        "message": "Entry 0 failed integrity/decryption (result 3)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "truncated.zip",
+      "exit_code": 1,
+      "elapsed_ms": 31.44,
+      "terminal": {
+        "event": "error",
+        "message": "Entry 0 failed integrity/decryption (result 2)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 38.62,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "fingerprint": "c915acb631a70029327c638e175350bb0ccd79532f683b47a18a5b0588ffe014",
+        "format": "ZIP"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 37.52,
+      "terminal": {
+        "event": "error",
+        "message": "Archive changed; reopen it before using the selected entry IDs"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 55.58,
+      "terminal": {
+        "count": 7,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-twu2ota1/\u65e5\u672c-caf\u00e9/\u65e5\u672c-caf\u00e9 (2)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cancel",
+      "latency_ms": 10.33,
+      "stderr": ""
+    },
+    {
+      "operation": "create",
+      "archive": "created.7z",
+      "exit_code": 0,
+      "elapsed_ms": 76.29,
+      "terminal": {
+        "count": 2,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e6pz1h8f/created.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "created.7z",
+      "exit_code": 0,
+      "elapsed_ms": 52.71,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e6pz1h8f/created.7z.backup-81b4139c55e04e5f91bb50b01b07550b",
+        "count": 1,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e6pz1h8f/created.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "created.7z",
+      "exit_code": 0,
+      "elapsed_ms": 68.17,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e6pz1h8f/created.7z.backup-18b874a3791444ef9a559d8c4bd746ca",
+        "count": 2,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e6pz1h8f/created.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "created.7z",
+      "exit_code": 0,
+      "elapsed_ms": 36.35,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "create",
+      "archive": "created.zip",
+      "exit_code": 0,
+      "elapsed_ms": 50.5,
+      "terminal": {
+        "count": 2,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-47rb_g0a/created.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "created.zip",
+      "exit_code": 0,
+      "elapsed_ms": 50.6,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-47rb_g0a/created.zip.backup-1e83aa5b91d0498fbde5a8297efa71be",
+        "count": 2,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-47rb_g0a/created.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "created.zip",
+      "exit_code": 0,
+      "elapsed_ms": 44.94,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-47rb_g0a/created.zip.backup-66ea57d378794866acf33fc67ad21bb0",
+        "count": 2,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-47rb_g0a/created.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "created.zip",
+      "exit_code": 0,
+      "elapsed_ms": 33.92,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 36.65,
+      "terminal": {
+        "event": "error",
+        "message": "Destination contains a link or reparse point"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "encrypted.7z",
+      "exit_code": 1,
+      "elapsed_ms": 32.15,
+      "terminal": {
+        "event": "error",
+        "message": "Password required"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "encrypted.7z",
+      "exit_code": 1,
+      "elapsed_ms": 60.04,
+      "terminal": {
+        "event": "error",
+        "message": "Wrong password or damaged encrypted header"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "encrypted.7z",
+      "exit_code": 0,
+      "elapsed_ms": 46.69,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "fingerprint": "f094180275191bc804a39f2bd5474cd5a93a559538febefa191fb3e7e6bd2792",
+        "format": "7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "encrypted.7z",
+      "exit_code": 0,
+      "elapsed_ms": 59.08,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-1870xws_/\u65e5\u672c-caf\u00e9/encrypted"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "encrypted.7z",
+      "exit_code": 0,
+      "elapsed_ms": 59.67,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-1870xws_/encrypted.7z.backup-2c2547b96f4845d48b15253f2e14e735",
+        "count": 1,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-1870xws_/encrypted.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "encrypted.7z",
+      "exit_code": 1,
+      "elapsed_ms": 32.2,
+      "terminal": {
+        "event": "error",
+        "message": "Password required"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "encrypted.7z",
+      "exit_code": 0,
+      "elapsed_ms": 57.77,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 78.56,
+      "terminal": {
+        "count": 3,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jbn360ms/\u65e5\u672c-caf\u00e9/\u65e5\u672c-caf\u00e9"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 51.55,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jbn360ms/\u65e5\u672c-caf\u00e9.zip.backup-1a5d9fa300bd4de78cc9db56640d07df",
+        "count": 4,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jbn360ms/\u65e5\u672c-caf\u00e9.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 52.82,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jbn360ms/\u65e5\u672c-caf\u00e9.zip.backup-89b83e2604384f64b58a2432fac7882e",
+        "count": 1,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jbn360ms/\u65e5\u672c-caf\u00e9.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 52.14,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-ebrr99kz/\u65e5\u672c-caf\u00e9/\u65e5\u672c-caf\u00e9"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "small-zip64.zip",
+      "exit_code": 0,
+      "elapsed_ms": 28.73,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 42.05,
+      "terminal": {
+        "event": "error",
+        "message": "Destination contains a link or reparse point"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "create",
+      "archive": "last.zip",
+      "exit_code": 0,
+      "elapsed_ms": 40.61,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "last.zip",
+      "exit_code": 0,
+      "elapsed_ms": 41.42,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.zip.backup-a18563d14963456785486a3b67665f90",
+        "count": 0,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.zip"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "last.zip",
+      "exit_code": 0,
+      "elapsed_ms": 25.86,
+      "terminal": {
+        "count": 0,
+        "event": "complete",
+        "fingerprint": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "format": "ZIP"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "last.zip",
+      "exit_code": 0,
+      "elapsed_ms": 26.05,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "create",
+      "archive": "last.7z",
+      "exit_code": 0,
+      "elapsed_ms": 43.16,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "last.7z",
+      "exit_code": 0,
+      "elapsed_ms": 46.18,
+      "terminal": {
+        "backup": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.7z.backup-2209e75e0fba47dea0989ba4b5c29a9e",
+        "count": 0,
+        "event": "complete",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-2q1483xx/last.7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "last.7z",
+      "exit_code": 0,
+      "elapsed_ms": 26.69,
+      "terminal": {
+        "count": 0,
+        "event": "complete",
+        "fingerprint": "5bc3a0638e7c9286a5b28dd5f32cd096bf5dd9c56e2c45afbd5e27d5353ce4ba",
+        "format": "7z"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "last.7z",
+      "exit_code": 0,
+      "elapsed_ms": 26.82,
+      "terminal": {
+        "event": "complete",
+        "message": "Integrity check passed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 43.91,
+      "terminal": {
+        "count": 3,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-lak60cfm/\u65e5\u672c-caf\u00e9/\u65e5\u672c-caf\u00e9"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "links.zip",
+      "exit_code": 1,
+      "elapsed_ms": 36.11,
+      "terminal": {
+        "event": "error",
+        "message": "Links require an explicit preservation policy; extraction stopped: link"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "interrupted.zip",
+      "exit_code": 1,
+      "elapsed_ms": 31.47,
+      "terminal": {
+        "event": "error",
+        "message": "Recovery marker differs from the interrupted job"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "interrupted.zip",
+      "exit_code": 0,
+      "elapsed_ms": 35.3,
+      "terminal": {
+        "event": "complete",
+        "message": "Interrupted staging cleaned"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 44.19,
+      "terminal": {
+        "count": 3,
+        "event": "complete",
+        "fingerprint": "a11dba95da0a7f42e512efd2674a16d0594dc0fbb656db5f4af756785a297bdd",
+        "format": "ZIP"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 0,
+      "elapsed_ms": 42.85,
+      "terminal": {
+        "count": 1,
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-ibw9rn92/\u65e5\u672c-caf\u00e9/\u65e5\u672c-caf\u00e9"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 42.7,
+      "terminal": {
+        "event": "error",
+        "message": "Destination escape in entry path: ../escape"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 40.76,
+      "terminal": {
+        "event": "error",
+        "message": "Unsafe entry path: /absolute"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 76.87,
+      "terminal": {
+        "event": "error",
+        "message": "Unsafe entry path: C:/escape"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 46.2,
+      "terminal": {
+        "event": "error",
+        "message": "Destination escape in entry path: folder/../escape"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 42.93,
+      "terminal": {
+        "event": "error",
+        "message": "Unsafe entry path: //server/share/file"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "\u65e5\u672c-caf\u00e9.zip",
+      "exit_code": 1,
+      "elapsed_ms": 40.38,
+      "terminal": {
+        "event": "error",
+        "message": "Update would create duplicate/case-colliding paths: alpha.txt"
+      },
+      "stderr": ""
+    }
+  ]
+}

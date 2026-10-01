@@ -1,0 +1,20 @@
+Cloning into 'C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\references\libarchive'...
+warning: refs/tags/v3.8.9 f1f785cc218bb05876c54680f10d3d4e54575ea2 is not a commit!
+Note: switching to '27cbc7827172698143e440801fc0ba39ccb4f1f5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  95% (1416/1476)Updating files:  96% (1417/1476)Updating files:  97% (1432/1476)Updating files:  98% (1447/1476)Updating files:  99% (1462/1476)Updating files: 100% (1476/1476)Updating files: 100% (1476/1476), done.

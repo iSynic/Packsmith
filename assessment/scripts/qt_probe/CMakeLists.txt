@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.19)
+project(ArchiveQtProbe LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+add_executable(qt_probe main.cpp)
+target_link_libraries(qt_probe PRIVATE Qt6::Widgets)

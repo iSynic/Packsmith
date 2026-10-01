@@ -1,0 +1,65 @@
+{
+  "conversion": "Pillow RGBA downsampling/ICO encoding; generated artwork and alpha preserved",
+  "icons": [
+    {
+      "name": "packsmith",
+      "source": "packsmith-master.png",
+      "sha256": "5895fb69920a4bb8b5b41fbe5f432cd8df382a2299316604fd25be9f054b1870",
+      "png_sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256,
+        512
+      ],
+      "ico_sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    },
+    {
+      "name": "packsmith-archive",
+      "source": "packsmith-archive-master.png",
+      "sha256": "51ccd98685c0bc0230290d1056aa4eea24c003f3cb7589ba935788a60df20c8e",
+      "png_sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256,
+        512
+      ],
+      "ico_sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    }
+  ]
+}

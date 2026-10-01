@@ -1,0 +1,30 @@
+{
+  "archive": "hax-13.hqx",
+  "archive_sha256": "f8b051b61e9c1a3cbe829d25d889e1c89d11809c84363a089d47679eb77deb0f",
+  "source_unchanged": true,
+  "listing_entries": 131,
+  "directories": 7,
+  "data_forks": 79,
+  "resource_forks": 70,
+  "empty_data_files": 46,
+  "output": "F:\\Unarchiver\\Packsmith-extracted\\hax-13",
+  "mapping": "F:\\Unarchiver\\Packsmith-extracted\\hax-13\\packsmith-mapping.json",
+  "export_hashes_sizes_raw_names_finderinfo_verified": true,
+  "listing_ms": 143.48,
+  "extraction_ms": 1911.43,
+  "terminal": {
+    "checksum_coverage": {
+      "checked_forks": 150,
+      "expanded_wrappers": 1,
+      "unchecked_forks": 0
+    },
+    "count": 131,
+    "engine": "xad",
+    "event": "complete",
+    "mapping": "packsmith-mapping.json",
+    "output": "F:/Unarchiver/Packsmith-extracted/hax-13"
+  },
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "decoder_sha256": "f64aa6edb2d3c094eb2b7cede591f3c436e0f61f0d3cf0ca455fb708f1e1081d",
+  "scope": "User-provided archive, not a redistributable fixture. BinHex CRC verified independently; inner StuffIt checks use XAD, with generated fixtures as an independent payload oracle."
+}

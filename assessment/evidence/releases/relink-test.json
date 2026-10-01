@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "compiler": "Clang/lld 22.1.8, original provisioned machine",
+  "developer_path_removed": true,
+  "modified_source_executed": true,
+  "helper_sha256": "1c1c2a92e456493ac341d9ad443bdfd9e6494462fa8b3f8cded9e4b089570bea",
+  "modified_helper_sha256": "8f5e7bb983fbd6ed37d25d76603f6e37cbee5569524523c3adfaa2c90e81a101",
+  "checks": [
+    {
+      "fixture": "forks.sit",
+      "passed": true,
+      "terminal": {
+        "event": "complete",
+        "expanded_wrappers": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 2
+      }
+    },
+    {
+      "fixture": "wrapped.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "complete",
+        "expanded_wrappers": 1,
+        "unchecked_forks": 0,
+        "checked_forks": 4
+      }
+    },
+    {
+      "fixture": "bad-resource.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "error",
+        "code": "integrity_failed",
+        "message": "Legacy fork checksum failed"
+      }
+    },
+    {
+      "fixture": "forks.hqx",
+      "passed": true,
+      "terminal": {
+        "relink_probe": "modified-source",
+        "event": "complete",
+        "expanded_wrappers": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 2
+      }
+    }
+  ]
+}

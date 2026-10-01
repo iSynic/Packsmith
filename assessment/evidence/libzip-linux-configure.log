@@ -1,0 +1,176 @@
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for include file CommonCrypto/CommonCrypto.h
+-- Looking for include file CommonCrypto/CommonCrypto.h - not found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Found Nettle: /usr/lib/x86_64-linux-gnu/libnettle.so (found suitable version "3.9.1", minimum required is "3.0") 
+-- Could NOT find GnuTLS (missing: GNUTLS_LIBRARY GNUTLS_INCLUDE_DIR) 
+-- Could NOT find MbedTLS (missing: MbedTLS_LIBRARY MbedTLS_INCLUDE_DIR) (Required is at least version "1.0")
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Looking for _close
+-- Looking for _close - not found
+-- Looking for _dup
+-- Looking for _dup - not found
+-- Looking for _fdopen
+-- Looking for _fdopen - not found
+-- Looking for _fileno
+-- Looking for _fileno - not found
+-- Looking for _fseeki64
+-- Looking for _fseeki64 - not found
+-- Looking for _fstat64
+-- Looking for _fstat64 - not found
+-- Looking for _setmode
+-- Looking for _setmode - not found
+-- Looking for _stat64
+-- Looking for _stat64 - not found
+-- Looking for _snprintf
+-- Looking for _snprintf - not found
+-- Looking for _snprintf_s
+-- Looking for _snprintf_s - not found
+-- Looking for _snwprintf_s
+-- Looking for _snwprintf_s - not found
+-- Looking for _strdup
+-- Looking for _strdup - not found
+-- Looking for _stricmp
+-- Looking for _stricmp - not found
+-- Looking for _strtoi64
+-- Looking for _strtoi64 - not found
+-- Looking for _strtoui64
+-- Looking for _strtoui64 - not found
+-- Looking for _unlink
+-- Looking for _unlink - not found
+-- Looking for arc4random
+-- Looking for arc4random - found
+-- Looking for clonefile
+-- Looking for clonefile - not found
+-- Looking for explicit_bzero
+-- Looking for explicit_bzero - found
+-- Looking for explicit_memset
+-- Looking for explicit_memset - not found
+-- Looking for fchmod
+-- Looking for fchmod - found
+-- Looking for fileno
+-- Looking for fileno - found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for ftello
+-- Looking for ftello - found
+-- Looking for getprogname
+-- Looking for getprogname - not found
+-- Looking for GetSecurityInfo
+-- Looking for GetSecurityInfo - not found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for localtime_s
+-- Looking for localtime_s - not found
+-- Looking for memcpy_s
+-- Looking for memcpy_s - not found
+-- Looking for random
+-- Looking for random - found
+-- Looking for setmode
+-- Looking for setmode - not found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for snprintf_s
+-- Looking for snprintf_s - not found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strerror_s
+-- Looking for strerror_s - not found
+-- Looking for strerrorlen_s
+-- Looking for strerrorlen_s - not found
+-- Looking for stricmp
+-- Looking for stricmp - not found
+-- Looking for strncpy_s
+-- Looking for strncpy_s - not found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strtoull
+-- Looking for strtoull - found
+-- Looking for 3 include files sys/types.h, ..., fts.h
+-- Looking for 3 include files sys/types.h, ..., fts.h - found
+-- Looking for fts_open
+-- Looking for fts_open - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of __int8
+-- Check size of __int8 - failed
+-- Check size of int8_t
+-- Check size of int8_t - done
+-- Check size of uint8_t
+-- Check size of uint8_t - done
+-- Check size of __int16
+-- Check size of __int16 - failed
+-- Check size of int16_t
+-- Check size of int16_t - done
+-- Check size of uint16_t
+-- Check size of uint16_t - done
+-- Check size of __int32
+-- Check size of __int32 - failed
+-- Check size of int32_t
+-- Check size of int32_t - done
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of __int64
+-- Check size of __int64 - failed
+-- Check size of int64_t
+-- Check size of int64_t - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Performing Test HAVE_FICLONERANGE
+-- Performing Test HAVE_FICLONERANGE - Success
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found suitable version "1.3", minimum required is "1.1.2")  
+-- Found BZip2: /usr/lib/x86_64-linux-gnu/libbz2.so (found version "1.0.8") 
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - found
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_auto_decoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_easy_encoder in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so
+-- Looking for lzma_lzma_preset in /usr/lib/x86_64-linux-gnu/liblzma.so - found
+-- Found LibLZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found suitable version "5.4.5", minimum required is "5.2") 
+-- Found zstd: /usr/lib/x86_64-linux-gnu/libzstd.so (Required is at least version "1.4.0") 
+-- Looking for getopt
+-- Looking for getopt - found
+CMake Warning at CMakeLists.txt:323 (message):
+  -- nihtest not found, regression testing disabled
+
+
+-- Configuring done (31.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/riceric/unarchiver-assessment-20260930/libzip-build

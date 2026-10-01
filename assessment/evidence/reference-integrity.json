@@ -1,0 +1,57 @@
+[
+  {
+    "directory": "source",
+    "commit": "28a2330b16139f6d074cdf75ea34eee0ccd218c4",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\ark",
+    "commit": "ce842bc2046c8718d7559d9f88ce1fc4c0fbde9d",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\detector",
+    "commit": "4eb832d999628edcd3d134e46bd35357c8c99a85",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\libarchive",
+    "commit": "27cbc7827172698143e440801fc0ba39ccb4f1f5",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\libzip",
+    "commit": "6f8a0cdd24a0dc6cce9dac4a7679da784ab124ea",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\nanazip",
+    "commit": "df5db3c4a327c980e9f66dc28fbabd6782cda5e0",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\nihtest",
+    "commit": "01d2588dbec93c7560236ad1b0ba5be30bc0a785",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\peazip",
+    "commit": "52140702007e6b5e4d3d8a7e3f06bfb4ff5f5b37",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\sevenzip",
+    "commit": "0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\xad-head",
+    "commit": "7cb9ee0abbb163f261e4cb74501e15067032319c",
+    "status_porcelain": ""
+  },
+  {
+    "directory": "assessment\\references\\xad-stable",
+    "commit": "881e0ec25e249c9ad5bbc1b6782ae8dcdf48a6ed",
+    "status_porcelain": ""
+  }
+]

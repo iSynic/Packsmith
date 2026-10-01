@@ -1,0 +1,174 @@
+-- The C compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Looking for include file CommonCrypto/CommonCrypto.h
+-- Looking for include file CommonCrypto/CommonCrypto.h - not found
+-- Found PkgConfig: C:/msys64/mingw64/bin/pkg-config.exe (found version "2.5.1")
+-- Found Nettle: C:/msys64/mingw64/lib/libnettle.dll.a (found suitable version "3.10.2", minimum required is "3.0")
+-- Found GnuTLS: C:/msys64/mingw64/lib/libgnutls.dll.a
+-- Could NOT find MbedTLS (missing: MbedTLS_LIBRARY MbedTLS_INCLUDE_DIR) (Required is at least version "1.0")
+-- Found OpenSSL: C:/msys64/mingw64/lib/libcrypto.dll.a (found version "3.5.2")
+-- Looking for _close
+-- Looking for _close - found
+-- Looking for _dup
+-- Looking for _dup - found
+-- Looking for _fdopen
+-- Looking for _fdopen - found
+-- Looking for _fileno
+-- Looking for _fileno - found
+-- Looking for _fseeki64
+-- Looking for _fseeki64 - found
+-- Looking for _fstat64
+-- Looking for _fstat64 - found
+-- Looking for _setmode
+-- Looking for _setmode - found
+-- Looking for _stat64
+-- Looking for _stat64 - found
+-- Looking for _snprintf
+-- Looking for _snprintf - found
+-- Looking for _snprintf_s
+-- Looking for _snprintf_s - found
+-- Looking for _snwprintf_s
+-- Looking for _snwprintf_s - found
+-- Looking for _strdup
+-- Looking for _strdup - found
+-- Looking for _stricmp
+-- Looking for _stricmp - found
+-- Looking for _strtoi64
+-- Looking for _strtoi64 - found
+-- Looking for _strtoui64
+-- Looking for _strtoui64 - found
+-- Looking for _unlink
+-- Looking for _unlink - found
+-- Looking for arc4random
+-- Looking for arc4random - not found
+-- Looking for clonefile
+-- Looking for clonefile - not found
+-- Looking for explicit_bzero
+-- Looking for explicit_bzero - not found
+-- Looking for explicit_memset
+-- Looking for explicit_memset - not found
+-- Looking for fchmod
+-- Looking for fchmod - not found
+-- Looking for fileno
+-- Looking for fileno - found
+-- Looking for fseeko
+-- Looking for fseeko - found
+-- Looking for ftello
+-- Looking for ftello - found
+-- Looking for getprogname
+-- Looking for getprogname - not found
+-- Looking for GetSecurityInfo
+-- Looking for GetSecurityInfo - found
+-- Looking for localtime_r
+-- Looking for localtime_r - not found
+-- Looking for localtime_s
+-- Looking for localtime_s - found
+-- Looking for memcpy_s
+-- Looking for memcpy_s - found
+-- Looking for random
+-- Looking for random - not found
+-- Looking for setmode
+-- Looking for setmode - found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for snprintf_s
+-- Looking for snprintf_s - not found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strerror_s
+-- Looking for strerror_s - found
+-- Looking for strerrorlen_s
+-- Looking for strerrorlen_s - not found
+-- Looking for stricmp
+-- Looking for stricmp - found
+-- Looking for strncpy_s
+-- Looking for strncpy_s - found
+-- Looking for strtoll
+-- Looking for strtoll - found
+-- Looking for strtoull
+-- Looking for strtoull - found
+-- Looking for 3 include files sys/types.h, ..., fts.h
+-- Looking for 3 include files sys/types.h, ..., fts.h - not found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for include file strings.h
+-- Looking for include file strings.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file stdint.h
+-- Looking for include file stdint.h - found
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of __int8
+-- Check size of __int8 - done
+-- Check size of int8_t
+-- Check size of int8_t - done
+-- Check size of uint8_t
+-- Check size of uint8_t - done
+-- Check size of __int16
+-- Check size of __int16 - done
+-- Check size of int16_t
+-- Check size of int16_t - done
+-- Check size of uint16_t
+-- Check size of uint16_t - done
+-- Check size of __int32
+-- Check size of __int32 - done
+-- Check size of int32_t
+-- Check size of int32_t - done
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of __int64
+-- Check size of __int64 - done
+-- Check size of int64_t
+-- Check size of int64_t - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Performing Test HAVE_FICLONERANGE
+-- Performing Test HAVE_FICLONERANGE - Failed
+-- Found ZLIB: C:/msys64/mingw64/lib/libz.dll.a (found suitable version "1.3.1", minimum required is "1.1.2")
+-- Found BZip2: C:/msys64/mingw64/lib/libbz2.dll.a (found version "1.0.8")
+-- Looking for BZ2_bzCompressInit
+-- Looking for BZ2_bzCompressInit - found
+-- Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_auto_decoder in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_easy_encoder in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a
+-- Looking for lzma_lzma_preset in C:/msys64/mingw64/lib/liblzma.dll.a - found
+-- Found LibLZMA: C:/msys64/mingw64/lib/liblzma.dll.a (found suitable version "5.8.1", minimum required is "5.2")
+-- Found zstd: C:/msys64/mingw64/lib/libzstd.dll.a (Required is at least version "1.4.0")
+-- Looking for getopt
+-- Looking for getopt - found
+CMake Warning at CMakeLists.txt:323 (message):
+  -- nihtest not found, regression testing disabled
+
+
+-- Configuring done (50.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/libzip-windows-build

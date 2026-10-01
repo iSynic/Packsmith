@@ -1,0 +1,2 @@
+gcc.exe: fatal error: cannot execute 'cc1obj': CreateProcess: No such file or directory
+compilation terminated.

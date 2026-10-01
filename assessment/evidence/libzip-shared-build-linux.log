@@ -1,0 +1,193 @@
+[  1%] Generating zip_err_str.c
+[  1%] Building C object regress/CMakeFiles/nonrandomopen.dir/nonrandomopen.c.o
+[  2%] Building C object regress/CMakeFiles/liboverride.dir/liboverride.c.o
+[  2%] Building C object lib/CMakeFiles/zip.dir/zip_add.c.o
+[  2%] Linking C shared module libliboverride.so
+[  3%] Linking C shared module libnonrandomopen.so
+[  3%] Built target testinput
+[  4%] Building C object lib/CMakeFiles/zip.dir/zip_add_dir.c.o
+[  5%] Building C object lib/CMakeFiles/zip.dir/zip_add_entry.c.o
+[  5%] Building C object lib/CMakeFiles/zip.dir/zip_algorithm_deflate.c.o
+[  6%] Building C object lib/CMakeFiles/zip.dir/zip_buffer.c.o
+[  6%] Built target liboverride
+[  6%] Built target nonrandomopen
+[  6%] Building C object lib/CMakeFiles/zip.dir/zip_close.c.o
+[  7%] Building C object lib/CMakeFiles/zip.dir/zip_delete.c.o
+[  8%] Building C object lib/CMakeFiles/zip.dir/zip_dir_add.c.o
+[  8%] Building C object lib/CMakeFiles/zip.dir/zip_dirent.c.o
+[  9%] Building C object lib/CMakeFiles/zip.dir/zip_discard.c.o
+[  9%] Building C object lib/CMakeFiles/zip.dir/zip_entry.c.o
+[ 10%] Building C object lib/CMakeFiles/zip.dir/zip_error.c.o
+[ 11%] Building C object lib/CMakeFiles/zip.dir/zip_error_clear.c.o
+[ 11%] Building C object lib/CMakeFiles/zip.dir/zip_error_get.c.o
+[ 12%] Building C object lib/CMakeFiles/zip.dir/zip_error_get_sys_type.c.o
+[ 12%] Building C object lib/CMakeFiles/zip.dir/zip_error_strerror.c.o
+[ 13%] Building C object lib/CMakeFiles/zip.dir/zip_error_to_str.c.o
+[ 14%] Building C object lib/CMakeFiles/zip.dir/zip_extra_field.c.o
+[ 14%] Building C object lib/CMakeFiles/zip.dir/zip_extra_field_api.c.o
+[ 15%] Building C object lib/CMakeFiles/zip.dir/zip_fclose.c.o
+[ 15%] Building C object lib/CMakeFiles/zip.dir/zip_fdopen.c.o
+[ 16%] Building C object lib/CMakeFiles/zip.dir/zip_file_add.c.o
+[ 16%] Building C object lib/CMakeFiles/zip.dir/zip_file_error_clear.c.o
+[ 17%] Building C object lib/CMakeFiles/zip.dir/zip_file_error_get.c.o
+[ 18%] Building C object lib/CMakeFiles/zip.dir/zip_file_get_comment.c.o
+[ 18%] Building C object lib/CMakeFiles/zip.dir/zip_file_get_external_attributes.c.o
+[ 19%] Building C object lib/CMakeFiles/zip.dir/zip_file_get_offset.c.o
+[ 19%] Building C object lib/CMakeFiles/zip.dir/zip_file_rename.c.o
+[ 20%] Building C object lib/CMakeFiles/zip.dir/zip_file_replace.c.o
+[ 21%] Building C object lib/CMakeFiles/zip.dir/zip_file_set_comment.c.o
+[ 21%] Building C object lib/CMakeFiles/zip.dir/zip_file_set_encryption.c.o
+[ 22%] Building C object lib/CMakeFiles/zip.dir/zip_file_set_external_attributes.c.o
+[ 22%] Building C object lib/CMakeFiles/zip.dir/zip_file_set_mtime.c.o
+[ 23%] Building C object lib/CMakeFiles/zip.dir/zip_file_strerror.c.o
+[ 24%] Building C object lib/CMakeFiles/zip.dir/zip_fopen.c.o
+[ 24%] Building C object lib/CMakeFiles/zip.dir/zip_fopen_encrypted.c.o
+[ 25%] Building C object lib/CMakeFiles/zip.dir/zip_fopen_index.c.o
+[ 25%] Building C object lib/CMakeFiles/zip.dir/zip_fopen_index_encrypted.c.o
+[ 26%] Building C object lib/CMakeFiles/zip.dir/zip_fread.c.o
+[ 27%] Building C object lib/CMakeFiles/zip.dir/zip_fseek.c.o
+[ 27%] Building C object lib/CMakeFiles/zip.dir/zip_ftell.c.o
+[ 28%] Building C object lib/CMakeFiles/zip.dir/zip_get_archive_comment.c.o
+[ 28%] Building C object lib/CMakeFiles/zip.dir/zip_get_archive_flag.c.o
+[ 29%] Building C object lib/CMakeFiles/zip.dir/zip_get_encryption_implementation.c.o
+[ 30%] Building C object lib/CMakeFiles/zip.dir/zip_get_file_comment.c.o
+[ 30%] Building C object lib/CMakeFiles/zip.dir/zip_get_name.c.o
+[ 31%] Building C object lib/CMakeFiles/zip.dir/zip_get_num_entries.c.o
+[ 31%] Building C object lib/CMakeFiles/zip.dir/zip_get_num_files.c.o
+[ 32%] Building C object lib/CMakeFiles/zip.dir/zip_hash.c.o
+[ 33%] Building C object lib/CMakeFiles/zip.dir/zip_io_util.c.o
+[ 33%] Building C object lib/CMakeFiles/zip.dir/zip_libzip_version.c.o
+[ 34%] Building C object lib/CMakeFiles/zip.dir/zip_memdup.c.o
+[ 34%] Building C object lib/CMakeFiles/zip.dir/zip_name_locate.c.o
+[ 35%] Building C object lib/CMakeFiles/zip.dir/zip_new.c.o
+[ 36%] Building C object lib/CMakeFiles/zip.dir/zip_open.c.o
+[ 36%] Building C object lib/CMakeFiles/zip.dir/zip_pkware.c.o
+[ 37%] Building C object lib/CMakeFiles/zip.dir/zip_progress.c.o
+[ 37%] Building C object lib/CMakeFiles/zip.dir/zip_realloc.c.o
+[ 38%] Building C object lib/CMakeFiles/zip.dir/zip_rename.c.o
+[ 39%] Building C object lib/CMakeFiles/zip.dir/zip_replace.c.o
+[ 39%] Building C object lib/CMakeFiles/zip.dir/zip_set_archive_comment.c.o
+[ 40%] Building C object lib/CMakeFiles/zip.dir/zip_set_archive_flag.c.o
+[ 40%] Building C object lib/CMakeFiles/zip.dir/zip_set_default_password.c.o
+[ 41%] Building C object lib/CMakeFiles/zip.dir/zip_set_file_comment.c.o
+[ 41%] Building C object lib/CMakeFiles/zip.dir/zip_set_file_compression.c.o
+[ 42%] Building C object lib/CMakeFiles/zip.dir/zip_set_name.c.o
+[ 43%] Building C object lib/CMakeFiles/zip.dir/zip_source_accept_empty.c.o
+[ 43%] Building C object lib/CMakeFiles/zip.dir/zip_source_begin_write.c.o
+[ 44%] Building C object lib/CMakeFiles/zip.dir/zip_source_begin_write_cloning.c.o
+[ 44%] Building C object lib/CMakeFiles/zip.dir/zip_source_buffer.c.o
+[ 45%] Building C object lib/CMakeFiles/zip.dir/zip_source_call.c.o
+[ 46%] Building C object lib/CMakeFiles/zip.dir/zip_source_close.c.o
+[ 46%] Building C object lib/CMakeFiles/zip.dir/zip_source_commit_write.c.o
+[ 47%] Building C object lib/CMakeFiles/zip.dir/zip_source_compress.c.o
+[ 47%] Building C object lib/CMakeFiles/zip.dir/zip_source_crc.c.o
+[ 48%] Building C object lib/CMakeFiles/zip.dir/zip_source_error.c.o
+[ 49%] Building C object lib/CMakeFiles/zip.dir/zip_source_file_common.c.o
+[ 49%] Building C object lib/CMakeFiles/zip.dir/zip_source_file_stdio.c.o
+[ 50%] Building C object lib/CMakeFiles/zip.dir/zip_source_free.c.o
+[ 50%] Building C object lib/CMakeFiles/zip.dir/zip_source_function.c.o
+[ 51%] Building C object lib/CMakeFiles/zip.dir/zip_source_get_dostime.c.o
+[ 52%] Building C object lib/CMakeFiles/zip.dir/zip_source_get_file_attributes.c.o
+[ 52%] Building C object lib/CMakeFiles/zip.dir/zip_source_is_deleted.c.o
+[ 53%] Building C object lib/CMakeFiles/zip.dir/zip_source_layered.c.o
+[ 53%] Building C object lib/CMakeFiles/zip.dir/zip_source_open.c.o
+[ 54%] Building C object lib/CMakeFiles/zip.dir/zip_source_pass_to_lower_layer.c.o
+[ 55%] Building C object lib/CMakeFiles/zip.dir/zip_source_pkware_decode.c.o
+[ 55%] Building C object lib/CMakeFiles/zip.dir/zip_source_pkware_encode.c.o
+[ 56%] Building C object lib/CMakeFiles/zip.dir/zip_source_read.c.o
+[ 56%] Building C object lib/CMakeFiles/zip.dir/zip_source_remove.c.o
+[ 57%] Building C object lib/CMakeFiles/zip.dir/zip_source_rollback_write.c.o
+[ 58%] Building C object lib/CMakeFiles/zip.dir/zip_source_seek.c.o
+[ 58%] Building C object lib/CMakeFiles/zip.dir/zip_source_seek_write.c.o
+[ 59%] Building C object lib/CMakeFiles/zip.dir/zip_source_stat.c.o
+[ 59%] Building C object lib/CMakeFiles/zip.dir/zip_source_supports.c.o
+[ 60%] Building C object lib/CMakeFiles/zip.dir/zip_source_tell.c.o
+[ 61%] Building C object lib/CMakeFiles/zip.dir/zip_source_tell_write.c.o
+[ 61%] Building C object lib/CMakeFiles/zip.dir/zip_source_window.c.o
+[ 62%] Building C object lib/CMakeFiles/zip.dir/zip_source_write.c.o
+[ 62%] Building C object lib/CMakeFiles/zip.dir/zip_source_zip.c.o
+[ 63%] Building C object lib/CMakeFiles/zip.dir/zip_source_zip_new.c.o
+[ 64%] Building C object lib/CMakeFiles/zip.dir/zip_stat.c.o
+[ 64%] Building C object lib/CMakeFiles/zip.dir/zip_stat_index.c.o
+[ 65%] Building C object lib/CMakeFiles/zip.dir/zip_stat_init.c.o
+[ 65%] Building C object lib/CMakeFiles/zip.dir/zip_strerror.c.o
+[ 66%] Building C object lib/CMakeFiles/zip.dir/zip_string.c.o
+[ 66%] Building C object lib/CMakeFiles/zip.dir/zip_unchange.c.o
+[ 67%] Building C object lib/CMakeFiles/zip.dir/zip_unchange_all.c.o
+[ 68%] Building C object lib/CMakeFiles/zip.dir/zip_unchange_archive.c.o
+[ 68%] Building C object lib/CMakeFiles/zip.dir/zip_unchange_data.c.o
+[ 69%] Building C object lib/CMakeFiles/zip.dir/zip_utf-8.c.o
+[ 69%] Building C object lib/CMakeFiles/zip.dir/zip_err_str.c.o
+[ 70%] Building C object lib/CMakeFiles/zip.dir/zip_source_file_stdio_named.c.o
+[ 71%] Building C object lib/CMakeFiles/zip.dir/zip_random_unix.c.o
+[ 71%] Building C object lib/CMakeFiles/zip.dir/zip_algorithm_bzip2.c.o
+[ 72%] Building C object lib/CMakeFiles/zip.dir/zip_algorithm_xz.c.o
+[ 72%] Building C object lib/CMakeFiles/zip.dir/zip_algorithm_zstd.c.o
+[ 73%] Building C object lib/CMakeFiles/zip.dir/zip_crypto_openssl.c.o
+[ 74%] Building C object lib/CMakeFiles/zip.dir/zip_winzip_aes.c.o
+[ 74%] Building C object lib/CMakeFiles/zip.dir/zip_source_winzip_aes_decode.c.o
+[ 75%] Building C object lib/CMakeFiles/zip.dir/zip_source_winzip_aes_encode.c.o
+[ 75%] Linking C shared library libzip.so
+[ 75%] Built target zip
+[ 76%] Building C object src/CMakeFiles/zipcmp.dir/zipcmp.c.o
+[ 76%] Building C object src/CMakeFiles/ziptool.dir/ziptool.c.o
+[ 76%] Building C object src/CMakeFiles/zipmerge.dir/zipmerge.c.o
+[ 76%] Building C object regress/CMakeFiles/add_from_filep.dir/add_from_filep.c.o
+[ 77%] Linking C executable add_from_filep
+[ 78%] Linking C executable zipmerge
+[ 79%] Linking C executable ziptool
+[ 80%] Building C object src/CMakeFiles/zipcmp.dir/diff_output.c.o
+[ 80%] Built target add_from_filep
+[ 80%] Building C object regress/CMakeFiles/can_clone_file.dir/can_clone_file.c.o
+[ 80%] Built target zipmerge
+[ 80%] Building C object regress/CMakeFiles/fopen_unchanged.dir/fopen_unchanged.c.o
+[ 80%] Linking C executable zipcmp
+[ 81%] Linking C executable can_clone_file
+[ 82%] Linking C executable fopen_unchanged
+[ 82%] Built target ziptool
+[ 83%] Building C object regress/CMakeFiles/fseek.dir/fseek.c.o
+[ 83%] Built target zipcmp
+[ 83%] Built target can_clone_file
+[ 83%] Building C object regress/CMakeFiles/nonrandomopentest.dir/nonrandomopentest.c.o
+[ 84%] Building C object regress/CMakeFiles/liboverride-test.dir/liboverride-test.c.o
+[ 84%] Linking C executable fseek
+[ 84%] Built target fopen_unchanged
+[ 85%] Building C object regress/CMakeFiles/fread.dir/fread.c.o
+[ 86%] Linking C executable nonrandomopentest
+[ 87%] Linking C executable liboverride-test
+[ 87%] Linking C executable fread
+[ 87%] Built target fseek
+[ 88%] Building C object regress/CMakeFiles/tryopen.dir/tryopen.c.o
+[ 88%] Built target liboverride-test
+[ 88%] Built target nonrandomopentest
+[ 89%] Building C object regress/CMakeFiles/hole.dir/hole.c.o
+[ 89%] Building C object regress/CMakeFiles/ziptool_regress.dir/ziptool_regress.c.o
+[ 89%] Linking C executable tryopen
+[ 90%] Building C object regress/CMakeFiles/hole.dir/source_hole.c.o
+[ 90%] Built target fread
+[ 91%] Building C object ossfuzz/CMakeFiles/zip_read_file_fuzzer.dir/zip_read_file_fuzzer.c.o
+/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/ziptool_regress.c: In function ‘get_stdin_commands’:
+/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip/regress/ziptool_regress.c:99:5: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   99 |     fgets(stdin_line, sizeof(stdin_line), stdin);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 91%] Linking C executable hole
+[ 92%] Building C object ossfuzz/CMakeFiles/zip_read_file_fuzzer.dir/fuzz_main.c.o
+[ 92%] Built target tryopen
+[ 93%] Building C object ossfuzz/CMakeFiles/zip_read_fuzzer.dir/zip_read_fuzzer.c.o
+[ 93%] Linking C executable zip_read_file_fuzzer
+[ 93%] Building C object ossfuzz/CMakeFiles/zip_read_fuzzer.dir/fuzz_main.c.o
+[ 94%] Building C object regress/CMakeFiles/ziptool_regress.dir/source_hole.c.o
+[ 94%] Built target hole
+[ 95%] Building C object ossfuzz/CMakeFiles/zip_write_encrypt_aes256_file_fuzzer.dir/zip_write_encrypt_aes256_file_fuzzer.c.o
+[ 96%] Linking C executable zip_read_fuzzer
+[ 96%] Built target zip_read_file_fuzzer
+[ 96%] Building C object ossfuzz/CMakeFiles/zip_write_encrypt_pkware_file_fuzzer.dir/zip_write_encrypt_pkware_file_fuzzer.c.o
+[ 96%] Building C object ossfuzz/CMakeFiles/zip_write_encrypt_aes256_file_fuzzer.dir/fuzz_main.c.o
+[ 97%] Linking C executable zip_write_encrypt_aes256_file_fuzzer
+[ 99%] Linking C executable ziptool_regress
+[ 99%] Building C object ossfuzz/CMakeFiles/zip_write_encrypt_pkware_file_fuzzer.dir/fuzz_main.c.o
+[ 99%] Built target zip_read_fuzzer
+[100%] Linking C executable zip_write_encrypt_pkware_file_fuzzer
+[100%] Built target zip_write_encrypt_aes256_file_fuzzer
+[100%] Built target ziptool_regress
+[100%] Built target zip_write_encrypt_pkware_file_fuzzer

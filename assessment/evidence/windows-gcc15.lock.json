@@ -1,0 +1,20 @@
+{
+  "reason": "Rejected runtime experiment: GNUstep 1.31.1-10 imports 228 symbols absent from GCC 15.2.0-13, and Foundation exits with STATUS_ENTRYPOINT_NOT_FOUND. Retained solely for negative-control reproduction.",
+  "hash_provenance": "SHA256 recorded after initial download over verified HTTPS from official MSYS2 repository; checked on reuse.",
+  "packages": [
+    {
+      "name": "gcc",
+      "version": "15.2.0-13",
+      "filename": "mingw-w64-x86_64-gcc-15.2.0-13-any.pkg.tar.zst",
+      "url": "https://repo.msys2.org/mingw/mingw64/mingw-w64-x86_64-gcc-15.2.0-13-any.pkg.tar.zst",
+      "sha256": "66c6e8dcdd7a288158b83fa5be7728fab6c492739ec3e98bf35886e3f560e93e"
+    },
+    {
+      "name": "gcc-libs",
+      "version": "15.2.0-13",
+      "filename": "mingw-w64-x86_64-gcc-libs-15.2.0-13-any.pkg.tar.zst",
+      "url": "https://repo.msys2.org/mingw/mingw64/mingw-w64-x86_64-gcc-libs-15.2.0-13-any.pkg.tar.zst",
+      "sha256": "5ccdbb9cbc1356f92cb77c22429c67b8d7ab0976e84293c8297548284826fb72"
+    }
+  ]
+}

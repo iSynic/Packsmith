@@ -1,0 +1,125 @@
+[
+  {
+    "name": "foundation-build",
+    "command": [
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/bin/clang.exe",
+      "-LC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime-gcc16_1/mingw64/lib",
+      "-fobjc-runtime=gnustep-2.0",
+      "-fexceptions",
+      "-fobjc-exceptions",
+      "-fblocks",
+      "-fconstant-string-class=NSConstantString",
+      "-DSTRICT_APPLE_COMPATIBILITY=1",
+      "-D_NATIVE_OBJC_EXCEPTIONS",
+      "-D_FILE_OFFSET_BITS=64",
+      "-IC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/include",
+      "-LC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/lib",
+      "-fuse-ld=lld",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/windows_foundation_probe.m",
+      "-lgnustep-base",
+      "-lobjc",
+      "-lstdc++",
+      "-o",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/foundation-probe.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "status": "pass",
+    "elapsed_seconds": 0.854,
+    "log": "foundation-build.log"
+  },
+  {
+    "name": "foundation-run",
+    "command": [
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/foundation-probe.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "status": "pass",
+    "elapsed_seconds": 0.258,
+    "log": "foundation-run.log"
+  },
+  {
+    "name": "foundation-negative-build",
+    "command": [
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/bin/clang.exe",
+      "-LC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime-gcc16_1/mingw64/lib",
+      "-fobjc-runtime=gnustep-2.0",
+      "-fexceptions",
+      "-fobjc-exceptions",
+      "-fblocks",
+      "-fconstant-string-class=NSConstantString",
+      "-D_NATIVE_OBJC_EXCEPTIONS",
+      "-D_FILE_OFFSET_BITS=64",
+      "-IC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/include",
+      "-LC:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/lib",
+      "-fuse-ld=lld",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/windows_foundation_probe.m",
+      "-lgnustep-base",
+      "-lobjc",
+      "-lstdc++",
+      "-o",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/foundation-without-abi-flag.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "status": "pass",
+    "elapsed_seconds": 1.051,
+    "log": "foundation-negative-build.log"
+  },
+  {
+    "name": "foundation-negative-run",
+    "command": [
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/foundation-without-abi-flag.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "status": "pass",
+    "elapsed_seconds": 0.1,
+    "log": "foundation-negative-run.log"
+  },
+  {
+    "name": "xad-configure",
+    "command": [
+      "C:/msys64/mingw64/bin/cmake.exe",
+      "-S",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/project",
+      "-B",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/build-clang22",
+      "-G",
+      "Ninja",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_C_COMPILER=C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/bin/clang.exe",
+      "-DCMAKE_OBJC_COMPILER=C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/bin/clang.exe",
+      "-DCMAKE_CXX_COMPILER=C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/windows-runtime/mingw64/bin/clang++.exe",
+      "-DCMAKE_CXX_FLAGS=",
+      "-DCMAKE_MAKE_PROGRAM=C:/msys64/mingw64/bin/ninja.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "status": "pass",
+    "elapsed_seconds": 0.507,
+    "log": "xad-configure.log"
+  },
+  {
+    "name": "xad-build",
+    "command": [
+      "C:/msys64/mingw64/bin/cmake.exe",
+      "--build",
+      "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/experiments/xad-windows/build-clang22",
+      "-j",
+      "4"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "status": "pass",
+    "elapsed_seconds": 2.698,
+    "log": "xad-build.log"
+  }
+]

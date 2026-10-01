@@ -1,0 +1,673 @@
+{
+  "tests": 12,
+  "failures": 0,
+  "errors": 0,
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "decoder_sha256": "5f6d305dff8825fd2829f0b2de71c9445fe4217c82ea0dbff02f61ed1efc01c0",
+  "environment": "Native Windows; developer PATH removed; generated fixtures and upstream encrypted StuffIt fixtures; no independent original Mac oracle",
+  "receipts": [
+    {
+      "operation": "cancel",
+      "latency_ms": 27.8,
+      "decoder_terminated": true,
+      "stderr": ""
+    },
+    {
+      "operation": "cleanup",
+      "archive": "recovery.sit",
+      "exit_code": 0,
+      "elapsed_ms": 31.38,
+      "terminal": {
+        "event": "complete",
+        "message": "Interrupted staging cleaned"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "forced-recovery",
+      "latency_ms": 46.55,
+      "decoder_terminated": true,
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "names.sit",
+      "exit_code": 0,
+      "elapsed_ms": 119.31,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 3,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-96up6qbn/\u65e5\u672c-caf\u00e9/names"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "unsafe.sit",
+      "exit_code": 1,
+      "elapsed_ms": 99.26,
+      "terminal": {
+        "event": "error",
+        "message": "Unsafe legacy path component"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "folder.sit",
+      "exit_code": 0,
+      "elapsed_ms": 115.45,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 2,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-96up6qbn/\u65e5\u672c-caf\u00e9/folder"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 110.81,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-data.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 136.57,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-header.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 104.62,
+      "terminal": {
+        "event": "error",
+        "message": "Unsupported or damaged legacy archive (XAD 0)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "truncated.sit",
+      "exit_code": 1,
+      "elapsed_ms": 108.69,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-data.sit",
+      "exit_code": 1,
+      "elapsed_ms": 97.3,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-wrapper.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 98.82,
+      "terminal": {
+        "event": "error",
+        "message": "Cannot open wrapped legacy archive (XAD 17)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-large-wrapper-data.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 233.69,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy archive checksum failed"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-large-wrapper-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 113.87,
+      "terminal": {
+        "event": "error",
+        "message": "Cannot open wrapped legacy archive (XAD 17)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "collisions.sit",
+      "exit_code": 0,
+      "elapsed_ms": 112.77,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 9,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 5,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-p1rkb7ne/\u65e5\u672c-caf\u00e9/collisions"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "collisions.sit",
+      "exit_code": 0,
+      "elapsed_ms": 97.68,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-p1rkb7ne/\u65e5\u672c-caf\u00e9/collisions (2)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 99.2,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "3bc3526744ff4c33d83c372f9390168a1f26743ca57534b3ed1ef0622de97bb9",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 104.81,
+      "terminal": {
+        "event": "error",
+        "message": "Filename encoding is unavailable"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 30.83,
+      "terminal": {
+        "event": "error",
+        "message": "Archive changed; reopen it before using the selected entry IDs"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 102.64,
+      "terminal": {
+        "event": "error",
+        "message": "Destination contains a link or reparse point"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 101.63,
+      "terminal": {
+        "event": "error",
+        "message": "Password required"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 103.77,
+      "terminal": {
+        "event": "error",
+        "message": "Missing or wrong password"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 101.68,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 2
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-lu5kdb6s/\u65e5\u672c-caf\u00e9/1234567.sit"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 97.95,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 2
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d008889f453fbd389d23649172684491aea1a1e73982c8b7536a1c60cd695c55",
+        "format": "StuffIt",
+        "message": "Decoded successfully; 2 fork streams have no source checksum",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 95.27,
+      "terminal": {
+        "event": "error",
+        "message": "Password required"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 91.87,
+      "terminal": {
+        "event": "error",
+        "message": "Missing or wrong password"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 90.8,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 2
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-lu5kdb6s/next-1234567/123456789012.sit"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 88.03,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 2
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "970aff546ea2592eff113426e531e58260bd504389259bec906c036a16c4d854",
+        "format": "StuffIt",
+        "message": "Decoded successfully; 2 fork streams have no source checksum",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 247.9,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 7,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 4,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-8c6o7wz4/\u65e5\u672c-caf\u00e9/large-wrapped"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 198.99,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 3,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-8c6o7wz4/\u65e5\u672c-caf\u00e9/large-wrapped (2)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 231.43,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-8c6o7wz4/\u65e5\u672c-caf\u00e9/large-wrapped (3)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 213.12,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-8c6o7wz4/\u65e5\u672c-caf\u00e9/large-wrapped (4)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 251.64,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 7,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 4,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "936517cf0747e6f77c721b6c36feb43dc2c88455262c6e16258d90f548ec1b9d",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 26.57,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy formats support reading, extraction and integrity checks; creation/editing is unavailable"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "unpaired.sit",
+      "exit_code": 0,
+      "elapsed_ms": 99.13,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 2,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-0xo2ndd9/\u65e5\u672c-caf\u00e9/unpaired"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "rle.sit",
+      "exit_code": 0,
+      "elapsed_ms": 99.57,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jn_wsuhz/\u65e5\u672c-caf\u00e9/rle"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 84.57,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "3bc3526744ff4c33d83c372f9390168a1f26743ca57534b3ed1ef0622de97bb9",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 87.94,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-pa3tfj5x/\u65e5\u672c-caf\u00e9/forks"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 92.35,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "3bc3526744ff4c33d83c372f9390168a1f26743ca57534b3ed1ef0622de97bb9",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 88.68,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "ec09536ef225ad515630fbcec999e70ec79928a2ff58d3441476ac009c696736",
+        "format": "BinHex",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 98.8,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-pa3tfj5x/\u65e5\u672c-caf\u00e9/forks (2)"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 91.55,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "ec09536ef225ad515630fbcec999e70ec79928a2ff58d3441476ac009c696736",
+        "format": "BinHex",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 111.06,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "unchecked_forks": 0
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-hur7q9sg/\u65e5\u672c-caf\u00e9/wrapped"
+      },
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+[
+  {
+    "name": "xad-stable-password-7",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-stable-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/1234567.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/stable1234567"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.1182,
+    "peak_rss_bytes_sampled": 21737472,
+    "raw_log": "outputs/raw/linux-wsl/xad-stable-password-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-stable-password-payloads-7",
+    "platform": "linux-wsl",
+    "status": "pass",
+    "details": {
+      "files": {
+        "testdoc.txt": "0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b",
+        "._testdoc.txt": "62042645389b99a448bc5c96b5fe9bb6c712982c5001bfbade6688f39c1c2620"
+      },
+      "worker_output": "{\"event\":\"complete\",\"parse_error\":0,\"extract_error\":0,\"file_failures\":0,\"files_extracted\":2}\n",
+      "limit": "Hash agreement between revisions is not an independent original-application oracle"
+    }
+  },
+  {
+    "name": "xad-stable-wrong-7",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-stable-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/1234567.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/stable1234567-wrong"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0353,
+    "peak_rss_bytes_sampled": 21204992,
+    "raw_log": "outputs/raw/linux-wsl/xad-stable-wrong-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-stable-wrong-cleanup-7",
+    "platform": "linux-wsl",
+    "status": "fail",
+    "details": {
+      "testdoc.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "._testdoc.txt": "c4839f38d6910fc8fe34d301dd76573a755ac65b15e49c66414d7116682ee2a4"
+    }
+  },
+  {
+    "name": "xad-stable-password-12",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-stable-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/123456789012.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/stable123456789012"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0351,
+    "peak_rss_bytes_sampled": 21479424,
+    "raw_log": "outputs/raw/linux-wsl/xad-stable-password-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-stable-password-payloads-12",
+    "platform": "linux-wsl",
+    "status": "fail",
+    "details": {
+      "files": {
+        "testdoc.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "._testdoc.txt": "c4839f38d6910fc8fe34d301dd76573a755ac65b15e49c66414d7116682ee2a4"
+      },
+      "worker_output": "{\"event\":\"complete\",\"parse_error\":0,\"extract_error\":0,\"file_failures\":2,\"files_extracted\":2}\n",
+      "limit": "Hash agreement between revisions is not an independent original-application oracle"
+    }
+  },
+  {
+    "name": "xad-stable-wrong-12",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-stable-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/123456789012.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/stable123456789012-wrong"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0345,
+    "peak_rss_bytes_sampled": 22675456,
+    "raw_log": "outputs/raw/linux-wsl/xad-stable-wrong-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-stable-wrong-cleanup-12",
+    "platform": "linux-wsl",
+    "status": "fail",
+    "details": {
+      "testdoc.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "._testdoc.txt": "c4839f38d6910fc8fe34d301dd76573a755ac65b15e49c66414d7116682ee2a4"
+    }
+  },
+  {
+    "name": "xad-head-password-7",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-head-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/1234567.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/head1234567"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0356,
+    "peak_rss_bytes_sampled": 21151744,
+    "raw_log": "outputs/raw/linux-wsl/xad-head-password-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-head-password-payloads-7",
+    "platform": "linux-wsl",
+    "status": "pass",
+    "details": {
+      "files": {
+        "testdoc.txt": "0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b",
+        "._testdoc.txt": "62042645389b99a448bc5c96b5fe9bb6c712982c5001bfbade6688f39c1c2620"
+      },
+      "worker_output": "{\"event\":\"complete\",\"parse_error\":0,\"extract_error\":0,\"file_failures\":0,\"files_extracted\":2}\n",
+      "limit": "Hash agreement between revisions is not an independent original-application oracle"
+    }
+  },
+  {
+    "name": "xad-head-wrong-7",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-head-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/1234567.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/head1234567-wrong"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0349,
+    "peak_rss_bytes_sampled": 22675456,
+    "raw_log": "outputs/raw/linux-wsl/xad-head-wrong-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-head-wrong-cleanup-7",
+    "platform": "linux-wsl",
+    "status": "pass",
+    "details": {}
+  },
+  {
+    "name": "xad-head-password-12",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-head-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/123456789012.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/head123456789012"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0349,
+    "peak_rss_bytes_sampled": 22122496,
+    "raw_log": "outputs/raw/linux-wsl/xad-head-password-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-head-password-payloads-12",
+    "platform": "linux-wsl",
+    "status": "pass",
+    "details": {
+      "files": {
+        "testdoc.txt": "0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b",
+        "._testdoc.txt": "62042645389b99a448bc5c96b5fe9bb6c712982c5001bfbade6688f39c1c2620"
+      },
+      "worker_output": "{\"event\":\"complete\",\"parse_error\":0,\"extract_error\":0,\"file_failures\":0,\"files_extracted\":2}\n",
+      "limit": "Hash agreement between revisions is not an independent original-application oracle"
+    }
+  },
+  {
+    "name": "xad-head-wrong-12",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/xad-head-probe",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/123456789012.sit.bin",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/head123456789012-wrong"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.035,
+    "peak_rss_bytes_sampled": 21270528,
+    "raw_log": "outputs/raw/linux-wsl/xad-head-wrong-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "xad-head-wrong-cleanup-12",
+    "platform": "linux-wsl",
+    "status": "pass",
+    "details": {}
+  },
+  {
+    "name": "sevenzip-encrypted-create",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "a",
+      "-t7z",
+      "-p",
+      "-mhe=on",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/encrypted.7z",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/input/alpha.txt"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0674,
+    "peak_rss_bytes_sampled": 12464128,
+    "raw_log": "outputs/raw/linux-wsl/sevenzip-encrypted-create.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "sevenzip-encrypted-correct",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "t",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/encrypted.7z"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0353,
+    "peak_rss_bytes_sampled": 5242880,
+    "raw_log": "outputs/raw/linux-wsl/sevenzip-encrypted-correct.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "sevenzip-encrypted-wrong",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "t",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/encrypted.7z"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 2,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0187,
+    "peak_rss_bytes_sampled": 5373952,
+    "raw_log": "outputs/raw/linux-wsl/sevenzip-encrypted-wrong.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "sevenzip-encrypted-hidden-list",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "l",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/encrypted.7z"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 2,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0186,
+    "peak_rss_bytes_sampled": 5505024,
+    "raw_log": "outputs/raw/linux-wsl/sevenzip-encrypted-hidden-list.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "bsdtar-ascii-create",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/libarchive-build/bin/bsdtar",
+      "-cf",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/ascii.tar",
+      "-C",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/ascii",
+      "."
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0114,
+    "peak_rss_bytes_sampled": 131072,
+    "raw_log": "outputs/raw/linux-wsl/bsdtar-ascii-create.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "sevenzip-ascii-verify",
+    "platform": "linux-wsl",
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "t",
+      "/home/riceric/unarchiver-assessment-20260930/suite/20261001T034304089019/ascii.tar"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.0065,
+    "peak_rss_bytes_sampled": 1310720,
+    "raw_log": "outputs/raw/linux-wsl/sevenzip-ascii-verify.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  }
+]

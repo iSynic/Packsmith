@@ -1,0 +1,18 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "error": "",
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "passed": true,
+  "recovery_ms": 190,
+  "stage_removed": true,
+  "window_title": "Packsmith 0.1.0-beta.1 \u00b7 Windows beta",
+  "peak_gui_rss": 51159040,
+  "peak_workers_rss": 54652928,
+  "gui_sha256": "a0a043933bf10c780cf0cc0cabc83709904412fff5c6154d7a1601a0ca113bc5",
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "decoder_sha256": "5f6d305dff8825fd2829f0b2de71c9445fe4217c82ea0dbff02f61ed1efc01c0",
+  "total_elapsed_ms": 471.79,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

@@ -1,0 +1,7 @@
+{"encoding":"macintosh","case":0,"roundtrip":false,"hex":""}
+{"encoding":"macintosh","case":1,"roundtrip":false,"hex":""}
+{"encoding":"windows-1252","case":2,"roundtrip":false,"hex":""}
+{"encoding":"shift_jis","case":3,"roundtrip":false,"hex":""}
+{"encoding":"utf-8","case":4,"roundtrip":false,"hex":""}
+{"encoding":"gb18030","case":5,"roundtrip":false,"hex":""}
+{"lossy_rejected":true,"malformed_utf16_rejected":true}

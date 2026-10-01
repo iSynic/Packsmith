@@ -1,0 +1,74 @@
+INITIALIZE XADArchiveParser prior=0
+INITIALIZE XADMacArchiveParser prior=1
+INITIALIZE XADZipParser prior=1
+INITIALIZE XADRARParser prior=1
+INITIALIZE XADRAR5Parser prior=1
+INITIALIZE XAD7ZipParser prior=1
+INITIALIZE XADGzipParser prior=1
+INITIALIZE XADBzip2Parser prior=1
+INITIALIZE XADTarParser prior=1
+INITIALIZE XADStuffItParser prior=1
+INITIALIZE XADStuffIt5Parser prior=1
+INITIALIZE XADStuffIt5ExeParser prior=1
+INITIALIZE XADStuffItSplitParser prior=1
+INITIALIZE XADStuffItXParser prior=1
+INITIALIZE XADBinHexParser prior=1
+INITIALIZE XADMacBinaryParser prior=1
+INITIALIZE XADAppleSingleParser prior=1
+INITIALIZE XADDiskDoublerParser prior=1
+INITIALIZE XADPackItParser prior=1
+INITIALIZE XADNowCompressParser prior=1
+INITIALIZE XADPPMdParser prior=1
+INITIALIZE XADXARParser prior=1
+INITIALIZE XADCompressParser prior=1
+INITIALIZE XADRPMParser prior=1
+INITIALIZE XADXZParser prior=1
+INITIALIZE XADSWFParser prior=1
+INITIALIZE XADPDFParser prior=1
+INITIALIZE XADALZipParser prior=1
+INITIALIZE XADCABParser prior=1
+INITIALIZE XADCFBFParser prior=1
+INITIALIZE XADCABSFXParser prior=1
+INITIALIZE XADLZHParser prior=1
+INITIALIZE XADLZHAmigaSFXParser prior=1
+INITIALIZE XADLZHCommodore64SFXParser prior=1
+INITIALIZE XADLZHSFXParser prior=1
+INITIALIZE XADZooParser prior=1
+INITIALIZE XADLZXParser prior=1
+INITIALIZE XADPowerPackerParser prior=1
+INITIALIZE XADNDSParser prior=1
+INITIALIZE XADNSAParser prior=1
+INITIALIZE XADSARParser prior=1
+INITIALIZE XADArParser prior=1
+INITIALIZE XADWARCParser prior=1
+INITIALIZE XADWinZipSFXParser prior=1
+INITIALIZE XADZipItSEAParser prior=1
+INITIALIZE XADZipSFXParser prior=1
+INITIALIZE XADEmbeddedRARParser prior=1
+INITIALIZE XADEmbeddedRAR5Parser prior=1
+INITIALIZE XAD7ZipSFXParser prior=1
+INITIALIZE XADNSISParser prior=1
+INITIALIZE XADGzipSFXParser prior=1
+INITIALIZE XADCompactProParser prior=1
+INITIALIZE XADARJParser prior=1
+INITIALIZE XADZipMultiPartParser prior=1
+INITIALIZE XADARCParser prior=1
+INITIALIZE XADARCSFXParser prior=1
+INITIALIZE XADSqueezeParser prior=1
+INITIALIZE XADCrunchParser prior=1
+INITIALIZE XADLBRParser prior=1
+INITIALIZE XADLZMAAloneParser prior=1
+INITIALIZE XADCpioParser prior=1
+INITIALIZE XADSplitFileParser prior=1
+INITIALIZE XADISO9660Parser prior=1
+INITIALIZE XADLibXADParser prior=1
+PARSERS count=62
+HEADER max=524288 parsers=62
+path=C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\outputs\fixtures\mainstream.zip exists=1 class=XADZipParser header=8
+bytes=64 data=<
+00000000   504b0304 14000000 08008318 2250ec6e   PK.........."Pìn
+00000010   609f0800 00000600 00000900 0000616c   `.............al
+00000020   7068612e 7478744b cc29c848 e4020050   pha.txtKÌ)ÈHä..P
+00000030   4b030414 00000008 00831822 50264c0b   K.........."P&L.
+> zip_recognized=1
+parser=(null) error=0

@@ -1,0 +1,21 @@
+
+7-Zip 25.01 (x64) : Copyright (c) 1999-2025 Igor Pavlov : 2025-08-03
+
+Scanning the drive for archives:
+1 file, 1764178 bytes (1723 KiB)
+
+Extracting archive: assessment\downloads\7z2603-extra.7z
+--
+Path = assessment\downloads\7z2603-extra.7z
+Type = 7z
+Physical Size = 1764178
+Headers Size = 602
+Method = LZMA:7m BCJ2
+Solid = +
+Blocks = 3
+
+Everything is Ok
+
+Files: 23
+Size:       6667460
+Compressed: 1764178

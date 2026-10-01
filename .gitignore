@@ -1,0 +1,10 @@
+source/
+assessment/references/
+assessment/downloads/
+assessment/experiments/
+assessment/outputs/
+assessment/tools/
+__pycache__/
+aqtinstall.log
+build/
+dist/

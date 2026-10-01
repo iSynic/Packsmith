@@ -1,0 +1,18 @@
+
+7-Zip (z) 26.03 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-09-03
+ 64-bit locale=C.UTF-8 Threads:12 OPEN_MAX:10240
+
+Scanning the drive for archives:
+1 file, 651 bytes (1 KiB)
+
+Testing archive: /mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/mainstream.zip
+--
+Path = /mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/mainstream.zip
+Type = zip
+Physical Size = 651
+
+Everything is Ok
+
+Files: 3
+Size:       1044
+Compressed: 651

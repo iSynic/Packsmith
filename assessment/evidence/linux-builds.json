@@ -1,0 +1,151 @@
+[
+  {
+    "name": "libarchive-linux-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libarchive",
+      "-B",
+      "/home/riceric/unarchiver-assessment-20260930/libarchive-build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DENABLE_TEST=ON",
+      "-DENABLE_CPIO=OFF",
+      "-DENABLE_CAT=OFF",
+      "-DENABLE_UNZIP=OFF"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 124.642,
+    "log": "libarchive-linux-configure.log"
+  },
+  {
+    "name": "libarchive-linux-build",
+    "command": [
+      "cmake",
+      "--build",
+      "/home/riceric/unarchiver-assessment-20260930/libarchive-build",
+      "-j",
+      "4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 50.295,
+    "log": "libarchive-linux-build.log"
+  },
+  {
+    "name": "libarchive-linux-ctest",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/home/riceric/unarchiver-assessment-20260930/libarchive-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 20.565,
+    "log": "libarchive-linux-ctest.log"
+  },
+  {
+    "name": "libzip-linux-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip",
+      "-B",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DBUILD_DOC=OFF",
+      "-DBUILD_EXAMPLES=OFF",
+      "-DBUILD_OSSFUZZ=OFF",
+      "-DBUILD_REGRESS=ON"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 32.128,
+    "log": "libzip-linux-configure.log"
+  },
+  {
+    "name": "libzip-linux-build",
+    "command": [
+      "cmake",
+      "--build",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-build",
+      "-j",
+      "4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 5.203,
+    "log": "libzip-linux-build.log"
+  },
+  {
+    "name": "libzip-linux-ctest",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 0.013,
+    "log": "libzip-linux-ctest.log"
+  },
+  {
+    "name": "xad-stable-linux-build",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.linux",
+      "-j4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930/xad-stable/XADMaster",
+    "exit_code": 0,
+    "elapsed_seconds": 13.055,
+    "log": "xad-stable-linux-build.log"
+  },
+  {
+    "name": "xad-head-linux-build",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.linux",
+      "-j4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930/xad-head/XADMaster",
+    "exit_code": 0,
+    "elapsed_seconds": 16.572,
+    "log": "xad-head-linux-build.log"
+  },
+  {
+    "name": "xad-baseline-linux-build",
+    "command": [
+      "make",
+      "-f",
+      "Makefile.linux",
+      "-j4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930/xad-baseline/XADMaster",
+    "exit_code": 0,
+    "elapsed_seconds": 18.574,
+    "log": "xad-baseline-linux-build.log"
+  },
+  {
+    "name": "linux-environment",
+    "command": [
+      "bash",
+      "-lc",
+      "uname -a; cat /etc/os-release; gcc --version; cmake --version; dpkg-query -W"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930",
+    "exit_code": 0,
+    "elapsed_seconds": 0.089,
+    "log": "linux-environment.log"
+  }
+]

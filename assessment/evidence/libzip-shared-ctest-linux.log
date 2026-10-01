@@ -1,0 +1,375 @@
+Internal ctest changing into directory: /home/riceric/unarchiver-assessment-20260930/libzip-shared-build
+Test project /home/riceric/unarchiver-assessment-20260930/libzip-shared-build
+        Start   1: add_dir.test
+        Start   2: add_from_buffer.test
+        Start   3: add_from_file.test
+        Start   4: add_from_file_duplicate.test
+  1/182 Test   #2: add_from_buffer.test .............................   Passed    0.20 sec
+        Start   5: add_from_file_twice_duplicate.test
+  2/182 Test   #1: add_dir.test .....................................   Passed    0.20 sec
+        Start   6: add_from_file_unchange.test
+  3/182 Test   #3: add_from_file.test ...............................   Passed    0.21 sec
+        Start   7: add_from_filep.test
+  4/182 Test   #4: add_from_file_duplicate.test .....................   Passed    0.21 sec
+        Start   8: add_from_stdin.test
+  5/182 Test   #8: add_from_stdin.test ..............................   Passed    0.20 sec
+        Start   9: add_from_zip_closed.test
+  6/182 Test   #6: add_from_file_unchange.test ......................   Passed    0.22 sec
+        Start  10: add_from_zip_deflated.test
+  7/182 Test   #7: add_from_filep.test ..............................   Passed    0.21 sec
+        Start  11: add_from_zip_deflated2.test
+  8/182 Test   #5: add_from_file_twice_duplicate.test ...............   Passed    0.23 sec
+        Start  12: add_from_zip_partial_deflated.test
+  9/182 Test   #9: add_from_zip_closed.test .........................   Passed    0.21 sec
+        Start  13: add_from_zip_partial_stored.test
+ 10/182 Test  #11: add_from_zip_deflated2.test ......................   Passed    0.21 sec
+        Start  14: add_from_zip_stored.test
+ 11/182 Test  #10: add_from_zip_deflated.test .......................   Passed    0.22 sec
+        Start  15: add_stored.test
+ 12/182 Test  #12: add_from_zip_partial_deflated.test ...............   Passed    0.22 sec
+        Start  16: add_stored_in_memory.test
+ 13/182 Test  #15: add_stored.test ..................................   Passed    0.17 sec
+        Start  17: buffer-fragment-read.test
+ 14/182 Test  #13: add_from_zip_partial_stored.test .................   Passed    0.19 sec
+        Start  18: buffer-fragment-write.test
+ 15/182 Test  #14: add_from_zip_stored.test .........................   Passed    0.18 sec
+        Start  19: cancel_45.test
+ 16/182 Test  #16: add_stored_in_memory.test ........................   Passed    0.20 sec
+        Start  20: cancel_90.test
+ 17/182 Test  #18: buffer-fragment-write.test .......................   Passed    0.15 sec
+        Start  21: changing-size-decreases-fixed.test
+ 18/182 Test  #19: cancel_45.test ...................................   Passed    0.15 sec
+        Start  22: changing-size-decreases.test
+ 19/182 Test  #17: buffer-fragment-read.test ........................   Passed    0.17 sec
+        Start  23: changing-size-increases-fixed.test
+ 20/182 Test  #20: cancel_90.test ...................................   Passed    0.19 sec
+        Start  24: changing-size-increases-unchecked.test
+ 21/182 Test  #21: changing-size-decreases-fixed.test ...............   Passed    0.17 sec
+        Start  25: changing-size-increases.test
+ 22/182 Test  #22: changing-size-decreases.test .....................   Passed    0.17 sec
+        Start  26: check_torrentzip_fail.test
+ 23/182 Test  #23: changing-size-increases-fixed.test ...............   Passed    0.17 sec
+        Start  27: check_torrentzip_modified.test
+ 24/182 Test  #24: changing-size-increases-unchecked.test ...........   Passed    0.22 sec
+        Start  28: check_torrentzip_success.test
+ 25/182 Test  #26: check_torrentzip_fail.test .......................   Passed    0.20 sec
+        Start  29: clone-buffer-add.test
+ 26/182 Test  #27: check_torrentzip_modified.test ...................   Passed    0.20 sec
+        Start  30: clone-buffer-delete.test
+ 27/182 Test  #25: changing-size-increases.test .....................   Passed    0.22 sec
+        Start  31: clone-buffer-replace.test
+ 28/182 Test  #28: check_torrentzip_success.test ....................   Passed    0.22 sec
+        Start  32: clone-fs-add.test
+ 29/182 Test  #30: clone-buffer-delete.test .........................   Passed    0.18 sec
+        Start  33: clone-fs-delete.test
+ 30/182 Test  #29: clone-buffer-add.test ............................   Passed    0.18 sec
+        Start  34: clone-fs-replace.test
+ 31/182 Test  #31: clone-buffer-replace.test ........................   Passed    0.18 sec
+        Start  35: cm-default.test
+ 32/182 Test  #32: clone-fs-add.test ................................***Skipped   0.18 sec
+        Start  36: convert_to_torrentzip.test
+ 33/182 Test  #33: clone-fs-delete.test .............................***Skipped   0.15 sec
+        Start  37: convert_to_torrentzip_ef.test
+ 34/182 Test  #34: clone-fs-replace.test ............................***Skipped   0.15 sec
+        Start  38: count_entries.test
+ 35/182 Test  #35: cm-default.test ..................................   Passed    0.19 sec
+        Start  39: create_empty_keep.test
+ 36/182 Test  #36: convert_to_torrentzip.test .......................   Passed    0.17 sec
+        Start  40: decrypt-correct-password-aes128.test
+ 37/182 Test  #37: convert_to_torrentzip_ef.test ....................   Passed    0.17 sec
+        Start  41: decrypt-correct-password-aes192.test
+ 38/182 Test  #39: create_empty_keep.test ...........................   Passed    0.18 sec
+        Start  42: decrypt-correct-password-aes256.test
+ 39/182 Test  #40: decrypt-correct-password-aes128.test .............   Passed    0.18 sec
+        Start  43: decrypt-correct-password-pkware-2.test
+ 40/182 Test  #41: decrypt-correct-password-aes192.test .............   Passed    0.18 sec
+        Start  44: decrypt-correct-password-pkware.test
+ 41/182 Test  #38: count_entries.test ...............................   Passed    0.38 sec
+        Start  45: decrypt-empty-file-pkware.test
+ 42/182 Test  #42: decrypt-correct-password-aes256.test .............   Passed    0.18 sec
+        Start  46: decrypt-no-password-aes256.test
+ 43/182 Test  #43: decrypt-correct-password-pkware-2.test ...........   Passed    0.16 sec
+        Start  47: decrypt-wrong-password-aes128.test
+ 44/182 Test  #44: decrypt-correct-password-pkware.test .............   Passed    0.15 sec
+        Start  48: decrypt-wrong-password-aes192.test
+ 45/182 Test  #45: decrypt-empty-file-pkware.test ...................   Passed    0.15 sec
+        Start  49: decrypt-wrong-password-aes256.test
+ 46/182 Test  #46: decrypt-no-password-aes256.test ..................   Passed    0.15 sec
+        Start  50: decrypt-wrong-password-pkware-2.test
+ 47/182 Test  #47: decrypt-wrong-password-aes128.test ...............   Passed    0.16 sec
+        Start  51: decrypt-wrong-password-pkware.test
+ 48/182 Test  #48: decrypt-wrong-password-aes192.test ...............   Passed    0.15 sec
+        Start  52: delete_add_same.test
+ 49/182 Test  #49: decrypt-wrong-password-aes256.test ...............   Passed    0.15 sec
+        Start  53: delete_invalid.test
+ 50/182 Test  #50: decrypt-wrong-password-pkware-2.test .............   Passed    0.15 sec
+        Start  54: delete_last.test
+ 51/182 Test  #51: decrypt-wrong-password-pkware.test ...............   Passed    0.16 sec
+        Start  55: delete_last_keep.test
+ 52/182 Test  #52: delete_add_same.test .............................   Passed    0.16 sec
+        Start  56: delete_multiple_last.test
+ 53/182 Test  #53: delete_invalid.test ..............................   Passed    0.17 sec
+        Start  57: delete_multiple_partial.test
+ 54/182 Test  #54: delete_last.test .................................   Passed    0.15 sec
+        Start  58: delete_renamed_rename.test
+ 55/182 Test  #55: delete_last_keep.test ............................   Passed    0.15 sec
+        Start  59: encrypt.test
+ 56/182 Test  #56: delete_multiple_last.test ........................   Passed    0.15 sec
+        Start  60: encryption-nonrandom-aes128.test
+ 57/182 Test  #57: delete_multiple_partial.test .....................   Passed    0.16 sec
+        Start  61: encryption-nonrandom-aes192.test
+ 58/182 Test  #58: delete_renamed_rename.test .......................   Passed    0.16 sec
+        Start  62: encryption-nonrandom-aes256.test
+ 59/182 Test  #59: encrypt.test .....................................   Passed    0.20 sec
+        Start  63: encryption-nonrandom-pkware-2.test
+ 60/182 Test  #60: encryption-nonrandom-aes128.test .................   Passed    0.22 sec
+        Start  64: encryption-nonrandom-pkware.test
+ 61/182 Test  #61: encryption-nonrandom-aes192.test .................   Passed    0.21 sec
+        Start  65: encryption-remove.test
+ 62/182 Test  #62: encryption-nonrandom-aes256.test .................   Passed    0.22 sec
+        Start  66: encryption-stat.test
+ 63/182 Test  #63: encryption-nonrandom-pkware-2.test ...............   Passed    0.21 sec
+        Start  67: extra_add.test
+ 64/182 Test  #64: encryption-nonrandom-pkware.test .................   Passed    0.20 sec
+        Start  68: extra_add_multiple.test
+ 65/182 Test  #65: encryption-remove.test ...........................   Passed    0.20 sec
+        Start  69: extra_count.test
+ 66/182 Test  #66: encryption-stat.test .............................   Passed    0.19 sec
+        Start  70: extra_count_by_id.test
+ 67/182 Test  #68: extra_add_multiple.test ..........................   Passed    0.20 sec
+        Start  71: extra_count_ignore_zip64.test
+ 68/182 Test  #67: extra_add.test ...................................   Passed    0.21 sec
+        Start  72: extra_delete.test
+ 69/182 Test  #69: extra_count.test .................................   Passed    0.20 sec
+        Start  73: extra_delete_by_id.test
+ 70/182 Test  #70: extra_count_by_id.test ...........................   Passed    0.19 sec
+        Start  74: extra_field_align.test
+ 71/182 Test  #71: extra_count_ignore_zip64.test ....................   Passed    0.19 sec
+        Start  75: extra_get.test
+ 72/182 Test  #72: extra_delete.test ................................   Passed    0.20 sec
+        Start  76: extra_get_by_id.test
+ 73/182 Test  #73: extra_delete_by_id.test ..........................   Passed    0.18 sec
+        Start  77: extra_set.test
+ 74/182 Test  #74: extra_field_align.test ...........................   Passed    0.30 sec
+        Start  78: extra_set_modify_c.test
+ 75/182 Test  #75: extra_get.test ...................................   Passed    0.19 sec
+        Start  79: extra_set_modify_l.test
+ 76/182 Test  #76: extra_get_by_id.test .............................   Passed    0.19 sec
+        Start  80: fdopen_ok.test
+ 77/182 Test  #77: extra_set.test ...................................   Passed    0.19 sec
+        Start  81: file_comment_encmismatch.test
+ 78/182 Test  #78: extra_set_modify_c.test ..........................   Passed    0.19 sec
+        Start  82: fopen_multiple.test
+ 79/182 Test  #79: extra_set_modify_l.test ..........................   Passed    0.17 sec
+        Start  83: fopen_multiple_reopen.test
+ 80/182 Test  #80: fdopen_ok.test ...................................   Passed    0.17 sec
+        Start  84: fopen_unchanged.test
+ 81/182 Test  #81: file_comment_encmismatch.test ....................   Passed    0.19 sec
+        Start  85: fread.test
+ 82/182 Test  #84: fopen_unchanged.test .............................   Passed    0.22 sec
+        Start  86: fseek_deflated.test
+ 83/182 Test  #82: fopen_multiple.test ..............................   Passed    0.27 sec
+        Start  87: fseek_fail.test
+ 84/182 Test  #83: fopen_multiple_reopen.test .......................   Passed    0.26 sec
+        Start  88: fseek_ok.test
+ 85/182 Test  #85: fread.test .......................................   Passed    0.26 sec
+        Start  89: get_comment.test
+ 86/182 Test  #86: fseek_deflated.test ..............................   Passed    0.22 sec
+        Start  90: get_comment_long.test
+ 87/182 Test  #87: fseek_fail.test ..................................   Passed    0.21 sec
+        Start  91: hmac-error.test
+ 88/182 Test  #88: fseek_ok.test ....................................   Passed    0.22 sec
+        Start  92: junk_at_end.test
+ 89/182 Test  #89: get_comment.test .................................   Passed    0.24 sec
+        Start  93: junk_at_start.test
+ 90/182 Test  #91: hmac-error.test ..................................   Passed    0.21 sec
+        Start  94: mtime-dstpoint.test
+ 91/182 Test  #90: get_comment_long.test ............................   Passed    0.21 sec
+        Start  95: mtime-post-dstpoint.test
+ 92/182 Test  #92: junk_at_end.test .................................   Passed    0.24 sec
+        Start  96: mtime-pre-dstpoint.test
+ 93/182 Test  #93: junk_at_start.test ...............................   Passed    0.22 sec
+        Start  97: name_locate-cp437.test
+ 94/182 Test  #94: mtime-dstpoint.test ..............................   Passed    0.17 sec
+        Start  98: name_locate-utf8.test
+ 95/182 Test  #95: mtime-post-dstpoint.test .........................   Passed    0.17 sec
+        Start  99: name_locate.test
+ 96/182 Test  #96: mtime-pre-dstpoint.test ..........................   Passed    0.18 sec
+        Start 100: open_archive_comment_wrong.test
+ 97/182 Test  #97: name_locate-cp437.test ...........................   Passed    0.17 sec
+        Start 101: open_cons_extrabytes.test
+ 98/182 Test  #98: name_locate-utf8.test ............................   Passed    0.15 sec
+        Start 102: open_empty.test
+ 99/182 Test  #99: name_locate.test .................................   Passed    0.15 sec
+        Start 103: open_empty_2.test
+100/182 Test #100: open_archive_comment_wrong.test ..................   Passed    0.18 sec
+        Start 104: open_extrabytes.test
+101/182 Test #101: open_cons_extrabytes.test ........................   Passed    0.15 sec
+        Start 105: open_file_count.test
+102/182 Test #103: open_empty_2.test ................................   Passed    0.13 sec
+        Start 106: open_filename_duplicate.test
+103/182 Test #102: open_empty.test ..................................   Passed    0.13 sec
+        Start 107: open_filename_duplicate_consistency.test
+104/182 Test #104: open_extrabytes.test .............................   Passed    0.17 sec
+        Start 108: open_filename_duplicate_empty.test
+105/182 Test #106: open_filename_duplicate.test .....................   Passed    0.14 sec
+        Start 109: open_filename_duplicate_empty_consistency.test
+106/182 Test #105: open_file_count.test .............................   Passed    0.16 sec
+        Start 110: open_filename_empty.test
+107/182 Test #107: open_filename_duplicate_consistency.test .........   Passed    0.16 sec
+        Start 111: open_incons.test
+108/182 Test #108: open_filename_duplicate_empty.test ...............   Passed    0.14 sec
+        Start 112: open_many_fail.test
+109/182 Test #109: open_filename_duplicate_empty_consistency.test ...   Passed    0.14 sec
+        Start 113: open_many_ok.test
+110/182 Test #110: open_filename_empty.test .........................   Passed    0.13 sec
+        Start 114: open_multidisk.test
+111/182 Test #114: open_multidisk.test ..............................   Passed    0.15 sec
+        Start 115: open_new_but_exists.test
+112/182 Test #112: open_many_fail.test ..............................   Passed    0.24 sec
+        Start 116: open_new_ok.test
+113/182 Test #115: open_new_but_exists.test .........................   Passed    0.20 sec
+        Start 117: open_nonarchive.test
+114/182 Test #111: open_incons.test .................................   Passed    0.54 sec
+        Start 118: open_nosuchfile.test
+115/182 Test #116: open_new_ok.test .................................   Passed    0.19 sec
+        Start 119: open_ok.test
+116/182 Test #117: open_nonarchive.test .............................   Passed    0.21 sec
+        Start 120: open_too_short.test
+117/182 Test #118: open_nosuchfile.test .............................   Passed    0.17 sec
+        Start 121: open_truncate.test
+118/182 Test #119: open_ok.test .....................................   Passed    0.18 sec
+        Start 122: open_truncated.test
+119/182 Test #120: open_too_short.test ..............................   Passed    0.16 sec
+        Start 123: open_zip64_3mf.test
+120/182 Test #121: open_truncate.test ...............................   Passed    0.15 sec
+        Start 124: open_zip64_ok.test
+121/182 Test #122: open_truncated.test ..............................   Passed    0.16 sec
+        Start 125: preload.test
+122/182 Test #124: open_zip64_ok.test ...............................   Passed    0.17 sec
+        Start 126: progress.test
+123/182 Test #123: open_zip64_3mf.test ..............................   Passed    0.18 sec
+        Start 127: read_incons.test
+124/182 Test #125: preload.test .....................................   Passed    0.18 sec
+        Start 128: read_seek_read.test
+125/182 Test #127: read_incons.test .................................   Passed    0.17 sec
+        Start 129: rename_ascii.test
+126/182 Test #126: progress.test ....................................   Passed    0.18 sec
+        Start 130: rename_cp437.test
+127/182 Test #113: open_many_ok.test ................................   Passed    1.12 sec
+        Start 131: rename_deleted.test
+128/182 Test #128: read_seek_read.test ..............................   Passed    0.19 sec
+        Start 132: rename_fail.test
+129/182 Test #129: rename_ascii.test ................................   Passed    0.16 sec
+        Start 133: rename_ok.test
+130/182 Test #130: rename_cp437.test ................................   Passed    0.15 sec
+        Start 134: rename_utf8.test
+131/182 Test #131: rename_deleted.test ..............................   Passed    0.15 sec
+        Start 135: rename_utf8_encmismatch.test
+132/182 Test #132: rename_fail.test .................................   Passed    0.15 sec
+        Start 136: reopen.test
+133/182 Test #133: rename_ok.test ...................................   Passed    0.14 sec
+        Start 137: reopen_partial.test
+134/182 Test #134: rename_utf8.test .................................   Passed    0.15 sec
+        Start 138: reopen_partial_rest.test
+135/182 Test #135: rename_utf8_encmismatch.test .....................   Passed    0.15 sec
+        Start 139: replace_set_stored.test
+136/182 Test #136: reopen.test ......................................   Passed    0.15 sec
+        Start 140: set_comment_all.test
+137/182 Test #137: reopen_partial.test ..............................   Passed    0.14 sec
+        Start 141: set_comment_localonly.test
+138/182 Test #138: reopen_partial_rest.test .........................   Passed    0.14 sec
+        Start 142: set_comment_removeglobal.test
+139/182 Test #139: replace_set_stored.test ..........................   Passed    0.14 sec
+        Start 143: set_comment_revert.test
+140/182 Test #140: set_comment_all.test .............................   Passed    0.14 sec
+        Start 144: set_compression_bzip2_to_deflate.test
+141/182 Test #141: set_comment_localonly.test .......................   Passed    0.14 sec
+        Start 145: set_compression_deflate_to_bzip2.test
+142/182 Test #142: set_comment_removeglobal.test ....................   Passed    0.14 sec
+        Start 146: set_compression_deflate_to_deflate.test
+143/182 Test #143: set_comment_revert.test ..........................   Passed    0.14 sec
+        Start 147: set_compression_deflate_to_store.test
+144/182 Test #144: set_compression_bzip2_to_deflate.test ............   Passed    0.14 sec
+        Start 148: set_compression_lzma_no_eos_to_store.test
+145/182 Test #145: set_compression_deflate_to_bzip2.test ............   Passed    0.19 sec
+        Start 149: set_compression_lzma_to_store.test
+146/182 Test #146: set_compression_deflate_to_deflate.test ..........   Passed    0.18 sec
+        Start 150: set_compression_store_to_bzip2.test
+147/182 Test #147: set_compression_deflate_to_store.test ............   Passed    0.21 sec
+        Start 151: set_compression_store_to_deflate.test
+148/182 Test #148: set_compression_lzma_no_eos_to_store.test ........   Passed    0.22 sec
+        Start 152: set_compression_store_to_lzma.test
+149/182 Test #149: set_compression_lzma_to_store.test ...............   Passed    0.22 sec
+        Start 153: set_compression_store_to_store.test
+150/182 Test #150: set_compression_store_to_bzip2.test ..............   Passed    0.22 sec
+        Start 154: set_compression_store_to_xz.test
+151/182 Test #151: set_compression_store_to_deflate.test ............   Passed    0.21 sec
+        Start 155: set_compression_store_to_zstd.test
+152/182 Test #152: set_compression_store_to_lzma.test ...............   Passed    0.22 sec
+        Start 156: set_compression_unknown.test
+153/182 Test #153: set_compression_store_to_store.test ..............   Passed    0.21 sec
+        Start 157: set_compression_xz_to_store.test
+154/182 Test #154: set_compression_store_to_xz.test .................   Passed    0.21 sec
+        Start 158: set_compression_zstd_to_store.test
+155/182 Test #155: set_compression_store_to_zstd.test ...............   Passed    0.21 sec
+        Start 159: set_file_dostime.test
+156/182 Test #156: set_compression_unknown.test .....................   Passed    0.19 sec
+        Start 160: set_file_mtime.test
+157/182 Test #157: set_compression_xz_to_store.test .................   Passed    0.16 sec
+        Start 161: set_file_mtime_pkware.test
+158/182 Test #158: set_compression_zstd_to_store.test ...............   Passed    0.16 sec
+        Start 162: stat_index_cp437_guess.test
+159/182 Test #159: set_file_dostime.test ............................   Passed    0.18 sec
+        Start 163: stat_index_cp437_raw.test
+160/182 Test #160: set_file_mtime.test ..............................   Passed    0.19 sec
+        Start 164: stat_index_cp437_strict.test
+161/182 Test #161: set_file_mtime_pkware.test .......................   Passed    0.19 sec
+        Start 165: stat_index_fileorder.test
+162/182 Test #162: stat_index_cp437_guess.test ......................   Passed    0.19 sec
+        Start 166: stat_index_streamed.test
+163/182 Test #163: stat_index_cp437_raw.test ........................   Passed    0.19 sec
+        Start 167: stat_index_streamed_zip64.test
+164/182 Test #164: stat_index_cp437_strict.test .....................   Passed    0.18 sec
+        Start 168: stat_index_utf8_guess.test
+165/182 Test #166: stat_index_streamed.test .........................   Passed    0.16 sec
+        Start 169: stat_index_utf8_raw.test
+166/182 Test #165: stat_index_fileorder.test ........................   Passed    0.17 sec
+        Start 170: stat_index_utf8_strict.test
+167/182 Test #167: stat_index_streamed_zip64.test ...................   Passed    0.17 sec
+        Start 171: stat_index_utf8_unmarked_strict.test
+168/182 Test #168: stat_index_utf8_guess.test .......................   Passed    0.16 sec
+        Start 172: stat_index_zip64.test
+169/182 Test #170: stat_index_utf8_strict.test ......................   Passed    0.14 sec
+        Start 173: truncate_empty_keep.test
+170/182 Test #169: stat_index_utf8_raw.test .........................   Passed    0.14 sec
+        Start 174: unchange-delete-namelocate.test
+171/182 Test #172: stat_index_zip64.test ............................   Passed    0.17 sec
+        Start 175: utf-8-standardization.test
+172/182 Test #171: stat_index_utf8_unmarked_strict.test .............   Passed    0.17 sec
+        Start 176: want_torrentzip_stat.test
+173/182 Test #173: truncate_empty_keep.test .........................   Passed    0.17 sec
+        Start 177: zip-in-archive-comment.test
+174/182 Test #174: unchange-delete-namelocate.test ..................   Passed    0.17 sec
+        Start 178: zip64-in-archive-comment.test
+175/182 Test #175: utf-8-standardization.test .......................   Passed    0.16 sec
+        Start 179: zip64_creation.test
+176/182 Test #176: want_torrentzip_stat.test ........................   Passed    0.16 sec
+        Start 180: zip64_stored_creation.test
+177/182 Test #177: zip-in-archive-comment.test ......................   Passed    0.15 sec
+        Start 181: zipcmp_zip_dir.test
+178/182 Test #178: zip64-in-archive-comment.test ....................   Passed    0.15 sec
+        Start 182: zipcmp_zip_dir_slash.test
+179/182 Test #182: zipcmp_zip_dir_slash.test ........................   Passed    0.15 sec
+180/182 Test #181: zipcmp_zip_dir.test ..............................   Passed    0.16 sec
+181/182 Test #180: zip64_stored_creation.test .......................   Passed    2.97 sec
+182/182 Test #179: zip64_creation.test ..............................   Passed   13.61 sec
+
+100% tests passed, 0 tests failed out of 182
+
+Total Test time (real) =  22.07 sec
+
+The following tests did not run:
+	 32 - clone-fs-add.test (Skipped)
+	 33 - clone-fs-delete.test (Skipped)
+	 34 - clone-fs-replace.test (Skipped)

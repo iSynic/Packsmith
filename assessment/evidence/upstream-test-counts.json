@@ -1,0 +1,44 @@
+{
+  "libarchive-linux-ctest.log": {
+    "passed": 786,
+    "failed": 0,
+    "skipped": 138,
+    "no_tests": false
+  },
+  "libarchive-windows-ctest.log": {
+    "passed": 799,
+    "failed": 0,
+    "skipped": 125,
+    "no_tests": false
+  },
+  "libzip-linux-ctest.log": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "no_tests": true
+  },
+  "libzip-linux-regress-ctest.log": {
+    "passed": 173,
+    "failed": 1,
+    "skipped": 8,
+    "no_tests": false
+  },
+  "libzip-shared-ctest-linux.log": {
+    "passed": 179,
+    "failed": 0,
+    "skipped": 3,
+    "no_tests": false
+  },
+  "libzip-windows-ctest.log": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "no_tests": true
+  },
+  "libzip-windows-regress-ctest.log": {
+    "passed": 171,
+    "failed": 0,
+    "skipped": 11,
+    "no_tests": false
+  }
+}

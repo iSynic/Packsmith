@@ -1,0 +1,27 @@
+--- a/XADStringWindows.m
++++ b/XADStringWindows.m
+@@ -75,13 +75,20 @@
+ 	unichar charbuf[numchars];
+ 	[string getCharacters:charbuf range:NSMakeRange(0,numchars)];
+ 
+-	int numbytes=WideCharToMultiByte(codepage,MB_ERR_INVALID_CHARS,charbuf,numchars,NULL,0,NULL,NULL);
++	DWORD flags=(codepage==CP_UTF8||codepage==54936)?WC_ERR_INVALID_CHARS:0;
++	int numbytes=WideCharToMultiByte(codepage,flags,charbuf,numchars,NULL,0,NULL,NULL);
+ 	if(numbytes==0) return nil;
+ 
+ 	uint8_t *bytebuf=malloc(numbytes);
+-	WideCharToMultiByte(codepage,MB_ERR_INVALID_CHARS,charbuf,numchars,bytebuf,numbytes,NULL,NULL);
+-
+-	return [NSData dataWithBytesNoCopy:bytebuf length:numbytes freeWhenDone:YES];
++	if(WideCharToMultiByte(codepage,flags,charbuf,numchars,bytebuf,numbytes,NULL,NULL)!=numbytes)
++	{
++		free(bytebuf);
++		return nil;
++	}
++
++	NSData *data=[NSData dataWithBytesNoCopy:bytebuf length:numbytes freeWhenDone:YES];
++	if(![[self stringForData:data encodingName:encoding] isEqualToString:string]) return nil;
++	return data;
+ }
+ 
+ +(NSArray *)availableEncodingNames

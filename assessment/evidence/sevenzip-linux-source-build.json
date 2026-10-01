@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      "make",
+      "-f",
+      "makefile.gcc",
+      "-j4"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930/sevenzip-source/CPP/7zip/Bundles/Alone2",
+    "exit_code": 0,
+    "elapsed_seconds": 0.017,
+    "log": "sevenzip-linux-source-build.log"
+  },
+  {
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip-source/CPP/7zip/Bundles/Alone2/_o/7zz",
+      "t",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/mainstream.zip"
+    ],
+    "cwd": "/home/riceric/unarchiver-assessment-20260930/sevenzip-source/CPP/7zip/Bundles/Alone2",
+    "exit_code": 0,
+    "elapsed_seconds": 0.022,
+    "log": "sevenzip-linux-source-test.log"
+  }
+]

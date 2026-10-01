@@ -1,0 +1,20 @@
+Cloning into 'C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\references\nanazip'...
+warning: refs/tags/7.0.1843.0 c7b928b81b0c6d19330af21a2eeb2bf4b1670a48 is not a commit!
+Note: switching to 'df5db3c4a327c980e9f66dc28fbabd6782cda5e0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  41% (1653/3972)Updating files:  42% (1669/3972)Updating files:  43% (1708/3972)Updating files:  44% (1748/3972)Updating files:  45% (1788/3972)Updating files:  46% (1828/3972)Updating files:  47% (1867/3972)Updating files:  48% (1907/3972)Updating files:  49% (1947/3972)Updating files:  50% (1986/3972)Updating files:  51% (2026/3972)Updating files:  52% (2066/3972)Updating files:  53% (2106/3972)Updating files:  54% (2145/3972)Updating files:  55% (2185/3972)Updating files:  56% (2225/3972)Updating files:  57% (2265/3972)Updating files:  58% (2304/3972)Updating files:  59% (2344/3972)Updating files:  60% (2384/3972)Updating files:  61% (2423/3972)Updating files:  62% (2463/3972)Updating files:  63% (2503/3972)Updating files:  64% (2543/3972)Updating files:  65% (2582/3972)Updating files:  66% (2622/3972)Updating files:  67% (2662/3972)Updating files:  68% (2701/3972)Updating files:  69% (2741/3972)Updating files:  70% (2781/3972)Updating files:  71% (2821/3972)Updating files:  72% (2860/3972)Updating files:  73% (2900/3972)Updating files:  74% (2940/3972)Updating files:  75% (2979/3972)Updating files:  76% (3019/3972)Updating files:  77% (3059/3972)Updating files:  78% (3099/3972)Updating files:  79% (3138/3972)Updating files:  80% (3178/3972)Updating files:  80% (3202/3972)Updating files:  81% (3218/3972)Updating files:  82% (3258/3972)Updating files:  83% (3297/3972)Updating files:  84% (3337/3972)Updating files:  85% (3377/3972)Updating files:  86% (3416/3972)Updating files:  87% (3456/3972)Updating files:  88% (3496/3972)Updating files:  89% (3536/3972)Updating files:  90% (3575/3972)Updating files:  91% (3615/3972)Updating files:  92% (3655/3972)Updating files:  93% (3694/3972)Updating files:  94% (3734/3972)Updating files:  95% (3774/3972)Updating files:  96% (3814/3972)Updating files:  97% (3853/3972)Updating files:  98% (3893/3972)Updating files:  99% (3933/3972)Updating files: 100% (3972/3972)Updating files: 100% (3972/3972), done.

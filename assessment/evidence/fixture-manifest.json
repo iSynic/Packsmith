@@ -1,0 +1,245 @@
+{
+  "generator": "assessment/scripts/generate_fixtures.py",
+  "expected_files": {
+    "alpha.txt": "b6a98d9ce9a2d9149288fa3df42d377c3e42737afdcdaf714e33c0a100b51060",
+    "nested/beta.bin": "785b0751fc2c53dc14a4ce3d800e69ef9ce1009eb327ccf458afe09c242c26c9",
+    "unicode/caf\u00e9-\u65e5\u672c.txt": "272bb9e59168da678718ab0d244f629c4c78a3f4fcb23f8730c90c3048020964"
+  },
+  "legacy": {
+    "filename": "legacy.txt",
+    "data_sha256": "0ca0509bf5db3383db133274a8d60b9afea8e0e0f855b024aeb79719df8f4eb5",
+    "resource_sha256": "7b9986ff63cc902cf60a0f7b908a0a155e03bded85300c0a18fe40d2238038b3",
+    "finder_type": "TEXT",
+    "finder_creator": "ttxt"
+  },
+  "imported": [
+    {
+      "fixture": "test_read_format_lha_bugfix_0.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_bugfix_0.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_filename_cp932.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_filename_cp932.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_filename_utf16.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_filename_utf16.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_header0.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_header0.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_header1.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_header1.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_header2.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_header2.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_header3.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_header3.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_lh0.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_lh0.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_lh6.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_lh6.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_lh7.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_lh7.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_oversize_header.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_oversize_header.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_symlink_missing_target.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_symlink_missing_target.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_lha_withjunk.lzh",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_lha_withjunk.lzh.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "test_read_format_cab_lzx_16bit.cab",
+      "source": "references\\libarchive\\libarchive\\test\\test_read_format_cab_lzx_16bit.cab.uu",
+      "oracle": "Upstream test assertions; CAB LZX does not establish Amiga LZX archive coverage"
+    },
+    {
+      "fixture": "1234567.sit.bin",
+      "source": "references\\xad-head\\XADMasterTests\\Stuffit\\StuffitFixtures\\1234567.sit.bin",
+      "oracle": "Upstream XCTest extraction assertions; payload hashes still need an independent oracle"
+    },
+    {
+      "fixture": "123456789012.sit.bin",
+      "source": "references\\xad-head\\XADMasterTests\\Stuffit\\StuffitFixtures\\123456789012.sit.bin",
+      "oracle": "Upstream XCTest extraction assertions; payload hashes still need an independent oracle"
+    }
+  ],
+  "archives": {
+    "1234567.sit.bin": {
+      "sha256": "d008889f453fbd389d23649172684491aea1a1e73982c8b7536a1c60cd695c55",
+      "bytes": 3072
+    },
+    "123456789012.sit.bin": {
+      "sha256": "970aff546ea2592eff113426e531e58260bd504389259bec906c036a16c4d854",
+      "bytes": 3072
+    },
+    "appledouble.zip": {
+      "sha256": "c5d6060b403207fa674471f6214bc99042a4dc6e723d41fe160e94b6eb731466",
+      "bytes": 319
+    },
+    "bad-checksum.zip": {
+      "sha256": "cd4cb6d5a6f3aeedf9969c71009f511341bddc7f915d5b991dd930f945bd5d72",
+      "bytes": 651
+    },
+    "case-collision.zip": {
+      "sha256": "db438aa78ab9f719d07bc5e2a9fd334b39df9a09479639e459d3334f1b40b5bd",
+      "bytes": 220
+    },
+    "duplicates.zip": {
+      "sha256": "abddd261ce91fca94d8e7c4e807b244b03966ce0fbe9c7a76aa31f735c655f3d",
+      "bytes": 221
+    },
+    "legacy.as": {
+      "sha256": "73a832410245de7ecc718b1f8a4e7d0a51976cc9d40df30b9bc9a2cc4df1f2c9",
+      "bytes": 154
+    },
+    "legacy.bin": {
+      "sha256": "44338eeb0c5d1fc74fcc1936e12de636503ade5a064b9a57b309eee763b6dbcb",
+      "bytes": 384
+    },
+    "legacy.cpt": {
+      "sha256": "e0eff5e2f86e7c99da737af9e94c12056a911a42854b069b35e1814b041a202f",
+      "bytes": 88
+    },
+    "legacy.hqx": {
+      "sha256": "8faf78fe8867a0818ecda6ae252cdd374b496ba11f9648ee05c11f930de87c2a",
+      "bytes": 152
+    },
+    "legacy.lzh": {
+      "sha256": "4440762989f52308c2649d31bec55f77b2729e93a6615b853bd9583b92479eaa",
+      "bytes": 54
+    },
+    "links.tar": {
+      "sha256": "8b31d99f6071c670b23ac288de3e736926bff829af2ac79a57624d4cf94cad3c",
+      "bytes": 10240
+    },
+    "mainstream.tar": {
+      "sha256": "07d82d03d9f0e521767f8885f43b0086ef0d449ffced6bd9fa89ee46b26d9d19",
+      "bytes": 10240
+    },
+    "mainstream.tar.gz": {
+      "sha256": "76817dcfeb14a0ceec5ce62dcc58e95ff622fd3353a636529d151f9cadaa39e4",
+      "bytes": 567
+    },
+    "mainstream.zip": {
+      "sha256": "fbe61ba4b71aa990edc4de44fc0a1b30f56bd46b314d2fb3442591e319f371c4",
+      "bytes": 651
+    },
+    "relative-escape.zip": {
+      "sha256": "798eec29152ef5973cbf8d6af721e9f3e9ee9289e2bf18606129301fea1ff401",
+      "bytes": 230
+    },
+    "scale-100k.zip": {
+      "sha256": "f8e7957c94ca20d7aa96517f0ef158bbd31f8fccafee370dad224b212e25745b",
+      "bytes": 11300098
+    },
+    "small-zip64.zip": {
+      "sha256": "59f9bd6720d65ae50eeb6490d572f7eafc2c9716755b9da0f56eaa6f0ef1e837",
+      "bytes": 142
+    },
+    "test_read_format_cab_lzx_16bit.cab": {
+      "sha256": "b4f405c3053cff3b268c666b2e87a5e516e756791f3a8fcdb2aeac472de78f39",
+      "bytes": 130
+    },
+    "test_read_format_lha_bugfix_0.lzh": {
+      "sha256": "2d13865aefb2a03a3a6270dab0d4fb9beb254d9326ea3e334cdd64877a90ad41",
+      "bytes": 685
+    },
+    "test_read_format_lha_filename_cp932.lzh": {
+      "sha256": "c94008b2e0202872a61a48db1815fa09cb9f7f93e754d989d2e26d0e20bf699f",
+      "bytes": 165
+    },
+    "test_read_format_lha_filename_utf16.lzh": {
+      "sha256": "74a780be3a808b4ba98a14949ea2c40ec06a9b58b1b895897b0502b8da19cabd",
+      "bytes": 707
+    },
+    "test_read_format_lha_header0.lzh": {
+      "sha256": "286b32e0f5c98016944681e4694b0c7be5c0575570c876d6fc63195a09d3c508",
+      "bytes": 348
+    },
+    "test_read_format_lha_header1.lzh": {
+      "sha256": "094084407fa7b6cf4b9e1d32ac122ce122e4637867400ca21a44977b9b08ad16",
+      "bytes": 420
+    },
+    "test_read_format_lha_header2.lzh": {
+      "sha256": "12bcc4b3e8ac6f81af82f4dc191133fb1cdc1b802e1c63f710c294a463f457c7",
+      "bytes": 420
+    },
+    "test_read_format_lha_header3.lzh": {
+      "sha256": "d36f9beaf7d1aa482315e810c8cfca327975ffd31a05082004102327310e419d",
+      "bytes": 548
+    },
+    "test_read_format_lha_lh0.lzh": {
+      "sha256": "35fa46a93d8fb0c1697afcc8c0aea0ad355e37296cfda8e87e36d6f61ea8f4cd",
+      "bytes": 434
+    },
+    "test_read_format_lha_lh6.lzh": {
+      "sha256": "99cbc14499cc88361e9182a4912263ae27bcba888f7fe30c00995ab96752421b",
+      "bytes": 422
+    },
+    "test_read_format_lha_lh7.lzh": {
+      "sha256": "c3aa72e18b294c271737803cedf889f289c4f215d16a192044525d930b045cb6",
+      "bytes": 422
+    },
+    "test_read_format_lha_oversize_header.lzh": {
+      "sha256": "dbb48ff170971dc908191714f4b8ea65b13eb3513c0c3165cf94f4a2c7b00bf1",
+      "bytes": 2537
+    },
+    "test_read_format_lha_symlink_missing_target.lzh": {
+      "sha256": "4870bccfb36c430626ff3670472e51efe789291823413d34558d71d799130ea4",
+      "bytes": 87
+    },
+    "test_read_format_lha_withjunk.lzh": {
+      "sha256": "35fa46a93d8fb0c1697afcc8c0aea0ad355e37296cfda8e87e36d6f61ea8f4cd",
+      "bytes": 434
+    },
+    "truncated.zip": {
+      "sha256": "0cee57db0774daac63f92f1ee907ffd20649586f73362733009f6683ef806a5f",
+      "bytes": 40
+    },
+    "unsafe-paths.zip": {
+      "sha256": "0a9ed7e45e55e8266a291402bdced7dd90a5722a8069f7faa1221ba154cfec1e",
+      "bytes": 449
+    },
+    "windows-names.zip": {
+      "sha256": "ae33f374fc6008e8f4a2d016f3420e6551c7c7e9718379deec643f33ced26836",
+      "bytes": 906
+    },
+    "large-5g.zip": {
+      "sha256": "989527c3d15956af88cfadf7ff0e91eea335d84876a4f2b05e7800cb95c80803",
+      "bytes": 51889311,
+      "uncompressed_bytes": 5369757696,
+      "expected_payload": "5121 MiB of zero bytes; CRC verified by readers"
+    }
+  }
+}

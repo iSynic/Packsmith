@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\scripts\\qt_probe",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\qt-windows-build",
+      "-G",
+      "Ninja",
+      "-DCMAKE_CXX_COMPILER=C:/msys64/mingw64/bin/g++.exe",
+      "-DCMAKE_PREFIX_PATH=C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\qt\\6.10.2\\mingw_64"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.567,
+    "log": "qt-windows-configure.log"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\qt-windows-build",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 2.841,
+    "log": "qt-windows-build.log"
+  },
+  {
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\qt-windows-build\\qt_probe.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\sevenzip-full\\7z.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\scale-100k.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\evidence\\qt-windows-probe"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.622,
+    "log": "qt-windows-run.log"
+  }
+]

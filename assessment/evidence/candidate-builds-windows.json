@@ -1,0 +1,41 @@
+[
+  {
+    "name": "ark-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\references\\ark",
+      "-B",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\ark-build"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "elapsed_seconds": 2.327,
+    "log": "ark-configure-windows.log"
+  },
+  {
+    "name": "xad-foundation-prerequisite",
+    "command": [
+      "C:\\msys64\\mingw64\\bin\\gcc.exe",
+      "-c",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\foundation-prerequisite.m",
+      "-o",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\foundation-prerequisite.o"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "elapsed_seconds": 0.029,
+    "log": "xad-foundation-prerequisite-windows.log"
+  },
+  {
+    "name": "peazip-lazbuild-prerequisite",
+    "command": [
+      "lazbuild",
+      "--version"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": -1,
+    "elapsed_seconds": 0.006,
+    "log": "peazip-lazbuild-prerequisite-windows.log"
+  }
+]

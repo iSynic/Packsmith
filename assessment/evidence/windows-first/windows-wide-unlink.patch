@@ -1,0 +1,14 @@
+--- a/XADUnarchiver.m
++++ b/XADUnarchiver.m
+@@ -453,7 +453,11 @@
+ 		@try { fh=[CSFileHandle fileHandleForWritingAtPath:destpath]; }
+ 		@catch(id e)
+ 		{
++			#ifdef _WIN32
++			_wunlink((const wchar_t *)[destpath fileSystemRepresentation]);
++#else
+ 			unlink([destpath fileSystemRepresentation]);
++#endif
+ 			@try { fh=[CSFileHandle fileHandleForWritingAtPath:destpath]; }
+ 			@catch(id e) { return XADOpenFileError; }
+ 		}

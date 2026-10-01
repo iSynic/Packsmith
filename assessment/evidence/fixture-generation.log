@@ -1,0 +1,3 @@
+C:\Python314\Lib\zipfile\__init__.py:1730: UserWarning: Duplicate name: 'same.txt'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+Generated 35 archives

@@ -1,0 +1,30 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "columns": 5,
+  "display_names": [
+    "caf\u00e9.txt"
+  ],
+  "edit_actions_disabled": true,
+  "entries": 1,
+  "error": "",
+  "extract_ms": 100,
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "listing_ms": 932,
+  "max_event_gap_ms": 16,
+  "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-85medrwm/forks.sit/forks",
+  "passed": true,
+  "read_only": true,
+  "selected_id": 0,
+  "selected_path": "caf\u00e9.txt",
+  "window_title": "Packsmith 0.1.0-beta.1 \u00b7 Windows beta",
+  "screenshot_sha256": "650200d569b1260017b386a5665413591bf8e2c1eacb91c13e63b4f43d2f07a4",
+  "peak_gui_rss": 54661120,
+  "peak_workers_rss": 46080000,
+  "gui_sha256": "a0a043933bf10c780cf0cc0cabc83709904412fff5c6154d7a1601a0ca113bc5",
+  "worker_sha256": "8902275fe2c26ce3942e3d81cc2bec23294927c6de02c09740fdfb16e14b92b6",
+  "decoder_sha256": "5f6d305dff8825fd2829f0b2de71c9445fe4217c82ea0dbff02f61ed1efc01c0",
+  "total_elapsed_ms": 1459.72,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

@@ -1,0 +1,564 @@
+{
+  "provenance": "Exact DLL content matched to cached binary packages; source archives acquired over HTTPS from official repositories. SHA256 observed at acquisition.",
+  "sources": [
+    {
+      "filename": "mingw-w64-winpthreads-14.0.0.r426.g4564ee4b5-1.src.tar.zst",
+      "component": "mingw-w64-winpthreads",
+      "version": "14.0.0.r426.g4564ee4b5-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-winpthreads-14.0.0.r426.g4564ee4b5-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libwinpthread-1.dll"
+      ],
+      "license": [
+        "spdx:MIT AND BSD-3-Clause-Clear"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libwinpthread-14.0.0.r426.g4564ee4b5-1-any.pkg.tar.zst",
+          "sha256": "543017ce2731292b215bf1d36fd70a86d8a8d5ed0afba9d3db9fff89804cda71"
+        }
+      ],
+      "sha256": "5493832de1b7e24f09edb556ed409091b0844f9677212c4865618d6f93c508be",
+      "bytes": 54807189
+    },
+    {
+      "filename": "mingw-w64-libffi-3.8.0-1.src.tar.zst",
+      "component": "mingw-w64-libffi",
+      "version": "3.8.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libffi-3.8.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libffi-8.dll"
+      ],
+      "license": [
+        "spdx:MIT"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libffi-3.8.0-1-any.pkg.tar.zst",
+          "sha256": "6dad7f3c6c900d3c64a4fe0c2764b405e678b22df3521d2284ffaeff0198b84b"
+        }
+      ],
+      "sha256": "641ea78ce0333839eab5262656f03fdcfd8496d7388bd7b27e4f0638aeed9adf",
+      "bytes": 1582238
+    },
+    {
+      "filename": "mingw-w64-libiconv-1.19-1.src.tar.zst",
+      "component": "mingw-w64-libiconv",
+      "version": "1.19-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libiconv-1.19-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libiconv-2.dll"
+      ],
+      "license": [
+        "spdx:LGPL-2.1-or-later",
+        "documentation:spdx:GPL-3.0-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libiconv-1.19-1-any.pkg.tar.zst",
+          "sha256": "21e334d0911f25de75d3e18e0697648bcecfa9658256d600cad0827d719c2f35"
+        }
+      ],
+      "sha256": "74428280c17094da5b702c29b2e1a0abae59556ea5dfdd65705cc8ccc1e000fb",
+      "bytes": 5131029
+    },
+    {
+      "filename": "mingw-w64-zlib-1.3.2-2.src.tar.zst",
+      "component": "mingw-w64-zlib",
+      "version": "1.3.2-2",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-zlib-1.3.2-2.src.tar.zst",
+      "binaries": [
+        "workers/legacy/zlib1.dll"
+      ],
+      "license": [
+        "spdx:Zlib"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-zlib-1.3.2-2-any.pkg.tar.zst",
+          "sha256": "9e75842a070ba648e986e12424e1c92c9d7d77200e85f6a34eeb600819f2e694"
+        }
+      ],
+      "sha256": "eef69dea52357e01b272d6fd6dc4d7c0773f71260cb7bcde6047c8c383518db3",
+      "bytes": 1326375
+    },
+    {
+      "filename": "mingw-w64-libxml2-2.15.4-1.src.tar.zst",
+      "component": "mingw-w64-libxml2",
+      "version": "2.15.4-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libxml2-2.15.4-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libxml2-16.dll"
+      ],
+      "license": [
+        "spdx:MIT"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libxml2-2.15.4-1-any.pkg.tar.zst",
+          "sha256": "b79dcaea6713e8d09af334de946db364eb501b5be2ec2f75dc7608e61b5d0316"
+        }
+      ],
+      "sha256": "e283bdd176377f82c3af57458d8623afedbba6d504d4480f93f49e39fb0a1417",
+      "bytes": 3805864
+    },
+    {
+      "filename": "mingw-w64-zstd-1.5.7-2.src.tar.zst",
+      "component": "mingw-w64-zstd",
+      "version": "1.5.7-2",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-zstd-1.5.7-2.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libzstd.dll"
+      ],
+      "license": [
+        "spdx:BSD-3-Clause OR GPL-2.0-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-zstd-1.5.7-2-any.pkg.tar.zst",
+          "sha256": "1add6705b344664f6aca108c85f79ab5bdd9e1162662bb06a4cf40a34f6e0907"
+        }
+      ],
+      "sha256": "306797282df799e95d550e6d0bb4b0a7b848027b8e13893a24236e060837c217",
+      "bytes": 2402010
+    },
+    {
+      "filename": "mingw-w64-gettext-1.0-1.src.tar.zst",
+      "component": "mingw-w64-gettext",
+      "version": "1.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gettext-1.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libintl-8.dll"
+      ],
+      "license": [
+        "spdx:GPL-3.0-or-later AND LGPL-2.1-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gettext-runtime-1.0-1-any.pkg.tar.zst",
+          "sha256": "be68d7f260633284b910c588c6d82ee304a81c8817a686d2cd9df83f872c27af"
+        }
+      ],
+      "sha256": "cca0d0c8f60353faccc5ad40405240014e4a7ccc8b1c6ca9f4626aef3097d26e",
+      "bytes": 10267655
+    },
+    {
+      "filename": "mingw-w64-gmp-6.3.0-2.src.tar.zst",
+      "component": "mingw-w64-gmp",
+      "version": "6.3.0-2",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gmp-6.3.0-2.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libgmp-10.dll"
+      ],
+      "license": [
+        "LGPL3",
+        "GPL"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gmp-6.3.0-2-any.pkg.tar.zst",
+          "sha256": "8924433974c4add46cb46ea4f6ef283b5c5139d3f552375115b5580f855015cc"
+        }
+      ],
+      "sha256": "f288f944fd9609db220bcf6a8dd0703a5674eeb906ef35eb8485bb8192135994",
+      "bytes": 2097066
+    },
+    {
+      "filename": "mingw-w64-brotli-1.2.0-1.src.tar.zst",
+      "component": "mingw-w64-brotli",
+      "version": "1.2.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-brotli-1.2.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libbrotlicommon.dll",
+        "workers/legacy/libbrotlidec.dll",
+        "workers/legacy/libbrotlienc.dll"
+      ],
+      "license": [
+        "spdx:MIT"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-brotli-1.2.0-1-any.pkg.tar.zst",
+          "sha256": "f5f2f7e723a08378241d15f0537386950c1a48e2d82bc47bedd632bd61852aba"
+        }
+      ],
+      "sha256": "2f0f93875aac21990d20f1eaf0ad8b970eb6f186c663c77ae47aaaf9e5711fcf",
+      "bytes": 644113
+    },
+    {
+      "filename": "mingw-w64-libunistring-1.4.2-1.src.tar.zst",
+      "component": "mingw-w64-libunistring",
+      "version": "1.4.2-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libunistring-1.4.2-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libunistring-5.dll"
+      ],
+      "license": [
+        "spdx:LGPL-3.0-or-later OR GPL-3.0-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libunistring-1.4.2-1-any.pkg.tar.zst",
+          "sha256": "c940cf52fb2b579baa596d3c1d911f7544cbf90f8bd19c260377aa115c65b059"
+        }
+      ],
+      "sha256": "a5bafb360d5c13c5c52ef071d5a8288ce2345346b902f20ed6e9322766ec60eb",
+      "bytes": 4770800
+    },
+    {
+      "filename": "mingw-w64-libidn2-2.3.8-4.src.tar.zst",
+      "component": "mingw-w64-libidn2",
+      "version": "2.3.8-4",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libidn2-2.3.8-4.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libidn2-0.dll"
+      ],
+      "license": [
+        "spdx:GPL-2.0-or-later",
+        "spdx:LGPL-3.0-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libidn2-2.3.8-4-any.pkg.tar.zst",
+          "sha256": "f98a157446f9ac35465022e329cdaf6169b0c9fa19837e9d80aff9d4e5109013"
+        }
+      ],
+      "sha256": "cd83e8514fbeb6a4499299b88691b9b9ecc3114cca1e2be4f6c54aab6ae9ddd0",
+      "bytes": 2147337
+    },
+    {
+      "filename": "mingw-w64-libtasn1-4.21.0-1.src.tar.zst",
+      "component": "mingw-w64-libtasn1",
+      "version": "4.21.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libtasn1-4.21.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libtasn1-6.dll"
+      ],
+      "license": [
+        "GPL3, LGPL"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libtasn1-4.21.0-1-any.pkg.tar.zst",
+          "sha256": "9f7aa213d14135e5856cc7a1254d871cbed60dee00b40db87a6ca7a4e733d2b2"
+        }
+      ],
+      "sha256": "c626129c5131eef0a45c736274f0844747605a105161cc0f7d39f6e1c70ed0ff",
+      "bytes": 1732161
+    },
+    {
+      "filename": "mingw-w64-nettle-4.0-1.src.tar.zst",
+      "component": "mingw-w64-nettle",
+      "version": "4.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-nettle-4.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libhogweed-7.dll",
+        "workers/legacy/libnettle-9.dll"
+      ],
+      "license": [
+        "spdx:GPL-2.0-or-later",
+        "spdx:LGPL-3.0-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-nettle-4.0-1-any.pkg.tar.zst",
+          "sha256": "505773abfb4f3af514012e2926c11db6365299c7eda141d958a065740740dc86"
+        }
+      ],
+      "sha256": "453187e86139bce3c5b94542cc709ead7f523f0fc33ce4cc2b8fe9d5a9719cdd",
+      "bytes": 2630115
+    },
+    {
+      "filename": "mingw-w64-p11-kit-0.26.5-1.src.tar.zst",
+      "component": "mingw-w64-p11-kit",
+      "version": "0.26.5-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-p11-kit-0.26.5-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libp11-kit-0.dll"
+      ],
+      "license": [
+        "spdx:BSD-3-Clause"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-p11-kit-0.26.5-1-any.pkg.tar.zst",
+          "sha256": "171b877586efd64888648007a56c3a263eb2d4abc82594c90d30b1b7e4b9f5eb"
+        }
+      ],
+      "sha256": "1665c40c6237bbb9be868ecfc00ab65f9038047e4c608126de575ae4ecb5ca12",
+      "bytes": 1094024
+    },
+    {
+      "filename": "mingw-w64-gnutls-3.8.13-3.src.tar.zst",
+      "component": "mingw-w64-gnutls",
+      "version": "3.8.13-3",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gnutls-3.8.13-3.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libgnutls-30.dll"
+      ],
+      "license": [
+        "spdx:GPL-3.0-or-later",
+        "spdx:LGPL-2.1-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gnutls-3.8.13-3-any.pkg.tar.zst",
+          "sha256": "0d5a373ac558af20dc0a46d249e99f8a3b3d3562ae013e73f00642dc3bd118cf"
+        }
+      ],
+      "sha256": "7889cd73810d909642c0f122b40cfe0eaec5b0d2985804f145cd90c6a51c0435",
+      "bytes": 7280076
+    },
+    {
+      "filename": "mingw-w64-icu-78.3-4.src.tar.zst",
+      "component": "mingw-w64-icu",
+      "version": "78.3-4",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-icu-78.3-4.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libicudt78.dll",
+        "workers/legacy/libicuin78.dll",
+        "workers/legacy/libicuuc78.dll"
+      ],
+      "license": [
+        "spdx:ICU"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-icu-78.3-4-any.pkg.tar.zst",
+          "sha256": "8486a018aca2e56d1fcd2eed2069011f2e1da02e03af72b38916ee06cbe7203f"
+        }
+      ],
+      "sha256": "9e24bccf1f6e00658114e0a61aa14ed6742e29983dba3da8058e6d2c42366f9f",
+      "bytes": 26077652
+    },
+    {
+      "filename": "mingw-w64-libobjc2-2.2.1-7.src.tar.zst",
+      "component": "mingw-w64-libobjc2",
+      "version": "2.2.1-7",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libobjc2-2.2.1-7.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libobjc-4.6.dll"
+      ],
+      "license": [
+        "spdx:MIT"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libobjc2-2.2.1-7-any.pkg.tar.zst",
+          "sha256": "3dcedcb5fcd92b8d2805162b85ddfe8ed495b69c3d8c877c52d3b26ab3d879c1"
+        }
+      ],
+      "sha256": "4c309b636fc55de4cb90904d2cd9b3372cc83f9cabb71a14ef1d6039f2437e3f",
+      "bytes": 208828
+    },
+    {
+      "filename": "mingw-w64-libxslt-1.1.45-1.src.tar.zst",
+      "component": "mingw-w64-libxslt",
+      "version": "1.1.45-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-libxslt-1.1.45-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libxslt-1.dll"
+      ],
+      "license": [
+        "custom"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libxslt-1.1.45-1-any.pkg.tar.zst",
+          "sha256": "1503384de892b2f1362e2eae56b0632692c1ce53b441c68c53ee73fb51f42cb7"
+        }
+      ],
+      "sha256": "67bef813cbdfced421e084867eb32e037e48d911a44ca619d45393830f85c454",
+      "bytes": 2675383
+    },
+    {
+      "filename": "mingw-w64-gnustep-base-1.31.1-10.src.tar.zst",
+      "component": "mingw-w64-gnustep-base",
+      "version": "1.31.1-10",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gnustep-base-1.31.1-10.src.tar.zst",
+      "binaries": [
+        "workers/legacy/gnustep-base-1_31.dll"
+      ],
+      "license": [
+        "spdx:LGPL-2.1-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gnustep-base-1.31.1-10-any.pkg.tar.zst",
+          "sha256": "dc8832428d16e43a8a7ecfd6596bbaecb2479f7fd4f5dac5d1540f97b1ae6ece"
+        }
+      ],
+      "sha256": "34836f1401a0da3c88968a43750442fa3c5785fc956ac22864e5bfa71f88be85",
+      "bytes": 3777948
+    },
+    {
+      "filename": "mingw-w64-wavpack-5.9.0-1.src.tar.zst",
+      "component": "mingw-w64-wavpack",
+      "version": "5.9.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-wavpack-5.9.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libwavpack-1.dll"
+      ],
+      "license": [
+        "spdx:BSD-3-Clause"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-wavpack-5.9.0-1-any.pkg.tar.zst",
+          "sha256": "54e9a30c413e2bdd8b3c839797a6947cd3c6dec973d94aa2222ebe5a75c22fd0"
+        }
+      ],
+      "sha256": "55cc253663b448e0d8a50009f2363f28a54c9bb04397c23de7da3a699d3868c4",
+      "bytes": 814493
+    },
+    {
+      "filename": "mingw-w64-bzip2-1.0.8-4.src.tar.zst",
+      "component": "mingw-w64-bzip2",
+      "version": "1.0.8-4",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-bzip2-1.0.8-4.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libbz2-1.dll"
+      ],
+      "license": [
+        "custom"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-bzip2-1.0.8-4-any.pkg.tar.zst",
+          "sha256": "123768f30ae14ba654a6feb70f8526146a331bc85f831a91a549ffb3f6cbffc7"
+        }
+      ],
+      "sha256": "fd9360917314d1cbccb3cb15ed8450d1e56b8a9f733b606504aba52c52159e54",
+      "bytes": 818825
+    },
+    {
+      "filename": "mingw-w64-gcc-16.1.0-1.src.tar.zst",
+      "component": "mingw-w64-gcc",
+      "version": "16.1.0-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gcc-16.1.0-1.src.tar.zst",
+      "binaries": [
+        "workers/legacy/libgcc_s_seh-1.dll",
+        "workers/legacy/libstdc++-6.dll"
+      ],
+      "license": [
+        "spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND LGPL-2.1-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gcc-libs-16.1.0-1-any.pkg.tar.zst",
+          "sha256": "acfdd5fd61709d9f6cba77ab9dc2bcbf6ef670cb7d20b10434affa7d3bb90357"
+        }
+      ],
+      "sha256": "fe7ac15e288ff715d1129b0b4ae36ddd2a687b83db991ddfccfe7b38b3e67a82",
+      "bytes": 102477926
+    },
+    {
+      "filename": "mingw-w64-gcc-15.2.0-8.src.tar.zst",
+      "component": "mingw-w64-gcc",
+      "version": "15.2.0-8",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-gcc-15.2.0-8.src.tar.zst",
+      "binaries": [
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll",
+        "workers/libgcc_s_seh-1.dll",
+        "workers/libstdc++-6.dll"
+      ],
+      "license": [
+        "spdx:GPL-3.0-or-later WITH GCC-exception-3.1 AND LGPL-2.1-or-later"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-gcc-libs-15.2.0-8-any.pkg.tar.zst",
+          "sha256": "4dc1beba0c5ee542d432363514cb800edf8ab081670a48756345443e1fbd1843"
+        }
+      ],
+      "sha256": "5c723ca641e699ad06da0a9954b5df50963565529691ee1e7844fe0e4730f369",
+      "bytes": 101090946
+    },
+    {
+      "filename": "mingw-w64-winpthreads-13.0.0.r155.g849a151ba-1.src.tar.zst",
+      "component": "mingw-w64-winpthreads",
+      "version": "13.0.0.r155.g849a151ba-1",
+      "url": "https://repo.msys2.org/mingw/sources/mingw-w64-winpthreads-13.0.0.r155.g849a151ba-1.src.tar.zst",
+      "binaries": [
+        "libwinpthread-1.dll",
+        "workers/libwinpthread-1.dll"
+      ],
+      "license": [
+        "spdx:MIT AND BSD-3-Clause-Clear"
+      ],
+      "binary_packages": [
+        {
+          "filename": "mingw-w64-x86_64-libwinpthread-13.0.0.r155.g849a151ba-1-any.pkg.tar.zst",
+          "sha256": "04669ba0dd2e95a0069c88512d3e5c4737fc1d877fa093405b202f61ed9da93c"
+        }
+      ],
+      "sha256": "78458938714d0444f0ec259f081e88050dfa76634290438813ecd29bf478d69e",
+      "bytes": 51368301
+    },
+    {
+      "filename": "qtbase-everywhere-src-6.10.2.tar.xz",
+      "component": "Qt Base",
+      "version": "6.10.2",
+      "url": "https://download.qt.io/archive/qt/6.10/6.10.2/submodules/qtbase-everywhere-src-6.10.2.tar.xz",
+      "binaries": [
+        "Qt6Core.dll",
+        "Qt6Gui.dll",
+        "Qt6Widgets.dll",
+        "imageformats/qico.dll",
+        "platforms/qwindows.dll",
+        "styles/qmodernwindowsstyle.dll",
+        "workers/Qt6Core.dll"
+      ],
+      "license": [
+        "LGPL-3.0-only and embedded third-party notices"
+      ],
+      "sha256": "aeb78d29291a2b5fd53cb55950f8f5065b4978c25fb1d77f627d695ab9adf21e",
+      "bytes": 50374380
+    }
+  ],
+  "runtime_binary_sha256": {
+    "libgcc_s_seh-1.dll": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+    "libstdc++-6.dll": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+    "libwinpthread-1.dll": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+    "Qt6Core.dll": "7e14027a0bb4017325db707c315c70ee008c8f2364f60bb2eb04d53c017ee762",
+    "Qt6Gui.dll": "5a6a0971e71979520b01682ce7dcd5b4138ee95f208286ac45010050aa386d9d",
+    "Qt6Widgets.dll": "18dce4f681cdbf0970301b5e6fbf5e8eb32182051c684b9366435269301870b9",
+    "imageformats/qico.dll": "3fca6f3092df4e01aa9d48186ce3df857521fc014f28b2edf9c331de4b9bda1b",
+    "platforms/qwindows.dll": "664cda539addfa1917e5b728f45a82a0f83694810c81df5604b86b200ad4aab1",
+    "styles/qmodernwindowsstyle.dll": "3f0b77397d04039b555519a3fb494b4fe2f64d058424b8a550b78836c20ff8fa",
+    "workers/7z.dll": "65e4c1f855f9ef6e8f0f5df8e3f27d9eb5f07311408639da0a1ca0b8f4871b0d",
+    "workers/libgcc_s_seh-1.dll": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+    "workers/libstdc++-6.dll": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+    "workers/libwinpthread-1.dll": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+    "workers/Qt6Core.dll": "7e14027a0bb4017325db707c315c70ee008c8f2364f60bb2eb04d53c017ee762",
+    "workers/legacy/gnustep-base-1_31.dll": "428456388343d6d0d6f5780d70a8b04257d4daca668f340b3f17c57cbc7d0013",
+    "workers/legacy/libbrotlicommon.dll": "ca7bc06ead80259971badf2cd0bfc688db9154dad65f139f49a38b4be9976f97",
+    "workers/legacy/libbrotlidec.dll": "a142dc6cfa77cb907028aa9426f486f3d8de37855e8db2ae2894147908121881",
+    "workers/legacy/libbrotlienc.dll": "50c3aca8abcf0d5576f0b62dbd608be285246f8fd1b48ef87d58fa6b8b744e5f",
+    "workers/legacy/libbz2-1.dll": "a4fbb97c26662d2b8a80bf4597ed3effb69b12048b0cb1eef2c3f211e2e66673",
+    "workers/legacy/libffi-8.dll": "b649c515907436a3299326f83aea0e8d75c61853eb1609602603bbcb9b00b4db",
+    "workers/legacy/libgcc_s_seh-1.dll": "851e164d1a8a7ec4a8991315339b8090853c8d4a27224332cea293e01ff18cbf",
+    "workers/legacy/libgmp-10.dll": "37248cda33845e7c5c35a574e57da762dd0a8268f0270d179f30a33746809681",
+    "workers/legacy/libgnutls-30.dll": "aca67ef2c8429557e9ac3a02ad313e9fdad35a1416972a248f0a205f83d39fbd",
+    "workers/legacy/libhogweed-7.dll": "8a4785b98e5418c32035f570904f65360c89825358702954b53c77ee2df8c97d",
+    "workers/legacy/libiconv-2.dll": "7a282a854e01be726c6cccfe46f548c716aa45b3014818468253aaa4efbcd067",
+    "workers/legacy/libicudt78.dll": "60255653982986c9fb72ad1b10b8dc502e498d890e0218cb0a47bc5907aa4e43",
+    "workers/legacy/libicuin78.dll": "c9bb34526709a81bfae231d4190f13adad0b4c63e345262f448aaa720291feec",
+    "workers/legacy/libicuuc78.dll": "27edc25710faa3489cd9cbd6cbc64c305b69ce5dbb9e0a29273d85e9badddde9",
+    "workers/legacy/libidn2-0.dll": "9880b52651a0247640a2531d777380f7c35fac7efa7e3979b265ddcb78db8642",
+    "workers/legacy/libintl-8.dll": "0537c3dd2378218508ebe3cc416d72a99ee2d24ae1c5525e23458f32544ef861",
+    "workers/legacy/libnettle-9.dll": "208002d990684946c7923a87022bedea588fef8e31286598c08805e37be2a95a",
+    "workers/legacy/libobjc-4.6.dll": "7a931695f61179292de70821283441a5a29a20d198011c7da8e57904f03fb1d0",
+    "workers/legacy/libp11-kit-0.dll": "ada3949f3763db47a754eec56388f3305c41c259eb3bbae188a820fd01c5445b",
+    "workers/legacy/libstdc++-6.dll": "4d4495104abe4dca9df029db8434f1f7d37067d67be644a7eb7bb79b1fb2c66f",
+    "workers/legacy/libtasn1-6.dll": "95821132a7d4ea90f7c37540118ad1459809ff23162d6dc3d5600b15755a644b",
+    "workers/legacy/libunistring-5.dll": "b91e2850d3668d4931056a8f4d35783b8ec3eea3735485108a936a072cd16071",
+    "workers/legacy/libwavpack-1.dll": "98f58782e269d18d5c0d9a2be19993225dcbf46e3b67e06d209ba2b1f9d1990d",
+    "workers/legacy/libwinpthread-1.dll": "72bf8802de3a99d28f0bc2db9a11f281a9f9f3fa83dab2bc67e69fac3bd3d9c0",
+    "workers/legacy/libxml2-16.dll": "81e97f59e486f95de3b8b12973860102cddebbaaeedbbc22786aaec0728b2c68",
+    "workers/legacy/libxslt-1.dll": "d2e2bc93cb8fd03eb5a681e75995e27ce3df0430b359d4717b3c5232776ad99a",
+    "workers/legacy/libzstd.dll": "b95c223a9548a9ecf51377c962e0bc8f0c51eb0c6f67a296dbc885996f0dd40d",
+    "workers/legacy/zlib1.dll": "93e9243a44c29200eeacaf9658efe2558581770e4b11ca4b500e18e424a6e3b5"
+  }
+}

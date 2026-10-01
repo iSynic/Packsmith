@@ -1,0 +1,115 @@
+[
+  {
+    "name": "ark-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/ark",
+      "-B",
+      "/home/riceric/unarchiver-assessment-20260930/ark-build"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 1,
+    "elapsed_seconds": 2.342,
+    "log": "ark-configure-linux.log"
+  },
+  {
+    "name": "peazip-lazbuild-prerequisite",
+    "command": [
+      "lazbuild",
+      "--version"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 0.068,
+    "log": "peazip-lazbuild-prerequisite-linux.log"
+  },
+  {
+    "name": "peazip-metadarkstyle",
+    "command": [
+      "lazbuild",
+      "--pcp=/home/riceric/unarchiver-assessment-20260930/lazarus-config",
+      "--add-package",
+      "/home/riceric/unarchiver-assessment-20260930/peazip/dev/metadarkstyle/metadarkstyle.lpk"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 0.319,
+    "log": "peazip-metadarkstyle-linux.log"
+  },
+  {
+    "name": "peazip-build",
+    "command": [
+      "lazbuild",
+      "--pcp=/home/riceric/unarchiver-assessment-20260930/lazarus-config",
+      "--widgetset=gtk2",
+      "/home/riceric/unarchiver-assessment-20260930/peazip/dev/project_peach.lpi"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 26.795,
+    "log": "peazip-build-linux.log"
+  },
+  {
+    "name": "pea-build",
+    "command": [
+      "lazbuild",
+      "--pcp=/home/riceric/unarchiver-assessment-20260930/lazarus-config",
+      "--widgetset=gtk2",
+      "/home/riceric/unarchiver-assessment-20260930/peazip/dev/project_pea.lpi"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 5.979,
+    "log": "pea-build-linux.log"
+  },
+  {
+    "name": "libzip-shared-configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/references/libzip",
+      "-B",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-shared-build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_SHARED_LIBS=ON",
+      "-DBUILD_DOC=OFF",
+      "-DBUILD_EXAMPLES=OFF",
+      "-DBUILD_REGRESS=ON",
+      "-DNIHTEST=/home/riceric/unarchiver-assessment-20260930/nihtest"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 31.102,
+    "log": "libzip-shared-configure-linux.log"
+  },
+  {
+    "name": "libzip-shared-build",
+    "command": [
+      "cmake",
+      "--build",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-shared-build",
+      "-j",
+      "4"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 6.331,
+    "log": "libzip-shared-build-linux.log"
+  },
+  {
+    "name": "libzip-shared-ctest",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/home/riceric/unarchiver-assessment-20260930/libzip-shared-build",
+      "--output-on-failure",
+      "-j",
+      "4"
+    ],
+    "cwd": "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver",
+    "exit_code": 0,
+    "elapsed_seconds": 22.139,
+    "log": "libzip-shared-ctest-linux.log"
+  }
+]

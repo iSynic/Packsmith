@@ -1,0 +1,5 @@
+-- Could NOT find GnuTLS (missing: GNUTLS_LIBRARY GNUTLS_INCLUDE_DIR) 
+-- Could NOT find MbedTLS (missing: MbedTLS_LIBRARY MbedTLS_INCLUDE_DIR) (Required is at least version "1.0")
+-- Configuring done (3.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/riceric/unarchiver-assessment-20260930/libzip-build

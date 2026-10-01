@@ -1,0 +1,18 @@
+{
+  "hash_provenance": "Observed local SDK/compiler hashes; source/download pins recorded separately. Not a clean-machine acquisition receipt.",
+  "gcc_msys2_package": "15.2.0-8",
+  "qt": "6.10.2",
+  "sevenzip_revision": "0766b733fe3e06dd2a7f9a3cfbf2108ac73abd17",
+  "hashes": {
+    "compiler/g++.exe": "51911fb398529fa19769da935279c1a8a56f1c3508b2df295624aaa3dae34aa5",
+    "compiler/cc1plus.exe": "de69bacf358b6232fc13d97879a1639ba026177b163d8ebf57fa9a63c6ecc7d8",
+    "compiler/cmake.exe": "7ac00ef53a57a3c998027db5acbb707d64e313a84dd1191b1b74a2055859b099",
+    "compiler/ninja.exe": "44cc3ec245c0dfb74dcc6f1c79034f746977c374fa5adb9ae0553408c651dfda",
+    "compiler/libstdc++-6.dll": "428d22a8a4d25e39edad36851122701b3460c2bcf628884cdd2664530d2dd634",
+    "compiler/libgcc_s_seh-1.dll": "2de4355648441db0230a9aba1a149fc829b094f83c14c37ea3f775356d33d8b1",
+    "compiler/libwinpthread-1.dll": "466b9ac1cd1fd7ec402d19cc990eac8e4c34a32c3f6319d78c0c7ec56063cd97",
+    "qt-sdk": "4f7ce8d701427f22483ec66cb2e5659fcffeacf1eb25e888b61be1a03321849a",
+    "7zip-sdk": "e5d88198ea1241a55b1e200fbcc738e8ca54244dd78366100c424e3f1a5fe99f",
+    "7z.dll": "65e4c1f855f9ef6e8f0f5df8e3f27d9eb5f07311408639da0a1ca0b8f4871b0d"
+  }
+}

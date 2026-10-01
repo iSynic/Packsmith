@@ -1,0 +1,18 @@
+Cloning into 'C:\Users\Eric\Documents\ChatGPT\Unarchiver\assessment\references\peazip'...
+Note: switching to '52140702007e6b5e4d3d8a7e3f06bfb4ff5f5b37'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "gui_sha256": "a0a043933bf10c780cf0cc0cabc83709904412fff5c6154d7a1601a0ca113bc5",
+  "embedded_icons": [
+    {
+      "resource_id": 101,
+      "name": "packsmith",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    },
+    {
+      "resource_id": 102,
+      "name": "packsmith-archive",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    }
+  ],
+  "version_strings": {
+    "ProductName": "Packsmith",
+    "FileDescription": "Packsmith archive manager",
+    "OriginalFilename": "Packsmith.exe",
+    "FileVersion": "0.1.0-beta.1",
+    "ProductVersion": "0.1.0-beta.1"
+  },
+  "previous_name_recovery": {
+    "application_icon_loaded": true,
+    "application_name": "Packsmith",
+    "archive_icon_loaded": true,
+    "error": "",
+    "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+    "passed": true,
+    "recovery_ms": 51,
+    "stage_removed": true,
+    "window_title": "Packsmith 0.1.0-beta.1 \u00b7 Windows beta"
+  }
+}

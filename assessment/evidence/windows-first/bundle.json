@@ -1,0 +1,444 @@
+{
+  "bundle_directory": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle",
+  "purpose": "Local assessment experiment, not an installer or release package",
+  "sources_lock": "assessment/evidence/sources.lock.json",
+  "runtime_locks": [
+    "assessment/evidence/windows-runtime.lock.json",
+    "assessment/evidence/windows-gcc16_1.lock.json"
+  ],
+  "patches": [
+    "assessment/evidence/windows-first/windows-wide-unlink.patch",
+    "assessment/evidence/windows-first/windows-encoding.patch"
+  ],
+  "native_files": [
+    {
+      "file": "xad-worker.exe",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\xad-worker.exe",
+      "sha256": "c16d2233cf0085b3c80b747ea078d4560bfd96a194d8d80e1aead469d3fe601f",
+      "bytes": 2642944,
+      "imports": [
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll",
+        "libbz2-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll",
+        "libwavpack-1.dll",
+        "WINMM.dll",
+        "zlib1.dll",
+        "gnustep-base-1_31.dll",
+        "libobjc-4.6.dll"
+      ]
+    },
+    {
+      "file": "lsar.exe",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\lsar.exe",
+      "sha256": "1162176b3af96865037deb5a1013446cad61e98e0aceb39c1e56a5b2a7731a5c",
+      "bytes": 2759680,
+      "imports": [
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll",
+        "libbz2-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll",
+        "SHELL32.dll",
+        "libwavpack-1.dll",
+        "WINMM.dll",
+        "zlib1.dll",
+        "gnustep-base-1_31.dll",
+        "libobjc-4.6.dll"
+      ]
+    },
+    {
+      "file": "encoding-probe.exe",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\build-clang22\\encoding-probe.exe",
+      "sha256": "4dec6327f1229c39895f25bea58fbb8ce801870b240c34d97ea73b11246fef2c",
+      "bytes": 2641408,
+      "imports": [
+        "libgcc_s_seh-1.dll",
+        "libstdc++-6.dll",
+        "libbz2-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll",
+        "libwavpack-1.dll",
+        "WINMM.dll",
+        "zlib1.dll",
+        "gnustep-base-1_31.dll",
+        "libobjc-4.6.dll"
+      ]
+    },
+    {
+      "file": "foundation-probe.exe",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\experiments\\xad-windows\\foundation-probe.exe",
+      "sha256": "33a40deec89af00c5e7c919e1576d37756825665ef3414dd1c443a530dbadc1f",
+      "bytes": 64512,
+      "imports": [
+        "libstdc++-6.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "gnustep-base-1_31.dll",
+        "libobjc-4.6.dll"
+      ]
+    },
+    {
+      "file": "libgcc_s_seh-1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime-gcc16_1\\mingw64\\bin\\libgcc_s_seh-1.dll",
+      "sha256": "851e164d1a8a7ec4a8991315339b8090853c8d4a27224332cea293e01ff18cbf",
+      "bytes": 151732,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll"
+      ]
+    },
+    {
+      "file": "libstdc++-6.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime-gcc16_1\\mingw64\\bin\\libstdc++-6.dll",
+      "sha256": "4d4495104abe4dca9df029db8434f1f7d37067d67be644a7eb7bb79b1fb2c66f",
+      "bytes": 2673229,
+      "imports": [
+        "libgcc_s_seh-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll"
+      ]
+    },
+    {
+      "file": "libbz2-1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libbz2-1.dll",
+      "sha256": "a4fbb97c26662d2b8a80bf4597ed3effb69b12048b0cb1eef2c3f211e2e66673",
+      "bytes": 108633,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libwinpthread-1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libwinpthread-1.dll",
+      "sha256": "72bf8802de3a99d28f0bc2db9a11f281a9f9f3fa83dab2bc67e69fac3bd3d9c0",
+      "bytes": 66333,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libwavpack-1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libwavpack-1.dll",
+      "sha256": "98f58782e269d18d5c0d9a2be19993225dcbf46e3b67e06d209ba2b1f9d1990d",
+      "bytes": 228099,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "zlib1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\zlib1.dll",
+      "sha256": "93e9243a44c29200eeacaf9658efe2558581770e4b11ca4b500e18e424a6e3b5",
+      "bytes": 128488,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "gnustep-base-1_31.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\gnustep-base-1_31.dll",
+      "sha256": "428456388343d6d0d6f5780d70a8b04257d4daca668f340b3f17c57cbc7d0013",
+      "bytes": 5040128,
+      "imports": [
+        "WS2_32.dll",
+        "ADVAPI32.dll",
+        "libffi-8.dll",
+        "libgcc_s_seh-1.dll",
+        "libgnutls-30.dll",
+        "libiconv-2.dll",
+        "libicuin78.dll",
+        "libicuuc78.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "NETAPI32.dll",
+        "SHELL32.dll",
+        "libstdc++-6.dll",
+        "USER32.dll",
+        "libxml2-16.dll",
+        "libxslt-1.dll",
+        "zlib1.dll",
+        "libobjc-4.6.dll"
+      ]
+    },
+    {
+      "file": "libobjc-4.6.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libobjc-4.6.dll",
+      "sha256": "7a931695f61179292de70821283441a5a29a20d198011c7da8e57904f03fb1d0",
+      "bytes": 167936,
+      "imports": [
+        "libgcc_s_seh-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libstdc++-6.dll"
+      ]
+    },
+    {
+      "file": "libffi-8.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libffi-8.dll",
+      "sha256": "b649c515907436a3299326f83aea0e8d75c61853eb1609602603bbcb9b00b4db",
+      "bytes": 39699,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libgnutls-30.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libgnutls-30.dll",
+      "sha256": "aca67ef2c8429557e9ac3a02ad313e9fdad35a1416972a248f0a205f83d39fbd",
+      "bytes": 2316158,
+      "imports": [
+        "ADVAPI32.dll",
+        "libbrotlidec.dll",
+        "libbrotlienc.dll",
+        "CRYPT32.dll",
+        "libgmp-10.dll",
+        "libhogweed-7.dll",
+        "libidn2-0.dll",
+        "libintl-8.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "ncrypt.dll",
+        "libnettle-9.dll",
+        "libp11-kit-0.dll",
+        "libwinpthread-1.dll",
+        "libtasn1-6.dll",
+        "libunistring-5.dll",
+        "WS2_32.dll",
+        "zlib1.dll",
+        "libzstd.dll"
+      ]
+    },
+    {
+      "file": "libiconv-2.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libiconv-2.dll",
+      "sha256": "7a282a854e01be726c6cccfe46f548c716aa45b3014818468253aaa4efbcd067",
+      "bytes": 1143148,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libicuin78.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libicuin78.dll",
+      "sha256": "c9bb34526709a81bfae231d4190f13adad0b4c63e345262f448aaa720291feec",
+      "bytes": 3186867,
+      "imports": [
+        "libicuuc78.dll",
+        "libgcc_s_seh-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libstdc++-6.dll"
+      ]
+    },
+    {
+      "file": "libicuuc78.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libicuuc78.dll",
+      "sha256": "27edc25710faa3489cd9cbd6cbc64c305b69ce5dbb9e0a29273d85e9badddde9",
+      "bytes": 1999466,
+      "imports": [
+        "libicudt78.dll",
+        "ADVAPI32.dll",
+        "libgcc_s_seh-1.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libwinpthread-1.dll",
+        "libstdc++-6.dll"
+      ]
+    },
+    {
+      "file": "libxml2-16.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libxml2-16.dll",
+      "sha256": "81e97f59e486f95de3b8b12973860102cddebbaaeedbbc22786aaec0728b2c68",
+      "bytes": 1255475,
+      "imports": [
+        "bcrypt.dll",
+        "libiconv-2.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "zlib1.dll"
+      ]
+    },
+    {
+      "file": "libxslt-1.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libxslt-1.dll",
+      "sha256": "d2e2bc93cb8fd03eb5a681e75995e27ce3df0430b359d4717b3c5232776ad99a",
+      "bytes": 307859,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libxml2-16.dll"
+      ]
+    },
+    {
+      "file": "libbrotlidec.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libbrotlidec.dll",
+      "sha256": "a142dc6cfa77cb907028aa9426f486f3d8de37855e8db2ae2894147908121881",
+      "bytes": 62461,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libbrotlicommon.dll"
+      ]
+    },
+    {
+      "file": "libbrotlienc.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libbrotlienc.dll",
+      "sha256": "50c3aca8abcf0d5576f0b62dbd608be285246f8fd1b48ef87d58fa6b8b744e5f",
+      "bytes": 788364,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libbrotlicommon.dll"
+      ]
+    },
+    {
+      "file": "libgmp-10.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libgmp-10.dll",
+      "sha256": "37248cda33845e7c5c35a574e57da762dd0a8268f0270d179f30a33746809681",
+      "bytes": 679747,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libhogweed-7.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libhogweed-7.dll",
+      "sha256": "8a4785b98e5418c32035f570904f65360c89825358702954b53c77ee2df8c97d",
+      "bytes": 275389,
+      "imports": [
+        "libgmp-10.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libnettle-9.dll"
+      ]
+    },
+    {
+      "file": "libidn2-0.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libidn2-0.dll",
+      "sha256": "9880b52651a0247640a2531d777380f7c35fac7efa7e3979b265ddcb78db8642",
+      "bytes": 247081,
+      "imports": [
+        "libiconv-2.dll",
+        "libintl-8.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "libunistring-5.dll"
+      ]
+    },
+    {
+      "file": "libintl-8.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libintl-8.dll",
+      "sha256": "0537c3dd2378218508ebe3cc416d72a99ee2d24ae1c5525e23458f32544ef861",
+      "bytes": 298731,
+      "imports": [
+        "ADVAPI32.dll",
+        "libiconv-2.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libnettle-9.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libnettle-9.dll",
+      "sha256": "208002d990684946c7923a87022bedea588fef8e31286598c08805e37be2a95a",
+      "bytes": 360977,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libp11-kit-0.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libp11-kit-0.dll",
+      "sha256": "ada3949f3763db47a754eec56388f3305c41c259eb3bbae188a820fd01c5445b",
+      "bytes": 1594910,
+      "imports": [
+        "libffi-8.dll",
+        "libintl-8.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll",
+        "SHELL32.dll"
+      ]
+    },
+    {
+      "file": "libtasn1-6.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libtasn1-6.dll",
+      "sha256": "95821132a7d4ea90f7c37540118ad1459809ff23162d6dc3d5600b15755a644b",
+      "bytes": 113467,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libunistring-5.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libunistring-5.dll",
+      "sha256": "b91e2850d3668d4931056a8f4d35783b8ec3eea3735485108a936a072cd16071",
+      "bytes": 2251328,
+      "imports": [
+        "libiconv-2.dll",
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libzstd.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libzstd.dll",
+      "sha256": "b95c223a9548a9ecf51377c962e0bc8f0c51eb0c6f67a296dbc885996f0dd40d",
+      "bytes": 1218273,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libicudt78.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libicudt78.dll",
+      "sha256": "60255653982986c9fb72ad1b10b8dc502e498d890e0218cb0a47bc5907aa4e43",
+      "bytes": 33120806,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    },
+    {
+      "file": "libbrotlicommon.dll",
+      "origin": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\windows-runtime\\mingw64\\bin\\libbrotlicommon.dll",
+      "sha256": "ca7bc06ead80259971badf2cd0bfc688db9154dad65f139f49a38b4be9976f97",
+      "bytes": 143429,
+      "imports": [
+        "KERNEL32.dll",
+        "msvcrt.dll"
+      ]
+    }
+  ],
+  "system_imports": [
+    "ADVAPI32.dll",
+    "CRYPT32.dll",
+    "KERNEL32.dll",
+    "NETAPI32.dll",
+    "SHELL32.dll",
+    "USER32.dll",
+    "WINMM.dll",
+    "WS2_32.dll",
+    "bcrypt.dll",
+    "msvcrt.dll",
+    "ncrypt.dll"
+  ],
+  "native_total_bytes": 68076757,
+  "limits": "Runtime tests on this development host with sanitized PATH do not establish clean-machine installation. License/source/relink obligations need review before distribution."
+}

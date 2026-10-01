@@ -1,0 +1,37 @@
+[
+  {
+    "command": [
+      "cmake",
+      "-S",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/qt_probe",
+      "-B",
+      "/home/riceric/unarchiver-assessment-20260930/qt-build"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.951,
+    "log": "qt-linux-configure.log"
+  },
+  {
+    "command": [
+      "cmake",
+      "--build",
+      "/home/riceric/unarchiver-assessment-20260930/qt-build",
+      "-j",
+      "4"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 2.971,
+    "log": "qt-linux-build.log"
+  },
+  {
+    "command": [
+      "/home/riceric/unarchiver-assessment-20260930/qt-build/qt_probe",
+      "/home/riceric/unarchiver-assessment-20260930/sevenzip/7zz",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/fixtures/scale-100k.zip",
+      "/mnt/c/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/evidence/qt-linux-probe"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.609,
+    "log": "qt-linux-run.log"
+  }
+]

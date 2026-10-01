@@ -1,0 +1,945 @@
+[
+  {
+    "name": "bundle-foundation",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\foundation-probe.exe"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.2404,
+    "peak_rss_bytes_sampled": 22016000,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\bundle-foundation.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "fork-legacy.bin",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\legacy.bin",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\fork-legacy.bin"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.1178,
+    "peak_rss_bytes_sampled": 22159360,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\fork-legacy.bin.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "fork-payloads-legacy.bin",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "finder-legacy.bin",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "fork-legacy.hqx",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\legacy.hqx",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\fork-legacy.hqx"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0389,
+    "peak_rss_bytes_sampled": 22556672,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\fork-legacy.hqx.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "fork-payloads-legacy.hqx",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "finder-legacy.hqx",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "fork-legacy.as",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\legacy.as",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\fork-legacy.as"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0415,
+    "peak_rss_bytes_sampled": 21094400,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\fork-legacy.as.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "fork-payloads-legacy.as",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "finder-legacy.as",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "fork-appledouble.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\appledouble.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\fork-appledouble.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0413,
+    "peak_rss_bytes_sampled": 22028288,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\fork-appledouble.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "fork-payloads-appledouble.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "finder-appledouble.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "data_matches": false,
+      "resource_hashes": {},
+      "finder_type_creator": []
+    }
+  },
+  {
+    "name": "compact-pro-data",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\legacy.cpt",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\compact-pro-data"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0366,
+    "peak_rss_bytes_sampled": 22667264,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\compact-pro-data.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "compact-pro-data-hash",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "limit": "Synthetic data-only RLE fixture; no realistic Compact Pro resource-fork claim"
+    }
+  },
+  {
+    "name": "stuffit-7",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\1234567.sit.bin",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\stuffit-7"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0358,
+    "peak_rss_bytes_sampled": 18272256,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\stuffit-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "stuffit-cross-platform-7",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "windows_files": {},
+      "linux_head_files": {
+        "testdoc.txt": "0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b",
+        "._testdoc.txt": "62042645389b99a448bc5c96b5fe9bb6c712982c5001bfbade6688f39c1c2620"
+      },
+      "limit": "Cross-platform agreement, not an independent original-application payload oracle"
+    }
+  },
+  {
+    "name": "stuffit-wrong-7",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\1234567.sit.bin",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\stuffit-wrong-7"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0375,
+    "peak_rss_bytes_sampled": 22675456,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\stuffit-wrong-7.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "stuffit-wrong-cleanup-7",
+    "platform": "windows",
+    "status": "pass",
+    "details": {}
+  },
+  {
+    "name": "stuffit-12",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\123456789012.sit.bin",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\stuffit-12"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0368,
+    "peak_rss_bytes_sampled": 22609920,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\stuffit-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "stuffit-cross-platform-12",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "windows_files": {},
+      "linux_head_files": {
+        "testdoc.txt": "0cb716050d9e407c3fda8eeb9a30d5c53ffceb8c49cc5320b965a56529ad572b",
+        "._testdoc.txt": "62042645389b99a448bc5c96b5fe9bb6c712982c5001bfbade6688f39c1c2620"
+      },
+      "limit": "Cross-platform agreement, not an independent original-application payload oracle"
+    }
+  },
+  {
+    "name": "stuffit-wrong-12",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\123456789012.sit.bin",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\stuffit-wrong-12"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.035,
+    "peak_rss_bytes_sampled": 18980864,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\stuffit-wrong-12.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "stuffit-wrong-cleanup-12",
+    "platform": "windows",
+    "status": "pass",
+    "details": {}
+  },
+  {
+    "name": "list-mainstream.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-j",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.1204,
+    "peak_rss_bytes_sampled": 22020096,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\list-mainstream.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "extract-mainstream.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\extract-mainstream.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0358,
+    "peak_rss_bytes_sampled": 18714624,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\extract-mainstream.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "payloads-mainstream.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "expected": {
+        "alpha.txt": "b6a98d9ce9a2d9149288fa3df42d377c3e42737afdcdaf714e33c0a100b51060",
+        "nested/beta.bin": "785b0751fc2c53dc14a4ce3d800e69ef9ce1009eb327ccf458afe09c242c26c9",
+        "unicode/caf\u00e9-\u65e5\u672c.txt": "272bb9e59168da678718ab0d244f629c4c78a3f4fcb23f8730c90c3048020964"
+      }
+    }
+  },
+  {
+    "name": "list-small-zip64.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-j",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\small-zip64.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0374,
+    "peak_rss_bytes_sampled": 23322624,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\list-small-zip64.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "extract-small-zip64.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\small-zip64.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\extract-small-zip64.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0354,
+    "peak_rss_bytes_sampled": 19968000,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\extract-small-zip64.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "payloads-small-zip64.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "expected": {
+        "zip64.txt": "5a839952ecf37f9e7bf190f4ce7af7744b543fe5f7643a19a2d752d0767090b6"
+      }
+    }
+  },
+  {
+    "name": "list-mainstream.tar",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-j",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.tar"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0375,
+    "peak_rss_bytes_sampled": 22908928,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\list-mainstream.tar.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "extract-mainstream.tar",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.tar",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\extract-mainstream.tar"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0351,
+    "peak_rss_bytes_sampled": 19247104,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\extract-mainstream.tar.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "payloads-mainstream.tar",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "expected": {
+        "alpha.txt": "b6a98d9ce9a2d9149288fa3df42d377c3e42737afdcdaf714e33c0a100b51060",
+        "nested/beta.bin": "785b0751fc2c53dc14a4ce3d800e69ef9ce1009eb327ccf458afe09c242c26c9",
+        "unicode/caf\u00e9-\u65e5\u672c.txt": "272bb9e59168da678718ab0d244f629c4c78a3f4fcb23f8730c90c3048020964"
+      }
+    }
+  },
+  {
+    "name": "list-mainstream.tar.gz",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-j",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.tar.gz"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0372,
+    "peak_rss_bytes_sampled": 20910080,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\list-mainstream.tar.gz.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "extract-mainstream.tar.gz",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.tar.gz",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\extract-mainstream.tar.gz"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0357,
+    "peak_rss_bytes_sampled": 18427904,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\extract-mainstream.tar.gz.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "payloads-mainstream.tar.gz",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "expected": {
+        "alpha.txt": "b6a98d9ce9a2d9149288fa3df42d377c3e42737afdcdaf714e33c0a100b51060",
+        "nested/beta.bin": "785b0751fc2c53dc14a4ce3d800e69ef9ce1009eb327ccf458afe09c242c26c9",
+        "unicode/caf\u00e9-\u65e5\u672c.txt": "272bb9e59168da678718ab0d244f629c4c78a3f4fcb23f8730c90c3048020964"
+      }
+    }
+  },
+  {
+    "name": "selected",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\selected",
+      "nested/beta.bin"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0359,
+    "peak_rss_bytes_sampled": 18317312,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\selected.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "selected-hash",
+    "platform": "windows",
+    "status": "fail",
+    "details": {}
+  },
+  {
+    "name": "\u65e5\u672c-caf\u00e9-output",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\\u65e5\u672c-caf\u00e9.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\\u65e5\u672c-caf\u00e9-output"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0362,
+    "peak_rss_bytes_sampled": 19333120,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\\u65e5\u672c-caf\u00e9-output.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "unicode-paths-and-payloads",
+    "platform": "windows",
+    "status": "fail",
+    "details": {}
+  },
+  {
+    "name": "independent-7z-create",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\tools\\sevenzip-full\\7z.exe",
+      "a",
+      "-t7z",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\mainstream.7z",
+      "."
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\input",
+    "exit_code": 0,
+    "expected": "success",
+    "status": "pass",
+    "elapsed_seconds": 0.026,
+    "peak_rss_bytes_sampled": 9068544,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\independent-7z-create.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "extract-7z",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\mainstream.7z",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\extract-7z"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0345,
+    "peak_rss_bytes_sampled": 19632128,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\extract-7z.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "payloads-7z",
+    "platform": "windows",
+    "status": "fail",
+    "details": {}
+  },
+  {
+    "name": "reject-truncated.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\truncated.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0368,
+    "peak_rss_bytes_sampled": 20885504,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\reject-truncated.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "reject-bad-checksum.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\bad-checksum.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0364,
+    "peak_rss_bytes_sampled": 22380544,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\reject-bad-checksum.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "legacy-integrity-legacy.lzh",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\legacy.lzh"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0363,
+    "peak_rss_bytes_sampled": 20885504,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\legacy-integrity-legacy.lzh.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "legacy-integrity-test_read_format_lha_header3.lzh",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\test_read_format_lha_header3.lzh"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.037,
+    "peak_rss_bytes_sampled": 20881408,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\legacy-integrity-test_read_format_lha_header3.lzh.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "legacy-integrity-test_read_format_lha_lh6.lzh",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\test_read_format_lha_lh6.lzh"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0392,
+    "peak_rss_bytes_sampled": 23318528,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\legacy-integrity-test_read_format_lha_lh6.lzh.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "legacy-integrity-test_read_format_lha_lh7.lzh",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\test_read_format_lha_lh7.lzh"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0395,
+    "peak_rss_bytes_sampled": 22700032,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\legacy-integrity-test_read_format_lha_lh7.lzh.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "legacy-integrity-test_read_format_cab_lzx_16bit.cab",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\test_read_format_cab_lzx_16bit.cab"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0394,
+    "peak_rss_bytes_sampled": 18472960,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\legacy-integrity-test_read_format_cab_lzx_16bit.cab.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "lzx-cab",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\test_read_format_cab_lzx_16bit.cab",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\lzx-cab"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0349,
+    "peak_rss_bytes_sampled": 18296832,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\lzx-cab.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "lzx-cab-oracle",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "files": {},
+      "limit": "CAB LZX, not Amiga LZX archive coverage"
+    }
+  },
+  {
+    "name": "collisions-duplicates.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\duplicates.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\collisions-duplicates.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0399,
+    "peak_rss_bytes_sampled": 22511616,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\collisions-duplicates.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "preserve-collisions-duplicates.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "output_files": {},
+      "expected_payload_hashes": [
+        "a7937b64b8caa58f03721bb6bacf5c78cb235febe0e70b1b84cd99541461a08e",
+        "16367aacb67a4a017c8da8ab95682ccb390863780f7114dda0a0e0c55644c7c4"
+      ],
+      "limit": "Bare always-overwrite probe; product must provide entry-ID/output-mapping collision policy"
+    }
+  },
+  {
+    "name": "collisions-case-collision.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\case-collision.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\collisions-case-collision.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0364,
+    "peak_rss_bytes_sampled": 18370560,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\collisions-case-collision.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "preserve-collisions-case-collision.zip",
+    "platform": "windows",
+    "status": "fail",
+    "details": {
+      "output_files": {},
+      "expected_payload_hashes": [
+        "aee610558292023758a4229ddcf75f167c9904313a83cf795232ed7f7e2131c9",
+        "8c6fb1e9e37a1aea1d308c785192e1a17d71cef08c7f50a68d2e0ab292b2e7f4"
+      ],
+      "limit": "Bare always-overwrite probe; product must provide entry-ID/output-mapping collision policy"
+    }
+  },
+  {
+    "name": "bounded-containment-relative-escape.zip",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\relative-escape.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\containment-relative-escape.zip\\dest"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0345,
+    "peak_rss_bytes_sampled": 20217856,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\bounded-containment-relative-escape.zip.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "bounded-no-escape-relative-escape.zip",
+    "platform": "windows",
+    "status": "pass",
+    "details": {
+      "outside": [],
+      "files": {},
+      "limit": "Bounded fixtures; reparse races, reserved names and long paths remain unverified"
+    }
+  },
+  {
+    "name": "bounded-containment-links.tar",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\links.tar",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\containment-links.tar\\dest"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0361,
+    "peak_rss_bytes_sampled": 19816448,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\bounded-containment-links.tar.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "bounded-no-escape-links.tar",
+    "platform": "windows",
+    "status": "pass",
+    "details": {
+      "outside": [],
+      "files": {},
+      "limit": "Bounded fixtures; reparse races, reserved names and long paths remain unverified"
+    }
+  },
+  {
+    "name": "write-failure",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\xad-worker.exe",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\mainstream.zip",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows\\20261001T041158330334\\blocked-destination"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "rejection",
+    "status": "pass",
+    "elapsed_seconds": 0.0359,
+    "peak_rss_bytes_sampled": 18247680,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\write-failure.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "write-failure-preserves-sentinel",
+    "platform": "windows",
+    "status": "pass",
+    "details": {
+      "limit": "File-as-directory rejection, not disk-full injection"
+    }
+  },
+  {
+    "name": "large-5g-integrity",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-t",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\large-5g.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0358,
+    "peak_rss_bytes_sampled": 19255296,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\large-5g-integrity.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "scale-100k-list",
+    "platform": "windows",
+    "command": [
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\windows-first\\xad-worker-bundle\\lsar.exe",
+      "-j",
+      "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\assessment\\outputs\\fixtures\\scale-100k.zip"
+    ],
+    "cwd": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver",
+    "exit_code": 1,
+    "expected": "success",
+    "status": "fail",
+    "elapsed_seconds": 0.0365,
+    "peak_rss_bytes_sampled": 19808256,
+    "raw_log": "outputs\\raw\\windows\\20261001T041158330334\\scale-100k-list.log",
+    "termination_latency_ms": null,
+    "termination_requested": false
+  },
+  {
+    "name": "clean-machine-install",
+    "platform": "windows",
+    "status": "unverified",
+    "reason": "Sanitized PATH on this development host only; no fresh VM/runner"
+  },
+  {
+    "name": "realistic-legacy-corpus",
+    "platform": "windows",
+    "status": "unverified",
+    "reason": "StuffIt X, realistic Compact Pro forks and Amiga LZX require independently verified corpus"
+  },
+  {
+    "name": "production-safety-and-gui",
+    "platform": "windows",
+    "status": "unverified",
+    "reason": "Worker is an assessment probe; entry-ID mappings, secure containment, cooperative cancel, recovery and native GUI integration are pending"
+  }
+]

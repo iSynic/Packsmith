@@ -1,0 +1,11 @@
+[1/2] Building CXX object CMakeFiles/qt_probe.dir/main.cpp.obj
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/qt_probe/main.cpp: In lambda function:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/qt_probe/main.cpp:49:55: warning: ignoring return value of 'virtual bool QFile::open(QIODeviceBase::OpenMode)', declared with attribute 'nodiscard' [-Wunused-result]
+   49 |         QFile file(QString(argv[3])+".json");file.open(QIODevice::WriteOnly);file.write(QJsonDocument(result).toJson());
+      |                                              ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtCore/QFile:1,
+                 from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/scripts/qt_probe/main.cpp:4:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtCore/qfile.h:291:32: note: declared here
+  291 |     QFILE_MAYBE_NODISCARD bool open(OpenMode flags) override;
+      |                                ^~~~
+[2/2] Linking CXX executable qt_probe.exe
