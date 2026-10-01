@@ -77,7 +77,10 @@ def main():
     parser.add_argument('--prepare-only', action='store_true')
     parser.add_argument('--candidate', action='store_true', help='Package an unpublished candidate from the exact current workspace snapshot')
     parser.add_argument('--committed', action='store_true', help='Require a clean tree and tie an unpublished candidate to HEAD')
+    parser.add_argument('--stable', action='store_true', help='Record a regular release rather than a GitHub prerelease')
     args = parser.parse_args()
+    if args.stable and args.candidate:
+        parser.error('--stable cannot be combined with --candidate')
     version = re.search(r'#define PACKSMITH_VERSION "([^"]+)"', (ROOT / 'app/version.h').read_text()).group(1)
     stage = prepare(version)
     if args.prepare_only:
@@ -134,7 +137,7 @@ def main():
     result = dict(tag=None if args.candidate else 'v' + version, source_commit=None if args.candidate and not args.committed else commit,
                   source_base_commit=commit,candidate=args.candidate,workspace_dirty=dirty,
                   workspace_tree_sha256=hashlib.sha256(json.dumps(snapshot,sort_keys=True).encode()).hexdigest() if snapshot else None,
-                  prerelease=True, assets=assets,
+                  prerelease=not args.stable, assets=assets,
                   scope='Unsigned portable Windows x64 beta; native developer-machine relocation tested; clean-Windows pass user-reported, automated details unavailable; fresh-machine source builds unverified')
     receipt = out / 'release-manifest.json'
     receipt.write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')

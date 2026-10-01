@@ -35,6 +35,8 @@ The desktop/worker can be rebuilt using the repository CMake target, Qt 6.10.2 M
 
 Release notes must keep the demonstrated format/operation scope and outstanding qualification gates visible. The original assessment's failed or unverified checks are retained as evidence. A beta publication does not mark them passed.
 
+For an explicitly authorized regular Latest release, use `python scripts/package_beta.py --stable`, then `python scripts/verify_beta4_candidate.py --release` for beta 4. Create the annotated tag at the packaged source commit and push it without force. Publish with `gh release create --verify-tag --latest --prerelease=false --draft=false`, including all four assets and release notes. Verify the remote tag, published state, Latest endpoint and uploaded SHA-256 digests. The beta version label remains unchanged; the GitHub release classification does not extend qualification claims.
+
 ## Unpublished candidates
 
 Run `python scripts/package_beta.py --candidate` to package the exact current workspace without committing, tagging, uploading or publishing. It writes versioned assets under `dist/candidates/`, includes a tarball of non-ignored authored workspace files, and records every snapshot hash, the base commit and dirty state. It validates the binary package and authored-source hashes before assembly. Private corpus inputs/outputs remain excluded by Git's ignore rules. This snapshot receipt is not a release-commit claim; the normal tagged-release command still requires a clean commit.

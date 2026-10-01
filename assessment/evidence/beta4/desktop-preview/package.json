@@ -926,8 +926,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "b2aa09c2b8dd6c1c12f3d5ace3b0fa11fb01e797b47f84b64b47283412e1180a",
-      "bytes": 11799,
+      "sha256": "f0d84b9d6d83ef8a2f9955c22c011fdc34adbc3808bd4a58d983a32fcf978996",
+      "bytes": 2911,
       "origin": null
     },
     {
@@ -1155,7 +1155,7 @@
   ],
   "portable_zip": {
     "path": "C:\\Users\\Eric\\Documents\\ChatGPT\\Unarchiver\\dist\\Packsmith-preview-windows-x64.zip",
-    "sha256": "6502f2b7b936e2e78b576d33f411538c7be8dfbf84a81d5c03e8f98c8ba02d4d",
-    "bytes": 47548498
+    "sha256": "da6282296dda957d84c5ffbdb3046205da55287d8ac797d9f5291caa26c18550",
+    "bytes": 47544932
   }
 }

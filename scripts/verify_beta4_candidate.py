@@ -1,4 +1,5 @@
-"""Verify unpublished committed assets without modifying authored receipts."""
+"""Verify committed beta 4 candidate or release assets without modifying authored receipts."""
+import argparse
 import hashlib
 import io
 import json
@@ -8,10 +9,17 @@ import tarfile
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-out=ROOT/'dist/candidates/v0.1.0-beta.4'
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--release',action='store_true',help='Verify regular release assets instead of the unpublished candidate')
+args=parser.parse_args()
+out=ROOT/('dist/releases' if args.release else 'dist/candidates')/'v0.1.0-beta.4'
 record=json.loads((out/'release-manifest.json').read_text(encoding='utf-8'))
 commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
-assert record['source_commit']==commit and record['candidate'] and record['tag'] is None and not record['workspace_dirty']
+assert record['source_commit']==commit and not record['workspace_dirty']
+if args.release:
+    assert not record['candidate'] and record['tag']=='v0.1.0-beta.4' and not record['prerelease']
+else:
+    assert record['candidate'] and record['tag'] is None
 assert not subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip(),'Committed candidate requires a clean authored tree'
 assets={row['name']:row for row in record['assets']}
 for name,row in assets.items():
@@ -44,5 +52,5 @@ for line in (out/'SHA256SUMS.txt').read_text().splitlines():
     with (out/name).open('rb') as stream:assert hashlib.file_digest(stream,'sha256').hexdigest()==digest
 result=dict(passed=True,source_commit=commit,zip_integrity=True,matching_corresponding_sources=True,private_payloads_excluded=True,source_files=len(files),materials_files=len(manifest),assets=list(assets))
 private=ROOT/'assessment/outputs/beta4';private.mkdir(parents=True,exist_ok=True)
-(private/'candidate-verification.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+(private/('release-verification.json' if args.release else 'candidate-verification.json')).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
 print(json.dumps(result,indent=2))
