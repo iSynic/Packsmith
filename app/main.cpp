@@ -20,6 +20,9 @@ class Window final : public QMainWindow {
     JobController jobs;
     QProcess &process = jobs.process;
     QPlainTextEdit *resultText;
+    QGroupBox *resultBox;
+    QWidget *resultDetails;
+    QLabel *resultSummary;
     QPushButton *outputButton, *mappingButton, *backButton, *upButton;
     QHBoxLayout *breadcrumbs;
     QAction *extractAction = nullptr, *extractAllAction = nullptr;
@@ -67,19 +70,9 @@ class Window final : public QMainWindow {
         auto layout = new QVBoxLayout(body);
         layout->setContentsMargins(28, 24, 28, 20);
         layout->setSpacing(14);
-        auto brand = new QHBoxLayout;
-        auto brandIcon = new QLabel;
-        brandIcon->setPixmap(windowIcon().pixmap(QSize(32, 32), devicePixelRatioF()));
-        brand->addWidget(brandIcon);
-        auto brandName = new QLabel("Packsmith");
-        brandName->setObjectName("product");
-        brand->addWidget(brandName);
-        brand->addStretch();
-        layout->addLayout(brand);
         heading = new QLabel("Your archives, organized.");
         heading->setObjectName("heading");
         auto headingFont = font(); headingFont.setPointSizeF(headingFont.pointSizeF() + 8); headingFont.setBold(true); heading->setFont(headingFont);
-        auto brandFont = font(); brandFont.setBold(true); brandName->setFont(brandFont);
         subtitle = new QLabel("Open ZIP, 7z, StuffIt or BinHex. Classic Mac forks stay together.");
         subtitle->setWordWrap(true);
         layout->addWidget(heading);
@@ -222,22 +215,34 @@ class Window final : public QMainWindow {
         const QFontMetrics headerMetrics(table->horizontalHeader()->font());
         for (int column = 1; column < 5; ++column)
             table->setColumnWidth(column, qMax(table->columnWidth(column), headerMetrics.horizontalAdvance(model.headerData(column, Qt::Horizontal, Qt::DisplayRole).toString()) + 32));
-        layout->addWidget(table, 1);
-        auto resultBox = new QGroupBox("Last job result");
+        layout->addWidget(table, 3);
+        resultBox = new QGroupBox("Last job result");
         auto resultLayout = new QVBoxLayout(resultBox);
-        resultToggle = new QPushButton("Expand result"); resultToggle->setCheckable(true);
-        resultToggle->setAccessibleName("Expand or collapse last job result"); resultLayout->addWidget(resultToggle);
-        resultText = new QPlainTextEdit; resultText->setReadOnly(true); resultText->setMaximumHeight(145);
-        connect(resultToggle, &QPushButton::toggled, this, [this](bool expanded) {
-            resultText->setMaximumHeight(expanded ? QWIDGETSIZE_MAX : 145);
-            resultToggle->setText(expanded ? "Collapse result" : "Expand result");
+        auto resultHeader = new QHBoxLayout;
+        resultSummary = new QLabel;
+        resultSummary->setTextFormat(Qt::PlainText); resultSummary->setWordWrap(true);
+        resultSummary->setAccessibleName("Last job outcome"); resultHeader->addWidget(resultSummary, 1);
+        outputButton = new QPushButton("Open output folder"); resultHeader->addWidget(outputButton);
+        resultToggle = new QPushButton("Show details"); resultToggle->setCheckable(true);
+        resultToggle->setAccessibleName("Show or hide last job details"); resultHeader->addWidget(resultToggle);
+        resultLayout->addLayout(resultHeader);
+        resultDetails = new QWidget;
+        auto detailsLayout = new QVBoxLayout(resultDetails); detailsLayout->setContentsMargins(0, 0, 0, 0);
+        resultText = new QPlainTextEdit; resultText->setReadOnly(true); resultText->setMinimumHeight(0);
+        resultText->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Ignored);
+        connect(resultToggle, &QPushButton::toggled, this, [this, layout](bool expanded) {
+            if (!expanded && resultDetails->isAncestorOf(QApplication::focusWidget())) resultToggle->setFocus();
+            resultDetails->setVisible(expanded);
+            layout->setStretch(layout->indexOf(resultBox), expanded ? 2 : 0);
+            resultToggle->setText(expanded ? "Hide details" : "Show details");
         });
-        resultText->setAccessibleName("Last job result"); resultLayout->addWidget(resultText);
+        resultText->setAccessibleName("Last job result"); detailsLayout->addWidget(resultText, 1);
         auto resultActions = new QHBoxLayout;
-        outputButton = new QPushButton("Open output folder"); mappingButton = new QPushButton("View mapping");
+        mappingButton = new QPushButton("View mapping");
         auto copyButton = new QPushButton("Copy diagnostic details");
-        resultActions->addWidget(outputButton); resultActions->addWidget(mappingButton); resultActions->addWidget(copyButton); resultActions->addStretch();
-        resultLayout->addLayout(resultActions); layout->addWidget(resultBox);
+        resultActions->addWidget(mappingButton); resultActions->addWidget(copyButton); resultActions->addStretch();
+        detailsLayout->addLayout(resultActions); resultLayout->addWidget(resultDetails, 1);
+        resultDetails->hide(); layout->addWidget(resultBox); resultBox->hide();
         outputButton->setEnabled(false); mappingButton->setEnabled(false);
         connect(outputButton, &QPushButton::clicked, this, [this] { QDesktopServices::openUrl(QUrl::fromLocalFile(QFileInfo(lastOutput).isFile() ? QFileInfo(lastOutput).absolutePath() : lastOutput)); });
         connect(mappingButton, &QPushButton::clicked, this, [this] {
@@ -285,8 +290,8 @@ class Window final : public QMainWindow {
         for (auto label : {heading, subtitle, status, note}) label->setTextFormat(Qt::PlainText);
         QWidget::setTabOrder(backButton, upButton); QWidget::setTabOrder(upButton, search);
         QWidget::setTabOrder(search, table); QWidget::setTabOrder(table, cancel);
-        QWidget::setTabOrder(cancel, resultToggle); QWidget::setTabOrder(resultToggle, resultText);
-        QWidget::setTabOrder(resultText, outputButton); QWidget::setTabOrder(outputButton, mappingButton);
+        QWidget::setTabOrder(cancel, outputButton); QWidget::setTabOrder(outputButton, resultToggle);
+        QWidget::setTabOrder(resultToggle, resultText); QWidget::setTabOrder(resultText, mappingButton);
         QWidget::setTabOrder(mappingButton, copyButton);
         connect(search, &QLineEdit::textChanged, this, [this](const QString &text) {
             table->clearSelection(); model.searchMode(!text.isEmpty());
@@ -623,6 +628,12 @@ class Window final : public QMainWindow {
         lastResultClassic = r.success && r.operation == "export_classic" && r.terminal["output_committed"].toBool();
         lastClassicMapping = lastResultClassic ? r.terminal["name_mapping"].toArray() : QJsonArray{};
         resultText->setPlainText(r.report());
+        QString summary = !r.finished ? "Recovery details available"
+            : r.success ? "Completed" : r.terminal["event"] == "cancelled" ? "Cancelled" : "Failed";
+        if (r.operation == "extract" || r.operation == "export_classic" || r.operation == "create" || r.operation == "update")
+            summary += r.terminal["output_committed"].toBool() ? " · Output committed" : " · No output committed";
+        if (r.success && r.terminal["checksum_coverage"].toObject()["unchecked_forks"].toInteger()) summary += " · Verification limits";
+        resultSummary->setText(summary); resultBox->show();
         if (r.terminal["output_committed"].toBool()) {
             lastOutput = r.terminal["output"].toString();
             lastMapping = r.terminal["mapping"].toString().isEmpty() ? QString() : QDir(lastOutput).filePath(r.terminal["mapping"].toString());

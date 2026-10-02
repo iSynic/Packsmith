@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "compiled_sources_match": true,
+  "portable_zip_integrity": true,
+  "worker_files_unchanged": 35,
+  "gui_sha256": "1c73e8c207abd08ac2c2f497a0a358113ed00549ee507b4dad56908e169490e7",
+  "portable_zip_sha256": "f433e1ec351ad1282a646e0fc4aa5aff2b6cd70eb4c83b47d7dd23775f14c379",
+  "scope": "Local layout preview; no GitHub publication or engine changes"
+}

@@ -7,7 +7,7 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 runtime=ROOT/'assessment/outputs/beta4-test-runtime'
-evidence=ROOT/'assessment/evidence/beta4/presentation'
+evidence=ROOT/os.environ.get('PACKSMITH_EVIDENCE','assessment/evidence/beta4')/'presentation'
 evidence.mkdir(parents=True,exist_ok=True)
 results=[]
 for name,scale,large,contrast in [('100',1,False,False),('150',1.5,False,False),('200',2,False,False),('large-text-contrast',1,True,True)]:

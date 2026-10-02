@@ -37,7 +37,8 @@ struct GuiChecks {
         w.password.clear();
         auto accessible=QAccessible::queryAccessibleInterface(w.table);
         expect(accessible && accessible->role()==QAccessible::Table && accessible->text(QAccessible::Name)=="Archive entries","Entries expose a named accessible table");
-        w.resultToggle->click();expect(w.resultText->maximumHeight()==QWIDGETSIZE_MAX,"Result expands without truncation");w.resultToggle->click();
+        expect(w.resultBox->isHidden() && w.resultDetails->isHidden(), "No empty result panel before a job completes");
+        expect(!w.findChild<QLabel *>("product"), "Archive heading has no redundant branding row");
         w.model.append({QJsonObject{{"id", 0}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "2"}},
                         QJsonObject{{"id", 1}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "3"}},
                         QJsonObject{{"id", 2}, {"path", "empty"}, {"components", QJsonArray{"empty"}}, {"directory", true}},
@@ -121,6 +122,24 @@ struct GuiChecks {
         w.jobs.result.begin({{"operation", "extract"}, {"password", "hidden-password"}});
         w.jobs.result.accept({{"event", "error"}, {"message", "Checksum failed hidden-password"}});
         w.jobs.result.finish(1, QProcess::NormalExit); w.jobs.result.cleanup = "Staging cleaned"; w.showResult();
+        QTest::qWait(25);
+        expect(w.resultBox->isVisible() && !w.resultDetails->isVisible(), "A completed job shows a compact summary by default");
+        expect(w.resultSummary->text() == "Failed · No output committed", "Collapsed failure identifies outcome and commitment");
+        expect(w.resultSummary->textFormat() == Qt::PlainText && !w.resultSummary->text().contains("hidden-password"), "Summary stays plain text and excludes private diagnostics");
+        if (qEnvironmentVariableIsSet("PACKSMITH_TEST_LARGE_TEXT"))
+            expect(w.table->height() > w.resultBox->height(), "Enlarged text keeps the list larger than the collapsed result");
+        else
+            expect(w.resultBox->height() < 100 && w.table->height() > 3 * w.resultBox->height(), "At standard size the entry list dominates the collapsed result");
+        const auto collapsedTableHeight = w.table->height();
+        w.resultToggle->setFocus(); QTest::keyClick(w.resultToggle, Qt::Key_Space); QTest::qWait(25);
+        expect(w.resultDetails->isVisible() && w.resultText->isVisible() && w.mappingButton->isVisible(), "Keyboard expansion reveals full diagnostics and report controls");
+        if (qEnvironmentVariableIsSet("PACKSMITH_TEST_LARGE_TEXT"))
+            expect(w.table->viewport()->height() >= w.table->verticalHeader()->defaultSectionSize(), "Enlarged-text details leave visible archive rows");
+        else
+            expect(w.table->height() >= w.resultBox->height(), "Expanded details retain the larger share of standard-size list space");
+        w.resultText->setFocus(); w.resultToggle->click(); QTest::qWait(25);
+        expect(!w.resultDetails->isVisible() && w.resultToggle->hasFocus() && w.table->height() == collapsedTableHeight, "Collapsing restores list space and keyboard focus");
+        w.grab().save("compact-result.png");
         expect(w.resultText->toPlainText().contains("Checksum failed") && w.resultText->toPlainText().contains("Staging cleaned"), "Durable panel retains failure and cleanup");
         expect(!w.resultText->toPlainText().contains("hidden-password"), "Visible diagnostics exclude passwords");
         bool promptAfterExit = false;
