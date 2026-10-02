@@ -1,5 +1,6 @@
 """Relink original and modified helpers from beta 4 materials and verify known fork bytes."""
 import base64
+import argparse
 import hashlib
 import json
 import os
@@ -16,10 +17,13 @@ def sha(path):
     with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--materials',type=Path,default=ROOT/'dist/release-materials/Packsmith-0.1.0-beta.4-source-materials')
+    args=parser.parse_args()
     legacy_fixtures.generate()
-    materials=ROOT/'dist/release-materials/Packsmith-0.1.0-beta.4-source-materials'
+    materials=args.materials.resolve()
     private=ROOT/'assessment/outputs/beta4-relink';private.mkdir(parents=True,exist_ok=True)
-    evidence=ROOT/'assessment/evidence/beta4';evidence.mkdir(parents=True,exist_ok=True)
+    evidence=ROOT/os.environ.get('PACKSMITH_EVIDENCE','assessment/evidence/beta4');evidence.mkdir(parents=True,exist_ok=True)
     compiler=ROOT/'assessment/tools/windows-runtime/mingw64/bin/clang.exe'
     modified=private/'modified-xad_stream.m'
     source=(materials/'app/xad_stream.m').read_text(encoding='utf-8')

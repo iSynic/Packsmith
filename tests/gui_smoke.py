@@ -14,7 +14,7 @@ legacy_fixtures.generate()
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "dist/Packsmith-preview"
-EVIDENCE = ROOT / "assessment/evidence/beta4/desktop-preview"
+EVIDENCE = ROOT / os.environ.get("PACKSMITH_EVIDENCE", "assessment/evidence/beta4") / "desktop-preview"
 EVIDENCE.mkdir(parents=True, exist_ok=True)
 env = os.environ.copy()
 env["PATH"] = str(Path(os.environ["SystemRoot"]) / "System32")

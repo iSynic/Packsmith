@@ -78,10 +78,16 @@ def main():
     parser.add_argument('--candidate', action='store_true', help='Package an unpublished candidate from the exact current workspace snapshot')
     parser.add_argument('--committed', action='store_true', help='Require a clean tree and tie an unpublished candidate to HEAD')
     parser.add_argument('--stable', action='store_true', help='Record a regular release rather than a GitHub prerelease')
+    parser.add_argument('--release-tag', help='Refresh assets under an existing release tag without moving that tag')
     args = parser.parse_args()
     if args.stable and args.candidate:
         parser.error('--stable cannot be combined with --candidate')
+    if args.release_tag and (args.candidate or not re.fullmatch(r'v[0-9A-Za-z][0-9A-Za-z.+-]*', args.release_tag)):
+        parser.error('--release-tag requires a safe existing release tag and cannot be combined with --candidate')
     version = re.search(r'#define PACKSMITH_VERSION "([^"]+)"', (ROOT / 'app/version.h').read_text()).group(1)
+    release_tag = args.release_tag or 'v' + version
+    asset_version = release_tag.removeprefix('v')
+    tag_commit = subprocess.check_output(['git', 'rev-parse', 'refs/tags/' + release_tag + '^{commit}'], cwd=ROOT, text=True).strip() if args.release_tag else None
     stage = prepare(version)
     if args.prepare_only:
         return
@@ -110,9 +116,9 @@ def main():
     manifest = {str(path.relative_to(stage)).replace('\\', '/'): sha(path)
                 for path in stage.rglob('*') if path.is_file() and path.name != 'materials-manifest.json'}
     (stage / 'materials-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
-    out = ROOT / ('dist/candidates' if args.candidate else 'dist/releases') / ('v' + version)
+    out = ROOT / ('dist/candidates' if args.candidate else 'dist/releases') / release_tag
     out.mkdir(parents=True, exist_ok=True)
-    binary = out / ('Packsmith-' + version + '-windows-x64.zip')
+    binary = out / ('Packsmith-' + asset_version + '-windows-x64.zip')
     package = ROOT / 'dist/Packsmith-preview'
     package_record = json.loads((package / 'package-manifest.json').read_text())
     if package_record['version'] != version:
@@ -126,7 +132,7 @@ def main():
         for path in sorted(package.rglob('*')):
             if path.is_file():
                 archive.write(path, 'Packsmith/' + path.relative_to(package).as_posix())
-    source = out / ('Packsmith-' + version + '-source-materials.zip')
+    source = out / ('Packsmith-' + asset_version + '-source-materials.zip')
     with zipfile.ZipFile(source, 'w', zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
         for path in sorted(stage.rglob('*')):
             if path.is_file():
@@ -134,7 +140,7 @@ def main():
                 archive.write(path, stage.name + '/' + path.relative_to(stage).as_posix(),
                               compress_type=zipfile.ZIP_STORED if compressed else zipfile.ZIP_DEFLATED)
     assets = [dict(name=path.name, sha256=sha(path), bytes=path.stat().st_size) for path in (binary, source)]
-    result = dict(tag=None if args.candidate else 'v' + version, source_commit=None if args.candidate and not args.committed else commit,
+    result = dict(tag=None if args.candidate else release_tag, version=version, tag_commit=tag_commit, source_commit=None if args.candidate and not args.committed else commit,
                   source_base_commit=commit,candidate=args.candidate,workspace_dirty=dirty,
                   workspace_tree_sha256=hashlib.sha256(json.dumps(snapshot,sort_keys=True).encode()).hexdigest() if snapshot else None,
                   prerelease=not args.stable, assets=assets,

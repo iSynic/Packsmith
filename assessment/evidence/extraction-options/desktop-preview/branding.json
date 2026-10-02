@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "gui_sha256": "035376e0f8422c56cb5feb3f4ba710b378dc83b6f7bcb7217a7ac32d4b540927",
+  "embedded_icons": [
+    {
+      "resource_id": 101,
+      "name": "packsmith",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    },
+    {
+      "resource_id": 102,
+      "name": "packsmith-archive",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128,
+        256
+      ]
+    }
+  ],
+  "version_strings": {
+    "ProductName": "Packsmith",
+    "FileDescription": "Packsmith archive manager",
+    "OriginalFilename": "Packsmith.exe",
+    "FileVersion": "0.1.0-beta.4-r1",
+    "ProductVersion": "0.1.0-beta.4-r1"
+  },
+  "previous_name_recovery": {
+    "application_icon_loaded": true,
+    "application_name": "Packsmith",
+    "archive_icon_loaded": true,
+    "error": "",
+    "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+    "passed": true,
+    "recovery_ms": 52,
+    "result_panel": "Recovery\nArchive: \nCleanup/recovery: Interrupted staging cleaned. Original archives were retained.",
+    "stage_removed": true,
+    "window_title": "Packsmith 0.1.0-beta.4-r1 \u00b7 Windows beta",
+    "worker_exit_verified": false
+  }
+}

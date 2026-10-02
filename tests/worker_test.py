@@ -16,6 +16,7 @@ import ctypes
 from ctypes import wintypes
 
 ROOT = Path(__file__).resolve().parents[1]
+EVIDENCE = ROOT / os.environ.get("PACKSMITH_EVIDENCE", "assessment/evidence/beta4")
 WORKER = Path(sys.argv.pop(1)).resolve()
 SEVEN = ROOT / "assessment/tools/sevenzip-full/7z.exe"
 FIXTURES = ROOT / "assessment/outputs/fixtures"
@@ -351,7 +352,7 @@ class WorkerTests(unittest.TestCase):
 if __name__ == "__main__":
     suite = unittest.defaultTestLoader.loadTestsFromTestCase(WorkerTests)
     result = unittest.TextTestRunner(verbosity=2).run(suite)
-    evidence = ROOT / "assessment/evidence/beta4/desktop-preview"
+    evidence = EVIDENCE / "desktop-preview"
     evidence.mkdir(parents=True, exist_ok=True)
     (evidence / "worker-tests.json").write_text(json.dumps({"tests": result.testsRun, "failures": len(result.failures), "errors": len(result.errors),
         "environment": "Native Windows; developer PATH removed; not a clean VM", "worker_sha256": hashlib.file_digest(WORKER.open("rb"), "sha256").hexdigest(), "receipts": RECEIPTS}, indent=2)+"\n", encoding="utf-8")

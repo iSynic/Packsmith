@@ -14,7 +14,7 @@ def main():
     for name in ('packsmith-core-tests','packsmith-ui-tests','packsmith-fake-worker'):
         shutil.copy2(ROOT/'build/windows'/(name+'.exe'),runtime)
     shutil.copy2(ROOT/'assessment/tools/qt/6.10.2/mingw_64/bin/Qt6Test.dll',runtime)
-    evidence=ROOT/'assessment/evidence/beta4';evidence.mkdir(parents=True,exist_ok=True)
+    evidence=ROOT/os.environ.get('PACKSMITH_EVIDENCE','assessment/evidence/beta4');evidence.mkdir(parents=True,exist_ok=True)
     env=os.environ.copy();env['PATH']=str(Path(os.environ['SystemRoot'])/'System32')
     for name in ('QT_PLUGIN_PATH','QT_QPA_PLATFORM_PLUGIN_PATH','QTDIR','QT_QPA_PLATFORM'):
         env.pop(name,None)

@@ -194,6 +194,6 @@ class ClassicTests(unittest.TestCase):
 
 if __name__=='__main__':
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(ClassicTests))
-    evidence=common.ROOT/'assessment/evidence/beta4';evidence.mkdir(parents=True,exist_ok=True)
+    evidence=common.EVIDENCE;evidence.mkdir(parents=True,exist_ok=True)
     (evidence/'classic-tests.json').write_text(json.dumps(dict(tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),worker_sha256=hashlib.sha256(common.WORKER.read_bytes()).hexdigest(),receipts=common.RECEIPTS),indent=2)+'\n',encoding='utf-8')
     sys.exit(0 if result.wasSuccessful() else 1)

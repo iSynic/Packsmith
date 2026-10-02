@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "compiler": "Clang/lld 22.1.8 on provisioned Windows machine",
+  "developer_path_removed": true,
+  "modified_source_executed": true,
+  "materials_helper_source_sha256": "141dbd8d9ed901e2875d2bb7dc46e04d7988f8e074954c9c9f68f780890085bd",
+  "checks": [
+    {
+      "build": "original",
+      "fixture": "forks.sit",
+      "passed": true,
+      "terminal": {
+        "event": "complete",
+        "expanded_wrappers": 0,
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 2
+      },
+      "helper_sha256": "9e6fa606ab685428df6f6c37effbf2e42eae98e7de99903d65944a7b7c38ef3e"
+    },
+    {
+      "build": "original",
+      "fixture": "wrapped.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "complete",
+        "expanded_wrappers": 1,
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 4
+      },
+      "helper_sha256": "9e6fa606ab685428df6f6c37effbf2e42eae98e7de99903d65944a7b7c38ef3e"
+    },
+    {
+      "build": "original",
+      "fixture": "nested-wrapped.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "complete",
+        "expanded_wrappers": 2,
+        "shared_checksums": 0,
+        "unchecked_forks": 2,
+        "checked_forks": 4
+      },
+      "helper_sha256": "9e6fa606ab685428df6f6c37effbf2e42eae98e7de99903d65944a7b7c38ef3e"
+    },
+    {
+      "build": "original",
+      "fixture": "bad-resource.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "id": 0,
+        "method_id": null,
+        "format": "BinHex",
+        "part": "resource",
+        "code": "integrity_failed"
+      },
+      "helper_sha256": "9e6fa606ab685428df6f6c37effbf2e42eae98e7de99903d65944a7b7c38ef3e"
+    },
+    {
+      "build": "modified",
+      "fixture": "forks.sit",
+      "passed": true,
+      "terminal": {
+        "relink_probe": "modified-source",
+        "event": "complete",
+        "expanded_wrappers": 0,
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 2
+      },
+      "helper_sha256": "3d9c2966056003b048dd46c9aa5f570cc6f3bd5b4e7786bbffdb05b420824b20"
+    },
+    {
+      "build": "modified",
+      "fixture": "wrapped.hqx",
+      "passed": true,
+      "terminal": {
+        "relink_probe": "modified-source",
+        "event": "complete",
+        "expanded_wrappers": 1,
+        "shared_checksums": 0,
+        "unchecked_forks": 0,
+        "checked_forks": 4
+      },
+      "helper_sha256": "3d9c2966056003b048dd46c9aa5f570cc6f3bd5b4e7786bbffdb05b420824b20"
+    },
+    {
+      "build": "modified",
+      "fixture": "nested-wrapped.hqx",
+      "passed": true,
+      "terminal": {
+        "relink_probe": "modified-source",
+        "event": "complete",
+        "expanded_wrappers": 2,
+        "shared_checksums": 0,
+        "unchecked_forks": 2,
+        "checked_forks": 4
+      },
+      "helper_sha256": "3d9c2966056003b048dd46c9aa5f570cc6f3bd5b4e7786bbffdb05b420824b20"
+    },
+    {
+      "build": "modified",
+      "fixture": "bad-resource.hqx",
+      "passed": true,
+      "terminal": {
+        "event": "error",
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "id": 0,
+        "method_id": null,
+        "format": "BinHex",
+        "part": "resource",
+        "code": "integrity_failed"
+      },
+      "helper_sha256": "3d9c2966056003b048dd46c9aa5f570cc6f3bd5b4e7786bbffdb05b420824b20"
+    }
+  ]
+}

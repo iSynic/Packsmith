@@ -104,7 +104,7 @@ static void writeBytes(Output *out, const QByteArray &bytes) {
     check(out->Write(bytes.constData(), bytes.size(), &done), "Write decoded legacy stream");
     require(done == UInt32(bytes.size()), "Incomplete legacy output write");
 }
-static void setLegacyTime(Output *out, const QJsonObject &row) {
+static void setLegacyTime(HANDLE handle, const QJsonObject &row) {
     if (!row.contains("modified_ms"))
         return;
     qint64 ms = row["modified_ms"].toInteger();
@@ -112,9 +112,10 @@ static void setLegacyTime(Output *out, const QJsonObject &row) {
             "Unsupported legacy modification time");
     quint64 ticks = quint64(ms + 11644473600000LL) * 10000;
     FILETIME time{DWORD(ticks), DWORD(ticks >> 32)};
-    require(SetFileTime(out->handle, nullptr, nullptr, &time),
+    require(SetFileTime(handle, nullptr, nullptr, &time),
             winError("Preserve legacy timestamp"));
 }
+static void setLegacyTime(Output *out, const QJsonObject &row) { setLegacyTime(out->handle, row); }
 static QString legacySafePath(const QJsonObject &row) {
     require(!row["absolute"].toBool(), "Absolute legacy entry path is unsafe");
     QStringList parts;
@@ -133,6 +134,14 @@ static QString legacySafePath(const QJsonObject &row) {
 }
 static void legacyJob(const QJsonObject &request) {
     QString operation = request["operation"].toString();
+    const QString filenamePolicy = request["filename_policy"].toString("escaped");
+    const QString forkStyle = request["resource_fork_style"].toString("appledouble");
+    require(filenamePolicy == "escaped" || filenamePolicy == "readable", "Unknown filename policy", "invalid_request");
+    require(forkStyle == "appledouble" || forkStyle == "rsrc", "Unknown resource fork style", "invalid_request");
+    const bool readable = filenamePolicy == "readable", visible = forkStyle == "rsrc";
+    const QString preservation = visible
+        ? "Resource forks and file FinderInfo are in .rsrc AppleDouble files. Resource-only files have no empty data placeholder; folder FinderInfo remains in the mapping report. Available file/folder modification times are applied; classic timezone/DST limitations remain."
+        : "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.";
     phase("listing");
     require(operation == "list" || operation == "extract" || operation == "test",
             "Legacy formats support reading, extraction and integrity checks; creation/editing is "
@@ -227,13 +236,14 @@ static void legacyJob(const QJsonObject &request) {
                                         row["directory"].toBool(),
                                         row["encrypted"].toBool(),
                                         false,
-                                        {}});
-                        if (row["has_resource"].toBool() || !finder.isEmpty())
+                                        {}, {}});
+                        for (const auto &component : row["components"].toArray()) entries.last().components.append(component.toString());
+                        if (row["has_resource"].toBool() || (!visible && !finder.isEmpty()) || (visible && !row["directory"].toBool() && !finder.isEmpty()))
                             sidecars.insert(i);
                         total += row["size"].toString().toULongLong() +
                                  row["resource_size"].toString().toULongLong();
                     }
-                names = planNames(entries, sidecars);
+                names = planNames(entries, sidecars, visible, readable);
                 QString destination = request["destination"].toString();
                 require(!destination.isEmpty(), "Destination is required");
                 parent = std::make_unique<SafeTree>(destination);
@@ -246,19 +256,20 @@ static void legacyJob(const QJsonObject &request) {
                         tree->directory(name.left(slash));
                     if (e.dir)
                         tree->directory(name);
-                    if (!e.dir && !rows[e.id]["has_data"].toBool()) {
+                    if (!e.dir && !rows[e.id]["has_data"].toBool() && (!visible || !rows[e.id]["has_resource"].toBool())) {
                         Output empty(QDir(tree->root).filePath(name));
                         require(empty.flush(), "Flush empty data fork");
                         setLegacyTime(&empty, rows[e.id]);
                     }
                     if (sidecars.contains(e.id) && !rows[e.id]["has_resource"].toBool()) {
-                        Output sidecar(QDir(tree->root).filePath(sidecarName(name)));
+                        Output sidecar(QDir(tree->root).filePath(sidecarName(name, visible)));
                         writeBytes(&sidecar,
                                    appleDouble(0,
                                                QByteArray::fromBase64(
                                                    rows[e.id]["finder_info"].toString().toLatin1()),
                                                false));
                         require(sidecar.flush(), "Flush Finder metadata");
+                        setLegacyTime(&sidecar, rows[e.id]);
                     }
                 }
             }
@@ -272,7 +283,7 @@ static void legacyJob(const QJsonObject &request) {
                     "Unexpected decoded legacy fork");
             QString path = QDir(tree->root)
                                .filePath(currentPart == "data" ? names[currentId]
-                                                               : sidecarName(names[currentId]));
+                                                               : sidecarName(names[currentId], visible));
             if (currentPart == "data")
                 output.p = new Output(path);
             else {
@@ -366,7 +377,8 @@ static void legacyJob(const QJsonObject &request) {
                                 {"raw_name", row["raw_name"]},
                                 {"encoding", row["encoding"]},
                                 {"finder_info", row["finder_info"]},
-                                {"output", names[i]}};
+                                {"output", names[i]},
+                                {"output_written", row["directory"].toBool() || row["has_data"].toBool() || !visible || !row["has_resource"].toBool()}};
                 if (row.contains("modified_ms"))
                     map["modified_ms"] = row["modified_ms"];
                 for (const auto &key : {"raw_components", "created_1904", "modified_1904", "has_data", "has_resource", "resource_size", "size", "directory"})
@@ -379,8 +391,8 @@ static void legacyJob(const QJsonObject &request) {
                     map["resource_sha256"] = QString::fromLatin1(resourceHashes[i].toHex());
                     map["resource_checksum_checked"] = resourceChecksums[i];
                 }
-                if (row["has_resource"].toBool() || !row["finder_info"].toString().isEmpty())
-                    map["sidecar"] = sidecarName(names[i]);
+                if (row["has_resource"].toBool() || (!visible && !row["finder_info"].toString().isEmpty()) || (visible && !row["directory"].toBool() && !row["finder_info"].toString().isEmpty()))
+                    map["sidecar"] = sidecarName(names[i], visible);
                 mappings.append(map);
             }
         QString mapping = "packsmith-mapping.json";
@@ -393,12 +405,18 @@ static void legacyJob(const QJsonObject &request) {
                 QJsonDocument(
                     QJsonObject{{"entries", mappings},
                                 {"checksum_coverage", coverage},
-                                {"preservation",
-                                 "Data and resource forks, FinderInfo and file modification times. "
-                                 "AppleDouble entry 2 stores the resource fork; entry 9 stores "
-                                 "FinderInfo. ACLs and unsupported metadata are not applied."}})
+                                {"filename_policy", filenamePolicy}, {"resource_fork_style", forkStyle},
+                                {"preservation", preservation}})
                     .toJson());
             require(out.flush(), "Flush legacy mapping");
+        }
+        for (auto id : selected) if (rows[id]["directory"].toBool() && rows[id].contains("modified_ms")) {
+            auto path = winPath(QDir(tree->root).filePath(names[id]));
+            HANDLE handle = CreateFileW(path.c_str(), FILE_WRITE_ATTRIBUTES, FILE_SHARE_READ | FILE_SHARE_WRITE,
+                nullptr, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS | FILE_FLAG_OPEN_REPARSE_POINT, nullptr);
+            require(handle != INVALID_HANDLE_VALUE, winError("Open folder timestamp"));
+            try { setLegacyTime(handle, rows[id]); } catch (...) { CloseHandle(handle); throw; }
+            CloseHandle(handle);
         }
         QString destination = parent->root;
         tree.reset();
@@ -429,6 +447,7 @@ static void legacyJob(const QJsonObject &request) {
         emitEvent({{"event", "complete"},
                    {"output_committed", true}, {"file_count", fileCount}, {"data_forks", dataCount},
                    {"resource_forks", resourceCount}, {"mapped_names", mappedNames},
+                   {"filename_policy", filenamePolicy}, {"resource_fork_style", forkStyle}, {"preservation", preservation},
                    {"output", target},
                    {"mapping", mapping},
                    {"count", selected.size()},

@@ -26,6 +26,7 @@ def main():
     parser.add_argument("--build", type=Path, default=ROOT / "build/windows")
     parser.add_argument("--package", type=Path, default=ROOT / "dist/Packsmith-preview")
     parser.add_argument("--reuse-legacy", action="store_true", help="Reuse the unchanged verified helper for a GUI-only rebuild")
+    parser.add_argument("--evidence", type=Path, default=ROOT / "assessment/evidence/beta4/desktop-preview", help="Write new build receipts without replacing historical evidence")
     args = parser.parse_args()
     qt, compiler, build, package = (p.resolve() for p in (args.qt, args.compiler, args.build, args.package))
     reference = ROOT / "assessment/references/sevenzip"
@@ -42,7 +43,7 @@ def main():
         raise RuntimeError(f"Untested Qt {qt_version}; this preview pins Qt 6.10.2")
     env = os.environ.copy()
     env["PATH"] = str(compiler) + os.pathsep + env["PATH"]
-    evidence = ROOT / "assessment/evidence/beta4/desktop-preview"
+    evidence = args.evidence.resolve()
     evidence.mkdir(parents=True, exist_ok=True)
     cc1 = Path(subprocess.check_output([str(compiler / "g++.exe"), "-print-prog-name=cc1plus"], text=True).strip()).resolve()
     frozen = {"compiler/" + p.name: sha(p) for p in [compiler / "g++.exe", cc1, compiler / "cmake.exe", compiler / "ninja.exe", compiler / "libstdc++-6.dll", compiler / "libgcc_s_seh-1.dll", compiler / "libwinpthread-1.dll"]}

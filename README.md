@@ -11,12 +11,14 @@ Get the Windows ZIP from [the latest release](https://github.com/iSynic/Packsmit
 - Creates and edits ZIP and 7z archives.
 - Opens StuffIt, BinHex, MacBinary, Compact Pro, LhA and Amiga LZX archives through the existing legacy engine. Support varies by compression method; [the support table](assessment/reports/packsmith-beta4.md) shows what we've tested.
 - Browses folders, searches the whole archive, and shows file details and separate data/resource-fork sizes.
-- Preserves classic Mac resource forks and Finder metadata in AppleDouble sidecars. Keep each extracted file with its matching `._filename` file.
+- Preserves classic Mac resource forks and file Finder metadata in `.rsrc` AppleDouble files, with readable Windows filenames. Original names and folder Finder metadata stay in the mapping report.
 - Exports legacy files as a ZIP of MacBinary files, with a preservation report and instructions for restoring them on a classic Mac.
 
 **Extract** uses your selection, or the current folder if nothing is selected. **Extract All** extracts the whole archive. Search results need a selection. You can also open an archive by dropping one file onto the window.
 
 Recent archive history is off by default. Enable it in the File menu if you want it; disabling it clears the saved paths. Passwords aren't saved.
+
+**Archive > Legacy extraction options** switches between readable or escaped filenames and visible `.rsrc` files or the original `._` preservation mode. Resource-only files don't get empty placeholders in `.rsrc` mode. In preservation mode, keep each data file with its matching `._filename` file. Available folder modification dates are restored in either mode.
 
 Extraction is staged and checked before output is committed. Corrupt archives don't leave a published partial extraction. Edits keep a backup of the original. The results panel shows what was written, what was verified, and any filename changes or recovery files.
 

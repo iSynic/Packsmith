@@ -1,0 +1,46 @@
+-- Configuring done (0.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Eric/Documents/ChatGPT/Unarchiver/build/windows
+[1/8] Building RC object CMakeFiles/Packsmith.dir/app/packsmith.rc.obj
+[2/8] Building RC object CMakeFiles/packsmith-ui-tests.dir/app/packsmith.rc.obj
+[3/8] Building CXX object CMakeFiles/Packsmith.dir/app/main.cpp.obj
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp: In constructor 'Window::Window(QString)':
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:134:47: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  134 |         classicAction = classicMenu->addAction("Export for Classic Mac…", this, [this] { exportClassic(); }, QKeySequence("Ctrl+M"));
+      |                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/QtWidgets:180,
+                 from C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:1:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:135:50: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  135 |         classicAllAction = classicMenu->addAction("Export All for Classic Mac…", this, [this] { exportClassic(true); }, QKeySequence("Ctrl+Shift+M"));
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+[4/8] Linking CXX executable Packsmith.exe
+[5/8] Building CXX object CMakeFiles/packsmith-ui-tests.dir/tests/ui_test.cpp.obj
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/tests/ui_test.cpp:4:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp: In constructor 'Window::Window(QString)':
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:134:47: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  134 |         classicAction = classicMenu->addAction("Export for Classic Mac…", this, [this] { exportClassic(); }, QKeySequence("Ctrl+M"));
+      |                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/QtWidgets:180,
+                 from C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:1:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:135:50: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  135 |         classicAllAction = classicMenu->addAction("Export All for Classic Mac…", this, [this] { exportClassic(true); }, QKeySequence("Ctrl+Shift+M"));
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+[6/8] Linking CXX executable packsmith-ui-tests.exe
+[7/8] Building CXX object CMakeFiles/packsmith-worker.dir/app/worker.cpp.obj
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/worker.cpp: In function 'Entry entry(IInArchive*, UInt32)':
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/worker.cpp:330:74: warning: missing initializer for member 'Entry::components' [-Wmissing-field-initializers]
+  330 |     Entry e{i, propertyString(a, i, kpidPath), 0, false, false, false, {}};
+      |                                                                          ^
+[8/8] Linking CXX executable packsmith-worker.exe

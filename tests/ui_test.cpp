@@ -43,6 +43,27 @@ struct GuiChecks {
                         QJsonObject{{"id", 2}, {"path", "empty"}, {"components", QJsonArray{"empty"}}, {"directory", true}},
                         QJsonObject{{"id", 3}, {"path", "<b>literal/slash</b>"}, {"components", QJsonArray{"<b>literal/slash</b>"}}}});
         w.model.finish(); w.listingValid = true; w.readOnly = true; w.setBusy(false); w.navigated();
+        expect(w.extractionFilenamePolicy == "readable" && w.extractionForkStyle == "rsrc", "GUI defaults to readable visible forks");
+        expect(w.legacyOptionsAction->isEnabled(), "Legacy options accessible through Archive menu");
+        QTimer::singleShot(0, &w, [&] {
+            auto dialog = qobject_cast<QDialog *>(QApplication::activeModalWidget());
+            expect(dialog, "Native extraction options dialog opens");
+            auto names = dialog->findChild<QComboBox *>("extractionFilenamePolicy");
+            auto forks = dialog->findChild<QComboBox *>("extractionForkStyle");
+            expect(names && forks && !names->accessibleName().isEmpty() && !forks->accessibleName().isEmpty(), "Extraction choices have accessible names");
+            names->setCurrentIndex(names->findData("escaped")); forks->setCurrentIndex(forks->findData("appledouble")); dialog->reject();
+        });
+        w.legacyExtractionOptions();
+        expect(w.extractionFilenamePolicy == "readable" && w.extractionForkStyle == "rsrc", "Cancel preserves extraction settings");
+        QTimer::singleShot(0, &w, [&] {
+            auto dialog = qobject_cast<QDialog *>(QApplication::activeModalWidget());
+            dialog->findChild<QComboBox *>("extractionFilenamePolicy")->setCurrentIndex(1);
+            dialog->findChild<QComboBox *>("extractionForkStyle")->setCurrentIndex(1); dialog->accept();
+        });
+        w.legacyExtractionOptions();
+        expect(w.extractionFilenamePolicy == "escaped" && w.extractionForkStyle == "appledouble", "Accept keeps preservation mode available");
+        expect(w.table->hasFocus(), "Extraction settings restore entry focus");
+        w.extractionFilenamePolicy = "readable"; w.extractionForkStyle = "rsrc";
         w.heading->setText("<b>untrusted.sit</b>");
         expect(w.heading->textFormat() == Qt::PlainText && w.status->textFormat() == Qt::PlainText, "Untrusted labels must remain plain text");
         int folderRow = -1;
@@ -129,6 +150,11 @@ struct GuiChecks {
             for(int i=0;i<400 && w.busy;++i)QTest::qWait(25);
             expect(w.listingValid && !w.busy,"Classic GUI test lists a real archive");
             expect(w.recent.paths().size()==1 && w.password.isEmpty() && w.filenameEncoding.isEmpty(),"Successful opening alone records history and clears archive-specific state");
+            w.run({{"operation", "extract"}, {"destination", destination.path()}, {"selection_scope", "all"}});
+            expect(w.request["filename_policy"] == "readable" && w.request["resource_fork_style"] == "rsrc", "GUI passes explicit extraction policies to its real worker");
+            for(int i=0;i<400 && w.busy;++i)QTest::qWait(25);
+            expect(w.jobs.result.success && w.jobs.result.terminal["resource_fork_style"] == "rsrc", "Native GUI extraction commits visible fork output");
+            expect(w.resultText->toPlainText().contains("Resource fork output: rsrc"), "Result panel explains the chosen output style");
             auto request=w.classicRequest(true);request["destination"]=destination.filePath("Transfer.zip");w.run(request);
             QDialog *preflight=nullptr;
             for(int i=0;i<400 && !preflight;++i) { QTest::qWait(25);preflight=w.findChild<QDialog *>("classicPreflight"); }

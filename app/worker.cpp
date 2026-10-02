@@ -317,6 +317,7 @@ struct Entry {
     bool encrypted;
     bool link;
     FILETIME mtime{};
+    QStringList components;
 };
 static QString propertyString(IInArchive *a, UInt32 i, PROPID id) {
     PROPVARIANT p{};
@@ -601,12 +602,14 @@ static void extractCheck(Engine &e, ExtractCallback *cb, const QVector<UInt32> &
 
 // Plan collisions before creating anything. Parents shared by files stay shared;
 // duplicate files, case collisions and file/directory conflicts receive suffixes.
-static QString sidecarName(const QString &name) {
+static QString sidecarName(const QString &name, bool visible = false) {
+    if (visible) return name + ".rsrc";
     int slash = name.lastIndexOf('/');
     return name.left(slash + 1) + "._" + name.mid(slash + 1);
 }
 static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
-                                       const QSet<UInt32> &sidecars = {}) {
+                                       const QSet<UInt32> &sidecars = {}, bool visible = false,
+                                       bool readable = false) {
     QMap<UInt32, QString> names;
     QMap<QString, bool> used;
     QMap<QString, QString> parents;
@@ -615,11 +618,24 @@ static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
     for (const auto &e : entries) {
         require(!e.link,
                 "Links require an explicit preservation policy; extraction stopped: " + e.path);
-        auto parts = safeName(e.path).split('/');
+        auto parts = readable && !e.components.isEmpty() ? e.components : safeName(e.path).split('/');
+        auto originalParts = e.components.isEmpty() ? parts : e.components;
+        if (readable && !e.components.isEmpty()) {
+            parts = e.components;
+            for (auto &part : parts) {
+                require(!part.isEmpty() && part != "." && part != ".." && !part.contains(QChar(0)), "Unsafe legacy path component");
+                for (auto &c : part)
+                    if (c.unicode() < 32 || QString("<>:\"/\\|?*").contains(c)) c = '_';
+                for (int i = part.size() - 1; i >= 0 && (part[i] == '.' || part[i] == ' '); --i) part[i] = '_';
+                static QRegularExpression device("^(CON|PRN|AUX|NUL|COM[1-9¹²³]|LPT[1-9¹²³])(?:\\.|$)", QRegularExpression::CaseInsensitiveOption);
+                if (device.match(part).hasMatch()) part.prepend('_');
+                require(part.size() <= 240, "Entry filename component is too long");
+            }
+        }
         QString parent, source;
         for (int j = 0; j < parts.size(); ++j) {
             bool dir = j < parts.size() - 1 || e.dir;
-            source = source.isEmpty() ? parts[j] : source + "/" + parts[j];
+            source = QString::fromUtf8(QJsonDocument(QJsonArray::fromStringList(originalParts.mid(0, j + 1))).toJson(QJsonDocument::Compact));
             const bool explicitDirectory = j == parts.size() - 1 && e.dir;
             if (dir && parents.contains(source) && (!explicitDirectory || !explicitDirectories.contains(source))) {
                 parent = parents.value(source);
@@ -631,11 +647,11 @@ static QMap<UInt32, QString> planNames(const QVector<Entry> &entries,
             int n = 2;
             bool paired = j == parts.size() - 1 && sidecars.contains(e.id);
             while (used.contains(chosen.toCaseFolded()) ||
-                   (paired && used.contains(sidecarName(chosen).toCaseFolded())))
+                   (paired && used.contains(sidecarName(chosen, visible).toCaseFolded())))
                 chosen = base + QString(" (%1)").arg(n++);
             used.insert(chosen.toCaseFolded(), dir);
             if (paired)
-                used.insert(sidecarName(chosen).toCaseFolded(), false);
+                used.insert(sidecarName(chosen, visible).toCaseFolded(), false);
             if (dir)
                 parents.insert(source, chosen);
             if (explicitDirectory) explicitDirectories.insert(source);

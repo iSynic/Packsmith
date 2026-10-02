@@ -18,6 +18,8 @@ commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).st
 assert record['source_commit']==commit and not record['workspace_dirty']
 if args.release:
     assert not record['candidate'] and record['tag']=='v0.1.0-beta.4' and not record['prerelease']
+    if record.get('tag_commit'):
+        assert record['tag_commit']==subprocess.check_output(['git','rev-parse','refs/tags/'+record['tag']+'^{commit}'],cwd=ROOT,text=True).strip()
 else:
     assert record['candidate'] and record['tag'] is None
 assert not subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip(),'Committed candidate requires a clean authored tree'
@@ -30,6 +32,7 @@ for name,row in assets.items():
 binary=next(out.glob('*windows-x64.zip'));source=next(out.glob('*source-materials.zip'))
 with zipfile.ZipFile(binary) as z:
     package=json.loads(z.read('Packsmith/package-manifest.json'))
+    if record.get('version'):assert package['version']==record['version']
     for row in package['files']:assert hashlib.sha256(z.read('Packsmith/'+row['path'].replace('\\','/'))).hexdigest()==row['sha256']
     assert not any('Qt6Test' in name or 'test-runtime' in name or name.endswith(('.hfv','.dsk','.ROM','.sit','.hqx','.cpt','.lzx')) for name in z.namelist())
 with zipfile.ZipFile(source) as z:

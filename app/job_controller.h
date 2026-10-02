@@ -60,6 +60,8 @@ struct JobResult {
             if (coverage["shared_checksums"].toInteger()) lines.append(QString("Combined Compact Pro source checksums: %1 fork pairs; individual fork bytes are covered together.").arg(coverage["shared_checksums"].toInteger()));
         }
         if (terminal.contains("mapped_names")) lines.append(QString("Mapped names: %1 (see mapping for substitutions and collisions)").arg(terminal["mapped_names"].toInteger()));
+        if (terminal.contains("filename_policy")) lines.append("Filename policy: " + terminal["filename_policy"].toString());
+        if (terminal.contains("resource_fork_style")) lines.append("Resource fork output: " + terminal["resource_fork_style"].toString());
         if (!terminal["preservation"].toString().isEmpty()) lines.append("Preservation limits: " + terminal["preservation"].toString());
         for (const auto &warning : warnings) lines.append("Warning: " + warning);
         if (!cleanup.isEmpty()) lines.append("Cleanup/recovery: " + cleanup);

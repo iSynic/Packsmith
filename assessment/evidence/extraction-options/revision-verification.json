@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "version": "0.1.0-beta.4-r1",
+  "worker_tests": 55,
+  "native_gui_scenarios": 8,
+  "worker_sha256": "cec15391495abc759c17b3453d6febba735c59c06754c7510dddfd57e90c920c",
+  "gui_sha256": "035376e0f8422c56cb5feb3f4ba710b378dc83b6f7bcb7217a7ac32d4b540927",
+  "corresponding_source_hashes_match": true,
+  "relinking": true
+}

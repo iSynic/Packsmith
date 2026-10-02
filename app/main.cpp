@@ -33,6 +33,8 @@ class Window final : public QMainWindow {
     bool recoveryRequired = false;
     QString archive, password, operation, staging, fingerprint, filenameEncoding;
     QAction *encodingAction = nullptr;
+    QAction *legacyOptionsAction = nullptr;
+    QString extractionFilenamePolicy = "readable", extractionForkStyle = "rsrc";
     RecentArchives recent;
     QMenu *recentMenu = nullptr;
     QAction *rememberAction = nullptr;
@@ -173,6 +175,8 @@ class Window final : public QMainWindow {
             true);
         archiveMenu->addAction(operations[operations.size()-2]);
         archiveMenu->addAction(encodingAction);
+        legacyOptionsAction = archiveMenu->addAction("Legacy extraction options…", this, [this] { legacyExtractionOptions(); });
+        legacyOptionsAction->setEnabled(false);
         refreshRecent();
         auto searchRow = new QHBoxLayout;
         search = new QLineEdit;
@@ -604,7 +608,10 @@ class Window final : public QMainWindow {
         const auto mapping = extractedEntries.value(entry->id);
         if (mapping.isEmpty()) detail.append("Source checksum status: not yet verified in this session.");
         else {
-            detail.append("Exported path: " + QDir(lastOutput).filePath(mapping["output"].toString()));
+            detail.append(mapping["output_written"].toBool(true)
+                ? "Exported path: " + QDir(lastOutput).filePath(mapping["output"].toString())
+                : "Data output: none (resource-only file; no empty placeholder).");
+            if (mapping.contains("sidecar")) detail.append("Resource/metadata file: " + QDir(lastOutput).filePath(mapping["sidecar"].toString()));
             for (const auto &part : {QString("data"), QString("resource")})
                 if (mapping.contains(part + "_sha256")) detail.append(part + " fork SHA-256: " + mapping[part + "_sha256"].toString() + "\nSource checksum: " + (mapping[part + "_checksum_checked"].toBool() ? "checked" : "not available"));
         }
@@ -660,6 +667,7 @@ class Window final : public QMainWindow {
         for (auto a : operations)
             a->setEnabled(!busy && listingValid && (!readOnly || !edits.contains(a)));
         encodingAction->setEnabled(!busy && !archive.isEmpty() && readOnly);
+        if (legacyOptionsAction) legacyOptionsAction->setEnabled(!busy && listingValid && readOnly);
         search->setEnabled(!busy);
         cancel->setVisible(busy);
         progress->setVisible(busy);
@@ -717,6 +725,10 @@ class Window final : public QMainWindow {
         if (!idle())
             return;
         r["archive"] = archive;
+        if (r["operation"] == "extract" && readOnly) {
+            if (!r.contains("filename_policy")) r["filename_policy"] = extractionFilenamePolicy;
+            if (!r.contains("resource_fork_style")) r["resource_fork_style"] = extractionForkStyle;
+        }
         if (passwordDefined)
             r["password"] = password;
         if (!filenameEncoding.isEmpty())
@@ -920,6 +932,33 @@ class Window final : public QMainWindow {
         if (!all && ids.isEmpty()) { status->setText("This folder has no extractable entries."); return; }
         auto destination = QFileDialog::getExistingDirectory(this, "Extract into a new folder inside…");
         if (!destination.isEmpty()) run({{"operation", "extract"}, {"destination", destination}, {"selection_scope", all ? "all" : "entries"}, {"ids", all ? QJsonArray{} : ids}});
+    }
+    void legacyExtractionOptions() {
+        if (!idle() || !readOnly) return;
+        QDialog dialog(this); dialog.setWindowTitle("Legacy extraction options");
+        auto layout = new QVBoxLayout(&dialog);
+        auto form = new QFormLayout; layout->addLayout(form);
+        auto names = new QComboBox(&dialog); names->setObjectName("extractionFilenamePolicy");
+        names->addItem("Readable Windows names (replace invalid characters with _)", "readable");
+        names->addItem("Escaped Windows names (for example, ~0009)", "escaped");
+        names->setCurrentIndex(names->findData(extractionFilenamePolicy));
+        names->setAccessibleName("Extracted filenames"); form->addRow("&Filenames:", names);
+        auto forks = new QComboBox(&dialog); forks->setObjectName("extractionForkStyle");
+        forks->addItem("Visible .rsrc files, without empty resource-only placeholders", "rsrc");
+        forks->addItem("Preservation mode: ._ sidecars and resource-only placeholders", "appledouble");
+        forks->setCurrentIndex(forks->findData(extractionForkStyle));
+        forks->setAccessibleName("Resource fork output"); form->addRow("&Resource forks:", forks);
+        auto explanation = new QLabel("Both modes keep the original names and available Finder metadata in the mapping report. .rsrc mode keeps file metadata in AppleDouble files and folder Finder metadata in the report. These choices apply to extraction only; Classic Mac export is unchanged.", &dialog);
+        explanation->setTextFormat(Qt::PlainText); explanation->setWordWrap(true); layout->addWidget(explanation);
+        auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dialog); layout->addWidget(buttons);
+        connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+        connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+        dialog.resize(680, 240);
+        if (dialog.exec() == QDialog::Accepted) {
+            extractionFilenamePolicy = names->currentData().toString(); extractionForkStyle = forks->currentData().toString();
+            status->setText("Legacy extraction options updated for this app session.");
+        }
+        table->setFocus();
     }
     QJsonObject classicRequest(bool all) {
         auto ids = selected();

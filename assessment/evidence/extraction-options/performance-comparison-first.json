@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "measurements": [
+    {
+      "kind": "baseline",
+      "listing_ms": 2489,
+      "peak_gui_rss": 259911680,
+      "max_event_gap_ms": 437
+    },
+    {
+      "kind": "current",
+      "listing_ms": 3056,
+      "peak_gui_rss": 260108288,
+      "max_event_gap_ms": 387
+    },
+    {
+      "kind": "baseline",
+      "listing_ms": 3650,
+      "peak_gui_rss": 260673536,
+      "max_event_gap_ms": 597
+    },
+    {
+      "kind": "current",
+      "listing_ms": 5861,
+      "peak_gui_rss": 260898816,
+      "max_event_gap_ms": 1668
+    }
+  ],
+  "median": {
+    "baseline": {
+      "listing_ms": 3069.5,
+      "peak_gui_rss": 260292608.0
+    },
+    "current": {
+      "listing_ms": 4458.5,
+      "peak_gui_rss": 260503552.0
+    }
+  },
+  "change_percent": {
+    "listing_ms": 45.25,
+    "peak_gui_rss": 0.08
+  },
+  "baseline_zip_sha256": "6c9f6828395dd736bf7114309a9be978679fd75aa7c08fa13f221bd9804be90b",
+  "gui_sha256": "54fad3a6215e9860a89a35ae89b6a698e0c656eaea27d537f70aed658abfabce",
+  "environment": "Sequential alternating native runs on the same developer machine; no competing owned build/test/emulator jobs. Existing user applications unchanged."
+}
