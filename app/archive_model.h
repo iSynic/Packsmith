@@ -21,6 +21,10 @@ inline QString displayPath(const QStringList &parts) {
     for (const auto &part : parts) escaped.append(visibleName(part));
     return escaped.join('/');
 }
+inline QString entryLabel(const QString &name, quint32 id) {
+    return !name.isEmpty() && name.trimmed().isEmpty()
+        ? QString("Whitespace-only name · #%1").arg(id) : visibleName(name);
+}
 struct Row {
     quint32 id = 0;
     QString name;
@@ -123,8 +127,11 @@ class Entries final : public QAbstractTableModel {
         const QString &name = global ? r->displayName : node->displayName;
         const QString &path = global ? r->displayFull : node->displayFull;
         if (role == IdRole) return r ? QVariant(r->id) : QVariant();
-        if (role == SearchRole) return path;
-        if (role == Qt::AccessibleTextRole) return index.column() == 0 ? path : data(index, Qt::DisplayRole);
+        if (role == SearchRole) return path + '\n' + name;
+        if (role == Qt::AccessibleTextRole) {
+            const auto &location = global ? r->displayLocation : node->displayLocation;
+            return index.column() == 0 ? (location.isEmpty() ? name : location + '/' + name) : data(index, Qt::DisplayRole);
+        }
         if (role == Qt::AccessibleDescriptionRole) {
             if (folder) return QString("Folder. %1 underlying entries.").arg(idsAt(index.row()).size());
             return QString("File. Data size %1. Resource fork %2. %3").arg(QLocale().formattedDataSize(r ? r->size : 0), r && r->resourceFork ? QLocale().formattedDataSize(r->resourceSize) : "not present", r && r->encrypted ? "Encrypted." : "Not encrypted.");
@@ -161,7 +168,7 @@ class Entries final : public QAbstractTableModel {
             r.resourceSize = obj["resource_size"].toString().toULongLong(); r.resourceFork = obj["has_resource"].toBool();
             for (auto part : obj["components"].toArray()) r.components.append(part.toString());
             if (r.components.isEmpty()) r.components = r.name.split('/');
-            r.displayName = visibleName(r.components.value(r.components.size() - 1));
+            r.displayName = entryLabel(r.components.value(r.components.size() - 1), r.id);
             r.displayFull = displayPath(r.components); r.displayLocation = displayPath(r.components.mid(0, r.components.size() - 1));
             r.metadata = obj; rows.append(r);
         }
@@ -190,7 +197,10 @@ class Entries final : public QAbstractTableModel {
             }
         }
         for (auto &node : nodes) if (node.folder) {
-            node.displayName = visibleName(node.parts.value(node.parts.size() - 1)); node.displayFull = displayPath(node.parts);
+            const auto name = node.parts.value(node.parts.size() - 1);
+            node.displayName = node.ids.isEmpty() ? visibleName(name)
+                : entryLabel(name, node.realRows.isEmpty() ? node.ids.first() : rows[node.realRows.first()].id);
+            node.displayFull = displayPath(node.parts);
             node.displayLocation = displayPath(node.parts.mid(0, node.parts.size() - 1));
         }
         current = 0; history.clear(); global = false; view = nodes[0].children;

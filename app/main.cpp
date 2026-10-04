@@ -585,7 +585,7 @@ class Window final : public QMainWindow {
         }
         const auto entry = model.editableAt(row);
         if (!entry) return;
-        QStringList detail{"Original archive path: " + displayPath(entry->components), QString("Entry ID: %1").arg(entry->id)};
+        QStringList detail{"Original filename (escaped): " + visibleName(entry->components.last()), "Original archive path: " + displayPath(entry->components), QString("Entry ID: %1").arg(entry->id)};
         detail.append("Original components: " + QString::fromUtf8(QJsonDocument(QJsonArray::fromStringList(entry->components)).toJson(QJsonDocument::Compact)));
         if (!entry->metadata["format"].toString().isEmpty()) detail.append("Detected format: " + entry->metadata["format"].toString());
         for (const auto &part : {QString("data"), QString("resource")})
@@ -620,7 +620,7 @@ class Window final : public QMainWindow {
             for (const auto &part : {QString("data"), QString("resource")})
                 if (mapping.contains(part + "_sha256")) detail.append(part + " fork SHA-256: " + mapping[part + "_sha256"].toString() + "\nSource checksum: " + (mapping[part + "_checksum_checked"].toBool() ? "checked" : "not available"));
         }
-        auto dialog = new QMessageBox(QMessageBox::Information, "Entry details", visibleName(entry->components.last()), QMessageBox::Ok, this);
+        auto dialog = new QMessageBox(QMessageBox::Information, "Entry details", entry->displayName, QMessageBox::Ok, this);
         dialog->setTextFormat(Qt::PlainText); dialog->setInformativeText(detail.join('\n')); dialog->setAttribute(Qt::WA_DeleteOnClose); restoreDialogFocus(dialog); dialog->open();
     }
     void showResult() {

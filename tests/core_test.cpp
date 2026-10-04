@@ -33,6 +33,25 @@ int main(int argc, char **argv) {
     expect(proxy.rowCount() == 2, "Global search must retain duplicate file results");
     expect(proxy.index(0,0).data(Entries::IdRole).isValid(), "Sorting must preserve numeric identity");
     model.clear(); expect(model.rowCount() == 0, "Clearing archive clears hierarchy");
+    const QString hiddenName = "\t\t ";
+    model.append({item(21, {"folder", hiddenName}), item(22, {"folder", hiddenName}),
+                  item(23, {"folder", "\t \t"}), item(24, {" ", "child"}), item(25, {" "}, true),
+                  item(26, {"ordinary name"})});
+    model.finish(); expect(model.navigate({"folder"}), "Whitespace-name parent is navigable");
+    expect(model.rowCount() == 3, "Whitespace-only and duplicate names retain distinct entries");
+    for (int i = 0; i < 3; ++i) {
+        const auto index = model.index(i, 0); const auto id = model.data(index, Entries::IdRole).toUInt();
+        expect(model.data(index, Qt::DisplayRole) == QString("Whitespace-only name · #%1").arg(id), "Whitespace labels use authoritative entry IDs");
+        expect(model.data(index, Qt::AccessibleTextRole).toString().contains("Whitespace-only name"), "Accessible text uses the readable label");
+        expect(model.data(index, Qt::ToolTipRole).toString().contains("\\t"), "Tooltips retain the exact escaped original name");
+    }
+    expect(model.partsAt(0).last() == hiddenName && model.idsAt(0) == QJsonArray({21}), "Friendly labels leave components and extraction IDs intact");
+    model.searchMode(true); proxy.setFilterFixedString("Whitespace-only name"); proxy.sort(0, Qt::DescendingOrder);
+    expect(proxy.rowCount() == 4, "Friendly labels can be searched globally, including whitespace folders");
+    proxy.setFilterFixedString("\\t\\t\\x20"); expect(proxy.rowCount() == 2, "Exact escaped originals remain searchable");
+    expect(model.navigate({" "}) && model.currentIds() == QJsonArray({24,25}), "Whitespace folder hierarchy uses original components");
+    expect(entryLabel("name\tend", 21) == "name\\tend", "Mixed ordinary names retain visible control characters");
+    model.clear();
     QElapsedTimer clock; clock.start();
     QJsonArray batch;
     for (int i = 0; i < 100000; ++i) {

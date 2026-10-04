@@ -42,7 +42,9 @@ struct GuiChecks {
         w.model.append({QJsonObject{{"id", 0}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "2"}},
                         QJsonObject{{"id", 1}, {"path", "dir/a"}, {"components", QJsonArray{"dir", "a"}}, {"size", "3"}},
                         QJsonObject{{"id", 2}, {"path", "empty"}, {"components", QJsonArray{"empty"}}, {"directory", true}},
-                        QJsonObject{{"id", 3}, {"path", "<b>literal/slash</b>"}, {"components", QJsonArray{"<b>literal/slash</b>"}}}});
+                        QJsonObject{{"id", 3}, {"path", "<b>literal/slash</b>"}, {"components", QJsonArray{"<b>literal/slash</b>"}}},
+                        QJsonObject{{"id", 4}, {"path", "\t\t "}, {"components", QJsonArray{"\t\t "}}},
+                        QJsonObject{{"id", 5}, {"path", "\t\t\t "}, {"components", QJsonArray{"\t\t\t "}}}});
         w.model.finish(); w.listingValid = true; w.readOnly = true; w.setBusy(false); w.navigated();
         expect(w.extractionFilenamePolicy == "readable" && w.extractionForkStyle == "rsrc", "GUI defaults to readable visible forks");
         expect(w.legacyOptionsAction->isEnabled(), "Legacy options accessible through Archive menu");
@@ -98,6 +100,16 @@ struct GuiChecks {
         expect(details && details->isVisible() && details->textFormat() == Qt::PlainText, "Enter on a file opens plain-text details");
         details->close(); w.search->clear();
         QTest::qWait(25);expect(w.table->hasFocus(),"Details dismissal restores entry focus");
+        w.search->setText("Whitespace-only name"); expect(w.proxy.rowCount() == 2, "Friendly whitespace labels are searchable");
+        w.table->sortByColumn(0, Qt::AscendingOrder); w.table->selectRow(0);
+        expect(w.selected() == QJsonArray({4}), "Friendly label selects the real entry ID");
+        w.table->sortByColumn(0, Qt::DescendingOrder);
+        expect(w.selected() == QJsonArray({4}), "Sorting friendly labels preserves selection identity");
+        w.table->setFocus(); QTest::keyClick(w.table, Qt::Key_Return); QTest::qWait(25);
+        details = w.findChild<QMessageBox *>();
+        expect(details && details->isVisible() && details->text() == "Whitespace-only name · #4", "Whitespace entry details use the readable label");
+        expect(details->informativeText().contains("Original filename (escaped): \\t\\t\\x20"), "Details retain every original tab and space");
+        details->close(); QTest::qWait(25); w.search->clear();
         auto updateHandler=QAccessible::installUpdateHandler(accessibilityEvent); QAccessible::setActive(true);
         w.jobs.result.begin({{"password","hidden-password"}});w.announcedPhases.clear();announcements.clear();
         w.event({{"event","progress"},{"phase","decoding"}});w.event({{"event","progress"},{"phase","decoding"}});

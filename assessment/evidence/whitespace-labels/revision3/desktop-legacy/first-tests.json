@@ -1,0 +1,1235 @@
+{
+  "tests": 14,
+  "failures": 1,
+  "errors": 1,
+  "worker_sha256": "c925577f2e927665b99ee610c894a39b4fb462fe2b7a4ef8568eda46dfd344c0",
+  "decoder_sha256": "af6872b47a89bfc63b6a2ee56c23fdc9f890b98b03df3e707aa742c1e448aa09",
+  "environment": "Native Windows; developer PATH removed; generated fixtures and upstream encrypted StuffIt fixtures; no independent original Mac oracle",
+  "receipts": [
+    {
+      "operation": "cancel",
+      "latency_ms": 20.76,
+      "decoder_terminated": true,
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "names.sit",
+      "exit_code": 0,
+      "elapsed_ms": 93.9,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 3,
+        "data_forks": 3,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 3,
+        "filename_policy": "escaped",
+        "mapped_names": 3,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-juz5kbgw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/names",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "unsafe.sit",
+      "exit_code": 1,
+      "elapsed_ms": 79.44,
+      "terminal": {
+        "code": "operation_failed",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Unsafe legacy path component",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "folder.sit",
+      "exit_code": 0,
+      "elapsed_ms": 88.82,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 2,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-juz5kbgw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/folder",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 81.95,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "resource"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-data.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 79.93,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-header.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 74.26,
+      "terminal": {
+        "code": "open_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "unknown",
+        "id": -1,
+        "message": "Unsupported or damaged legacy archive (XAD 0)",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "truncated.sit",
+      "exit_code": 1,
+      "elapsed_ms": 82.44,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "None",
+        "method_id": 0,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-data.sit",
+      "exit_code": 1,
+      "elapsed_ms": 81.84,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "None",
+        "method_id": 0,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-wrapper.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 75.9,
+      "terminal": {
+        "code": "wrapper_error",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": -1,
+        "message": "Cannot open wrapped legacy archive (XAD 17)",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-large-wrapper-data.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 207.42,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 3,
+        "message": "Legacy archive checksum failed",
+        "method": "None",
+        "method_id": 0,
+        "output": "",
+        "output_committed": false,
+        "part": "resource"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-large-wrapper-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 99.17,
+      "terminal": {
+        "code": "wrapper_error",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": -1,
+        "message": "Cannot open wrapped legacy archive (XAD 17)",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "collisions.sit",
+      "exit_code": 0,
+      "elapsed_ms": 102.26,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 9,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 5,
+        "data_forks": 5,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 5,
+        "filename_policy": "escaped",
+        "mapped_names": 3,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e48wgrch/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/collisions",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 4
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "collisions.sit",
+      "exit_code": 0,
+      "elapsed_ms": 84.85,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-e48wgrch/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/collisions (2)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 78.14,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "94e75df7b524d35b926a616304a8ae1d84a7e196d69b537c135026a4b017260b",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 74.97,
+      "terminal": {
+        "code": "unsupported_encoding",
+        "engine": "xad",
+        "event": "error",
+        "format": "unknown",
+        "id": -1,
+        "message": "Filename encoding is unavailable",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 23.55,
+      "terminal": {
+        "code": "operation_failed",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Archive changed; reopen it before using the selected entry IDs",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 77.7,
+      "terminal": {
+        "code": "operation_failed",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Destination contains a link or reparse point",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 91.94,
+      "terminal": {
+        "code": "password_required",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Password required",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 81.2,
+      "terminal": {
+        "code": "password_incorrect",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Missing or wrong password",
+        "method": "LZ+Huffman",
+        "method_id": 13,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 87.87,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-wv9yv8ui/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/1234567.sit",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "1234567.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 86.42,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "d008889f453fbd389d23649172684491aea1a1e73982c8b7536a1c60cd695c55",
+        "format": "StuffIt",
+        "message": "Decoded successfully; 2 fork streams have no source checksum",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 107.24,
+      "terminal": {
+        "code": "password_required",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Password required",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 1,
+      "elapsed_ms": 110.25,
+      "terminal": {
+        "code": "password_incorrect",
+        "engine": "xad",
+        "event": "error",
+        "format": "StuffIt",
+        "id": 0,
+        "message": "Missing or wrong password",
+        "method": "LZ+Huffman",
+        "method_id": 13,
+        "output": "",
+        "output_committed": false,
+        "part": "data"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 97.83,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-wv9yv8ui/next-1234567/123456789012.sit",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "123456789012.sit.bin",
+      "exit_code": 0,
+      "elapsed_ms": 83.25,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 1,
+          "outer_format": "MacBinary",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "970aff546ea2592eff113426e531e58260bd504389259bec906c036a16c4d854",
+        "format": "StuffIt",
+        "message": "Decoded successfully; 2 fork streams have no source checksum",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 91.45,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "22c7630b8e6a21574fca23713475c24eb001e629fa4d20e35e30abb72782f42e",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 107.14,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 4,
+        "data_forks": 2,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 2,
+        "filename_policy": "escaped",
+        "mapped_names": 2,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jj_cs6rp/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/duplicate-folders",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 2
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 110.17,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 0,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 0,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jj_cs6rp/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/duplicate-folders (2)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 0
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 1,
+      "elapsed_ms": 28.0,
+      "terminal": {
+        "code": "empty_selection",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Entry selection must not be empty",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "duplicate-folders.sit",
+      "exit_code": 0,
+      "elapsed_ms": 111.16,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 5,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 6,
+        "data_forks": 3,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 3,
+        "filename_policy": "escaped",
+        "mapped_names": 3,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-jj_cs6rp/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/duplicate-folders (3)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 2
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 260.89,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 7,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 4,
+        "data_forks": 2,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 3,
+        "filename_policy": "escaped",
+        "mapped_names": 1,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-cg2v0ezw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/large-wrapped",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 3
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 201.96,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 3,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 0,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 1,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-cg2v0ezw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/large-wrapped (2)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 229.58,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-cg2v0ezw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/large-wrapped (3)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 215.16,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-cg2v0ezw/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/large-wrapped (4)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "large-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 235.54,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 7,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 4,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "936517cf0747e6f77c721b6c36feb43dc2c88455262c6e16258d90f548ec1b9d",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "update",
+      "archive": "forks.sit",
+      "exit_code": 1,
+      "elapsed_ms": 23.4,
+      "terminal": {
+        "code": "operation_failed",
+        "engine": "xad",
+        "event": "error",
+        "id": -1,
+        "message": "Legacy formats support reading, extraction and integrity checks; creation/editing is unavailable",
+        "output": "",
+        "output_committed": false,
+        "part": ""
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "nested-wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 88.38,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 2,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 2,
+          "wrapper_chain": [
+            "BinHex",
+            "MacBinary",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-mh9w4sbc/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/nested-wrapped",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "bad-resource.hqx",
+      "exit_code": 1,
+      "elapsed_ms": 79.05,
+      "terminal": {
+        "code": "integrity_failed",
+        "engine": "xad",
+        "event": "error",
+        "format": "BinHex",
+        "id": 0,
+        "message": "Legacy fork checksum failed",
+        "method": "unknown",
+        "method_id": null,
+        "output": "",
+        "output_committed": false,
+        "part": "resource"
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "unpaired.sit",
+      "exit_code": 0,
+      "elapsed_ms": 92.48,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 2,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 2,
+        "filename_policy": "escaped",
+        "mapped_names": 1,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-1oqmkiyk/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/unpaired",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "rle.sit",
+      "exit_code": 0,
+      "elapsed_ms": 96.98,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-iyht8zfz/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/rle",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 88.41,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "94e75df7b524d35b926a616304a8ae1d84a7e196d69b537c135026a4b017260b",
+        "format": "StuffIt",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 97.11,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-the0szxc/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/forks",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "forks.sit",
+      "exit_code": 0,
+      "elapsed_ms": 87.62,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "StuffIt",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "94e75df7b524d35b926a616304a8ae1d84a7e196d69b537c135026a4b017260b",
+        "format": "StuffIt",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "list",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 85.37,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 0,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9234a6c44fcaefbcc0acd5f12613416f09f2c7747b07113705ccb040e4665465",
+        "format": "BinHex",
+        "message": "",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 87.92,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-the0szxc/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/forks (2)",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "test",
+      "archive": "forks.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 85.86,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 2,
+          "expanded_wrappers": 0,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex"
+          ]
+        },
+        "count": 1,
+        "engine": "xad",
+        "event": "complete",
+        "fingerprint": "9234a6c44fcaefbcc0acd5f12613416f09f2c7747b07113705ccb040e4665465",
+        "format": "BinHex",
+        "message": "Legacy integrity check passed",
+        "read_only": true
+      },
+      "stderr": ""
+    },
+    {
+      "operation": "extract",
+      "archive": "wrapped.hqx",
+      "exit_code": 0,
+      "elapsed_ms": 99.2,
+      "terminal": {
+        "checksum_coverage": {
+          "checked_forks": 4,
+          "expanded_wrappers": 1,
+          "outer_format": "BinHex",
+          "shared_checksums": 0,
+          "unchecked_forks": 0,
+          "wrapper_chain": [
+            "BinHex",
+            "StuffIt"
+          ]
+        },
+        "count": 1,
+        "data_forks": 1,
+        "engine": "xad",
+        "event": "complete",
+        "file_count": 1,
+        "filename_policy": "escaped",
+        "mapped_names": 0,
+        "mapping": "packsmith-mapping.json",
+        "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-test-4h4m72td/\u00e6\u2014\u00a5\u00e6\u0153\u00ac-caf\u00c3\u00a9/wrapped",
+        "output_committed": true,
+        "preservation": "Data and resource forks and FinderInfo are preserved with ._ AppleDouble sidecars and empty data placeholders for resource-only files. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+        "resource_fork_style": "appledouble",
+        "resource_forks": 1
+      },
+      "stderr": ""
+    }
+  ]
+}

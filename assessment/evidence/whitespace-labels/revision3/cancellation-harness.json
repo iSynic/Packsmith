@@ -1,0 +1,11 @@
+{
+  "first_failure_receipt": "desktop-legacy/first-tests.json",
+  "observed_failure": "No active xad-stream.exe child found after staging; assertion skipped process cleanup and temporary-directory cleanup hit a file lock.",
+  "diagnosis": "Timing race suspected with the original 4 MiB fixture.",
+  "harness_changes": [
+    "Use a generated 64 MiB payload for the active-decoder termination test",
+    "Always terminate and wait for the owned worker in finally"
+  ],
+  "verification": "Full 14-test legacy suite passed, followed by an additional focused cancellation/termination run.",
+  "production_decoder_changed": false
+}

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "gui_sha256": "a1785e1665f12d8da12047587a104db59096659c605b0fc79715f0728e08f9eb",
+  "source_hashes_match": true,
+  "portable_zip_integrity": true,
+  "unchanged_worker_files": 35,
+  "native_gui_scenarios": 8,
+  "generated_whitespace_names_native_listing_and_selected_extraction": true,
+  "scope": "Local preview; friendly names only, exact components and engine IDs retained; forced Qt scale/palette checks, no additional system or Narrator certification"
+}

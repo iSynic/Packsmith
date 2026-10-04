@@ -1,0 +1,26 @@
+{
+    "application_icon_loaded": true,
+    "application_name": "Packsmith",
+    "archive_icon_loaded": true,
+    "columns": 6,
+    "display_names": [
+        "\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\x20",
+        "\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\x20\\t"
+    ],
+    "edit_actions_disabled": true,
+    "entries": 2,
+    "error": "",
+    "extract_ms": 114,
+    "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+    "listing_ms": 299,
+    "max_event_gap_ms": 90,
+    "model_build_ms": 0,
+    "output": "C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/whitespace-labels/output/whitespace-names",
+    "passed": true,
+    "read_only": true,
+    "result_panel": "extract: Completed\nArchive: C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/whitespace-labels/whitespace-names.sit\nOutput committed: yes\nOutput: C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/whitespace-labels/output/whitespace-names\nBackend: xad\nEntries: 1\nFiles: 1 · Data forks: 0 · Resource forks: 1\nSource checksums: 1 checked fork streams; 0 without source checksums; 0 expanded wrappers.\nMapped names: 1 (see mapping for substitutions and collisions)\nFilename policy: readable\nResource fork output: rsrc\nPreservation limits: Resource forks and file FinderInfo are in .rsrc AppleDouble files. Resource-only files have no empty data placeholder; folder FinderInfo remains in the mapping report. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+    "selected_id": 1,
+    "selected_path": "\t\t\t\t\t\t\t\t\t\t\t\t\t \t",
+    "window_title": "Packsmith 0.1.0-beta.4-r2 · Windows beta",
+    "worker_exit_verified": true
+}

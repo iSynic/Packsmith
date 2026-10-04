@@ -166,30 +166,37 @@ class LegacyTests(unittest.TestCase):
         self.assertNotEqual(code,0,events[-1]);self.assertEqual(path.read_bytes(),before)
 
     def test_cancel_and_terminated_decoder_recovery(self):
-        archive=fixtures.OUT/'recovery.sit'
+        # Keep decoding active long enough to observe and terminate the helper.
+        archive=self.root/'active-decoder.sit'
+        archive.write_bytes(fixtures.sit([fixtures.sit_entry('large.dat',bytes(range(256))*262144,RESOURCE)]))
         before=hashlib.sha256(archive.read_bytes()).hexdigest()
         for forced in (False,True):
             proc=subprocess.Popen([str(common.WORKER)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',env=common.ENV)
-            proc.stdin.write(json.dumps(dict(operation='extract',archive=str(archive),destination=str(self.dest)))+'\n');proc.stdin.flush()
-            stage=json.loads(proc.stdout.readline())
-            while stage['event']!='staging': stage=json.loads(proc.stdout.readline())
-            self.assertEqual(stage['event'],'staging')
-            children=psutil.Process(proc.pid).children(recursive=True)
-            self.assertTrue(any(child.name()=='xad-stream.exe' for child in children))
-            started=time.perf_counter()
-            if forced:proc.kill()
-            else:proc.stdin.write('{"cancel":true}\n');proc.stdin.flush()
-            stdout,stderr=proc.communicate(timeout=10)
-            self.assertNotEqual(proc.returncode,0)
-            if forced:
-                self.assertTrue(Path(stage['path']).exists())
-                self.good('cleanup',archive,**{key:stage[key] for key in ('path','parent','token')})
-            else:self.assertIn('"event":"cancelled"',stdout)
-            psutil.wait_procs(children,timeout=3)
-            self.assertFalse([child for child in children if child.is_running()])
-            self.assertEqual(list(self.dest.iterdir()),[])
-            self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),before)
-            common.RECEIPTS.append({'operation':'forced-recovery' if forced else 'cancel','latency_ms':round((time.perf_counter()-started)*1000,2),'decoder_terminated':True,'stderr':stderr})
+            children=[]
+            try:
+                proc.stdin.write(json.dumps(dict(operation='extract',archive=str(archive),destination=str(self.dest)))+'\n');proc.stdin.flush()
+                stage=json.loads(proc.stdout.readline())
+                while stage['event']!='staging': stage=json.loads(proc.stdout.readline())
+                self.assertEqual(stage['event'],'staging')
+                children=psutil.Process(proc.pid).children(recursive=True)
+                self.assertTrue(any(child.name()=='xad-stream.exe' for child in children))
+                started=time.perf_counter()
+                if forced:proc.kill()
+                else:proc.stdin.write('{"cancel":true}\n');proc.stdin.flush()
+                stdout,stderr=proc.communicate(timeout=10)
+                self.assertNotEqual(proc.returncode,0)
+                if forced:
+                    self.assertTrue(Path(stage['path']).exists())
+                    self.good('cleanup',archive,**{key:stage[key] for key in ('path','parent','token')})
+                else:self.assertIn('"event":"cancelled"',stdout)
+                psutil.wait_procs(children,timeout=3)
+                self.assertFalse([child for child in children if child.is_running()])
+                self.assertEqual(list(self.dest.iterdir()),[])
+                self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),before)
+                common.RECEIPTS.append({'operation':'forced-recovery' if forced else 'cancel','latency_ms':round((time.perf_counter()-started)*1000,2),'decoder_terminated':True,'stderr':stderr})
+            finally:
+                if proc.poll() is None:proc.kill();proc.communicate(timeout=10)
+                psutil.wait_procs(children,timeout=3)
 
     def test_encoding_override_stale_listing_and_write_failure(self):
         archive=fixtures.OUT/'forks.sit'

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "ui_test_sha256": "fd6607da7c884e804fe70c42c7aa88b5631a7a4024451c24fcfd42804b706781",
+  "cases": [
+    {
+      "name": "100",
+      "qt_scale": 1,
+      "font_points": "system default",
+      "contrast_palette": false,
+      "passed": true,
+      "exit_code": 0,
+      "screenshot_sha256": "a87669802a7be34dbfa311543d30af9131c2a0c287fbbe45792e659cbb07c9bb"
+    },
+    {
+      "name": "150",
+      "qt_scale": 1.5,
+      "font_points": "system default",
+      "contrast_palette": false,
+      "passed": true,
+      "exit_code": 0,
+      "screenshot_sha256": "09e8de0059f1fa126a6e55612e7826b6dbe2f6aa2a7b8ac5338622f2b52731a7"
+    },
+    {
+      "name": "200",
+      "qt_scale": 2,
+      "font_points": "system default",
+      "contrast_palette": false,
+      "passed": true,
+      "exit_code": 0,
+      "screenshot_sha256": "a727a7ed770071d0d706751f137ddfe60fcb3d0851dc4060e8a810a43bb38c79"
+    },
+    {
+      "name": "large-text-contrast",
+      "qt_scale": 1,
+      "font_points": 16,
+      "contrast_palette": true,
+      "passed": true,
+      "exit_code": 0,
+      "screenshot_sha256": "0a144507475f6a0e7b7e6dbb6f2abfb9a4fa01f5d4edd63255586e5d912c3bd3"
+    }
+  ],
+  "limitation": "Forced Qt scale and palette on native qwindows, with keyboard/focus/accessibility interface assertions. Actual Windows display scaling, contrast theme, enlarged system text and spoken Narrator output remain separately unverified."
+}

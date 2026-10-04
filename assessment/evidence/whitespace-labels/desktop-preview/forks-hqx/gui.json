@@ -1,0 +1,33 @@
+{
+  "application_icon_loaded": true,
+  "application_name": "Packsmith",
+  "archive_icon_loaded": true,
+  "columns": 6,
+  "display_names": [
+    "caf\u00c3\u00a9.txt"
+  ],
+  "edit_actions_disabled": true,
+  "entries": 1,
+  "error": "",
+  "extract_ms": 118,
+  "journal_directory": "C:/Users/Eric/AppData/Local/qttest/Packsmith/Packsmith/jobs",
+  "listing_ms": 118,
+  "max_event_gap_ms": 44,
+  "model_build_ms": 0,
+  "output": "C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-58dvzecj/forks.hqx/forks",
+  "passed": true,
+  "read_only": true,
+  "result_panel": "extract: Completed\nArchive: C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/outputs/desktop-legacy-fixtures/forks.hqx\nOutput committed: yes\nOutput: C:/Users/Eric/AppData/Local/Temp/unarchiver-relocation-58dvzecj/forks.hqx/forks\nBackend: xad\nEntries: 1\nFiles: 1 \u00b7 Data forks: 1 \u00b7 Resource forks: 1\nSource checksums: 2 checked fork streams; 0 without source checksums; 0 expanded wrappers.\nMapped names: 0 (see mapping for substitutions and collisions)\nFilename policy: readable\nResource fork output: rsrc\nPreservation limits: Resource forks and file FinderInfo are in .rsrc AppleDouble files. Resource-only files have no empty data placeholder; folder FinderInfo remains in the mapping report. Available file/folder modification times are applied; classic timezone/DST limitations remain.",
+  "selected_id": 0,
+  "selected_path": "caf\u00c3\u00a9.txt",
+  "window_title": "Packsmith 0.1.0-beta.4-r2 \u00b7 Windows beta",
+  "worker_exit_verified": true,
+  "screenshot_sha256": "5fbabe95cb97e1a255493fab31263f7f427fe5a2f140e53e0ccd2c50ec7169b4",
+  "peak_gui_rss": 52297728,
+  "peak_workers_rss": 39448576,
+  "gui_sha256": "a1785e1665f12d8da12047587a104db59096659c605b0fc79715f0728e08f9eb",
+  "worker_sha256": "f32038ab7521762f5444d7f6bc4569fd357d2d7423cf194f2df9d3f4a2eb56aa",
+  "decoder_sha256": "af6872b47a89bfc63b6a2ee56c23fdc9f890b98b03df3e707aa742c1e448aa09",
+  "total_elapsed_ms": 741.17,
+  "scope": "Native qwindows widgets and worker; relocated Unicode directory; developer PATH removed; no fresh VM or accessibility proof"
+}

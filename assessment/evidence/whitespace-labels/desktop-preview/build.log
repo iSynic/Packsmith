@@ -1,0 +1,40 @@
+-- Configuring done (1.2s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/Eric/Documents/ChatGPT/Unarchiver/build/windows
+[1/6] Building CXX object CMakeFiles/packsmith-core-tests.dir/tests/core_test.cpp.obj
+[2/6] Linking CXX executable packsmith-core-tests.exe
+[3/6] Building CXX object CMakeFiles/Packsmith.dir/app/main.cpp.obj
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp: In constructor 'Window::Window(QString)':
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:127:47: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  127 |         classicAction = classicMenu->addAction("Export for Classic Mac…", this, [this] { exportClassic(); }, QKeySequence("Ctrl+M"));
+      |                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/QtWidgets:180,
+                 from C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:1:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:128:50: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  128 |         classicAllAction = classicMenu->addAction("Export All for Classic Mac…", this, [this] { exportClassic(true); }, QKeySequence("Ctrl+Shift+M"));
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+[4/6] Linking CXX executable Packsmith.exe
+[5/6] Building CXX object CMakeFiles/packsmith-ui-tests.dir/tests/ui_test.cpp.obj
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/tests/ui_test.cpp:4:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp: In constructor 'Window::Window(QString)':
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:127:47: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  127 |         classicAction = classicMenu->addAction("Export for Classic Mac…", this, [this] { exportClassic(); }, QKeySequence("Ctrl+M"));
+      |                         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/QtWidgets:180,
+                 from C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:1:
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/app/main.cpp:128:50: warning: 'typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type QMenu::addAction(const QString&, const Obj*, Func1, const QKeySequence&) [with Obj = Window; Func1 = Window::Window(QString)::<lambda()>; typename std::enable_if<((! std::is_same<const char*, Func1>::value) && QtPrivate::IsPointerToTypeDerivedFromQObject<T*>::Value), QAction*>::type = QAction*]' is deprecated: Use addAction(text, shortcut, object, slot) instead. [-Wdeprecated-declarations]
+  128 |         classicAllAction = classicMenu->addAction("Export All for Classic Mac…", this, [this] { exportClassic(true); }, QKeySequence("Ctrl+Shift+M"));
+      |                            ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/Eric/Documents/ChatGPT/Unarchiver/assessment/tools/qt/6.10.2/mingw_64/include/QtWidgets/qmenu.h:79:9: note: declared here
+   79 |         addAction(const QString &text, const Obj *object, Func1 slot,
+      |         ^~~~~~~~~
+[6/6] Linking CXX executable packsmith-ui-tests.exe
